@@ -7,7 +7,11 @@ export const Signup = () => {
         <h1>Register</h1>
         <form action="">
           <div className="mb-3">
-            <label htmlFor="Name">Name</label>
+            <label htmlFor="Name">First Name</label>
+            <input type="" placeholder="Name"></input>
+          </div>
+          <div className="mb-3">
+            <label htmlFor="Name">Last Name</label>
             <input type="" placeholder="Name"></input>
           </div>
           <div className="mb-3">
@@ -18,15 +22,17 @@ export const Signup = () => {
             <label htmlFor="password">Password</label>
             <input type="password" placeholder="Password" />
           </div>
+          <div className="mb-3">
+            <label htmlFor="password">Birthday</label>
+            <input type="password" placeholder="Password" />
+          </div>
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
-          <button className="btn btn-success rounded-0 w-100">Register</button>
+          <button className="btn btn-success rounded w-100">Register</button>
           <p></p>
           <Link
             to="/"
             className="btn btn-default border w-100 bg-light text-decoration-none"
-          >
-            Create Account
-          </Link>
+          ></Link>
         </form>
       </div>
     </div>

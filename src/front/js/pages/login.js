@@ -1,17 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-
+import "./LoginValidation.js";
 //this is the login
 export const Login = () => {
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
-  const handleInput =
+  const [errors, setErrors] = useState({})
+  const handleInput = (event) => {
+    setValues((prev) => ({
+      ...prev,
+      [event.target.name]: [event.target.value],
+    }));
+  };
+
   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
   const handleSubmit = (event) => {
     event.preventDefault();
+    setErrors(validation(values));
   };
   return (
     //the line under this places everything in the middle of the screen
@@ -21,12 +29,13 @@ export const Login = () => {
       <div className="bg-white p-3 rounded w-25 vh-80">
         <form action="" onSubmite={handleSubmit}>
           <div className="mb-3">
-            <label htmlFor="user">UserName</label>
+            <label htmlFor="Email">Email</label>
             <input
               type="email"
               onChange={handleInput}
               className="form-control rounded-0"
-              placeholder="UserName"
+              placeholder="Email"
+              name="email"
             />
           </div>
           <div className="mb-3">
@@ -36,6 +45,7 @@ export const Login = () => {
               placeholder="Password"
               onChange={handleInput}
               className="form-control rounded-0"
+              name="password"
             />
           </div>
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
