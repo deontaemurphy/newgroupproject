@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
-import "./LoginValidation.js";
+import LoginValidation from "./LoginValidation.js";
 //this is the login
 export const Login = () => {
   const [values, setValues] = useState({
     email: "",
     password: "",
   });
-  const [errors, setErrors] = useState({})
+  const [errors, setErrors] = useState({});
   const handleInput = (event) => {
     setValues((prev) => ({
       ...prev,
@@ -19,7 +19,7 @@ export const Login = () => {
   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(validation(values));
+    setErrors(LoginValidation(values));
   };
   return (
     //the line under this places everything in the middle of the screen
@@ -36,7 +36,12 @@ export const Login = () => {
               className="form-control rounded-0"
               placeholder="Email"
               name="email"
+              required
             />
+            {/* line underneath will print the errors after retrieivng them from LoginValidation */}
+            {errors.email && (
+              <span className="text-danger">{errors.email}</span>
+            )}
           </div>
           <div className="mb-3">
             <label htmlFor="password"></label>
@@ -46,7 +51,11 @@ export const Login = () => {
               onChange={handleInput}
               className="form-control rounded-0"
               name="password"
+              required
             />
+            {errors.password && (
+              <span className="text-danger">{errors.password}</span>
+            )}
           </div>
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
           <button type="submit" className="btn btn-success rounded-0 w-100">

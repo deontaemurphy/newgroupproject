@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-export const Signup = () => {
+export const CreateAccount = () => {
   return (
     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
       <div className="bg-white p-3 rounded w-25 vh-80">
