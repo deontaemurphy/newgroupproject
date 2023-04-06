@@ -1,11 +1,19 @@
 import React from "react-router-dom";
 
-const LoginValidation = (values) => {
+const CreateAccountValidation = (values) => {
+ 
+
   let error = {};
   const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   const password_pattern = /^(?=.\d)(?=.[a-z])(?=.*[A-Z])[a-zA-Z0-9]{8,}$/;
   /*=== check whenther two operators are equal an returns boolean(true or false) results */
+
+  if (values.name === "") {
+    error.name = "Name should not be empty";
+  } else {
+    error.name = "";
+  }
   if (values.email === "") {
     error.email = "Name should not be empty";
   } else if (!email_pattern.test(values.email)) {
@@ -23,4 +31,4 @@ const LoginValidation = (values) => {
   return error;
 };
 
-export default LoginValidation;
+export default CreateAccountValidation;
