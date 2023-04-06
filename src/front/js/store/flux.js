@@ -4,12 +4,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			message: null,
 			demo: [
 				{
-					title: "FIRST",
-					background: "white",
-					initial: "white"
+					title: "Favorite Book",
+					background: "black",
+					initial: "blue"
 				},
 				{
-					title: "SECOND",
+					title: "Bookmark" ,
 					background: "white",
 					initial: "white"
 				}
