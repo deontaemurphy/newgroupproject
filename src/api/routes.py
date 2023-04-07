@@ -16,3 +16,25 @@ def handle_hello():
     }
 
     return jsonify(response_body), 200
+
+
+@api.route('/login', methods=['POST'])
+def login():
+    if request.method=="POST":
+        email=request.json.get("email")
+        password=request.json.get("password")
+        if not email:
+            return jsonify({"message":"must have email"})
+        if not password:
+            return jsonify({"message":"must have password"})
+        user=User.query.filter_by(email=email).first()
+        if not user:
+            return jsonify({"message":"user does not exist"})
+        if not check_password_hash(user.password,password):
+            return jsonify({"message":"password is incorrect"})
+        
+        expiration=datetime.timedelta(days=1)
+        access_token=create_access_token(identity=user.id,experies_delta=expiration)
+        return jsonify(access_token=access_token)
+    
+    return jsonify({"message":"wrong method"})
