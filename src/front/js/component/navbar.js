@@ -13,14 +13,14 @@ export const Navbar = () => {
           </button>
         </Link>
 
-        <div className="">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAzovqILuk-M9wwSilpOYPBdbsnRmiwBzM4g&usqp=CAU" />
+            <div className="ml-auto">
+              <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAzovqILuk-M9wwSilpOYPBdbsnRmiwBzM4g&usqp=CAU" />
         </div>
 
         <div className="ml-auto">
           <Link to="/demo">
             <button className="btn btn-primary">
-              Check the Context in action
+             Make a Post
             </button>
           </Link>
         </div>
