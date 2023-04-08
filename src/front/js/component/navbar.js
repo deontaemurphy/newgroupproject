@@ -5,30 +5,21 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-light">
-      <li class="nav-item dropdown">
-        {/* <i> */}
-        className="fa-regular fa-bars fa-rotate-180" style="color: #3c9c35;"
-        <a
-          class="nav-link dropdown-toggle"
-          href="https://www.kw.zain.com/en/web/myzain"
-          role="button"
-          data-bs-toggle="dropdown"
-          aria-expanded="false"
-        >
-          Hamburger Menu
-        </a>
-      </li>
+
       <div className="container">
         <Link to="/">
-          {/* <Link to = "className= btn btn-primary"> */}
-          {/* </Link> */}
           <button className="btn btn-primary" >
-            {/* <i> */}
-             style="color: #3c9c35;"
-            {/* </i> */}
-            <span className="navbar-brand mb-0 h1">Navbar</span>
+           Navbar is in white?
+            <span className="navbar-brand mb-0 h1"></span>
           </button>
         </Link>
+
+
+      <img https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAzovqILuk-M9wwSilpOYPBdbsnRmiwBzM4g&usqp=CAU />
+
+
+
+
         <div className="ml-auto">
           <Link to="/demo">
             <button className="btn btn-primary">
