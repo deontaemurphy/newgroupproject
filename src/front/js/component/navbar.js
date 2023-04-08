@@ -10,7 +10,7 @@ export const Navbar = () => {
         className="fa-regular fa-bars fa-rotate-180" style="color: #3c9c35;"
         <a
           class="nav-link dropdown-toggle"
-          href="#"
+          href="https://www.kw.zain.com/en/web/myzain"
           role="button"
           data-bs-toggle="dropdown"
           aria-expanded="false"
@@ -20,12 +20,14 @@ export const Navbar = () => {
       </li>
       <div className="container">
         <Link to="/">
-      <button className="btn btn-primary">
+          {/* <Link to = "className= btn btn-primary"> */}
+          {/* </Link> */}
+          <button className="btn btn-primary" >
             {/* <i> */}
-            className="fa-regular fa-bars fa-rotate-180" style="color: #3c9c35;"
+             style="color: #3c9c35;"
             {/* </i> */}
             <span className="navbar-brand mb-0 h1">Navbar</span>
-      </button>
+          </button>
         </Link>
         <div className="ml-auto">
           <Link to="/demo">
