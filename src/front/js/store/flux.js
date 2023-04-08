@@ -4,6 +4,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 			message: null,
 			demo: [
 				{
+					title: "PostMan Pulls",
+					words: "text-box entry",
+					background: "orange",
+					initial: "blue"
+				},
+				{
 					title: "Favorite Book",
 					background: "black",
 					initial: "blue"
