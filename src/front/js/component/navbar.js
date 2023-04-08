@@ -5,20 +5,17 @@ import { Link } from "react-router-dom";
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-light">
-
       <div className="container">
         <Link to="/">
-          <button className="btn btn-primary" >
-           Navbar is in white?
+          <button className="btn btn-primary">
+            Navbar is in white?
             <span className="navbar-brand mb-0 h1"></span>
           </button>
         </Link>
 
-
-      <img https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAzovqILuk-M9wwSilpOYPBdbsnRmiwBzM4g&usqp=CAU />
-
-
-
+        <div className="">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAzovqILuk-M9wwSilpOYPBdbsnRmiwBzM4g&usqp=CAU" />
+        </div>
 
         <div className="ml-auto">
           <Link to="/demo">
