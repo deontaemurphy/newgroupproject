@@ -5,6 +5,15 @@ import fontawesome from "font-awesome";
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-light bg-light">
+
+<li class="nav-item dropdown">
+            {/* <i> */}
+              className="fa-regular fa-bars fa-rotate-180" style="color:
+              #3c9c35;"
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Hamburger Menu
+          </a>
+   
       <div className="container">
         <Link to="/">
           <button className="btn btn-primary">
