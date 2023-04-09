@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-from api.models import db, User
+from api.models import db, User, CreateStory
 from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
@@ -38,3 +38,23 @@ def login():
         return jsonify(access_token=access_token)
     
     return jsonify({"message":"wrong method"})
+
+@api.routes('/createstory', methods=['Post'])
+def add_create_story(): 
+    request_body = request.get_json(force= True)
+    username = request_body.get("username")
+    storyTitle = request_body.get("storyTitle")
+    likes = request_body.get("likes")
+    chapters = request.get("chapters")
+
+    return jsonify(request_body), 200
+
+@api.routes('/createstory', methods=['Get'])
+def get_create_story():
+    create_story = CreateStory.query.all()
+    all_create_story = list(map(lambda create_story: create_story.serialize(), create_story))
+
+    return jsonify(all_create_story), 200
+
+
+# 200 means it worked

@@ -2,6 +2,7 @@
     General Styles used on every website (Don't Repeat Yourself)
 */
 .whole-screen {
-  background-color: #e6e6fa;
+  background-image: linear-gradient(to right, #01b636, yellow);
 }
 /*#03360f*/
+

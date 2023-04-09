@@ -2,38 +2,44 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CreateAccountValidation from "./CreateAccountValidation.js";
+
+import DatePicker from "react-datepicker";
+import "react-datepicker/dist/react-datepicker.css";
+
 export const CreateAccount = () => {
   const [values, setValues] = useState({
     name: "",
     email: "",
     password: "",
     lastname: "",
+    birthday: new Date(),
+    username: "",
   });
   const [errors, setErrors] = useState({});
   const handleInput = (event) => {
-    setValues((prev) => ({
-      ...prev,
-      [event.target.name]: [event.target.value],
-    }));
+    let newValues = values;
+    newValues[event.target.name] = event.target.value;
+    setValues(newValues);
   };
 
   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(LoginValidation(values));
+    setErrors(CreateAccountValidation(values));
   };
   return (
     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
+      {/* <button onClick={() => console.log(values)}>click me</button> */}
       <div className="bg-white p-3 rounded w-25 vh-80">
         <h1>Register</h1>
-        <form action="">
-          <div className="mb-3" onSubmit={handleSubmit}>
+        <form action="" onSubmit={(e) => handleSubmit(e)}>
+          <div className="mb-3">
             <label htmlFor="Name">First Name</label>
             <input
               type=""
               placeholder="Name"
               name="name"
-              onChange={handleInput}
+              onChange={(e) => handleInput(e)}
             />
             {errors.name && <span className="text-danger">{errors.name}</span>}
           </div>
@@ -41,12 +47,25 @@ export const CreateAccount = () => {
             <label htmlFor="Name">Last Name</label>
             <input
               type=""
-              placeholder="Name"
-              name="lastname"
-              onChange={handleInput}
+              placeholder="Last Name"
+              name="Last name"
+              onChange={(e) => handleInput(e)}
             />
             {errors.lastname && (
               <span className="text-danger">{errors.lastname}</span>
+            )}
+          </div>
+
+          <div className="mb-3">
+            <label htmlFor="username">UserName</label>
+            <input
+              type=""
+              placeholder="UserName"
+              name="username"
+              onChange={handleInput}
+            />
+            {errors.username && (
+              <span className="text-danger">{errors.username}</span>
             )}
           </div>
           <div className="mb-3">
@@ -76,17 +95,40 @@ export const CreateAccount = () => {
           {/*have to fix birthday so instead of text box drop down and enter */}
           <div className="mb-3">
             <label htmlFor="birthday">Birthday</label>
-            <input
-              type="birthday"
-              placeholder="Birthday"
-              onChange={handleInput}
-            />
+            <label for="birthday">Birthday:</label>
+            <select id="birthday" name="birthday" required>
+              <option value="">Month</option>
+              <option value="01">January</option>
+              <option value="02">February</option>
+              <option value="03">March</option>
+
+              <option value="">Day</option>
+              <option value="01">1</option>
+              <option value="02">2</option>
+              <option value="03">3</option>
+
+              <option value="">Year</option>
+              <option value="1900">1900</option>
+              <option value="1901">1901</option>
+              <option value="1902">1902</option>
+            </select>
+
+            {/* <DatePicker
+              placeholderText="Select Date"
+              selected={values.birthday}
+              onChange={(date) => {
+                handleInput({ target: { name: "birthday", value: date } });
+              }}
+            /> */}
             {errors.birthday && (
               <span className="text-danger">{errors.birthday}</span>
             )}
           </div>
+
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
-          <button type="submit" className="btn btn-success rounded w-100">Register</button>
+          <button type="submit" className="btn btn-success rounded w-100">
+            Register
+          </button>
           <p></p>
           <Link
             to="/"

@@ -25,10 +25,10 @@ export const Login = () => {
   return (
     //the line under this places everything in the middle of the screen
     // The onsubmit event occurs when a form is submitted.//
-    <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
+    <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100 ">
       <h1>Login</h1>
-      <div className="bg-white p-3 rounded w-25 vh-80">
-        <form action="" onSubmite={handleSubmit}>
+      <div className="bg-white p-3 rounded w-25 vh-80 login-box">
+        <form action="" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="Email">Email</label>
             <input
@@ -64,7 +64,7 @@ export const Login = () => {
           </button>
           <p></p>
           <Link
-            to="/signup"
+            to="/CreateAccount"
             className="btn btn-default border w-100 bg-light text-decoration-none"
           >
             Create Account

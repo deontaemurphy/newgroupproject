@@ -1,8 +1,6 @@
 import React from "react-router-dom";
 
 const CreateAccountValidation = (values) => {
- 
-
   let error = {};
   const email_pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
@@ -14,8 +12,18 @@ const CreateAccountValidation = (values) => {
   } else {
     error.name = "";
   }
+  if (values.lastname === "") {
+    error.lastname = "Name should not be empty";
+  } else {
+    error.lastname = "";
+  }
+  if (values.username === "") {
+    error.username = "UserName should not be empty";
+  } else {
+    error.username = "";
+  }
   if (values.email === "") {
-    error.email = "Name should not be empty";
+    error.email = "Email should not be empty";
   } else if (!email_pattern.test(values.email)) {
     error.email = "Email Didn't match";
   } else {
