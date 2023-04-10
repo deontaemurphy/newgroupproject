@@ -11,6 +11,7 @@ import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import { CreateAccount } from "./pages/CreateAccount";
 import { Login } from "./pages/login.js";
+import Createstory from "./pages/Createstory";
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
 const Layout = () => {
@@ -27,6 +28,7 @@ const Layout = () => {
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/" />
             <Route element={<CreateAccount />} path="/CreateAccount" />
+            <Route element={<Createstory />} path="/Createstory" />
             <Route element={<Demo />} path="/demo" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<h1>Not found!</h1>} />
