@@ -18,3 +18,28 @@ class User(db.Model):
             "name": self.name
             # do not serialize the password, its a security breach
         }
+class CreateStory(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    
+    username = db.Column(db.String(256), unique=False, nullable=False)
+    storyTitle =  db.Column(db.String(256), unique=True, nullable=False)
+    # I need to change likes (250) to unlimited
+    likes = db.Column(db.String(256), unique=True, nullable=False)
+    chapters = db.Column(db.Text(), unique=True, nullable=True)
+    # this line make cuase problems  later
+    def __repr__(self):
+        return f'<CreateStory {self.username}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "username": self.username,
+            "likes": self.likes,
+            "storyTitle": self.storyTitle,
+            "chapters": self.chapters
+            
+            
+            # do not serialize the password, its a security breach
+        }
+
+ 
