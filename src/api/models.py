@@ -73,4 +73,18 @@ class Chapters(db.Model):
             
             # do not serialize the password, its a security breach
         }
-        
+class Comments(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(256), unique=True, nullable=False)
+    comment = db.Column(db.String(256), unique=False, nullable=False)
+
+    def __repr__(self):
+        return f'<Comments {self.email}>'
+
+    def serialize(self):
+        return {
+            "id": self.id,
+            "username": self.username,
+            "comment": self.comment
+        }
+ 
