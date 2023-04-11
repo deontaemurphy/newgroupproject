@@ -28,7 +28,7 @@ export const Login = () => {
     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
       <h1>Login</h1>
       <div className="bg-white p-3 rounded w-25 vh-80">
-        <form action="" onSubmite={handleSubmit}>
+        <form action="" onSubmit={handleSubmit}>
           <div className="mb-3">
             <label htmlFor="Email">Email</label>
             <input
@@ -59,13 +59,13 @@ export const Login = () => {
             )}
           </div>
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
-          <button type="submit" className="btn btn-success rounded-0 w-100">
+          <button type="submit" className="btn-grad rounded-pill w-100">
             Login in
           </button>
           <p></p>
           <Link
-            to="/signup"
-            className="btn btn-default border w-100 bg-light text-decoration-none"
+            to="/createaccount"
+            className="btn-grad rounded-pill border w-100 bg-light text-decoration-none "
           >
             Create Account
           </Link>
