@@ -28,7 +28,7 @@ export const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="https://3000-deontaemurp-newgrouppro-893lv3uwazv.ws-us93.gitpod.io/">
               Profile
               </a>
             </li>
