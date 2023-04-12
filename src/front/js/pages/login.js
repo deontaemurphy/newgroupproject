@@ -1,26 +1,56 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { Context } from "../store/appContext";
 import LoginValidation from "./LoginValidation.js";
 
 //this is the login
 export const Login = () => {
-  const [values, setValues] = useState({
-    email: "",
-    password: "",
-  });
+  // line below is used for login validation
+  // const [values, setValues] = useState({
+  //   email: "",
+  //   password: "",
+  // });
   const [errors, setErrors] = useState({});
-  const handleInput = (event) => {
-    setValues((prev) => ({
-      ...prev,
-      [event.target.name]: [event.target.value],
-    }));
-  };
-
+  // const handleInput = (event) => {
+  //   setValues((prev) => ({
+  //     ...prev,
+  //     [event.target.name]: [event.target.value],
+  //   }));
+  // };
+  const { store, actions } = useContext(Context);
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(LoginValidation(values));
+    // this is flux action
+    actions
+      .login(email, password)
+      // this takes you to home page when u login
+      .then((response) => navigate("/"))
+      .catch((error) => setErrors(error));
+  };
+  const handleClick = () => {
+    const opt = {
+      method: "POST",
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        user_id: user_id,
+      }),
+    };
+    fetch(
+      "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token"
+    )
+      .then((resp) => {
+        if (resp.ststus === 200) return resp.json();
+        else alert("there will be an error ");
+      })
+      .then()
+      .catch((error) => {
+        console.error("there was an error", error);
+      });
   };
   return (
     //the line under this places everything in the middle of the screen
@@ -33,8 +63,9 @@ export const Login = () => {
             <label htmlFor="Email">Email</label>
             <input
               type="email"
-              onChange={handleInput}
+              onChange={(e) => setEmail(e.target.value)}
               className="form-control rounded-0"
+              value={email}
               placeholder="Email"
               name="email"
               required
@@ -49,7 +80,8 @@ export const Login = () => {
             <input
               type="password"
               placeholder="Password"
-              onChange={handleInput}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               className="form-control rounded-0"
               name="password"
               required
@@ -59,7 +91,11 @@ export const Login = () => {
             )}
           </div>
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
-          <button type="submit" className="btn-grad rounded-pill w-100">
+          <button
+            type="submit"
+            className="btn-grad rounded-pill w-100"
+            onClick={handleClick}
+          >
             Login in
           </button>
           <p></p>
