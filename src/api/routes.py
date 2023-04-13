@@ -28,7 +28,7 @@ def handle_hello():
 def create_token():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
-    user_id =  request.json.get("user_id", None)
+    # user_id =  request.json.get("user_id", None)
     if email != "test" or password != "test":
         return jsonify({"msg": "Bad username or password"}), 401
 

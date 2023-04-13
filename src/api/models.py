@@ -89,4 +89,24 @@ class Comments(db.Model):
             "username": self.username,
             "comment": self.comment
         }
- 
+# class Favorites(db.Model):
+   
+#     id = db.Column(db.Integer, primary_key=True, unique=False)
+#     name= db.Column(db.String(256), unique=False, nullable=False)
+#     user_id = db.Column(db.Integer, nullable=False)
+     
+#     storyTitle = db.relationship('Chapters', backref='story_title', lazy=True)
+#     #password = db.Column(db.String(256), unique=False, nullable=False)
+
+
+#     def __repr__(self):
+#         return f'<Favorite {self.item}>'
+
+#     def serialize(self):
+#         return {
+#             #"id": self.id,
+#             "id": self.id,
+#             "user_id": self.user_id,
+#             "name": self.name,
+#             "storyTitle": self.storyTitle
+#         }

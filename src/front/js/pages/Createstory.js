@@ -2,6 +2,7 @@ import React from "react";
 import { useState } from "react";
 export default function Createstory() {
   const [story, setStory] = useState();
+  const token = sessionStorage.getItem("token");
   return (
     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
       <form>
