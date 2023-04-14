@@ -1,3 +1,7 @@
+// import React from "react";
+// import { Link } from "react-router-dom";
+// import { useState } from "react";
+// import CreateAccountValidation from "./CreateAccountValidation.js";
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
@@ -12,7 +16,7 @@ export const SignUp = () => {
     username: "",
     email: "",
     password: "",
-    birthday: ""
+    birthday: "",
   });
 
   const {
@@ -24,7 +28,7 @@ export const SignUp = () => {
   const onSubmit = async (data) => {
     try {
       let signup = await actions.signup(data);
-      console.log(signup);
+      // console.log(signup);
       if (typeof signup !== "object") {
         navigate("/");
       } else {
@@ -48,7 +52,7 @@ export const SignUp = () => {
 
   return (
     <div className="container-fluid">
-      <div className="row d-flex main-content text-center w-50 rounded shadow-lg my-5 mx-auto p-4">
+      <div className="whole-screen row d-flex main-content text-center w-50 rounded shadow-lg my-5 mx-auto p-4">
         <div className="col-md-8 col-xs-12 col-sm-12 login-form mx-auto bg-white rounded">
           <div className="container-fluid">
             <div className="row justify-content-center">
@@ -146,7 +150,7 @@ export const SignUp = () => {
             </div>
             <div className="row justify-content-center">
               <p>
-                Have an account? <Link to="/login">Log in here</Link>
+                Have an account? <Link to="/Signup">Log in here</Link>
               </p>
             </div>
           </div>
@@ -155,3 +159,86 @@ export const SignUp = () => {
     </div>
   );
 };
+// export const CreateAccount = () => {
+//   const [values, setValues] = useState({
+//     name: "",
+//     email: "",
+//     password: "",
+//   });
+//   const [errors, setErrors] = useState({});
+//   const handleInput = (event) => {
+//     setValues((prev) => ({}));
+//   };
+
+//   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
+//   const handleSubmit = (event) => {
+//     event.preventDefault();
+//     setErrors(LoginValidation(values));
+//   };
+//   return (
+//     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
+//       <div className="bg-white p-3 rounded w-25 vh-80">
+//         <h1>Register</h1>
+//         <form action="">
+//           <div className="mb-3" onSubmit={handleSubmit}>
+//             <label htmlFor="Name">UserName</label>
+//             <input
+//               type=""
+//               placeholder="Name"
+//               name="username"
+//               onChange={handleInput}
+//             />
+//             {errors.name && <span className="text-danger">{errors.name}</span>}
+//           </div>
+//           {/* removed lastName */}
+//           <div className="mb-3">
+//             <label htmlFor="Email">Email Address</label>
+//             <input
+//               type="email"
+//               placeholder="email Address"
+//               name="email-Address"
+//               onChange={handleInput}
+//             />
+//             {errors.email && (
+//               <span className="text-danger">{errors.email}</span>
+//             )}
+//           </div>
+//           <div className="mb-3">
+//             <label htmlFor="password">Password</label>
+//             <input
+//               type="password"
+//               placeholder="Password"
+//               name="password"
+//               onChange={handleInput}
+//             />
+//             {errors.password && (
+//               <span className="text-danger">{errors.password}</span>
+//             )}
+//           </div>
+//           {/*have to fix birthday so instead of text box drop down and enter */}
+//           <div className="mb-3">
+//             <label htmlFor="birthday">Birthday</label>
+//             <input
+//               type="birthday"
+//               placeholder="Birthday"
+//               onChange={handleInput}
+//               name="birthday"
+//             />
+//             {errors.birthday && (
+//               <span className="text-danger">{errors.birthday}</span>
+//             )}
+//           </div>
+//           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
+//           <button type="submit" className="btn btn-success rounded w-100">
+//             Register
+//           </button>
+//           <p></p>
+//           <Link
+//             to="/"
+//             className="btn btn-default border w-100 bg-light text-decoration-none"
+//           ></Link>
+//         </form>
+//       </div>
+//     </div>
+//   );
+// };

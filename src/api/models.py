@@ -7,8 +7,8 @@ class User(db.Model):
     email = db.Column(db.String(256), unique=True, nullable=False)
     password = db.Column(db.String(256), unique=False, nullable=False)
     name = db.Column(db.String(256), unique=False, nullable=False)
-    stories = db.relationship('CreateStory', backref='user', lazy=True)
-    comments = db.relationship('Comments', backref='user', lazy=True)
+    # stories = db.relationship('CreateStory', backref='user', lazy=True)
+    # comments = db.relationship('Comments', backref='user', lazy=True)
     def __repr__(self):
         return f'<User {self.email}>'
 
@@ -26,7 +26,7 @@ class CreateStory(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     storyTitle =  db.Column(db.String(256), unique=True, nullable=False)
     likes = db.Column(db.BigInteger, default=0)
-    chapters = db.relationship('Chapters', backref='story_title', lazy=True)
+    # chapters = db.relationship('Chapters', backref='story_title', lazy=True)
     storydescription=db.Column(db.String(256), unique=False, nullable=False)
     
     def __repr__(self):
@@ -55,7 +55,7 @@ class Chapters(db.Model):
     description=db.Column(db.String(256), unique=False, nullable=False)
     story_id = db.Column(db.Integer, db.ForeignKey('create_story.id'), nullable=False)
     likes = db.Column(db.BigInteger, default=0)
-    comments= db.relationship('Comments', backref='chapters', lazy=True)
+    # comments= db.relationship('Comments', backref='chapters', lazy=True)
     # I need to change likes (250) to unlimited
     
     # this line make cuase problems  later

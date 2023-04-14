@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 // import { useState } from "react";
 import { Context } from "../store/appContext";
-import LoginValidation from "./LoginValidation.js";
+
 import { useNavigate } from "react-router";
 //this is the login
 export const Login = () => {
@@ -35,37 +35,36 @@ export const Login = () => {
       .catch((error) => setErrors(error));
   };
   const handleClick = () => {
-    actions.login(email, password);
+    // actions.login(email, password);
+    if (store.token && store.token != "" && store.token != undefined)
+      history.push("/");
+    const opt = {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        password: password,
+        // user_id: user_id,
+      }),
+    };
+    fetch(
+      "https://3000-deontaemurp-newgrouppro-o8sbwd8jf3t.ws-us94.gitpod.io/api/token",
+      opt
+    )
+      .then((resp) => {
+        if (resp.status === 200) return resp.json();
+        else alert("there will be an error in logging in ");
+      })
+      .then((data) => {
+        console.log("this came from backend", data);
+        sessionStorage.setItem("token", data.access_token);
+      })
+      .catch((error) => {
+        console.error("there was an error", error);
+      });
   };
-  if (store.token && store.token != "" && store.token != undefined)
-    history.push("/");
-  const opt = {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      email: email,
-      password: password,
-      // user_id: user_id,
-    }),
-  };
-  fetch(
-    "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token",
-    opt
-  )
-    .then((resp) => {
-      if (resp.status === 200) return resp.json();
-      else alert("there will be an error in logging in ");
-    })
-    .then((data) => {
-      console.log("this came from backend", data);
-      sessionStorage.setItem("token", data.access_token);
-    })
-    .catch((error) => {
-      console.error("there was an error", error);
-    });
-
   //the line under this places everything in the middle of the screen
   // The onsubmit event occurs when a form is submitted.//
   return (

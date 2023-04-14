@@ -55,6 +55,52 @@ def login():
         return jsonify(access_token=access_token)
     
     return jsonify({"message":"wrong method"})
+
+# @api.route('/signup', methods=['POST'])
+# def add_createUser():
+#   if request.method == 'POST':
+#     request_body = request.get_json()
+
+#     if not request_body["username"]:
+#       return jsonify({"msg": "Name is required"}), 400
+#     if not request_body["email"]:
+#       return jsonify({"msg": "Email is required"}), 400
+#     if not request_body["password"]:
+#       return jsonify({"msg": "Password is required"}), 400
+
+#     user = User.query.filter_by(email=request_body["email"]).first()
+#     if user:
+#       return jsonify({"msg": "User already exists"}), 400
+
+#     user = User(
+#           name = request_body["name"],
+#           email = request_body["email"],
+#           password = generate_password_hash(request_body["password"]),
+#       )
+
+#     db.session.add(user)   
+#     db.session.commit()
+#     return jsonify({"created": "Thanks. Your registration was successfully", "status": "true"}), 200
+
+# @api.route('/users/<int:user_id>', methods=['GET'])
+# def get_user(user_id):
+#     user = User.query.filter_by(id=user_id).first()
+#     if not user:
+#         return jsonify({"msg": "User not found"}), 404
+
+#     return jsonify({
+#         "id": user.id,
+#         "name": user.name,
+#         "email": user.email
+#     }), 200
+# @api.route('/login', methods=['GET'])
+# def get_createUser():
+#     createUser = C.query.all()
+#     all_create_story = list(map(lambda create_story: create_story.serialize(), create_story))
+
+#     return jsonify(all_create_story), 200
+
+
 @api.route('/createstory', methods=['POST'])
 def add_create_story(): 
     request_body = request.get_json(force= True)
@@ -93,7 +139,7 @@ def get_comments():
     return jsonify(all_comments), 200
 
 
-@api.route('/createUser', methods=['POST'])
+@api.route('/signup', methods=['POST'])
 def createUser():
   if request.method == 'POST':
     request_body = request.get_json()

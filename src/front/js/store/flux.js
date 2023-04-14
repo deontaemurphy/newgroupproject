@@ -1,6 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
   const token = sessionStorage.getItem("token");
-  let cb_url= process.env.BACKEND_URL
+  let cb_url = process.env.BACKEND_URL;
   return {
     store: {
       message: null,
@@ -55,7 +55,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       //   }
 
       login: async (email, password) => {
-        
         const opts = {
           method: "POST",
           mode: "cors",
@@ -93,36 +92,36 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      signup: data => {
-				const store = getStore();
-				console.log("data received", data);
-				console.log(JSON.stringify(data));
-				return fetch(`${cb_url}/api/signup`, {
-					method: "POST",
-					headers: { "Content-type": "application/json" },
-					body: JSON.stringify(data)
-				})
-					.then(res => {
-						if (res.status === 409)
-							throw new Error(
-								"The email address already exists. Please login to your account to continue."
-							);
-						// else if (!res.ok) throw new Error(res.statusText);
+      signup: (data) => {
+        const store = getStore();
+        console.log("data received", data);
+        console.log(JSON.stringify(data));
+        return fetch(`${cb_url}/api/signup`, {
+          method: "POST",
+          headers: { "Content-type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => {
+            if (res.status === 409)
+              throw new Error(
+                "The email address already exists. Please login to your account to continue."
+              );
+            // else if (!res.ok) throw new Error(res.statusText);
 
-						return res.json();
-					})
-					.then(data => {
-						console.log("data ", data);
-						getActions().setAlert({
-							type: "success",
-							msg: data.msg,
-							show: true
-						});
+            return res.json();
+          })
+          .then((data) => {
+            console.log("data ", data);
+            getActions().setAlert({
+              type: "success",
+              msg: data.msg,
+              show: true,
+            });
 
-						return true;
-					})
-					.catch(err => err);
-			},
+            return true;
+          })
+          .catch((err) => err);
+      },
 
       getMessage: async () => {
         try {
