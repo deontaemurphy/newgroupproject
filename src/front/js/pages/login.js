@@ -69,12 +69,15 @@ export const Login = () => {
   // The onsubmit event occurs when a form is submitted.//
   return (
     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
-      <h1>Login</h1>
+      <h1></h1>
       {store.token && store.token != "" && store.token != undefined ? (
         " You are logged in with this token" + store.token
       ) : (
         <div className="bg-white p-3 rounded w-25 vh-80">
           <form action="" onSubmit={handleSubmit}>
+            <div>
+              <h2 className="white-box-login">Login</h2>
+            </div>
             <div className="mb-3">
               <label htmlFor="Email">Email</label>
               <input
