@@ -28,9 +28,11 @@ export const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="https://3000-deontaemurp-newgrouppro-893lv3uwazv.ws-us93.gitpod.io/">
+            <Link to="/Profile">
+
               Profile
-              </a>
+            </Link>
+
             </li>
             <li className="nav-item dropdown">
               <a
@@ -44,19 +46,19 @@ export const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                <Link to="/">
+                <Link to="/user">
                  Library
                  </Link>
 
                 </li>
                 <li>
-                <Link to="/">
+                <Link to="/demo">
                     View Favorites
                     </Link >
 
                 </li>
                 <li>
-                <Link to="/">
+                <Link to="/user">
                     Logout
                     </Link >
                 </li>
