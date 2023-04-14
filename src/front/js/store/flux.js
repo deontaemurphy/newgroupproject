@@ -1,5 +1,5 @@
 const getState = ({ getStore, getActions, setStore }) => {
-  
+  const token = sessionStorage.getItem("token");
   return {
     store: {
       message: null,
@@ -23,35 +23,35 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ token: null });
         window.location.href = cf_url + "/";
       },
-      // login: async (email,password) => {
-      //   const opt = {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({
-      //       email: email,
-      //       password: password,
-      //       // user_id: user_id,
-      //     }),
-      //   };
-      //   const resp = await fetch(
-      //     "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token",
-      //     opt
-      //   )
-      //   if (resp.status !== 200){
-      //     alert("there will be an error");
-      //     return false;
+      //   login: async (email,password) => {
+      //     const opt = {
+      //       method: "POST",
+      //       headers: {
+      //         "Content-Type": "application/json",
+      //       },
+      //       body: JSON.stringify({
+      //         email: email,
+      //         password: password,
+      //         // user_id: user_id,
+      //       }),
+      //     };
+      //     const resp = await fetch(
+      //       "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token",
+      //       opt
+      //     )
+      //     if (resp.status !== 200){
+      //       alert("there will be an error");
+      //       return false;
+      //     }
+      //     const data = await resp.json();
+      //       .then((data) => {
+      //         console.log("this came from backend", data);
+      //         sessionStorage.setItem("token", data.access_token);
+      //       })
+      //       .catch((error) => {
+      //         console.error("there was an error", error);
+      //       })
       //   }
-      //   const data = await resp.json();
-      //     .then((data) => {
-      //       console.log("this came from backend", data);
-      //       sessionStorage.setItem("token", data.access_token);
-      //     })
-      //     .catch((error) => {
-      //       console.error("there was an error", error);
-      //     })
-      // }
 
       login: async (email, password) => {
         const cb_url = getStore().process.env.BACKEND_URL;
@@ -74,12 +74,13 @@ const getState = ({ getStore, getActions, setStore }) => {
             return false;
           }
           const data = await res.json();
+          console.log("this is from backend flux", data);
           sessionStorage.setItem("token", data.access_token);
-          // data.favorites.forEach((f) => {
-          //   //was returning an error bc it didnt like the single quotes so the line below turns the single into double quotes
-          //   f.item = f.item.replace(/'/g, '"');
-          //   f.item = JSON.parse(f.item);
-          // });
+          data.favorites.forEach((f) => {
+            //was returning an error bc it didnt like the single quotes so the line below turns the single into double quotes
+            f.item = f.item.replace(/'/g, '"');
+            f.item = JSON.parse(f.item);
+          });
           setStore({
             token: data.access_token,
             // favorites: data.favorites, need to add favorites

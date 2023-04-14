@@ -7,7 +7,6 @@ export const CreateAccount = () => {
     name: "",
     email: "",
     password: "",
-    lastname: "",
   });
   const [errors, setErrors] = useState({});
   const handleInput = (event) => {
@@ -28,7 +27,7 @@ export const CreateAccount = () => {
         <h1>Register</h1>
         <form action="">
           <div className="mb-3" onSubmit={handleSubmit}>
-            <label htmlFor="Name">First Name</label>
+            <label htmlFor="Name">User Name</label>
             <input
               type=""
               placeholder="Name"
@@ -37,18 +36,7 @@ export const CreateAccount = () => {
             />
             {errors.name && <span className="text-danger">{errors.name}</span>}
           </div>
-          <div className="mb-3">
-            <label htmlFor="Name">Last Name</label>
-            <input
-              type=""
-              placeholder="Name"
-              name="lastname"
-              onChange={handleInput}
-            />
-            {errors.lastname && (
-              <span className="text-danger">{errors.lastname}</span>
-            )}
-          </div>
+          {/* removed lastName */}
           <div className="mb-3">
             <label htmlFor="Email">Email Address</label>
             <input
@@ -86,7 +74,9 @@ export const CreateAccount = () => {
             )}
           </div>
           {/* the rounded-0 raounds buuton and the w-100 elongated it taking to the width */}
-          <button type="submit" className="btn btn-success rounded w-100">Register</button>
+          <button type="submit" className="btn btn-success rounded w-100">
+            Register
+          </button>
           <p></p>
           <Link
             to="/"

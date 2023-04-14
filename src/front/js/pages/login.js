@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import { useState } from "react";
+// import { useState } from "react";
 import { Context } from "../store/appContext";
 import LoginValidation from "./LoginValidation.js";
-
+import { useHistory } from "react-router";
 //this is the login
 export const Login = () => {
   // line below is used for login validation
@@ -18,11 +18,12 @@ export const Login = () => {
   //     [event.target.name]: [event.target.value],
   //   }));
   // };
+  const history = useHistory();
   const { store, actions } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const token = sessionStorage.getItem("token");
-  console.log("this is your token", token);
+  // const token = sessionStorage.getItem("token");
+  console.log("this is your token", store.token);
   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -34,40 +35,44 @@ export const Login = () => {
       .catch((error) => setErrors(error));
   };
   const handleClick = () => {
-    const opt = {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        password: password,
-        // user_id: user_id,
-      }),
-    };
-    fetch(
-      "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token",
-      opt
-    )
-      .then((resp) => {
-        if (resp.status === 200) return resp.json();
-        else alert("there will be an error in logging in ");
-      })
-      .then((data) => {
-        console.log("this came from backend", data);
-        sessionStorage.setItem("token", data.access_token);
-      })
-      .catch((error) => {
-        console.error("there was an error", error);
-      });
+    actions.login(email, password);
   };
+  if (store.token && store.token != "" && store.token != undefined)
+    history.push("/");
+  const opt = {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      email: email,
+      password: password,
+      // user_id: user_id,
+    }),
+  };
+  fetch(
+    "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token",
+    opt
+  )
+    .then((resp) => {
+      if (resp.status === 200) return resp.json();
+      else alert("there will be an error in logging in ");
+    })
+    .then((data) => {
+      console.log("this came from backend", data);
+      sessionStorage.setItem("token", data.access_token);
+    })
+    .catch((error) => {
+      console.error("there was an error", error);
+    });
+
+  //the line under this places everything in the middle of the screen
+  // The onsubmit event occurs when a form is submitted.//
   return (
-    //the line under this places everything in the middle of the screen
-    // The onsubmit event occurs when a form is submitted.//
     <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
       <h1>Login</h1>
-      {token && token != "" && token != undefined ? (
-        " You are logged in with this token" + token
+      {store.token && store.token != "" && store.token != undefined ? (
+        " You are logged in with this token" + store.token
       ) : (
         <div className="bg-white p-3 rounded w-25 vh-80">
           <form action="" onSubmit={handleSubmit}>

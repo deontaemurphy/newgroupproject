@@ -91,3 +91,30 @@ def get_comments():
     all_comments = list(map(lambda comments: comments.serialize(), comments))
 
     return jsonify(all_comments), 200
+
+
+@api.route('/createUser', methods=['POST'])
+def createUser():
+  if request.method == 'POST':
+    request_body = request.get_json()
+
+    if not request_body["name"]:
+      return jsonify({"msg": "Name is required"}), 400
+    if not request_body["email"]:
+      return jsonify({"msg": "Email is required"}), 400
+    if not request_body["password"]:
+      return jsonify({"msg": "Password is required"}), 400
+
+    user = User.query.filter_by(email=request_body["email"]).first()
+    if user:
+      return jsonify({"msg": "User already exists"}), 400
+
+    user = User(
+          name = request_body["name"],
+          email = request_body["email"],
+          password = generate_password_hash(request_body["password"]),
+      )
+
+    db.session.add(user)   
+    db.session.commit()
+    return jsonify({"created": "Thanks. Your registration was successfully", "status": "true"}), 200
