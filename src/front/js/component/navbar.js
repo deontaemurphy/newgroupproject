@@ -44,19 +44,21 @@ export const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
-                  library
-                  </a>
+                <Link to="/">
+                 Library
+                 </Link>
+
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
+                <Link to="/">
+                    View Favorites
+                    </Link >
+
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
+                <Link to="/">
+                    Logout
+                    </Link >
                 </li>
               </ul>
             </li>
@@ -80,17 +82,3 @@ export const Navbar = () => {
     </nav>
   );
 };
-{
-   <nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">Home</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav> 
-}
