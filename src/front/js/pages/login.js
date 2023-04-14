@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 // import { useState } from "react";
 import { Context } from "../store/appContext";
 import LoginValidation from "./LoginValidation.js";
-import { useHistory } from "react-router";
+import { useNavigate } from "react-router";
 //this is the login
 export const Login = () => {
   // line below is used for login validation
@@ -18,7 +18,7 @@ export const Login = () => {
   //     [event.target.name]: [event.target.value],
   //   }));
   // };
-  const history = useHistory();
+  const history = useNavigate();
   const { store, actions } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

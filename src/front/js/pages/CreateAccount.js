@@ -10,10 +10,7 @@ export const CreateAccount = () => {
   });
   const [errors, setErrors] = useState({});
   const handleInput = (event) => {
-    setValues((prev) => ({
-      ...prev,
-      [event.target.name]: [event.target.value],
-    }));
+    setValues((prev) => ({}));
   };
 
   // The preventDefault() method cancels the event if it is cancelable, meaning that the default action that belongs to the event will not occur.//
@@ -27,11 +24,11 @@ export const CreateAccount = () => {
         <h1>Register</h1>
         <form action="">
           <div className="mb-3" onSubmit={handleSubmit}>
-            <label htmlFor="Name">User Name</label>
+            <label htmlFor="Name">UserName</label>
             <input
               type=""
               placeholder="Name"
-              name="name"
+              name="username"
               onChange={handleInput}
             />
             {errors.name && <span className="text-danger">{errors.name}</span>}
@@ -68,6 +65,7 @@ export const CreateAccount = () => {
               type="birthday"
               placeholder="Birthday"
               onChange={handleInput}
+              name="birthday"
             />
             {errors.birthday && (
               <span className="text-danger">{errors.birthday}</span>

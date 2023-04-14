@@ -1,5 +1,6 @@
 const getState = ({ getStore, getActions, setStore }) => {
   const token = sessionStorage.getItem("token");
+  let cb_url= process.env.BACKEND_URL
   return {
     store: {
       message: null,
@@ -54,7 +55,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       //   }
 
       login: async (email, password) => {
-        const cb_url = getStore().process.env.BACKEND_URL;
+        
         const opts = {
           method: "POST",
           mode: "cors",
@@ -92,39 +93,37 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      createUser: async (name, email, password) => {
-        const cb_url = getStore().cb_url;
-        const cf_url = getStore().cf_url;
-        const opts = {
-          method: "POST",
-          mode: "cors",
-          headers: {
-            "Content-Type": "application/json",
-            "Access-Control-Allow-Origin": "*",
-          },
-          body: JSON.stringify({
-            name: name,
-            email: email,
-            password: password,
-          }),
-        };
-        try {
-          const res = await fetch(cb_url + "/api/createUser", opts);
-          if (res.status !== 200) {
-            alert("there has been an error");
-            return false;
-          }
-          const data = await res.json();
-          // console.log(data);
-          if (data.status == "true") {
-            //redirect to login
-            window.location.href = cf_url + "/login";
-          }
-          return true;
-        } catch (error) {
-          console.error(error);
-        }
-      },
+      signup: data => {
+				const store = getStore();
+				console.log("data received", data);
+				console.log(JSON.stringify(data));
+				return fetch(`${cb_url}/api/signup`, {
+					method: "POST",
+					headers: { "Content-type": "application/json" },
+					body: JSON.stringify(data)
+				})
+					.then(res => {
+						if (res.status === 409)
+							throw new Error(
+								"The email address already exists. Please login to your account to continue."
+							);
+						// else if (!res.ok) throw new Error(res.statusText);
+
+						return res.json();
+					})
+					.then(data => {
+						console.log("data ", data);
+						getActions().setAlert({
+							type: "success",
+							msg: data.msg,
+							show: true
+						});
+
+						return true;
+					})
+					.catch(err => err);
+			},
+
       getMessage: async () => {
         try {
           // fetching data from the backend
