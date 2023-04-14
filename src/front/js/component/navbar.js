@@ -23,14 +23,14 @@ export const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
-              <a className="nav-link active" aria-current="page" href="#">
+            <Link to="/">
                 Home
-              </a>
+                </Link>
             </li>
             <li className="nav-item">
-            <Link to="/Profile">
+            <Link to="/user">
 
-              Profile
+              Signup
             </Link>
 
             </li>
@@ -58,7 +58,7 @@ export const Navbar = () => {
 
                 </li>
                 <li>
-                <Link to="/user">
+                <Link to="/">
                     Logout
                     </Link >
                 </li>
@@ -72,11 +72,11 @@ export const Navbar = () => {
             <input
               className="form-control me-2"
               type="search"
-              placeholder="Search"
-              aria-label="Search"
+              placeholder="Look it up"
+              aria-label="Find the right read"
             />
             <button className="btn btn-outline-success" type="submit">
-              Search
+            buscar
             </button>
           </form>
         </div>
