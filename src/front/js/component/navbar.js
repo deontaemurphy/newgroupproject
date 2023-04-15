@@ -6,9 +6,9 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <a className="navbar-brand" href="#">
+        <Link to="/demo">
           Navbar
-        </a>
+        </Link>
         <button
           className="navbar-toggler"
           type="button"
@@ -27,6 +27,7 @@ export const Navbar = () => {
                 Home
                 </Link>
             </li>
+
             <li className="nav-item">
             <Link to="/user">
 
@@ -78,6 +79,7 @@ export const Navbar = () => {
             <button className="btn btn-outline-success" type="submit">
             buscar
             </button>
+          <Link to="/single:theid"></Link>
           </form>
         </div>
       </div>
