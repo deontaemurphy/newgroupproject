@@ -7,34 +7,17 @@ export const Navbar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
         <Link to="/demo">
-          Navbar
+          Navbar(logo)
         </Link>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon"></span>
-        </button>
+       
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-            <li className="nav-item">
+            <li className="nav-itemHome mt-2 mx-4">
             <Link to="/">
                 Home
                 </Link>
             </li>
 
-            <li className="nav-item">
-            <Link to="/user">
-
-              Signup
-            </Link>
-
-            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -65,9 +48,6 @@ export const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
-            </li>
           </ul>
           <form className="d-flex" role="search">
             <input
@@ -76,8 +56,8 @@ export const Navbar = () => {
               placeholder="Look it up"
               aria-label="Find the right read"
             />
-            <button className="btn btn-outline-success" type="submit">
-            buscar
+            <button className="btn btn-outline-success w-100" type="submit">
+            Login/Signup
             </button>
           <Link to="/single:theid"></Link>
           </form>

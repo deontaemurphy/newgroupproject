@@ -1,6 +1,9 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+
+.nav-itemHome
 .whole-screen {
   background-color: #e6e6fa;
 }
