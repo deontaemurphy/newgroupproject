@@ -57,6 +57,7 @@ export const Login = () => {
         if (resp.status === 200) return resp.json();
         else alert("there will be an error in logging in ");
       })
+      // this .then is not being read
       .then((data) => {
         console.log("this came from backend", data);
         sessionStorage.setItem("token", data.access_token);

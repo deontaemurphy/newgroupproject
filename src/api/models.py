@@ -50,15 +50,15 @@ class CreateStory(db.Model):
 class Chapters(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
-    name= db.Column(db.String(256), unique=False, nullable=False)
+    name = db.Column(db.String(256), unique=False, nullable=False)
+    description = db.Column(db.String(256), unique=False, nullable=False)
     
-    description=db.Column(db.String(256), unique=False, nullable=False)
-    story_id = db.Column(db.Integer, db.ForeignKey('create_story.id'), nullable=False)
+    # add a foreign key constraint to reference the CreateStory table
+    # story_id = db.Column(db.Integer, db.ForeignKey('create_story.id'), nullable=False)
+    
     likes = db.Column(db.BigInteger, default=0)
-    # comments= db.relationship('Comments', backref='chapters', lazy=True)
-    # I need to change likes (250) to unlimited
+    comments = db.relationship('Comments', backref='chapters', lazy=True)
     
-    # this line make cuase problems  later
     def __repr__(self):
         return f'<Chapters {self.name}>'
 
@@ -68,11 +68,8 @@ class Chapters(db.Model):
             "name" : self.name,
             "description": self.description,
             "story_id": self.story_id,
-            "storyTitle": self.story_Title,
+            "storyTitle": self.story_title.storyTitle,
             "comments": list(map(lambda x: x.serialize(), self.comments))
-            
-            
-            # do not serialize the password, its a security breach
         }
 class Comments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
@@ -81,7 +78,7 @@ class Comments(db.Model):
     chapters_id = db.Column(db.Integer, db.ForeignKey('chapters.id'), nullable=False)
 
     def __repr__(self):
-        return f'<Comments {self.email}>'
+        return f'<Comments {self.comments}>'
 
     def serialize(self):
         return {

@@ -23,7 +23,7 @@ app.url_map.strict_slashes = False
 
 
 app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')  # Change this!
-# I createdJWT_SECRET in env and imported here
+# # I createdJWT_SECRET in env and imported here
 jwt = JWTManager(app)
 
 # database condiguration
