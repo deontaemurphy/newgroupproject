@@ -93,25 +93,31 @@ def login():
 #     return jsonify(all_create_story), 200
 
 
-@api.route('/createstory', methods=['POST'])
-def add_create_story(): 
-    request_body = request.get_json(force= True)
+@api.route('/users/<int:user_id>/createstory', methods=['POST'])
+def add_create_story(user_id):
+    request_body = request.get_json(force=True)
     username = request_body.get("username")
     storyTitle = request_body.get("storyTitle")
     likes = request_body.get("likes")
-    chapters = request.get("chapters")
+    chapters = request_body.get('chapters')
     story = CreateStory(
-        storyTitle = storyTitle
+        user_id=user_id,
+        storyTitle=storyTitle,
+        likes=likes,
+        chapters=chapters,
     )
+    db.session.add(story)
+    db.session.commit()
 
     return jsonify(request_body), 200
 
-@api.route('/createstories', methods=['GET'])
-def get_create_story():
-    create_story = CreateStory.query.all()
+@api.route('/users/<int:user_id>/getstories', methods=['GET'])
+def get_create_story(user_id):
+    create_story = CreateStory.query.filter_by(user_id=user_id).all()
     all_create_story = list(map(lambda create_story: create_story.serialize(), create_story))
 
     return jsonify(all_create_story), 200
+
 
 
 # 200 means it worked

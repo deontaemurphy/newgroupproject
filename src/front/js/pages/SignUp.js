@@ -149,9 +149,11 @@ export const SignUp = () => {
               </form>
             </div>
             <div className="row justify-content-center">
-              <p>
-                Have an account? <Link to="/Signup">Log in here</Link>
-              </p>
+              <div className=" ">
+                <p>
+                  Have an account? <Link to="/Signup">Log in here</Link>
+                </p>
+              </div>
             </div>
           </div>
         </div>
