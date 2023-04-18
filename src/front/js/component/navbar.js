@@ -26,12 +26,13 @@ export const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Discover
+                
+                Library
               </a>
               <ul className="dropdown-menu">
                 <li>
                 <Link to="/user">
-                 Library
+                  User
                  </Link>
 
                 </li>
@@ -49,14 +50,14 @@ export const Navbar = () => {
               </ul>
             </li>
           </ul>
-          <form className="d-flex" role="search">
+          <form className="d-flex w-100" role="search">
             <input
-              className="form-control me-2"
+              className="form-control me-2 ml-100"
               type="search"
               placeholder="Look it up"
               aria-label="Find the right read"
             />
-            <button className="btn btn-outline-success w-100" type="submit">
+            <button className="btn btn-outline-success" type="submit">
             Login/Signup
             </button>
           <Link to="/single:theid"></Link>
