@@ -7,8 +7,8 @@ class User(db.Model):
     email = db.Column(db.String(256), unique=True, nullable=False)
     password = db.Column(db.String(256), unique=False, nullable=False)
     name = db.Column(db.String(256), unique=False, nullable=False)
-    # stories = db.relationship('CreateStory', backref='user', lazy=True)
-    # comments = db.relationship('Comments', backref='user', lazy=True)
+    stories = db.relationship('CreateStory', backref='user', lazy=True)
+    comments = db.relationship('Comments', backref='user', lazy=True)
     def __repr__(self):
         return f'<User {self.email}>'
 
@@ -26,7 +26,7 @@ class CreateStory(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     storyTitle =  db.Column(db.String(256), unique=True, nullable=False)
     likes = db.Column(db.BigInteger, default=0)
-    # chapters = db.relationship('Chapters', backref='story_title', lazy=True)
+    chapters = db.relationship('Chapters', backref='story_title', lazy=True)
     storydescription=db.Column(db.String(256), unique=False, nullable=False)
     
     def __repr__(self):
@@ -51,14 +51,15 @@ class Chapters(db.Model):
     
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String(256), unique=False, nullable=False)
-    description = db.Column(db.String(256), unique=False, nullable=False)
-    
+   
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
     # add a foreign key constraint to reference the CreateStory table
-    # story_id = db.Column(db.Integer, db.ForeignKey('create_story.id'), nullable=False)
+    
     
     likes = db.Column(db.BigInteger, default=0)
     comments = db.relationship('Comments', backref='chapters', lazy=True)
-    
+    story_id = db.Column(db.Integer, db.ForeignKey('createstory.id'), nullable=False)
+
     def __repr__(self):
         return f'<Chapters {self.name}>'
 
@@ -73,17 +74,19 @@ class Chapters(db.Model):
         }
 class Comments(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+   
     comment = db.Column(db.String(256), unique=False, nullable=False)
     chapters_id = db.Column(db.Integer, db.ForeignKey('chapters.id'), nullable=False)
-
+    # user_id = db.Column(db.Integer, db.ForeignKey('user.name'), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    chapters_id = db.Column(db.Integer, db.ForeignKey('chapters.id'), nullable=False)
     def __repr__(self):
         return f'<Comments {self.comments}>'
 
     def serialize(self):
         return {
             "id": self.id,
-            "username": self.username,
+            "user_id": self.user_id,
             "comment": self.comment
         }
 # class Favorites(db.Model):
