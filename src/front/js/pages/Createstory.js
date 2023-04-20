@@ -19,10 +19,10 @@ export default function Createstory() {
           </button>
           <ul className="dropdown-menu dropdown-menu-dark">
             <li>
-              <a className="dropdown-item active">Saved</a>
+            <Link to="/home">Home</Link>
             </li>
             <li>
-              <a className="dropdown-item"></a>
+            <Link to="/demo">Drafts</Link>
             </li>
             <li>
               <a className="dropdown-item">Published</a>
@@ -31,7 +31,7 @@ export default function Createstory() {
               <hr className="dropdown-divider" />
             </li>
             <li>
-              <a className="dropdown-item me-4">Logout</a>
+            <Link to="/home">Logout</Link>
             </li>
           </ul>
         </div>
@@ -39,6 +39,16 @@ export default function Createstory() {
         <textarea placeholder="Create Chapter">
           Once upon a time there was two kings and they ...
         </textarea>
+        <div class="card">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">Special title treatment</h5>
+    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+    <Link to="/home">Share</Link>
+  </div>
+</div>
         <button type="button" className="form-control me-2 ml-100">
           Create
         </button>
