@@ -31,7 +31,7 @@ export const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                <Link to="/user">
+                <Link to="/Createstory">
                   User
                  </Link>
 
