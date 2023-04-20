@@ -11,7 +11,7 @@ from api.models import db
 from api.routes import api
 from api.admin import setup_admin
 from api.commands import setup_commands
-from flask_jwt_extended import JWTManager
+# from flask_jwt_extended import JWTManager
 
 
 #from models import Person
@@ -22,9 +22,9 @@ app = Flask(__name__)
 app.url_map.strict_slashes = False
 
 
-app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')  # Change this!
-# # I createdJWT_SECRET in env and imported here
-jwt = JWTManager(app)
+# app.config["FLASK_APP_KEY"] = os.environ.get('FLASK_APP_KEY')  # Change this!
+# # # I createdJWT_SECRET in env and imported here
+# jwt = JWTManager(app)
 
 # database condiguration
 db_url = os.getenv("DATABASE_URL")
