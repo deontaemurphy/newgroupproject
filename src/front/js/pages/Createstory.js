@@ -6,8 +6,8 @@ export default function Createstory() {
       <form>
         {/* cover upload under */}
         <div></div>
-        <h3 >Title</h3>
-        <input></input>
+        <h3>Title</h3>
+        <input>Tale of Two Queens</input>
         <div className="dropdown">
           <button
             className="btn btn-secondary dropdown-toggle"
@@ -31,13 +31,15 @@ export default function Createstory() {
               <hr className="dropdown-divider" />
             </li>
             <li>
-              <a className="dropdown-item">Logout</a>
+              <a className="dropdown-item me-4">Logout</a>
             </li>
           </ul>
         </div>
         <h3>Description</h3>
-        <textarea placeholder="Add description here">New Html</textarea>
-        <button type="button" className="btn btn-primary">
+        <textarea placeholder="Create Chapter">
+          Once upon a time there was two kings and they ...
+        </textarea>
+        <button type="button" className="form-control me-2 ml-100">
           Create
         </button>
       </form>
