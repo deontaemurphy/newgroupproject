@@ -28,7 +28,7 @@ class Story_Cover(db.Model):
     # username = db.Column(db.String(256), db.ForeignKey(User.user_id))
     title = db.Column(db.String(256), unique=False, nullable=True)
     summary = db.Column(db.String(1024), unique=False, nullable=False)
-    chapter = db.relationship('Chapter', backref = 'story_cover', lazy = True)
+    chapters = db.relationship('Chapter', backref = 'story_cover', lazy = True)
     
     def __repr__(self):
         return f'<Story_Cover {self.title}>'

@@ -2,7 +2,7 @@
 This module takes care of starting the API Server, Loading the DB and Adding the endpoints
 """
 from flask import Flask, request, jsonify, url_for, Blueprint
-# from api.models import db, User, CreateStory,Comments
+from api.models import db, User, Story_Cover
 import os 
 from api.utils import generate_sitemap, APIException
 # from flask_jwt_extended import create_access_token
@@ -12,7 +12,7 @@ from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
 
-@api.route('/story_cover', methods=['POST'])
+@api.route('/users/<int:user_id>/story_cover', methods=['POST'])
 def story_cover():
     data = request.get_json()
     # user_id = request.get(user_id)
@@ -20,11 +20,21 @@ def story_cover():
     # title = request.get(title)
     # summary = request.get(summary)
     # chapter = request.get(chapter)
-    add_story = Story_Cover(user_id = data["user_id"],title = data['title'], summary = data['summary'], chapter =data['chapter'])
+    add_story = Story_Cover(user_id = data["user_id"],title = data['title'], summary = data['summary'])
     db.session.add(add_story)   
     db.session.commit()
 
     return jsonify(add_story.serialize()), 200
+
+@api.route('/users/<int:user_id>/chapter', methods=['POST', 'GET'])
+def chapter():
+    data = request.get_json()
+    add_chapter = Story_Cover(user_id = data["user_id"], story_id = data['story_id'], chapter_number = data['chapter_number'], chapter_name = data['chapter_name'], chapter_text =data['chapter_text'])
+    db.session.add(add_chapter)   
+    db.session.commit()
+
+    return jsonify(add_chapter.serialize()), 200
+
 
 # @api.route("/newProgram", methods=['POST'])
 # def new_program():
@@ -53,15 +63,15 @@ def story_cover():
 
 
 # @api.route("/token", methods=["POST"])
-# def create_token():
-#     email = request.json.get("email", None)
-#     password = request.json.get("password", None)
-#     # user_id =  request.json.get("user_id", None)
-#     if email != "test" or password != "test":
-#         return jsonify({"msg": "Bad username or password"}), 401
+# # def create_token():
+# #     email = request.json.get("email", None)
+# #     password = request.json.get("password", None)
+# #     # user_id =  request.json.get("user_id", None)
+# #     if email != "test" or password != "test":
+# #         return jsonify({"msg": "Bad username or password"}), 401
 
-#     access_token = create_access_token(identity=email)
-#     return jsonify(access_token=access_token)
+# #     access_token = create_access_token(identity=email)
+# #     return jsonify(access_token=access_token)
 
 # @api.route('/login', methods=['POST'])
 # def login():
@@ -82,21 +92,21 @@ def story_cover():
 #         access_token=create_access_token(identity=user.id,experies_delta=expiration)
 #         return jsonify(access_token=access_token)
     
-#     return jsonify({"message":"wrong method"})
+#  return jsonify({"message":"wrong method"})
 
 
 
 
-# @api.route('/users/<int:user_id>/createstory', methods=['POST'])
-# def add_create_story(user_id):
-#     request_body = request.get_json(force=True)
-#     user_id = request_body.get("user_id")
-#     storyTitle = request_body.get("storyTitle")
-#     likes = request_body.get("likes")
-#     chapters = request_body.get('chapters')
-#     storydescription = request_body.get('storydescription')
+@api.route('/users/<int:user_id>/createstory', methods=['POST'])
+def add_create_story(user_id):
+    request_body = request.get_json(force=True)
+    user_id = request_body.get("user_id")
+    storyTitle = request_body.get("storyTitle")
+    likes = request_body.get("likes")
+    chapters = request_body.get('chapters')
+    storydescription = request_body.get('storydescription')
 
-#     return jsonify(request_body), 200
+    return jsonify(request_body), 200
 
 # @api.route('/getstories', methods=['GET'])
 # def get_create_story(user_id):
