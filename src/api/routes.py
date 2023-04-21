@@ -12,6 +12,42 @@ from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
 
+@api.route('/story_cover', methods=['POST'])
+def story_cover():
+    data = request.get_json()
+    # user_id = request.get(user_id)
+    # username = request.get(username)
+    # title = request.get(title)
+    # summary = request.get(summary)
+    # chapter = request.get(chapter)
+    add_story = Story_Cover(user_id = data["user_id"],title = data['title'], summary = data['summary'], chapter =data['chapter'])
+    db.session.add(add_story)   
+    db.session.commit()
+
+    return jsonify(add_story.serialize()), 200
+
+# @api.route("/newProgram", methods=['POST'])
+# def new_program():
+#     data = request.get_json()
+#     add_program = Programs(name = data["name"],description = data["description"],prog_bar_txt = data["prog_bar_txt"],start_time = data["start_time"],end_time = data["end_time"],monday = data["monday"],tuesday = data["tuesday"],wednesday = data["wednesday"],thursday = data["thursday"],friday = data["friday"],saturday = data["saturday"],sunday = data["sunday"],thur_start_time = data["thur_start_time"],thur_end_time = data["thur_end_time"],prog_bar_thur_txt = data["prog_bar_thur_txt"],sat_start_time = data["sat_start_time"],sat_end_time = data["sat_end_time"],prog_bar_sat_txt = data["prog_bar_sat_txt"])
+#     db.session.add(add_program)
+#     db.session.commit()
+#     return jsonify(add_program.serialize())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
