@@ -31,14 +31,14 @@ class Story_Cover(db.Model):
     chapters = db.relationship('Chapter', backref = 'story_cover', lazy = True)
     
     def __repr__(self):
-        return f'<Story_Cover {self.title}>'
+        return f'<Story_Cover {self.summary}>'
 
     def serialize(self):
         return {
             "id": self.id,
-            "username": self.username,
+            # "username": self.username,
             "title": self.title,
-            "summary": self.username,
+            "summary": self.summary,
             "user_id": self.user_id
         }
 
@@ -60,7 +60,7 @@ class Chapter(db.Model):
             "story_id": self.story_id,
             "chapter_number": self.chapter_number,
             "chapter_name": self.chapter_name,
-            "chapter_text": self.chapter_name,
+            "chapter_text": self.chapter_text,
             
         }
 

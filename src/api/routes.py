@@ -12,28 +12,46 @@ from flask_jwt_extended import jwt_required
 
 api = Blueprint('api', __name__)
 
-@api.route('/users/<int:user_id>/story_cover', methods=['POST'])
-def story_cover():
-    data = request.get_json()
-    # user_id = request.get(user_id)
-    # username = request.get(username)
-    # title = request.get(title)
-    # summary = request.get(summary)
-    # chapter = request.get(chapter)
-    add_story = Story_Cover(user_id = data["user_id"],title = data['title'], summary = data['summary'])
-    db.session.add(add_story)   
-    db.session.commit()
 
-    return jsonify(add_story.serialize()), 200
+@api.route('/users' , methods=['GET', 'POST'])
+def users():
+    if request.method == 'POST':
+        return '/users POST section'
+    else:
+        all_users = User.query.all()
+        all_users = list(map(lambda x: x.serialize(), all_users))
+        return jsonify(all_users), 200
 
-@api.route('/users/<int:user_id>/chapter', methods=['POST', 'GET'])
-def chapter():
-    data = request.get_json()
-    add_chapter = Story_Cover(user_id = data["user_id"], story_id = data['story_id'], chapter_number = data['chapter_number'], chapter_name = data['chapter_name'], chapter_text =data['chapter_text'])
-    db.session.add(add_chapter)   
-    db.session.commit()
+@api.route('/users/<int:user_id>/story_covers', methods=['POST', 'GET'])
+def story_cover(user_id):
+  if request.method == 'POST':
+    return "/users/<int:user_id>/story_cover Post section"
+  else:
+   
+    # data = request.get_json()
+    # # user_id = request.get(user_id)
+    # # username = request.get(username)
+    # # title = request.get(title)
+    # # summary = request.get(summary)
+    # # chapter = request.get(chapter)
+    # add_story = Story_Cover(user_id = data["user_id"],title = data['title'], summary = data['summary'])
+    all_story_cover = Story_Cover.query.filter_by(user_id = user_id )
+    all_story_cover = list(map(lambda x: x.serialize(), all_story_cover))
+    return jsonify(all_story_cover), 200
+   
 
-    return jsonify(add_chapter.serialize()), 200
+@api.route('/users/<int:user_id>/<int:story_id>/chapter', methods=['POST', 'GET'])
+def chapter(user_id, story_id):
+    # data = request.get_json()
+    # add_chapter = Story_Cover(user_id = data["user_id"], story_id = data['story_id'], chapter_number = data['chapter_number'], chapter_name = data['chapter_name'], chapter_text =data['chapter_text'])
+    # db.session.add(add_chapter)   
+    # db.session.commit()
+    if request.method == 'POST':
+        return '/users/<int:user_id>/<int:story_id>/chapter Post section'
+    else:
+        all_story_chapters = Chapter.query.filter_by(user_id = user_id, story_id = story_id)
+        all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
+        return jsonify(all_story_chapters), 200
 
 
 # @api.route("/newProgram", methods=['POST'])
