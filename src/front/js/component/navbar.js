@@ -28,7 +28,11 @@ export const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-              Profile
+
+                Discover
+
+        
+
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -52,6 +56,8 @@ export const Navbar = () => {
                     Another action
                   </a>
                 </li>
+
+                <li>className="dropdown-divider"</li>
                 <li>
                   <a className="dropdown-item" href="#">
                     Something else here
