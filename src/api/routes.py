@@ -16,7 +16,7 @@ api = Blueprint('api', __name__)
 @api.route('/users' , methods=['GET', 'POST'])
 def users():
     if request.method == 'POST':
-        return '/users POST section'
+        return jsonify()
     else:
         all_users = User.query.all()
         all_users = list(map(lambda x: x.serialize(), all_users))
