@@ -1,21 +1,17 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import fontawesome from "font-awesome";
+
 
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link to="/demo">
-          Navbar(logo)
-        </Link>
-       
+        <Link to="/demo">Navbar(logo)</Link>
+
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-itemHome mt-2 mx-4">
-            <Link to="/">
-                Home
-                </Link>
+              <Link to="/">Home</Link>
             </li>
 
             <li className="nav-item dropdown">
@@ -26,26 +22,17 @@ export const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                
                 Library
               </a>
               <ul className="dropdown-menu">
                 <li>
-                <Link to="/Createstory">
-                  User
-                 </Link>
-
+                  <Link to="/Createstory">User</Link>
                 </li>
                 <li>
-                <Link to="/demo">
-                    View Favorites
-                    </Link >
-
+                  <Link to="/demo">View Favorites</Link>
                 </li>
                 <li>
-                <Link to="/">
-                    Logout
-                    </Link >
+                  <Link to="/">Logout</Link>
                 </li>
               </ul>
             </li>
@@ -58,9 +45,9 @@ export const Navbar = () => {
               aria-label="Find the right read"
             />
             <button className="btn btn-outline-success" type="submit">
-            Signup
+              Signup
             </button>
-          <Link to="/login.js"></Link>
+            <Link to="/login.js"></Link>
           </form>
         </div>
       </div>

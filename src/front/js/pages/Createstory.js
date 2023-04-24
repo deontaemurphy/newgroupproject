@@ -1,58 +1,77 @@
 import React from "react";
-
-export default function Createstory() {
-  return (
+const Card = (props) => {
+  let characterProp = (props.type = "character" ? (
     <div>
-      <form>
-        {/* cover upload under */}
-        <div></div>
-        <h3>Title</h3>
-        <input>Tale of Two Queens</input>
-        <div className="dropdown">
-          <button
-            className="btn btn-secondary dropdown-toggle"
-            type="button"
-            data-bs-toggle="dropdown"
-            aria-expanded="true"
-          >
-            Genre
-          </button>
-          <ul className="dropdown-menu dropdown-menu-dark">
-            <li>
-            <Link to="/home">Home</Link>
-            </li>
-            <li>
-            <Link to="/demo">Drafts</Link>
-            </li>
-            <li>
-              <a className="dropdown-item">Published</a>
-            </li>
-            <li>
-              <hr className="dropdown-divider" />
-            </li>
-            <li>
-            <Link to="/home">Logout</Link>
-            </li>
-          </ul>
-        </div>
-        <h3>Description</h3>
-        <textarea placeholder="Create Chapter">
-          Once upon a time there was two kings and they ...
-        </textarea>
-        <div class="card">
-  <div class="card-header">
-    Featured
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">Special title treatment</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <Link to="/home">Share</Link>
-  </div>
-</div>
-        <button type="button" className="form-control me-2 ml-100">
-          Create
-        </button>
-      </form>
+      <img
+        src={`https://starwars-visualguide.com/assets/img/characters/${
+          props.id + 1
+        }.jpeg`}
+        onError={(e) => {
+          e.target.src =
+            "https://starwars-visualguide.com/assets/img/placeholder.jpg";
+        }}
+        className="card-img-top"
+        style={{ maxHeight: "300px", objectFit: "cover" }}
+        alt="pictures of StarWars characters"
+      />
+      <div className="card-body">
+        <h5 className="card-title">{props.item.name}</h5>
+        <h6 className="card-information">Gender:{props.item.gender}</h6>
+        <h6 className="card-information">HairColor:{props.item.hair_color}</h6>
+        <h6 className="card-information">Eye-Color:{props.item.eye_color}</h6>
+      </div>
+    </div>
+  ) : (
+    ""
+  ));
+
+  let starshipProp = (props.type = "starship" ? (
+    <div>
+      <img
+        src={`https://starwars-visualguide.com/assets/img/starship/${
+          props.id + 1
+        }.jpeg`}
+        onError={(e) => {
+          e.target.src =
+            "https://starwars-visualguide.com/assets/img/placeholder.jpg";
+        }}
+        className="card-img-top"
+        style={{ maxHeight: "300px", objectFit: "cover" }}
+        alt="pictures of StarWars ships"
+      />
+      <div className="card-body">
+        <h5 className="card-title">{props.item.name}</h5>
+        <h6 className="card-information">cost_in_credits:{props.item.cost_in_credits}</h6>
+        <h6 className="card-information">hyperdrive_rating:{props.item.hyperdrive_rating}</h6>
+        <h6 className="card-information">model:{props.item.model}</h6>
+      </div>
+    </div>
+  ) : (
+    ""
+  ));
+  
+ let planetProp = props.type="planet"? <div>
+ <img src={`https://starwars-visualguide.com/assets/img/planet/${props.id+1}.jpeg`} 
+ onError={(e)=>{
+     e.target.src='https://starwars-visualguide.com/assets/img/placeholder.jpg'
+ }}
+ className="card-img-top"
+ style={{maxHeight:"300px",objectFit:"cover"}}
+ alt="pictures of StarWars planets"
+ />
+ <div className="card-body">
+ <h5 className="card-title">{props.item.name}</h5>
+ <h6 className="card-information">diameter:{props.item.diameter}</h6>
+ <h6 className="card-information">population:{props.item.population}</h6>
+ <h6 className="card-information">terrian:{props.item.terrian}</h6>
+ </div>
+</div>:""
+  return (
+    <div className="card" style="width:18rem;">
+        {props.type=="character"? characterProp:""}
+        {props.type=="planet"? planetProp:""}
+        {props.type=="starship"? starshipProp:""}
     </div>
   );
-}
+};
+export default Card;
