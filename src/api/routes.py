@@ -13,10 +13,18 @@ from flask_jwt_extended import jwt_required
 api = Blueprint('api', __name__)
 
 
-@api.route('/users' , methods=['GET', 'POST'])
+@api.route('/users/<int:user_id>' , methods=['GET', 'POST'])
 def users():
     if request.method == 'POST':
-        return jsonify()
+        data = request.get_json()
+        # user = User(name=data['username'], email=data['email'], password=data['password'])
+        user1 = Person.query.get(user_id)
+        user1.username = body.username
+        db.session.commit()
+        db.session.add(user)
+        db.session.commit()
+
+        return jsonify(user.serialize())
     else:
         all_users = User.query.all()
         all_users = list(map(lambda x: x.serialize(), all_users))
