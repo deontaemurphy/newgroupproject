@@ -22,7 +22,7 @@ static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 
-
+app.secret_key = os.environ.get('JWT_SECRET', 'sample key')
 app.config["FLASK_APP_KEY"] = os.environ.get('FLASK_APP_KEY')  # Change this!
 # # I createdJWT_SECRET in env and imported here
 jwt = JWTManager(app)

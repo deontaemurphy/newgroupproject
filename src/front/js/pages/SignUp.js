@@ -121,8 +121,8 @@ export const SignUp = () => {
                     </span>
                   )}
                 </div>
-                <div className="row justify-content-center mt-2">
-                  <label htmlFor="birthday">Birthday</label>
+                {/* <div className="row justify-content-center mt-2"> */}
+                {/* <label htmlFor="birthday">Birthday</label>
                   <input
                     type="date"
                     placeholder="Birthday"
@@ -138,7 +138,7 @@ export const SignUp = () => {
                       {errors.birthday.message}
                     </span>
                   )}
-                </div>
+                </div> */}
                 <div className="row justify-content-center mt-4">
                   <input
                     type="submit"

@@ -24,35 +24,35 @@ const getState = ({ getStore, getActions, setStore }) => {
         setStore({ token: null });
         window.location.href = cf_url + "/";
       },
-      //   login: async (email,password) => {
-      //     const opt = {
-      //       method: "POST",
-      //       headers: {
-      //         "Content-Type": "application/json",
-      //       },
-      //       body: JSON.stringify({
-      //         email: email,
-      //         password: password,
-      //         // user_id: user_id,
-      //       }),
-      //     };
-      //     const resp = await fetch(
-      //       "https://3001-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/api/token",
-      //       opt
-      //     )
-      //     if (resp.status !== 200){
-      //       alert("there will be an error");
-      //       return false;
-      //     }
-      //     const data = await resp.json();
-      //       .then((data) => {
-      //         console.log("this came from backend", data);
-      //         sessionStorage.setItem("token", data.access_token);
-      //       })
-      //       .catch((error) => {
-      //         console.error("there was an error", error);
-      //       })
-      //   }
+        // login: async (email,password) => {
+        //   const opt = {
+        //     method: "POST",
+        //     headers: {
+        //       "Content-Type": "application/json",
+        //     },
+        //     body: JSON.stringify({
+        //       email: email,
+        //       password: password,
+        //       // user_id: user_id,
+        //     }),
+        //   };
+        //   const resp = await fetch(
+        //     "https://3001-deontaemurp-newgrouppro-8tf8x11ptk9.ws-us95.gitpod.io/admin/api/token",
+        //     opt
+        //   )
+        //   if (resp.status !== 200){
+        //     alert("there will be an error");
+        //     return false;
+        //   }
+        //   // const data = await resp.json();
+        //   //   .then((data) => {
+        //   //     console.log("this came from backend", data);
+        //   //     sessionStorage.setItem("token", data.access_token);
+        //   //   })
+        //   //   .catch((error) => {
+        //   //     console.error("there was an error", error);
+        //   //   })
+        // }
 
       login: async (email, password) => {
         const opts = {

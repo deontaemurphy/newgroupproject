@@ -8,59 +8,137 @@ from api.utils import generate_sitemap, APIException
 from flask_jwt_extended import create_access_token
 from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
-
-
+from werkzeug.security import generate_password_hash, check_password_hash
+import datetime
 api = Blueprint('api', __name__)
 
+# equal id to token 
+
+
+
+# @api.route("/token", methods=["POST"])
+# def create_token():
+#     email = request.json.get("email", None)
+#     password = request.json.get("password", None)
+#     # user_id =  request.json.get("user_id", None)
+#     if email != "test" or password != "test":
+#         return jsonify({"msg": "Bad username or password"}), 401
+
+#     access_token = create_access_token(identity=email)
+#     return jsonify(access_token=access_token)
 
 @api.route('/users' , methods=['GET', 'POST'])
 def users():
     if request.method == 'POST':
-        return '/users POST section'
+        request_body = request.get_json()
+
+        if not request_body["username"]:
+            return jsonify({"msg": "Name is required"}), 400
+        if not request_body["email"]:
+            return jsonify({"msg": "Email is required"}), 400
+        if not request_body["password"]:
+            return jsonify({"msg": "Password is required"}), 400
+        
+
+        user = User.query.filter_by(email=request_body["email"]).first()
+        if user:
+            return jsonify({"msg": "User already exists"}), 400
+        user = User(
+            username = request_body["username"],
+            email = request_body["email"],
+            password = generate_password_hash(request_body["password"]),
+            )
+
+
+        db.session.add(user)   
+        db.session.commit()
+        return jsonify({"created": "Thanks. Your registration was successfully", "status": "true"}), 200
+      
+     
     else:
         all_users = User.query.all()
         all_users = list(map(lambda x: x.serialize(), all_users))
         return jsonify(all_users), 200
 
-@api.route('/users/<int:user_id>/story_covers', methods=['POST', 'GET'])
+@api.route("/login", methods=["POST"])
+def create_token():
+    if request.method == 'POST':
+        email = request.json.get("email", None)
+        password = request.json.get("password", None)
+
+        if not email:
+            return jsonify({"msg": "Email is required"}), 400
+        if not password:
+            return jsonify({"msg": "Password is required"}), 400
+
+    #   user = User.query.filter_by(email=email).first()
+    #   if not user:
+    #       return jsonify({"msg": "Email/Password are incorrect"}), 401
+
+    #   if not check_password_hash(user.password, password):
+    #       return jsonify({"msg": "Username/Password are incorrect"}), 401
+
+      # create token
+    #   expiration = datetime.timedelta(days=3)
+    #   access_token = create_access_token(identity= user.id, expires_delta= expiration)
+        access_token = create_access_token(identity=email) 
+        return jsonify(access_token=access_token)
+
+    return jsonify(msg="wrong user")
+
+@api.route('/users/story_covers', methods=['POST', 'GET'])
+@jwt_required()
 def story_cover(user_id):
   if request.method == 'POST':
-    return "/users/<int:user_id>/story_cover Post section"
+    user_id = get_jwt_identity()
+    request_body = request.get_json()
+    if not request_body["title"]:
+        return jsonify({"msg": "Title is required"}), 400
+    story = Story_Cover (
+        
+        title = request_body["title"],
+        summary = request_body["summary"],
+        users_id = user_id 
+    ) 
+    db.session.add(story)   
+    db.session.commit()
+    return jsonify({"created": "Thanks. Your Story is created ", "status": "true"}), 200    
+   
   else:
    
-    # data = request.get_json()
-    # # user_id = request.get(user_id)
-    # # username = request.get(username)
-    # # title = request.get(title)
-    # # summary = request.get(summary)
-    # # chapter = request.get(chapter)
-    # add_story = Story_Cover(user_id = data["user_id"],title = data['title'], summary = data['summary'])
     all_story_cover = Story_Cover.query.filter_by(user_id = user_id )
     all_story_cover = list(map(lambda x: x.serialize(), all_story_cover))
     return jsonify(all_story_cover), 200
    
 
-@api.route('/users/<int:user_id>/<int:story_id>/chapter', methods=['POST', 'GET'])
-def chapter(user_id, story_id):
-    # data = request.get_json()
-    # add_chapter = Story_Cover(user_id = data["user_id"], story_id = data['story_id'], chapter_number = data['chapter_number'], chapter_name = data['chapter_name'], chapter_text =data['chapter_text'])
-    # db.session.add(add_chapter)   
-    # db.session.commit()
+@api.route('/users/chapter', methods=['POST', 'GET'])
+@jwt_required()
+def chapter():
+    user_id = get_jwt_identity()
     if request.method == 'POST':
-        return '/users/<int:user_id>/<int:story_id>/chapter Post section'
+        
+        request_body = request.get_json()
+        
+        chapter = Chapter (
+            user_id = user_id,
+            story_id = request_body["story_id"],
+            chapter_number = request_body["chapter_number"],
+            chapter_name = request_body["chapter_name"],
+            chapter_text = request_body["chapter_text"]
+        ) 
+        db.session.add(chapter)   
+        db.session.commit()
+        return jsonify({"created": "Thanks. Your Chapter has been  created ", "status": "true"}), 200    
+       
     else:
-        all_story_chapters = Chapter.query.filter_by(user_id = user_id, story_id = story_id)
+        user_id = request.args.get('user_id')
+        story_id = request.args.get('story_id')
+        all_story_chapters = Chapter.query.filter_by(user_id=user_id, story_id=story_id)
         all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
         return jsonify(all_story_chapters), 200
-
-
-# @api.route("/newProgram", methods=['POST'])
-# def new_program():
-#     data = request.get_json()
-#     add_program = Programs(name = data["name"],description = data["description"],prog_bar_txt = data["prog_bar_txt"],start_time = data["start_time"],end_time = data["end_time"],monday = data["monday"],tuesday = data["tuesday"],wednesday = data["wednesday"],thursday = data["thursday"],friday = data["friday"],saturday = data["saturday"],sunday = data["sunday"],thur_start_time = data["thur_start_time"],thur_end_time = data["thur_end_time"],prog_bar_thur_txt = data["prog_bar_thur_txt"],sat_start_time = data["sat_start_time"],sat_end_time = data["sat_end_time"],prog_bar_sat_txt = data["prog_bar_sat_txt"])
-#     db.session.add(add_program)
-#     db.session.commit()
-#     return jsonify(add_program.serialize())
+        # all_story_chapters = Chapter.query.filter_by(user_id = user_id, story_id = story_id)
+        # all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
+        # return jsonify(all_story_chapters), 200
 
 
 
@@ -80,38 +158,8 @@ def chapter(user_id, story_id):
 
 
 
-@api.route("/token", methods=["POST"])
-def create_token():
-    email = request.json.get("email", None)
-    password = request.json.get("password", None)
-    # user_id =  request.json.get("user_id", None)
-    if email != "test" or password != "test":
-        return jsonify({"msg": "Bad username or password"}), 401
 
-    access_token = create_access_token(identity=email)
-    return jsonify(access_token=access_token)
 
-@api.route('/login', methods=['POST'])
-def login():
-    if request.method=="POST":
-        email=request.json.get("email")
-        password=request.json.get("password")
-        if not email:
-            return jsonify({"message":"must have email"})
-        if not password:
-            return jsonify({"message":"must have password"})
-        user=User.query.filter_by(email=email).first()
-        if not user:
-            return jsonify({"message":"user does not exist"})
-        if not check_password_hash(user.password,password):
-            return jsonify({"message":"password is incorrect"})
-        
-        expiration=datetime.timedelta(days=1)
-        access_token=create_access_token(identity=user.id,experies_delta=expiration)
-
-        return jsonify(access_token=access_token)
-    
- 
 
 
 
