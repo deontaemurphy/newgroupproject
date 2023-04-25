@@ -13,6 +13,20 @@ import datetime
 api = Blueprint('api', __name__)
 
 # equal id to token 
+
+
+
+# @api.route("/token", methods=["POST"])
+# def create_token():
+#     email = request.json.get("email", None)
+#     password = request.json.get("password", None)
+#     # user_id =  request.json.get("user_id", None)
+#     if email != "test" or password != "test":
+#         return jsonify({"msg": "Bad username or password"}), 401
+
+#     access_token = create_access_token(identity=email)
+#     return jsonify(access_token=access_token)
+
 @api.route('/users' , methods=['GET', 'POST'])
 def users():
     if request.method == 'POST':
@@ -49,30 +63,31 @@ def users():
 @api.route("/login", methods=["POST"])
 def create_token():
     if request.method == 'POST':
-      email = request.json.get("email", None)
-      password = request.json.get("password", None)
+        email = request.json.get("email", None)
+        password = request.json.get("password", None)
 
-      if not email:
-          return jsonify({"msg": "Email is required"}), 400
-      if not password:
-          return jsonify({"msg": "Password is required"}), 400
+        if not email:
+            return jsonify({"msg": "Email is required"}), 400
+        if not password:
+            return jsonify({"msg": "Password is required"}), 400
 
-      user = User.query.filter_by(email=email).first()
-      if not user:
-          return jsonify({"msg": "Email/Password are incorrect"}), 401
+    #   user = User.query.filter_by(email=email).first()
+    #   if not user:
+    #       return jsonify({"msg": "Email/Password are incorrect"}), 401
 
-      if not check_password_hash(user.password, password):
-          return jsonify({"msg": "Username/Password are incorrect"}), 401
+    #   if not check_password_hash(user.password, password):
+    #       return jsonify({"msg": "Username/Password are incorrect"}), 401
 
       # create token
-      expiration = datetime.timedelta(days=3)
-      access_token = create_access_token(identity= user.id, expires_delta= expiration)
-     
-      return jsonify(access_token=access_token)
+    #   expiration = datetime.timedelta(days=3)
+    #   access_token = create_access_token(identity= user.id, expires_delta= expiration)
+        access_token = create_access_token(identity=email) 
+        return jsonify(access_token=access_token)
 
     return jsonify(msg="wrong user")
+
 @api.route('/users/story_covers', methods=['POST', 'GET'])
-@jwt_required
+@jwt_required()
 def story_cover(user_id):
   if request.method == 'POST':
     user_id = get_jwt_identity()
@@ -96,30 +111,34 @@ def story_cover(user_id):
     return jsonify(all_story_cover), 200
    
 
-@api.route('/users/<int:user_id>/<int:story_id>/chapter', methods=['POST', 'GET'])
-def chapter(user_id, story_id):
-   if request.method == 'POST':
+@api.route('/users/chapter', methods=['POST', 'GET'])
+@jwt_required()
+def chapter():
     user_id = get_jwt_identity()
-    request_body = request.get_json()
-    
-    chapter = Chapter (
+    if request.method == 'POST':
         
-        chapter_number = request_body["chapter_number"],
-        chapter_name = request_body["chapter_name"],
-        chapter_text = request_body["chapter_text"]
-    ) 
-    db.session.add(chapter)   
-    db.session.commit()
-    return jsonify({"created": "Thanks. Your Chapter has been  created ", "status": "true"}), 200    
-   
+        request_body = request.get_json()
+        
+        chapter = Chapter (
+            user_id = user_id,
+            story_id = request_body["story_id"],
+            chapter_number = request_body["chapter_number"],
+            chapter_name = request_body["chapter_name"],
+            chapter_text = request_body["chapter_text"]
+        ) 
+        db.session.add(chapter)   
+        db.session.commit()
+        return jsonify({"created": "Thanks. Your Chapter has been  created ", "status": "true"}), 200    
+       
     else:
-        all_story_chapters = Chapter.query.filter_by(user_id = user_id, story_id = story_id)
+        user_id = request.args.get('user_id')
+        story_id = request.args.get('story_id')
+        all_story_chapters = Chapter.query.filter_by(user_id=user_id, story_id=story_id)
         all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
         return jsonify(all_story_chapters), 200
-
-
-
-
+        # all_story_chapters = Chapter.query.filter_by(user_id = user_id, story_id = story_id)
+        # all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
+        # return jsonify(all_story_chapters), 200
 
 
 
