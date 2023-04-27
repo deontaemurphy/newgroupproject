@@ -138,9 +138,9 @@ def chapter(user_id,story_id):
    
        
     # if request.method == 'GET':   
-        all_story_chapters = Chapter.query.filter_by(user_id=user.id, story_id= story_id)
-        all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
-        return jsonify(all_story_chapters), 200
+    all_story_chapters = Chapter.query.filter_by(user_id=user.id, story_id= story_id)
+    all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
+    return jsonify(all_story_chapters), 200
         # all_story_chapters = Chapter.query.filter_by(user_id = user_id, story_id = story_id)
         # all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
         # return jsonify(all_story_chapters), 200
