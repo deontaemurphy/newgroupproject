@@ -1,5 +1,4 @@
 const getState = ({ getStore, getActions, setStore }) => {
-<<<<<<< HEAD
   return {
     store: {
       message: null,
@@ -15,9 +14,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           initial: "white",
         },
       ],
-      characters: [],
-      planets: [],
-      starships: [],
     },
     actions: {
       // Use getActions to call a function within a fuction
@@ -25,34 +21,6 @@ const getState = ({ getStore, getActions, setStore }) => {
         getActions().changeColor(0, "green");
       },
       loadSomeData: () => {
-        /**
-					fetch().then().then(data => setStore({ "foo": data.bar }))
-				*/
-        fetch("https://swapi.dev/api/people")
-          .then((response) => response.json())
-          .then((data) => {
-            setStore({ characters: data.results });
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-        fetch("https://swapi.dev/api/planet")
-          .then((response) => response.json())
-          .then((data) => {
-            setStore({ planets: data.results });
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-        fetch("https://swapi.dev/api/starships")
-          .then((response) => response.json())
-          .then((data) => {
-            setStore({ starships: data.results });
-          })
-          .catch((error) => {
-            console.log(error);
-          });
-      },
       changeColor: (index, color) => {
         //get the store
         const store = getStore();
@@ -67,29 +35,22 @@ const getState = ({ getStore, getActions, setStore }) => {
         //reset the global store
         setStore({ demo: demo });
       },
-=======
-  const token = sessionStorage.getItem("token");
-  let cb_url = process.env.BACKEND_URL;
-  return {
-    store: {
-      message: null,
+  // const token = sessionStorage.getItem("token"),
+  // let cb_url = process.env.BACKEND_URL,
+  // return {
+  // store: {
+  // message: null,
 
       //   evertime I come back must update cf_url by coping if from the browser of my frontend
-      token: null,
-      user: null,
-      cf_url:
-        "https:3000-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/",
-      username: null,
-    },
-    actions: {
-      // Use getActions to call a function within a fuction
-      exampleFunction: () => {
-        getActions().changeColor(0, "green");
-      },
-
-      logout: () => {
-        const cf_url = getStore().cf_url;
-        const token = sessionStorage.removeItem("token");
+      // token: null,
+      // user: null,
+      // cf_url:
+        // "https:3000-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/",
+      // username: null,
+    // },
+    // logout: () => {
+    // const cf_url = getStore().cf_url;
+    // const token = sessionStorage.removeItem("token");
         setStore({ token: null });
         window.location.href = cf_url + "/";
       },
@@ -218,7 +179,6 @@ const getState = ({ getStore, getActions, setStore }) => {
       //   //reset the global store
       //   setStore({ demo: demo });
       // },
->>>>>>> main
     },
   };
 };

@@ -1,9 +1,5 @@
 import React from "react";
-<<<<<<< HEAD
-const Card = (props) => {
-   
-=======
-import { useState } from "react";
+
 export default function Createstory() {
   const [story, setStory] = useState();
   const token = sessionStorage.getItem("token");
@@ -53,6 +49,4 @@ export default function Createstory() {
       </form>
     </div>
   );
->>>>>>> main
 }
-export default Card;

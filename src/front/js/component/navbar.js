@@ -69,12 +69,13 @@ export const Navbar = () => {
               </ul>
             </li>
           </ul>
-          <form className="d-flex w-100" role="search">
+          </div>
+          <form className="d-flex w-100" role="search"/>
             <input
-              className="form-control me-2 ml-100"
-              <a>
+              className="form-control me-2 ml-100"/>
+              <div>
                 Discover
-              </a>
+              </div>
               <ul className="dropdown-menu">
                 <li>
                   <a className="dropdown-item" href="#">
@@ -94,7 +95,6 @@ export const Navbar = () => {
                   </a>
                 </li>
               </ul>
-            </li>
             <li className="nav-item">
               <a className="nav-link disabled">Disabled</a>
             </li>
