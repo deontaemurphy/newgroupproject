@@ -6,7 +6,7 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-<<<<<<< HEAD
+
         <Link to="/demo">Navbar(logo)</Link>
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
@@ -14,8 +14,6 @@ export const Navbar = () => {
             <li className="nav-itemHome mt-2 mx-4">
               <Link to="/">Home</Link>
             </li>
-
-=======
         <a className="navbar-brand" href="#">
           Navbar
         </a>
@@ -46,7 +44,7 @@ export const Navbar = () => {
 
               </a>
             </li>
->>>>>>> main
+
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -55,7 +53,7 @@ export const Navbar = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-<<<<<<< HEAD
+
                 Library
               </a>
               <ul className="dropdown-menu">
@@ -74,7 +72,7 @@ export const Navbar = () => {
           <form className="d-flex w-100" role="search">
             <input
               className="form-control me-2 ml-100"
-=======
+              <a>
                 Discover
               </a>
               <ul className="dropdown-menu">
@@ -104,17 +102,12 @@ export const Navbar = () => {
           <form className="d-flex" role="search">
             <input
               className="form-control me-2"
->>>>>>> main
               type="search"
               placeholder="Look it up"
               aria-label="Find the right read"
             />
             <button className="btn btn-outline-success" type="submit">
-<<<<<<< HEAD
               Signup
-=======
-              Search
->>>>>>> main
             </button>
             <Link to="/login.js"></Link>
           </form>
@@ -123,8 +116,6 @@ export const Navbar = () => {
     </nav>
   );
 };
-<<<<<<< HEAD
-=======
 {
    <nav className="navbar navbar-light bg-light">
 			<div className="container">
@@ -139,4 +130,3 @@ export const Navbar = () => {
 			</div>
 		</nav> 
 }
->>>>>>> main
