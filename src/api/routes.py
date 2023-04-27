@@ -87,56 +87,57 @@ def create_token():
     return jsonify(msg="wrong user")
 
 @api.route('/users/story_covers', methods=['POST', 'GET'])
-@jwt_required()
+# @jwt_required()
 def story_cover():
-    email = get_jwt_identity()
-    user = User.query.filter_by(email = email).first()
-    if request.method == 'POST':
+    # email = get_jwt_identity()
+    # user = User.query.filter_by(email = email).first()
+    # if request.method == 'POST':
         
-        request_body = request.get_json()
-        if not request_body["title"]:
-            return jsonify({"msg": "Title is required"}), 400
-        story = Story_Cover (
+    #     request_body = request.get_json()
+    #     if not request_body["title"]:
+    #         return jsonify({"msg": "Title is required"}), 400
+    #     story = Story_Cover (
             
-            title = request_body["title"],
-            summary = request_body["summary"],
-            users_id = user.id 
-        ) 
-        db.session.add(story)   
-        db.session.commit()
-        return jsonify({"created": "Thanks. Your Story is created ", "status": "true"}), 200    
+    #         title = request_body["title"],
+    #         summary = request_body["summary"],
+    #         users_id = user.id 
+    #     ) 
+    #     db.session.add(story)   
+    #     db.session.commit()
+    #     return jsonify({"created": "Thanks. Your Story is created ", "status": "true"}), 200    
     
-    else:
+    # else:
     
-        all_story_cover = Story_Cover.query.filter_by(user_id = user.id )
+        all_story_cover = Story_Cover.query.all()
+        # filter_by(user_id = user.id )
         all_story_cover = list(map(lambda x: x.serialize(), all_story_cover))
         return jsonify(all_story_cover), 200
    
 
-@api.route('/story/<int:story_id>/chapters/', methods=['POST', 'GET'])
-@jwt_required()
-def chapter(story_id):
-    email = get_jwt_identity()
-    user = User.query.filter_by(email = email).first()
-    request_body = request.get_json()
-    if request.method == 'POST':
+@api.route('/<int:user_id>/<int:story_id>/chapters/', methods=['POST', 'GET'])
+# @jwt_required()
+def chapter(user_id,story_id):
+    # email = get_jwt_identity()
+    # user = User.query.filter_by(email = email).first()
+    # request_body = request.get_json()
+    # if request.method == 'POST':
         
        
         
-        chapter = Chapter (
-            user_id = user.id,
-            story_id = story_id,
-            chapter_number = request_body["chapter_number"],
-            chapter_name = request_body["chapter_name"],
-            chapter_text = request_body["chapter_text"]
-        ) 
-        db.session.add(chapter)   
-        db.session.commit()
-        return jsonify({"created": "Thanks. Your Chapter has been  created ", "status": "true"}), 200    
+    #     chapter = Chapter (
+    #         user_id = user.id,
+    #         story_id = story_id,
+    #         chapter_number = request_body["chapter_number"],
+    #         chapter_name = request_body["chapter_name"],
+    #         chapter_text = request_body["chapter_text"]
+    #     ) 
+    #     db.session.add(chapter)   
+    #     db.session.commit()
+    #     return jsonify({"created": "Thanks. Your Chapter has been  created ", "status": "true"}), 200    
        
    
        
-    if request.method == 'GET':   
+    # if request.method == 'GET':   
         all_story_chapters = Chapter.query.filter_by(user_id=user.id, story_id= story_id)
         all_story_chapters = list(map(lambda x: x.serialize(), all_story_chapters))
         return jsonify(all_story_chapters), 200
