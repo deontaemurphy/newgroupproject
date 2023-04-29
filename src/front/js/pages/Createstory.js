@@ -11,33 +11,22 @@ export default function Createstory() {
           <div></div>
           <h3 className="">Title</h3>
           <input></input>
-          {/* <div className="dropdown">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              
-            </button>
-            <ul className="dropdown-menu dropdown-menu-dark">
-              <li>
-                <a className="dropdown-item active">Action</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Another action</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Something else here</a>
-              </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
-              <li>
-                <a className="dropdown-item">Separated link</a>
-              </li>
-            </ul>
-          </div> */}
+          <div class="card" style="width: 18rem;">
+          <img src="..." class="card-img-top" alt="description relating to photo"/>
+          <div class="card-body">
+          <h5 class="card-title">Story title</h5>
+          <p class="card-text">Romeo and Juiletta</p>
+          </div>
+          <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+          </ul>
+          <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+          </div>
+          </div>
           <h3>Description</h3>
           <textarea placeholder="Add description here"></textarea>
           <div>

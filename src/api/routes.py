@@ -10,8 +10,9 @@ from flask_jwt_extended import get_jwt_identity
 from flask_jwt_extended import jwt_required
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
-api = Blueprint('api', __name__)
-
+api = Blueprint('api', __name__) 
+# os.getenv('JWT_SECRET', 'sample key') #Change this
+jwt = JWTManager(app)
 # equal id to token 
 
 
