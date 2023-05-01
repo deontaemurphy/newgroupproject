@@ -11,10 +11,10 @@ from flask_jwt_extended import jwt_required
 from werkzeug.security import generate_password_hash, check_password_hash
 import datetime
 api = Blueprint('api', __name__) 
-# os.getenv('JWT_SECRET', 'sample key') #Change this
+app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')
 jwt = JWTManager(app)
 # equal id to token 
-
+ #access_token = create_access_token
 
 
 # @api.route("/token", methods=["POST"])
