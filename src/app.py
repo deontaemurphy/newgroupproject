@@ -21,13 +21,14 @@ ENV = os.getenv("FLASK_ENV")
 static_file_dir = os.path.join(os.path.dirname(os.path.realpath(__file__)), '../public/')
 app = Flask(__name__)
 app.url_map.strict_slashes = False
-
+app.config["JWT_SECRET_KEY"] = os.environ.get('JWT_SECRET')
+jwt = JWTManager(app)
 app.secret_key = os.environ.get('JWT_SECRET', 'sample key')
 app.config["FLASK_APP_KEY"] = os.environ.get('FLASK_APP_KEY')  # Change this!
 # # I createdJWT_SECRET in env and imported here
 jwt = JWTManager(app)
 
-# database condiguration
+# database configuration
 db_url = os.getenv("DATABASE_URL")
 if db_url is not None:
     app.config['SQLALCHEMY_DATABASE_URI'] = db_url.replace("postgres://", "postgresql://")
