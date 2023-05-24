@@ -26,7 +26,7 @@ export const Demo = () => {
 								</p>
 							) : null}
 							<button className="btn btn-success" onClick={() => actions.changeColor(index, "orange")}>
-								Change Color
+								Orange - Red
 							</button>
 						</li>
 					);
@@ -34,7 +34,7 @@ export const Demo = () => {
 			</ul>
 			<br />
 			<Link to="/">
-				<button className="btn btn-primary">Back home</button>
+				<button className="btn btn-primary">de "casa"</button>
 			</Link>
 		</div>
 	);

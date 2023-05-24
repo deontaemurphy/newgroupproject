@@ -16,12 +16,11 @@ export const Single = (props) => {
       <img src={rigoImageUrl} />
       <hr className="my-4" />
 
-      <Link to="/">
+      <Link to="/home">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
         </span>
       </Link>
-     
     </div>
   );
 };
