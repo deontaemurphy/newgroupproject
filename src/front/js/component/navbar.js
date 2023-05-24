@@ -29,7 +29,7 @@ export const Navbar = () => {
             <li className="nav-item">
               <a className="nav-link" href="#">
 
-                Discover
+                Discover Your Parabla
 
         
 
@@ -47,17 +47,19 @@ export const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Action
+                  <a className="dropdown-item" href="this way to the linkage of the bokks being a public domain read.">
+                    My Book <span>donde estas las bibl 'i' oeteca</span> (sus libre)
                   </a>
+                      <bold>Too much "c" </bold>
+
                 </li>
                 <li>
                   <a className="dropdown-item" href="#">
-                    Another action
+                  
                   </a>
                 </li>
 
-                <li>className="dropdown-divider"</li>
+                <li>   <span>   Code Name Kids Next Door : </span></li>
                 <li>
                   <a className="dropdown-item" href="#">
                     Something else here
