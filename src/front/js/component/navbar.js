@@ -98,7 +98,7 @@ export const Navbar = () => {
                 </li>
               </ul>
             <li className="nav-item">
-              <a className="nav-link disabled">Disabled</a>
+              <a className="nav-link disabled">"Disabled"</a>
             </li>
           </ul>
           <form className="d-flex" role="search">
@@ -121,8 +121,8 @@ export const Navbar = () => {
 {
    <nav className="navbar navbar-light bg-light">
 			<div className="container">
-				<Link to="/">
-					<span className="navbar-brand mb-0 h1">Home</span>
+				<Link to="/home">
+					<span className="navbar-brand mb-0 h1">"Home"</span>
 				</Link>
 				<div className="ml-auto">
 					<Link to="/demo">
