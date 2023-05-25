@@ -17,7 +17,11 @@ export const Navbar = () => {
                 Home
                 </Link>
             </li>
-
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+              Profile
+              </a>
+            </li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -31,23 +35,26 @@ export const Navbar = () => {
               </a>
               <ul className="dropdown-menu">
                 <li>
-                <Link to="/Createstory">
-                  User
-                 </Link>
-
+                  <a className="dropdown-item" href="#">
+                    Action
+                  </a>
                 </li>
                 <li>
-                <Link to="/demo">
-                    View Favorites
-                    </Link >
-
+                  <a className="dropdown-item" href="#">
+                    Another action
+                  </a>
                 </li>
+
+                <li>   <span>   Code Name Kids Next Door : </span></li>
                 <li>
                 <Link to="/">
                     Logout
                     </Link >
                 </li>
               </ul>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link disabled">Disabled</a>
             </li>
           </ul>
           <form className="d-flex w-100" role="search">
@@ -67,3 +74,17 @@ export const Navbar = () => {
     </nav>
   );
 };
+{
+   <nav className="navbar navbar-light bg-light">
+			<div className="container">
+				<Link to="/">
+					<span className="navbar-brand mb-0 h1">Home</span>
+				</Link>
+				<div className="ml-auto">
+					<Link to="/demo">
+						<button className="btn btn-primary">Check the Context in action</button>
+					</Link>
+				</div>
+			</div>
+		</nav> 
+}
