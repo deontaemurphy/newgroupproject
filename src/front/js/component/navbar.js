@@ -28,11 +28,7 @@ export const Navbar = () => {
             </li>
             <li className="nav-item">
               <a className="nav-link" href="#">
-
                 Discover Your Parabla
-
-        
-
               </a>
             </li>
             <li className="nav-item dropdown">
@@ -49,20 +45,24 @@ export const Navbar = () => {
                 <li>
                   <ul>Orange</ul>
                   <a className="dropdown-item">
-                    My Book <span>donde estas las bibl 'i' oeteca</span> (sus libre)
+                    My Book <span>donde estas las bibl 'i' oeteca</span> (sus
+                    libre)
                   </a>
-                      <bold>Too much "c" </bold>
-
+                  <bold>Too much "c" </bold>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                  
-                  </a>
+                  <a className="dropdown-item" href="#"></a>
                 </li>
 
-                <li>   <span>   Code Name Kids Next Door : </span></li>
                 <li>
-                  <a className="dropdown-item" href="#">
+                  {" "}
+                  <span> Code Name Kids Next Door : </span>
+                </li>
+                <li>
+                  <a
+                    className="dropdown-item"
+                    href="https://3000-deontaemurp-newgrouppro-97s7svokbii.ws-us97.gitpod.io/single/0"
+                  >
                     Something else here
                   </a>
                 </li>
@@ -89,16 +89,18 @@ export const Navbar = () => {
   );
 };
 {
-   <nav className="navbar navbar-light bg-light">
-			<div className="container">
-				<Link to="/home">
-					<span className="navbar-brand mb-0 h1">"Home"</span>
-				</Link>
-				<div className="ml-auto">
-					<Link to="/demo">
-						<button className="btn btn-primary">Check the Context in action</button>
-					</Link>
-				</div>
-			</div>
-		</nav> 
+  <nav className="navbar navbar-light bg-light">
+    <div className="container">
+      <Link to="/home">
+        <span className="navbar-brand mb-0 h1">"Home"</span>
+      </Link>
+      <div className="ml-auto">
+        <Link to="/demo">
+          <button className="btn btn-primary">
+            Check the Context in action
+          </button>
+        </Link>
+      </div>
+    </div>
+  </nav>;
 }

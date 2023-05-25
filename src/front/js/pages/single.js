@@ -17,7 +17,7 @@ export const Single = (props) => {
       <h1> Mobile </h1>
       <hr className="my-4" />
 
-      <Link to="/home">
+      <Link to="/single">
         <span className="btn btn-primary btn-lg" href="#" role="button">
           Back home
         </span>
