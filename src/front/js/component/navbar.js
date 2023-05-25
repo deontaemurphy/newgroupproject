@@ -55,7 +55,7 @@ export const Navbar = () => {
                 </li>
 
                 <li>
-                  {" "}
+                  {"https://wallpaperaccess.com/full/8011.jpg"}
                   <span> Code Name Kids Next Door : </span>
                 </li>
                 <li>
@@ -63,7 +63,7 @@ export const Navbar = () => {
                     className="dropdown-item"
                     href="https://3000-deontaemurp-newgrouppro-97s7svokbii.ws-us97.gitpod.io/single/0"
                   >
-                    Something else here
+                    Profile
                   </a>
                 </li>
               </ul>
