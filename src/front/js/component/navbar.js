@@ -108,7 +108,7 @@ export const Navbar = () => {
             <button className="btn btn-outline-success" type="submit">
               Signup
             </button>
-            <Link to="/login.js"></Link>
+            <Link to="/createaccount"></Link>
           </form>
         </div>
       </div>
