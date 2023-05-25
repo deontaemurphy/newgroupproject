@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from "react";
 import PropTypes from "prop-types";
 import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
-import rigoImageUrl from "../../img/rigo-baby.jpg";
+
 
 export const Single = (props) => {
   const { store, actions } = useContext(Context);
@@ -13,7 +13,8 @@ export const Single = (props) => {
       <h1 className="display-4">
         This will show the demo element: {store.demo[params.theid].title}
       </h1>
-      <img src={rigoImageUrl} />
+      <img src= "https://wallpaperaccess.com/full/8011.jpg"/>
+      <h1> Mobile </h1>
       <hr className="my-4" />
 
       <Link to="/home">
