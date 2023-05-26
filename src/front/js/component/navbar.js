@@ -56,12 +56,14 @@ export const Navbar = () => {
 
                 <li>
                   {"https://wallpaperaccess.com/full/8011.jpg"}
-                  <span> Code Name Kids Next Door : </span>
+                <Link to ="/CreateAccount">
+                 <span> Code Name Kids Next Door : </span>
+                </Link>
                 </li>
                 <li>
                   <a
                     className="dropdown-item"
-                    href="https://3000-deontaemurp-newgrouppro-97s7svokbii.ws-us97.gitpod.io/single/0"
+                    href="google.com"
                   >
                     Profile
                   </a>
@@ -79,9 +81,11 @@ export const Navbar = () => {
               placeholder="Search"
               aria-label="Search"
             />
+            <Link to ="/demo">
             <button className="btn btn-outline-success" type="submit">
               Search
             </button>
+            </Link>
           </form>
         </div>
       </div>
