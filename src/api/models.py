@@ -6,7 +6,6 @@ class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(256), unique=True, nullable=False)
     password = db.Column(db.String(256), unique=False, nullable=False)
-    username = db.Column(db.String(256), unique=True, nullable=False)
     chapter = db.relationship('Chapter', backref= 'user', lazy = True)
      # story_cover_username = db.relationship('Story_Cover', backref='user', lazy=True, foreign_keys= [username])
     story_cover_user_id = db.relationship('Story_Cover', backref='user', lazy=True, foreign_keys='Story_Cover.user_id')
@@ -16,10 +15,7 @@ class User(db.Model):
     def serialize(self):
         return {
             "id": self.id,
-            "email": self.email,
-            "username": self.username
-            
-        
+            "email": self.email
         }
 class Story_Cover(db.Model):
   
