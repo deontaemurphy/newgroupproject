@@ -151,7 +151,7 @@ export const SignUp = () => {
             <div className="row justify-content-center">
               <div className=" ">
                 <p>
-                  Have an account? <Link to="/Signup">Log in here</Link>
+                  Have an account? <Link to="/createaccount">Log in here</Link>
                 </p>
               </div>
             </div>
