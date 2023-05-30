@@ -54,35 +54,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           setStore({ token: null });
         window.location.href = cf_url + "/";
       },
-      // login: async (email,password) => {
-      //   const opt = {
-      //     method: "POST",
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     body: JSON.stringify({
-      //       email: email,
-      //       password: password,
-      //       // user_id: user_id,
-      //     }),
-      //   };
-      //   const resp = await fetch(
-      //     "https://3001-deontaemurp-newgrouppro-8tf8x11ptk9.ws-us95.gitpod.io/admin/api/token",
-      //     opt
-      //   )
-      //   if (resp.status !== 200){
-      //     alert("there will be an error");
-      //     return false;
-      //   }
-      //   // const data = await resp.json();
-      //   //   .then((data) => {
-      //   //     console.log("this came from backend", data);
-      //   //     sessionStorage.setItem("token", data.access_token);
-      //   //   })
-      //   //   .catch((error) => {
-      //   //     console.error("there was an error", error);
-      //   //   })
-      // }
 
       login: async (email, password) => {
         const opts = {
@@ -106,15 +77,9 @@ const getState = ({ getStore, getActions, setStore }) => {
           const data = await res.json();
           console.log("this is from backend flux", data);
           sessionStorage.setItem("token", data.access_token);
-          data.favorites.forEach((f) => {
-            //was returning an error bc it didnt like the single quotes so the line below turns the single into double quotes
-            f.item = f.item.replace(/'/g, '"');
-            f.item = JSON.parse(f.item);
-          });
           setStore({
             token: data.access_token,
             // favorites: data.favorites, need to add favorites
-            user_name: data.user,
           });
           return true;
         } catch (error) {
@@ -122,15 +87,20 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      signup: (data) => {
+      register: (name, email, password) => {
         const store = getStore();
-        console.log("data received", data);
-        console.log(JSON.stringify(data));
-        return fetch(`${cb_url}/api/signup`, {
-          method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify(data),
-        })
+
+        return fetch(
+          `https://3001-deontaemurp-newgrouppro-97s7svokbii.ws-us98.gitpod.io/api/createUser`,
+          {
+            method: "POST",
+            headers: {
+              "Content-type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+            body: JSON.stringify({ name, email, password }),
+          }
+        )
           .then((res) => {
             if (res.status === 409)
               throw new Error(
@@ -142,15 +112,10 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .then((data) => {
             console.log("data ", data);
-            getActions().setAlert({
-              type: "success",
-              msg: data.msg,
-              show: true,
-            });
 
             return true;
           })
-          .catch((err) => err);
+          .catch((error) => error);
       },
 
       getMessage: async () => {

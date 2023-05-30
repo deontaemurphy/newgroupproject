@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import rigoImageUrl from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Login } from "./login.js";
+import  Login  from "./login.js";
 
 import { SignUp } from "./SignUp";
 

@@ -9,8 +9,8 @@ import injectContext from "./store/appContext";
 
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-import { SignUp } from "./pages/SignUp";
-import { Login } from "./pages/login.js";
+import Register from "./pages/SignUp";
+import Login from "./pages/login.js";
 import Createstory from "./pages/Createstory";
 
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
@@ -28,7 +28,7 @@ const Layout = () => {
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
-            <Route element={<SignUp />} path="/createaccount" />
+            <Route element={<Register />} path="/createaccount" />
             <Route element={<Createstory />} path="/Createstory" />
             <Route element={<Demo />} path="/demo" />
             <Route element={<Single />} path="/single/:theid" />
