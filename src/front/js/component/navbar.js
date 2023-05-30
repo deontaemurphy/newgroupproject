@@ -55,18 +55,16 @@ export const Navbar = () => {
                 </li>
 
                 <li>
-                  {"https://wallpaperaccess.com/full/8011.jpg"}
-                <Link to ="/CreateAccount">
-                 <span> Code Name Kids Next Door : </span>
-                </Link>
+                  <Link to="/CreateAccount">
+                    <span> Code Name Kids Next Door : </span>
+                  </Link>
                 </li>
                 <li>
-                  <a
-                    className="dropdown-item"
-                    href="google.com"
-                  >
-                    Profile
-                  </a>
+                  <Link to="/single/:theid">
+                    <a className="dropdown-item" href="#">
+                      Profile
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </li>
@@ -81,10 +79,10 @@ export const Navbar = () => {
               placeholder="Search"
               aria-label="Search"
             />
-            <Link to ="/demo">
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
+            <Link to="/demo">
+              <button className="btn btn-outline-success" type="submit">
+                Search
+              </button>
             </Link>
           </form>
         </div>
