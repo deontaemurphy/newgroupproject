@@ -1,16 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import algoliasearch from "algoliasearch/lite";
-import {
-  InstantSearch,
-  SearchBox,
-  Pagination,
-} from "react-instantsearch-hooks-web";
+import Search from "./SearchApi";
 // import fontawesome from "font-awesome";
-const searchClient = algoliasearch(
-  "7VW33R3U8I",
-  "b1f9230c31bc7c0e843528ead2376046"
-);
 
 export const Navbar = () => {
   return (
@@ -65,25 +56,13 @@ export const Navbar = () => {
           </ul>
 
           <form className="d-flex w-100" role="search">
-            {/* <input
+            {/*           <input
               className="form-control me-2 ml-100"
               type="search"
-              placeholder="Look it up"
+              placeholder="Search"
               aria-label="Find the right read"
             /> */}
-            <div className="ais-InstantSearch">
-              <InstantSearch
-                indexName="the_book_club"
-                searchClient={searchClient}
-              >
-                <div>
-                  <SearchBox />
-                  <div className="d-flex">
-                    <Pagination />
-                  </div>
-                </div>
-              </InstantSearch>
-            </div>
+            <Search />
             <button className="btn btn-outline-success" type="submit">
               Login/Signup
             </button>
