@@ -39,7 +39,7 @@ export const Navbar = () => {
                 </li>
                 <li className="nav-item">
                   <a className="nav-link" href="#">
-                    Discover Your Parabla
+                    Discover Your Palabra
                   </a>
                 </li>
 

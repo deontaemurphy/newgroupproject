@@ -69,7 +69,9 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const res = await fetch(process.env.BACKEND_URL + "/api/login", opts);
+          const res = await fetch(
+            `https://3001-deontaemurp-newgrouppro-97s7svokbii.ws-us98.gitpod.io/api/token`
+          );
           if (res.status !== 200) {
             alert("there has been an error");
             return false;
@@ -94,11 +96,16 @@ const getState = ({ getStore, getActions, setStore }) => {
           `https://3001-deontaemurp-newgrouppro-97s7svokbii.ws-us98.gitpod.io/api/createUser`,
           {
             method: "POST",
+            mode: "cors",
             headers: {
               "Content-type": "application/json",
               "Access-Control-Allow-Origin": "*",
             },
-            body: JSON.stringify({ name, email, password }),
+            body: JSON.stringify({
+              name: name,
+              email: email,
+              password: password,
+            }),
           }
         )
           .then((res) => {

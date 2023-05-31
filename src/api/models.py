@@ -5,6 +5,7 @@ db = SQLAlchemy()
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(256), unique=True, nullable=False)
+    name = db.Column(db.String(256))
     password = db.Column(db.String(256), unique=False, nullable=False)
     chapter = db.relationship('Chapter', backref= 'user', lazy = True)
      # story_cover_username = db.relationship('Story_Cover', backref='user', lazy=True, foreign_keys= [username])
