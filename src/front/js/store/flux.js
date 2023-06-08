@@ -70,7 +70,8 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const res = await fetch(
-            `https://3001-deontaemurp-newgrouppro-97s7svokbii.ws-us98.gitpod.io/api/token`
+            `https://3001-deontaemurp-newgrouppro-tegeyvkur3n.ws-us99.gitpod.io/api/login`,
+            opts
           );
           if (res.status !== 200) {
             alert("there has been an error");
@@ -93,7 +94,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
 
         return fetch(
-          `https://3001-deontaemurp-newgrouppro-97s7svokbii.ws-us98.gitpod.io/api/createUser`,
+          `https://3001-deontaemurp-newgrouppro-tegeyvkur3n.ws-us99.gitpod.io/api/createUser`,
           {
             method: "POST",
             mode: "cors",
