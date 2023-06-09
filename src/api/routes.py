@@ -38,6 +38,13 @@ def create_token():
     access_token = create_access_token(identity= user.id, expires_delta= expiration)
     return jsonify(access_token=access_token), 200
 
+@api.route('/user', methods=['GET'])
+@jwt_required()
+def user():
+  username = get_jwt_identity()
+  user = User.query.filter_by(username = username).first()
+  return jsonify(user.serialize()), 200
+
 
 @api.route('/createUser', methods=['POST'])
 def createUser():
