@@ -70,13 +70,13 @@ const getState = ({ getStore, getActions, setStore }) => {
         };
         try {
           const res = await fetch(
-            `https://3001-deontaemurp-newgrouppro-tegeyvkur3n.ws-us99.gitpod.io/api/login`,
+            `https://3001-deontaemurp-newgrouppro-zu2xsffdobe.ws-us99.gitpod.io/api/login`,
             opts
           );
-          if (res.status !== 200) {
-            alert("there has been an error");
-            return false;
-          }
+          // if (res.status !== 200) {
+          //   alert("there has been an error");
+          //   return false;
+          // }
           const data = await res.json();
           console.log("this is from backend flux", data);
           sessionStorage.setItem("token", data.access_token);
@@ -94,7 +94,7 @@ const getState = ({ getStore, getActions, setStore }) => {
         const store = getStore();
 
         return fetch(
-          `https://3001-deontaemurp-newgrouppro-tegeyvkur3n.ws-us99.gitpod.io/api/createUser`,
+          `https://3001-deontaemurp-newgrouppro-zu2xsffdobe.ws-us99.gitpod.io/api/createUser`,
           {
             method: "POST",
             mode: "cors",
