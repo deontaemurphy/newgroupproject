@@ -10,7 +10,8 @@ export const Single = (props) => {
   return (
     <div className="jumbotron">
       <h1 className="display-4">
-        This will show the demo element: {store.demo[params.theid].title}
+        This will show the demo book club search page{" "}
+        {store.demo[params.theid].title}
       </h1>
       <img src="https://wallpaperaccess.com/full/8011.jpg" />
       <hr className="my-4" />

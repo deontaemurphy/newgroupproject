@@ -6,15 +6,15 @@ export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link to="/demo">Navbar(logo)</Link>
-
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-itemHome mt-2 mx-4">
-              <Link to="/">Home</Link>
+              <Link to="/thebookclubfavorites">
+                <i class="fa-solid fa-bookmark fa-bounce"></i>
+              </Link>
             </li>
-            <a className="navbar-brand" href="#">
-              Navbar
+            <a className="navbar-brand" href="https://www.algolia.com/">
+              Search With Algolia
             </a>
             <button
               className="navbar-toggler"
@@ -31,6 +31,9 @@ export const Navbar = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
+              <Link to="/">
+                Navbar<i class="fa-solid fa-bookmark"></i>
+              </Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
@@ -58,28 +61,29 @@ export const Navbar = () => {
                       <Link to="/Createstory">User</Link>
                     </li>
                     <li>
-                      <Link to="/demo">View Favorites</Link>
+                      <Link to="/thebookclub">View Favorites</Link>
                     </li>
                     <li>
-                      <Link to="/">Logout</Link>
+                      <Link to="/home">Logout</Link>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
             <form className="d-flex w-100" role="search" />
+            
+            <div className="form-control">Discover
             <input className="form-control me-2 ml-100" />
-            <div>Discover</div>
+            </div>
             <ul className="dropdown-menu">
               <li>
                 <a
                   className="dropdown-item"
                   href="this way to the linkage of the bokks being a public domain read."
                 >
-                  My Book <span>donde estas las bibl 'i' oeteca</span> (sus
-                  libre)
+                  My Book <span></span>
                 </a>
-                <bold>Too much "c" </bold>
+                <strong>H</strong>
               </li>
               <li>
                 <a className="dropdown-item" href="#"></a>
@@ -87,7 +91,7 @@ export const Navbar = () => {
 
               <li>
                 {" "}
-                <span> Code Name Kids Next Door : </span>
+                <span> Modify</span>
               </li>
               <li>
                 <a className="dropdown-item" href="google.com">
@@ -109,7 +113,7 @@ export const Navbar = () => {
             <button className="btn btn-outline-success" type="submit">
               Signup
             </button>
-            <Link to="/createaccount"></Link>
+            <a href ="https://3000-deontaemurp-newgrouppro-ov2uc672d2n.ws-us100.gitpod.io/createUser"></a>
           </form>
         </div>
       </div>
