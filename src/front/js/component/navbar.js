@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Createstory from "../pages/Createstory";
+import Login from "../pages/login";
 
 export const Navbar = () => {
   return (
@@ -27,6 +27,10 @@ export const Navbar = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+            <div className="form-control">
+              Discover (Needs to be up under The Algolia)
+              <input className="form-control me-2 ml-100" />
+            </div>
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
@@ -58,7 +62,9 @@ export const Navbar = () => {
                       <Link to="/">Createstory</Link>
                     </li>
                     <li>
-                      <Link to="/thebookclubfavorites">View Favorites</Link>
+                      <Link to="/thebookclubfavorites">
+                        View Favorites is undefined
+                      </Link>
                     </li>
                     <li>
                       <Link to="/thebookclub">Logout</Link>
@@ -67,51 +73,10 @@ export const Navbar = () => {
                 </li>
               </ul>
             </div>
-            <form className="d-flex w-100" role="search" />
-
-            <div className="form-control">
-              Discover
-              <input className="form-control me-2 ml-100" />
-            </div>
-            <ul className="dropdown-menu">
-              <li>
-                <a
-                  className="dropdown-item"
-                  href="this way to the linkage of the bokks being a public domain read."
-                >
-                  My Book <span></span>
-                </a>
-                <strong>H</strong>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#"></a>
-              </li>
-
-              <li>
-                {" "}
-                <span> Modify</span>
-              </li>
-              <li>
-                <a className="dropdown-item" href="google.com">
-                  Something else here
-                </a>
-              </li>
-            </ul>
-            <li className="nav-item">
-              <a className="nav-link disabled"></a>
-            </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Look it up"
-              aria-label="Find the right read"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Login
-            </button>
-          </form>
+          <Link to="/createUser">
+            <button>Login</button>
+          </Link>
         </div>
       </div>
     </nav>
