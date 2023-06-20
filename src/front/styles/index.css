@@ -1,6 +1,9 @@
 /* 
     General Styles used on every website (Don't Repeat Yourself)
 */
+
+
+.nav-itemHome
 .whole-screen {
   background-image: linear-gradient(to right, #01b636, yellow);
 }
