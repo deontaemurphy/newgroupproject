@@ -31,9 +31,6 @@ export const Navbar = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <Link to="/">
-                Navbar<i class="fa-solid fa-bookmark"></i>
-              </Link>
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
                   <a className="nav-link active" aria-current="page" href="#">
@@ -58,22 +55,23 @@ export const Navbar = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link to="/Createstory">User</Link>
+                      <Link to="/">Createstory</Link>
                     </li>
                     <li>
-                      <Link to="/thebookclub">View Favorites</Link>
+                      <Link to="/thebookclubfavorites">View Favorites</Link>
                     </li>
                     <li>
-                      <Link to="/home">Logout</Link>
+                      <Link to="/thebookclub">Logout</Link>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
             <form className="d-flex w-100" role="search" />
-            
-            <div className="form-control">Discover
-            <input className="form-control me-2 ml-100" />
+
+            <div className="form-control">
+              Discover
+              <input className="form-control me-2 ml-100" />
             </div>
             <ul className="dropdown-menu">
               <li>
@@ -111,9 +109,8 @@ export const Navbar = () => {
               aria-label="Find the right read"
             />
             <button className="btn btn-outline-success" type="submit">
-              Signup
+              Login
             </button>
-            <a href ="https://3000-deontaemurp-newgrouppro-ov2uc672d2n.ws-us100.gitpod.io/createUser"></a>
           </form>
         </div>
       </div>
