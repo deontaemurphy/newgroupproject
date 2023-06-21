@@ -39,7 +39,7 @@ const Layout = () => {
             <Route element={<h1>Not found!</h1>} />
             <Route element={<The_Book_Club />} path="/thebookclub" />
             <Route element={<Search />} path="/searchthebookclub" />
-            <Route element={<Publish />} path="/publish" />
+            <Route element={<Publish />} path="/publishmystory" />
             <Route element={<TheBookClubFavorites />} path="/favorites" />
           </Routes>
           <Footer />

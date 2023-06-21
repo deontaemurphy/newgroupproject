@@ -16,7 +16,7 @@ export const Createstory = () => {
               style={{ background: item.background }}
             >
               <Link to="/publishmystory">
-                <span>Link to: "story title" </span>
+                <span>Link to: "publish" </span>
               </Link>
               {
                 // Conditional render example
