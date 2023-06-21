@@ -5,7 +5,7 @@ export const Footer = () => (
     <nav aria-label="Page navigation example">
       <ul className="pagination">
         <li className="page-item">
-          <a className="page-link" href="">
+          <a className="page-link" href="#">
             Previous
           </a>
         </li>
