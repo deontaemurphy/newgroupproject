@@ -40,7 +40,11 @@ export const Navbar = () => {
             >
               <ul className="navbar-nav me-auto mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <a
+                    className="nav-link active"
+                    aria-current="page"
+                    href="https://3000-doctorine06-newgrouppro-39pq6je7xty.ws-us100.gitpod.io/"
+                  >
                     Home
                   </a>
                 </li>

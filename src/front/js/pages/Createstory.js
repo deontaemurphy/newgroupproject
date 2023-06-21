@@ -1,41 +1,48 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
 
-export default function Createstory() {
-  const [story, setStory] = useState();
-  const token = sessionStorage.getItem("token");
+export const Createstory = () => {
+  const { store, actions } = useContext(Context);
+
   return (
-    <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
-      <form>
-        <div className="box vh-100 w-100">
-          {/* cover upload under */}
-          <div></div>
-          <h3 className="">Title</h3>
-          <input></input>
-          <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="description relating to photo"/>
-          <div class="card-body">
-          <h5 class="card-title">Story title</h5>
-          <p class="card-text">Romeo and Juiletta</p>
-          </div>
-          <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          </ul>
-          <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-          </div>
-          </div>
-          <h3>Description</h3>
-          <textarea placeholder="Add description here"></textarea>
-          <div>
-            <button type="button" className="btn-grad rounded-pill">
-              Create
-            </button>
-          </div>
-        </div>
-      </form>
+    <div className="container">
+      <ul className="list-group">
+        {store.demo.map((item, index) => {
+          return (
+            <li
+              key={index}
+              className="list-group-item d-flex justify-content-between"
+              style={{ background: item.background }}
+            >
+              <Link to={"/single/" + index}>
+                <span>Link to: {item.title}</span>
+              </Link>
+              {
+                // Conditional render example
+                // Check to see if the background is orange, if so, display the message
+                item.background === "orange" ? (
+                  <p style={{ color: item.initial }}>
+                    Check store/flux.js scroll to the actions to see the code
+                  </p>
+                ) : null
+              }
+              <button
+                className="btn btn-success"
+                onClick={() => actions.changeColor(index, "orange")}
+              >
+                Blue
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      <br />
+      <Link to="/home">
+        <button className="btn btn-primary">Vide</button>
+      </Link>
     </div>
   );
-}
+};
+
+export default Createstory;
