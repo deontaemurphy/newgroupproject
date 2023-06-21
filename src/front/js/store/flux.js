@@ -1,58 +1,60 @@
 const getState = ({ getStore, getActions, setStore }) => {
-  const token = sessionStorage.getItem("token");
-  let cb_url = process.env.BACKEND_URL;
   return {
     store: {
-      message: null,
-
-      //   evertime I come back must update cf_url by coping if from the browser of my frontend
       token: null,
-      user: null,
-      cf_url:
-        "https:3000-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/",
-      username: null,
+      message: null,
+      demo: [
+        {
+          title: "FIRST",
+          background: "white",
+          initial: "white",
+        },
+        {
+          title: "SECOND",
+          background: "white",
+          initial: "white",
+        },
+      ],
     },
     actions: {
       // Use getActions to call a function within a fuction
       exampleFunction: () => {
         getActions().changeColor(0, "green");
       },
+      loadSomeData: () => {
+        changeColor: (index, color) => {
+          //get the store
+          const store = getStore();
 
-      logout: () => {
-        const cf_url = getStore().cf_url;
-        const token = sessionStorage.removeItem("token");
-        setStore({ token: null });
+          //we have to loop the entire demo array to look for the respective index
+          //and change its color
+          const demo = store.demo.map((elm, i) => {
+            if (i === index) elm.background = color;
+            return elm;
+          });
+
+          //reset the global store
+          setStore({ demo: demo });
+        },
+          // const token = sessionStorage.getItem("token"),
+          // let cb_url = process.env.BACKEND_URL,
+          // return {
+          // store: {
+          // message: null,
+
+          //   evertime I come back must update cf_url by coping if from the browser of my frontend
+          // token: null,
+          // user: null,
+          // cf_url:
+          // "https:3000-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/",
+          // username: null,
+          // },
+          // logout: () => {
+          // const cf_url = getStore().cf_url;
+          // const token = sessionStorage.removeItem("token");
+          setStore({ token: null });
         window.location.href = cf_url + "/";
       },
-        // login: async (email,password) => {
-        //   const opt = {
-        //     method: "POST",
-        //     headers: {
-        //       "Content-Type": "application/json",
-        //     },
-        //     body: JSON.stringify({
-        //       email: email,
-        //       password: password,
-        //       // user_id: user_id,
-        //     }),
-        //   };
-        //   const resp = await fetch(
-        //     "https://3001-deontaemurp-newgrouppro-8tf8x11ptk9.ws-us95.gitpod.io/admin/api/token",
-        //     opt
-        //   )
-        //   if (resp.status !== 200){
-        //     alert("there will be an error");
-        //     return false;
-        //   }
-        //   // const data = await resp.json();
-        //   //   .then((data) => {
-        //   //     console.log("this came from backend", data);
-        //   //     sessionStorage.setItem("token", data.access_token);
-        //   //   })
-        //   //   .catch((error) => {
-        //   //     console.error("there was an error", error);
-        //   //   })
-        // }
 
       login: async (email, password) => {
         const opts = {
@@ -68,23 +70,17 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const res = await fetch(process.env.BACKEND_URL + "/api/login", opts);
-          if (res.status !== 200) {
-            alert("there has been an error");
-            return false;
-          }
+          const res = await fetch(process.env.BACKEND_URL + `/api/login`, opts);
+          // if (res.status !== 200) {
+          //   alert("there has been an error");
+          //   return false;
+          // }
           const data = await res.json();
           console.log("this is from backend flux", data);
           sessionStorage.setItem("token", data.access_token);
-          data.favorites.forEach((f) => {
-            //was returning an error bc it didnt like the single quotes so the line below turns the single into double quotes
-            f.item = f.item.replace(/'/g, '"');
-            f.item = JSON.parse(f.item);
-          });
           setStore({
             token: data.access_token,
             // favorites: data.favorites, need to add favorites
-            user_name: data.user,
           });
           return true;
         } catch (error) {
@@ -92,14 +88,26 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
-      signup: (data) => {
+      logout: () => {
+        sessionStorage.removeItem("token");
+        setStore({ token: null });
+      },
+
+      register: (name, email, password) => {
         const store = getStore();
-        console.log("data received", data);
-        console.log(JSON.stringify(data));
-        return fetch(`${cb_url}/api/signup`, {
+
+        fetch(process.env.BACKEND_URL + `/api/createUser`, {
           method: "POST",
-          headers: { "Content-type": "application/json" },
-          body: JSON.stringify(data),
+          mode: "cors",
+          headers: {
+            "Content-type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            password: password,
+          }),
         })
           .then((res) => {
             if (res.status === 409)
@@ -112,15 +120,10 @@ const getState = ({ getStore, getActions, setStore }) => {
           })
           .then((data) => {
             console.log("data ", data);
-            getActions().setAlert({
-              type: "success",
-              msg: data.msg,
-              show: true,
-            });
 
             return true;
           })
-          .catch((err) => err);
+          .catch((error) => error);
       },
 
       getMessage: async () => {
@@ -132,9 +135,10 @@ const getState = ({ getStore, getActions, setStore }) => {
           // don't forget to return something, that is how the async resolves
           return data;
         } catch (error) {
-          console.log("Error loading message from backend", error);
+          console.log("Error from backend", error);
         }
       },
+
       // changeColor: (index, color) => {
       //   //get the store
       //   const store = getStore();

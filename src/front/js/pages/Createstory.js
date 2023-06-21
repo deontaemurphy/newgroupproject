@@ -1,52 +1,49 @@
-import React from "react";
-import { useState } from "react";
-export default function Createstory() {
-  const [story, setStory] = useState();
-  const token = sessionStorage.getItem("token");
+import React, { useContext, useState } from "react";
+import { Context } from "../store/appContext";
+import { Link } from "react-router-dom";
+
+export const Createstory = () => {
+  const { store, actions } = useContext(Context);
+
   return (
-    <div className=" whole-screen d-flex justify-content-center align-items-center  vh-100">
-      <form>
-        <div className="box vh-100 w-100">
-          {/* cover upload under */}
-          <div></div>
-          <h3 className="">Title</h3>
-          <input></input>
-          {/* <div className="dropdown">
-            <button
-              className="btn btn-secondary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
+    <div className="container">
+      <ul className="list-group">
+        {store.demo.map((item, index) => {
+          return (
+            <li
+              key={index}
+              className="list-group-item d-flex justify-content-between"
+              style={{ background: item.background }}
             >
-              
-            </button>
-            <ul className="dropdown-menu dropdown-menu-dark">
-              <li>
-                <a className="dropdown-item active">Action</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Another action</a>
-              </li>
-              <li>
-                <a className="dropdown-item">Something else here</a>
-              </li>
-              <li>
-                <hr className="dropdown-divider" />
-              </li>
-              <li>
-                <a className="dropdown-item">Separated link</a>
-              </li>
-            </ul>
-          </div> */}
-          <h3>Description</h3>
-          <textarea placeholder="Add description here"></textarea>
-          <div>
-            <button type="button" className="btn-grad rounded-pill">
-              Create
-            </button>
-          </div>
-        </div>
-      </form>
+              <Link to="/publishmystory">
+                <span>Link to: "publish" </span>
+              </Link>
+              {
+                // Conditional render example
+                // Check to see if the background is orange, if so, display the message
+                item.background === "orange" ? (
+                  <p style={{ color: item.initial }}>
+                    Check store/flux.js scroll to the actions to see the code
+                  </p>
+                ) : null
+              }
+              <button
+                className="btn btn-success"
+                onClick={() => actions.changeColor(index, "orange")}
+              >
+                Publish
+              </button>
+            </li>
+          );
+        })}
+      </ul>
+      <br />
+      <input maxLength={10}></input>
+      <Link to="/home">
+        <button className="btn btn-primary">Save Draft</button>
+      </Link>
     </div>
   );
-}
+};
+
+export default Createstory;
