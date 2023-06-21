@@ -1,6 +1,6 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { store, actions } = useContext(Context);
@@ -10,6 +10,13 @@ const Login = () => {
     e.preventDefault();
     actions.login(email, password);
   };
+  let navigate = useNavigate();
+  let token = sessionStorage.getItem("token");
+  useEffect(() => {
+    if (token !== null || token !== undefined || token !== "") {
+      navigate("/thebookclub");
+    }
+  }, []);
   return (
     <div>
       <input

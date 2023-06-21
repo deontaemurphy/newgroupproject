@@ -1,6 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
+      token: null,
       message: null,
       demo: [
         {
@@ -87,40 +88,42 @@ const getState = ({ getStore, getActions, setStore }) => {
         }
       },
 
+      logout: () => {
+        sessionStorage.removeItem("token");
+        setStore({ token: null });
+      },
+
       register: (name, email, password) => {
         const store = getStore();
 
-        return (
-          fetch(process.env.BACKEND_URL + `/api/createUser`),
-          {
-            method: "POST",
-            mode: "cors",
-            headers: {
-              "Content-type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-            },
-            body: JSON.stringify({
-              name: name,
-              email: email,
-              password: password,
-            }),
-          }
-            .then((res) => {
-              if (res.status === 409)
-                throw new Error(
-                  "The email address already exists. Please login to your account to continue."
-                );
-              // else if (!res.ok) throw new Error(res.statusText);
+        fetch(process.env.BACKEND_URL + `/api/createUser`, {
+          method: "POST",
+          mode: "cors",
+          headers: {
+            "Content-type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          body: JSON.stringify({
+            name: name,
+            email: email,
+            password: password,
+          }),
+        })
+          .then((res) => {
+            if (res.status === 409)
+              throw new Error(
+                "The email address already exists. Please login to your account to continue."
+              );
+            // else if (!res.ok) throw new Error(res.statusText);
 
-              return res.json();
-            })
-            .then((data) => {
-              console.log("data ", data);
+            return res.json();
+          })
+          .then((data) => {
+            console.log("data ", data);
 
-              return true;
-            })
-            .catch((error) => error)
-        );
+            return true;
+          })
+          .catch((error) => error);
       },
 
       getMessage: async () => {

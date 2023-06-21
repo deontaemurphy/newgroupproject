@@ -25,7 +25,7 @@ const Search = () => {
       ></input>
 
       <button onClick={(e) => handleClick(e)}>Search</button>
-      <Link to="/thebookclub">
+      <Link to="/searchthebookclub">
         <button>The Book Club</button>
       </Link>
     </div>

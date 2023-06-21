@@ -5,6 +5,10 @@ import { Context } from "../store/appContext";
 
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
+  const handleClick = (e) => {
+    e.preventDefault();
+    actions.logout();
+  };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -29,10 +33,7 @@ export const Navbar = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
-            <div className="form-control">
-              Discover (Needs to be up under The Algolia)
-              <input className="form-control me-2 ml-100" />
-            </div>
+
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
@@ -61,20 +62,21 @@ export const Navbar = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link to="/">Createstory</Link>
+                      <Link to="/createUser">Create User</Link>
                     </li>
                     <li>
-                      <Link to="/thebookclub">View Favorites is undefined</Link>
+                      <Link to="/demo">Createstory</Link>
+                    </li>
+                    <li>
+                      <Link to="/searchthebookclub">Search</Link>
                     </li>
                     <li>
                       {!store.token ? (
-                        <Link to="/createUser">
+                        <Link to="/login">
                           <button>Login</button>
                         </Link>
                       ) : (
-                        <Link to="/demo">
-                          <button>Logout</button>
-                        </Link>
+                        <button onClick={(e) => handleClick(e)}>Logout</button>
                       )}
                     </li>
                   </ul>
