@@ -69,10 +69,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const res = await fetch(
-            `https://3001-deontaemurp-newgrouppro-zu2xsffdobe.ws-us99.gitpod.io/api/login`,
-            opts
-          );
+          const res = await fetch(process.env.BACKEND_URL + `/api/login`, opts);
           // if (res.status !== 200) {
           //   alert("there has been an error");
           //   return false;
@@ -93,8 +90,8 @@ const getState = ({ getStore, getActions, setStore }) => {
       register: (name, email, password) => {
         const store = getStore();
 
-        return fetch(
-          `https://3001-deontaemurp-newgrouppro-zu2xsffdobe.ws-us99.gitpod.io/api/createUser`,
+        return (
+          fetch(process.env.BACKEND_URL + `/api/createUser`),
           {
             method: "POST",
             mode: "cors",
@@ -108,22 +105,22 @@ const getState = ({ getStore, getActions, setStore }) => {
               password: password,
             }),
           }
-        )
-          .then((res) => {
-            if (res.status === 409)
-              throw new Error(
-                "The email address already exists. Please login to your account to continue."
-              );
-            // else if (!res.ok) throw new Error(res.statusText);
+            .then((res) => {
+              if (res.status === 409)
+                throw new Error(
+                  "The email address already exists. Please login to your account to continue."
+                );
+              // else if (!res.ok) throw new Error(res.statusText);
 
-            return res.json();
-          })
-          .then((data) => {
-            console.log("data ", data);
+              return res.json();
+            })
+            .then((data) => {
+              console.log("data ", data);
 
-            return true;
-          })
-          .catch((error) => error);
+              return true;
+            })
+            .catch((error) => error)
+        );
       },
 
       getMessage: async () => {

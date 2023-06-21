@@ -15,7 +15,6 @@ api = Blueprint('api', __name__)
 
 #access_token = create_access_token
 
-
 @api.route("/login", methods=["POST"])
 def create_token():
     email = request.json.get("email", None)
@@ -48,26 +47,26 @@ def user():
 
 @api.route('/createUser', methods=['POST'])
 def createUser():
-  if request.method == 'POST':
-    request_body = request.get_json()
+  request_body = request.get_json()
 
-    if not request_body["name"]:
+  if not request_body["name"]:
       return jsonify({"msg": "Name is required"}), 400
-    if not request_body["email"]:
+  if not request_body["email"]:
       return jsonify({"msg": "Email is required"}), 400
-    if not request_body["password"]:
+  if not request_body["password"]:
       return jsonify({"msg": "Password is required"}), 400
 
-    user = User.query.filter_by(email=request_body["email"]).first()
-    if user:
+  user = User.query.filter_by(email=request_body["email"]).first()
+  if user:
       return jsonify({"msg": "User already exists"}), 400
 
-    user = User(
-          name = request_body["name"],
-          email = request_body["email"],
-          password = generate_password_hash(request_body["password"]),
-      )
-
-    db.session.add(user)   
-    db.session.commit()
-    return jsonify({"created": "Thanks. Your registration was successfully", "status": "true"}), 200
+  user = User(
+            name = request_body["name"],
+            email = request_body["email"],
+            password = generate_password_hash(request_body["password"]),
+            )
+  email = request.json.get("email",None)
+  access_token = create_access_token(identity=email)
+  db.session.add(user)   
+  db.session.commit()
+  return jsonify(request_body,access_token), 200

@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Login from "../pages/login";
+import { Context } from "../store/appContext";
 
 export const Navbar = () => {
+  const { store, actions } = useContext(Context);
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -10,7 +12,7 @@ export const Navbar = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-itemHome mt-2 mx-4">
               <Link to="/thebookclubfavorites">
-                <i class="fa-solid fa-bookmark fa-bounce"></i>
+                <i className="fa-solid fa-bookmark fa-bounce"></i>
               </Link>
             </li>
             <a className="navbar-brand" href="https://www.algolia.com/">
@@ -62,21 +64,24 @@ export const Navbar = () => {
                       <Link to="/">Createstory</Link>
                     </li>
                     <li>
-                      <Link to="/thebookclubfavorites">
-                        View Favorites is undefined
-                      </Link>
+                      <Link to="/thebookclub">View Favorites is undefined</Link>
                     </li>
                     <li>
-                      <Link to="/thebookclub">Logout</Link>
+                      {!store.token ? (
+                        <Link to="/createUser">
+                          <button>Login</button>
+                        </Link>
+                      ) : (
+                        <Link to="/demo">
+                          <button>Logout</button>
+                        </Link>
+                      )}
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
           </ul>
-          <Link to="/createUser">
-            <button>Login</button>
-          </Link>
         </div>
       </div>
     </nav>

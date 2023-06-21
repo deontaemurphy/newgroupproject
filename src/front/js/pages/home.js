@@ -6,8 +6,6 @@ import Login from "./login.js";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 
-import { SignUp } from "./SignUp";
-
 export const Home = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
@@ -23,8 +21,7 @@ export const Home = () => {
 
   return (
     <div className="text-center mt-5">
-      <Login />
-      {/* <SignUp /> */}
+    
     </div>
   );
 };
