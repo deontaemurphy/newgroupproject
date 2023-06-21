@@ -15,8 +15,8 @@ export const Createstory = () => {
               className="list-group-item d-flex justify-content-between"
               style={{ background: item.background }}
             >
-              <Link to={"/single/" + index}>
-                <span>Link to: {item.title}</span>
+              <Link to="/publishmystory">
+                <span>Link to: "story title" </span>
               </Link>
               {
                 // Conditional render example
@@ -31,15 +31,16 @@ export const Createstory = () => {
                 className="btn btn-success"
                 onClick={() => actions.changeColor(index, "orange")}
               >
-                Blue
+                Publish
               </button>
             </li>
           );
         })}
       </ul>
       <br />
+      <input maxLength={10}></input>
       <Link to="/home">
-        <button className="btn btn-primary">Vide</button>
+        <button className="btn btn-primary">Save Draft</button>
       </Link>
     </div>
   );

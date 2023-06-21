@@ -13,8 +13,10 @@ import Register from "./pages/SignUp";
 import Login from "./pages/login.js";
 import Createstory from "./pages/Createstory";
 import The_Book_Club from "./pages/The_Book_Club";
-import Search from "./pages/Search";
 import TheBookClubFavorites from "./pages/TheBookClubFavorites";
+import Search from "./pages/Search";
+import Publish from "./pages/PublishYours";
+
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
 const Layout = () => {
@@ -37,10 +39,8 @@ const Layout = () => {
             <Route element={<h1>Not found!</h1>} />
             <Route element={<The_Book_Club />} path="/thebookclub" />
             <Route element={<Search />} path="/searchthebookclub" />
-            <Route
-              element={<TheBookClubFavorites />}
-              path="/thebookclubfavorites"
-            />
+            <Route element={<Publish />} path="/publish" />
+            <Route element={<TheBookClubFavorites />} path="/favorites" />
           </Routes>
           <Footer />
         </ScrollToTop>

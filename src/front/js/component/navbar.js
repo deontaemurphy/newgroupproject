@@ -72,7 +72,7 @@ export const Navbar = () => {
                       <Link to="/createUser">Create User</Link>
                     </li>
                     <li>
-                      <Link to="/demo">Createstory</Link>
+                      <Link to="/Createstory">Createstory</Link>
                     </li>
                     <li>
                       <Link to="/searchthebookclub">Search</Link>
