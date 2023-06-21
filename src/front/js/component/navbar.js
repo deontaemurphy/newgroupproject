@@ -45,7 +45,10 @@ export const Navbar = () => {
                   </a>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <a
+                    className="nav-link"
+                    href="https://www.amazon.com/b/?node=283155&tag=mh0b-20&hvadid=78271604260220&hvqmt=e&hvbmt=be&hvdev=c&ref=pd_sl_1670j3im06_e"
+                  >
                     Discover Your Palabra
                   </a>
                 </li>
