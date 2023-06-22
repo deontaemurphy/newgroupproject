@@ -22,14 +22,18 @@ export default function Publish() {
           ></input>
 
           <h3> Description</h3>
-          <textarea placeholder="Add descrption here"></textarea>
+          <textarea
+            cols="25"
+            rows="25"
+            placeholder="Add descrption here"
+          ></textarea>
           <div>
             <button
               onClick={(e) => handleClick(e)}
               type="button"
               className="btn-grad rounded-pill"
             >
-            Save
+              Save
             </button>
           </div>
         </div>

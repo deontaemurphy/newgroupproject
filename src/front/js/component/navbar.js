@@ -2,12 +2,15 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import Login from "../pages/login";
 import { Context } from "../store/appContext";
-
+import { useNavigate } from "react-router-dom";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
+  let navigate = useNavigate();
   const handleClick = (e) => {
     e.preventDefault();
     actions.logout();
+    navigate("/");
+    actions.checkForToken();
   };
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
@@ -38,57 +41,28 @@ export const Navbar = () => {
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                <li className="nav-item">
-                  <a
-                    className="nav-link active"
-                    aria-current="page"
-                    href="https://3000-doctorine06-newgrouppro-39pq6je7xty.ws-us100.gitpod.io/"
-                  >
+              <li className="nav-item">
+                <Link to="/">
+                  <span className="nav-link active" aria-current="page">
                     Home
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    className="nav-link"
-                    href="https://www.amazon.com/b/?node=283155&tag=mh0b-20&hvadid=78271604260220&hvqmt=e&hvbmt=be&hvdev=c&ref=pd_sl_1670j3im06_e"
-                  >
-                    Discover Your Palabra
-                  </a>
-                </li>
-
-                <li className="nav-item dropdown">
-                  <a
-                    className="nav-link dropdown-toggle"
-                    href="#"
-                    role="button"
-                    data-bs-toggle="dropdown"
-                    aria-expanded="false"
-                  >
-                    Library
-                  </a>
-                  <ul className="dropdown-menu">
-                    <li>
-                      <Link to="/createUser">Create User</Link>
-                    </li>
-                    <li>
-                      <Link to="/Createstory">Createstory</Link>
-                    </li>
-                    <li>
-                      <Link to="/searchthebookclub">Search</Link>
-                    </li>
-                    <li>
-                      {!store.token ? (
-                        <Link to="/login">
-                          <button>Login</button>
-                        </Link>
-                      ) : (
-                        <button onClick={(e) => handleClick(e)}>Logout</button>
-                      )}
-                    </li>
-                  </ul>
-                </li>
-              </ul>
+                  </span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/createStory">
+                  <span className="nav-link">Discover Your Palabra</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/searchthebookclub">
+                  <span className="nav-link">Search</span>
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link to="/login">
+                  <span className="nav-link">Login</span>
+                </Link>
+              </li>
             </div>
           </ul>
         </div>

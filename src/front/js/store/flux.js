@@ -1,3 +1,5 @@
+import { set } from "react-hook-form";
+
 const getState = ({ getStore, getActions, setStore }) => {
   return {
     store: {
@@ -18,6 +20,13 @@ const getState = ({ getStore, getActions, setStore }) => {
     },
     actions: {
       // Use getActions to call a function within a fuction
+      checkForToken: () => {
+        let token = sessionStorage.getItem(token);
+        if (token !== null && token !== "" && token !== undefined) {
+          setStore({ token: token });
+        }
+        else{setStore({token:null})}
+      },
       exampleFunction: () => {
         getActions().changeColor(0, "green");
       },

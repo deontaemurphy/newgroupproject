@@ -12,11 +12,13 @@ const Login = () => {
   };
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
-  useEffect(() => {
-    if (token !== null || token !== undefined || token !== "") {
-      navigate("/thebookclub");
-    }
-  }, []);
+
+  // useEffect(() => {
+  console.log(store.token);
+  if (store.token !== null || store.token !== undefined || store.token !== "") {
+    navigate("/thebookclub");
+  }
+  // }, []);
   return (
     <div>
       <input
