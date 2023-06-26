@@ -12,10 +12,13 @@ const Login = () => {
   };
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
-
+  let auth = sessionStorage.getItem("token");
   // useEffect(() => {
   console.log(store.token);
-  if (store.token !== null || store.token !== undefined || store.token !== "") {
+  // if (token !== || token !== undefined || token !== "") {
+  navigate("/thebookclub");
+  // }
+  if (auth === true || auth === defined || auth === "") {
     navigate("/thebookclub");
   }
   // }, []);
