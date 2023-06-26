@@ -12,13 +12,15 @@ const Login = () => {
   };
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
-  let auth = sessionStorage.getItem("token");
+  // let auth = sessionStorage.getItem("token");
+  // {Laura suggestes a true statement in order to fix the broken authenticator}
   // useEffect(() => {
   console.log(store.token);
-  // if (token !== || token !== undefined || token !== "") {
+  if (token !== token !== undefined || token !== "") {
   navigate("/thebookclub");
   // }
-  if (auth === true || auth === defined || auth === "") {
+  // Authentincate 
+  // if (auth === true || auth === defined || auth === "") {
     navigate("/thebookclub");
   }
   // }, []);
