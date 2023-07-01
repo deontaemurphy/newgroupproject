@@ -13,24 +13,40 @@ export const Footer = () => (
           </Link>
         </li>
         <li className="page-item">
-          <a className="page-link" href="#">
+          <a
+            className="page-link"
+            href="https://archive.org/details/adventuresofsher00doylrich/page/272/mode/2up?ref=ol&view=theater"
+          >
+            BookClub:Page Of The Week
+          </a>
+        </li>
+        <li className="page-item">
+          <a
+            className="page-link"
+            href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater"
+          >
             1
           </a>
         </li>
         <li className="page-item">
-          <a className="page-link" href="#">
+          <a
+            className="page-link"
+            href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater"
+          >
             2
           </a>
         </li>
         <li className="page-item">
-          <a className="page-link" href="#">
+          <a className="page-link" href="3">
             3
           </a>
         </li>
         <li className="page-item">
-          <a className="page-link" href="#">
-            Next
-          </a>
+        <Link to="/thebookclub">
+            <span className="page-link">
+              Next
+            </span>
+          </Link>
         </li>
       </ul>
     </nav>

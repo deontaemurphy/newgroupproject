@@ -24,8 +24,9 @@ const getState = ({ getStore, getActions, setStore }) => {
         let token = sessionStorage.getItem(token);
         if (token !== null && token !== "" && token !== undefined) {
           setStore({ token: token });
+        } else {
+          setStore({ token: null });
         }
-        else{setStore({token:null})}
       },
       exampleFunction: () => {
         getActions().changeColor(0, "green");
@@ -45,22 +46,6 @@ const getState = ({ getStore, getActions, setStore }) => {
           //reset the global store
           setStore({ demo: demo });
         },
-          // const token = sessionStorage.getItem("token"),
-          // let cb_url = process.env.BACKEND_URL,
-          // return {
-          // store: {
-          // message: null,
-
-          //   evertime I come back must update cf_url by coping if from the browser of my frontend
-          // token: null,
-          // user: null,
-          // cf_url:
-          // "https:3000-deontaemurp-newgrouppro-gcgtzxginv1.ws-us93.gitpod.io/",
-          // username: null,
-          // },
-          // logout: () => {
-          // const cf_url = getStore().cf_url;
-          // const token = sessionStorage.removeItem("token");
           setStore({ token: null });
         window.location.href = cf_url + "/";
       },
@@ -79,18 +64,16 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const res = await fetch(process.env.BACKEND_URL + `/api/login`, opts);
-          // if (res.status !== 200) {
-          //   alert("there has been an error");
-          //   return false;
-          // }
-          const data = await res.json();
+          const resp = await fetch(process.env.BACKEND_URL + `/api/login`, opts);
+          if (resp.status !== 200) {
+            alert("there has been an error");
+            return false;
+          }
+          const data = await resp.json();
           console.log("this is from backend flux", data);
           sessionStorage.setItem("token", data.access_token);
           setStore({
-            token: data.access_token,
-            // favorites: data.favorites, need to add favorites
-          });
+            token: data.access_token, });
           return true;
         } catch (error) {
           console.error(error);
