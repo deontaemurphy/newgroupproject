@@ -11,19 +11,6 @@ const Search = () => {
   };
   return (
     <div>
-      <input
-        type="text"
-        placeholder="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      ></input>
-      <input
-        type="text"
-        placeholder="book"
-        value={bookTitle}
-        onChange={(e) => setBookTitle(e.target.value)}
-      ></input>
-
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Link to="/thebookclub">
@@ -31,18 +18,29 @@ const Search = () => {
           </Link>
           <div className="ml-auto">
             <Link to="/thebookclub">
-              <button className="btn btn-primary">
-                <input placeholder="Reloj" size="100px;">
-                <FontAwesomeIcon icon="fa-solid fa-download" />
-                </input>
+             
+              <button onClick={(e) => handleClick(e)}>
+                <input placeholder="Reloj" size="100px;"></input>
+                <button>Search</button>
               </button>
             </Link>
           </div>
         </div>
       </nav>
-      <button onClick={(e) => handleClick(e)}>Search</button>
-      <Link to="/login">
+      <input
+                type="text"
+                placeholder="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+              ></input>
+      <Link to="/searchthebook">
         <button onClick={(e) => handleClick(e)}>The Book Club</button>
+        <input
+        type="text"
+        placeholder="book"
+        value={bookTitle}
+        onChange={(e) => setBookTitle(e.target.value)}
+      ></input>
       </Link>
     </div>
   );

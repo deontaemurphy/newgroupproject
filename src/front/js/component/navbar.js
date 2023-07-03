@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import logout from "store.flux";
+
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();

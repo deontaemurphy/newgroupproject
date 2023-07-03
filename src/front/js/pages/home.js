@@ -23,7 +23,6 @@ export const Home = () => {
     <div className="text-center mt-5">
       <h1>New Page Loading</h1>
       <span>
-        {" "}
         Let's start the basic writings on how this web page was structured.
       </span>
 
