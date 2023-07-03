@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
+import logout from "store.flux";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
@@ -65,15 +66,17 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-              {! token ?
-                <Link to="/login">
-                <button onClick={() => actions.logut()} className =" btn btn-primary">Log</button>
-                  <span className="nav-link">Login</span>
-                </Link>:
-                 <Link to="/">
-                 <span className="nav-link">Log out</span>
-               </Link>
-                }
+                {!store.token ? (
+                  <Link to="/login">
+                    <span className="nav-link">Login</span>
+                  </Link>
+                ) : (
+                  <Link to="/">
+                    <span onClick={() => actions.logut()} className="nav-link">
+                      Log out
+                    </span>
+                  </Link>
+                )}
               </li>
             </div>
           </ul>

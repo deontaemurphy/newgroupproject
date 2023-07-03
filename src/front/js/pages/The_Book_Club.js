@@ -2,6 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
+import  Search  from "../pages/Search.js";
 
 const The_Book_Club = () => {
   const popoverTriggerList = document.querySelectorAll(
@@ -15,6 +16,7 @@ const The_Book_Club = () => {
 
   return (
     <div>
+
       <button
         type="button"
         class="btn btn-lg btn-danger"
@@ -24,7 +26,13 @@ const The_Book_Club = () => {
       >
         Click to toggle popover
       </button>
+       
       <h1>Spolighted Books</h1>
+        <div class="sticky-top">
+        <img src="" />
+          <input size="100"></input>
+        
+    </div>
     </div>
   );
 };

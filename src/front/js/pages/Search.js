@@ -32,7 +32,9 @@ const Search = () => {
           <div className="ml-auto">
             <Link to="/thebookclub">
               <button className="btn btn-primary">
-                <input placeholder="Reloj" size="100px;"></input>
+                <input placeholder="Reloj" size="100px;">
+                <FontAwesomeIcon icon="fa-solid fa-download" />
+                </input>
               </button>
             </Link>
           </div>
