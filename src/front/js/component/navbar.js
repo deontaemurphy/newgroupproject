@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import Login from "../pages/login";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
+import Profile from "./ProfileImport";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
@@ -22,7 +23,10 @@ export const Navbar = () => {
                 <i className="fa-solid fa-bookmark fa-bounce"></i>
               </Link>
             </li>
-            <a className="navbar-brand" href="https://www.algolia.com/">
+            <a
+              className="navbar-brand"
+              href="https://dashboard.algolia.com/apps/7VW33R3U8I/dashboard"
+            >
               Search With Algolia
             </a>
             <button
@@ -48,7 +52,11 @@ export const Navbar = () => {
                   </span>
                 </Link>
               </li>
-              <li className="nav-item">
+              <li
+                className="nav-item"
+                a
+                href="https://www.youtube.com/watch?v=ZrxCRySeHNE"
+              >
                 <Link to="/createStory">
                   <span className="nav-link">Discover Your Palabra</span>
                 </Link>
@@ -73,14 +81,12 @@ export const Navbar = () => {
 {
   <nav className="navbar navbar-light bg-light">
     <div className="container">
-      <Link to="/">
+      <Link to="/thebookclub">
         <span className="navbar-brand mb-0 h1">"Home"</span>
       </Link>
       <div className="ml-auto">
-        <Link to="/">
-          <button className="btn btn-primary">
-            Check the Context in action
-          </button>
+        <Link to="/thebookclub">
+          <button className="btn btn-primary"></button>
         </Link>
       </div>
     </div>

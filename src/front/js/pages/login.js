@@ -16,7 +16,7 @@ const Login = () => {
   // {Laura suggestes a true statement in order to fix the broken authenticator}
   // useEffect(() => {
   console.log(store.token);
-  if (token !== token !== undefined || token !== "") {
+  if (token && token != "" && token != undefined) {
   navigate("/thebookclub");
   // }
   // Authentincate 

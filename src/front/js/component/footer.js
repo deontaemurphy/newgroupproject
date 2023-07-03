@@ -37,7 +37,7 @@ export const Footer = () => (
           </a>
         </li>
         <li className="page-item">
-          <a className="page-link" href="3">
+          <a className="page-link" href="https://www.youtube.com/watch?v=ZrxCRySeHNE">
             3
           </a>
         </li>

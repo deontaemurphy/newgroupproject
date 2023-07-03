@@ -24,9 +24,23 @@ const Search = () => {
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
 
+      <nav className="navbar navbar-light bg-light">
+        <div className="container">
+          <Link to="/thebookclub">
+            <span className="navbar-brand mb-0 h1">"Home"</span>
+          </Link>
+          <div className="ml-auto">
+            <Link to="/thebookclub">
+              <button className="btn btn-primary">
+                <input placeholder="Reloj" size="100px;"></input>
+              </button>
+            </Link>
+          </div>
+        </div>
+      </nav>
       <button onClick={(e) => handleClick(e)}>Search</button>
-      <Link to="/searchthebookclub">
-        <button>The Book Club</button>
+      <Link to="/login">
+        <button onClick={(e) => handleClick(e)}>The Book Club</button>
       </Link>
     </div>
   );

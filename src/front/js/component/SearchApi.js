@@ -17,6 +17,10 @@ function Search() {
     <div className="ais-InstantSearch">
       <InstantSearch indexName="the_book_club" searchClient={searchClient}>
         <div>
+
+
+
+          
           <SearchBox />
           <Hits hitComponent={Hit} />
           <Pagination />
