@@ -23,7 +23,7 @@ export const Footer = () => (
         <li className="page-item">
           <a
             className="page-link"
-            href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater"
+            href="https://www.youtube.com/watch?v=JkcxEUNohC8r"
           >
             1
           </a>
@@ -37,15 +37,16 @@ export const Footer = () => (
           </a>
         </li>
         <li className="page-item">
-          <a className="page-link" href="https://www.youtube.com/watch?v=ZrxCRySeHNE">
+          <a
+            className="page-link"
+            href="https://www.youtube.com/watch?v=ZrxCRySeHNE"
+          >
             3
           </a>
         </li>
         <li className="page-item">
-        <Link to="/thebookclub">
-            <span className="page-link">
-              Next
-            </span>
+          <Link to="/thebookclub">
+            <span className="page-link">Next</span>
           </Link>
         </li>
       </ul>

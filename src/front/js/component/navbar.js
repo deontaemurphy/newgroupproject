@@ -1,9 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import Login from "../pages/login";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import Profile from "./ProfileImport";
 export const Navbar = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
@@ -67,9 +65,15 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
+              {! token ?
                 <Link to="/login">
+                <button onClick={() => actions.logut()} className =" btn btn-primary">Log</button>
                   <span className="nav-link">Login</span>
-                </Link>
+                </Link>:
+                 <Link to="/">
+                 <span className="nav-link">Log out</span>
+               </Link>
+                }
               </li>
             </div>
           </ul>
