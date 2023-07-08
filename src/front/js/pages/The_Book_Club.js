@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import  Search  from "../pages/Search.js";
+import Search from "../pages/Search.js";
 
 const The_Book_Club = () => {
   const popoverTriggerList = document.querySelectorAll(
@@ -16,7 +16,6 @@ const The_Book_Club = () => {
 
   return (
     <div>
-
       <button
         type="button"
         class="btn btn-lg btn-danger"
@@ -26,13 +25,52 @@ const The_Book_Club = () => {
       >
         Click to toggle popover
       </button>
-       
-      <h1>Spolighted Books</h1>
-        <div class="sticky-top">
+
+      <h1>Spotlighted Books</h1>
+      <div class="sticky-top">
         <img src="" />
-          <input size="100"></input>
-        
-    </div>
+        Photo Here
+        <form>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label">
+              Email address
+            </label>
+            <input
+              type="email"
+              class="form-control"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
+            />
+            <div id="emailHelp" class="form-text">
+              We'll never share your email with anyone else.
+            </div>
+          </div>
+          <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">
+              Password
+            </label>
+            <input
+              type="password"
+              class="form-control"
+              id="exampleInputPassword1"
+            />
+          </div>
+          <div class="mb-3 form-check">
+            <input
+              type="checkbox"
+              class="form-check-input"
+              id="exampleCheck1"
+            />
+            <label class="form-check-label" for="exampleCheck1">
+              Check me out
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">
+            Submit
+          </button>
+        </form>
+        <input size="100"></input>
+      </div>
     </div>
   );
 };

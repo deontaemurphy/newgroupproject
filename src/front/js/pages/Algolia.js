@@ -1,7 +1,7 @@
 import React from "react";
 
 
-const The_Book_Club = () => {
+const Algolia = () => {
     const popoverTriggerList = document.querySelectorAll(
       '[data-bs-toggle="popover"]'
     );
@@ -13,16 +13,6 @@ const The_Book_Club = () => {
   
     return (
       <div>
-  
-        <button
-          type="button"
-          class="btn btn-lg btn-danger"
-          data-bs-toggle="popover"
-          data-bs-title="The Readers"
-          data-bs-content="And here's some amazing content. It's very engaging. Right?"
-        >
-          Click to toggle popover
-        </button>
          
         <h1>Spolighted Books</h1>
           <div class="sticky-top">
@@ -34,3 +24,4 @@ const The_Book_Club = () => {
     );
   };
   
+  export default Algolia;

@@ -15,6 +15,7 @@ import Createstory from "./pages/Createstory";
 import The_Book_Club from "./pages/The_Book_Club";
 import TheBookClubFavorites from "./pages/TheBookClubFavorites";
 import Search from "./pages/Search";
+import Algolia from "./pages/Algolia";
 import Publish from "./pages/PublishYours";
 
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
@@ -41,6 +42,7 @@ const Layout = () => {
             <Route element={<Search />} path="/searchthebookclub" />
             <Route element={<Publish />} path="/publishmystory" />
             <Route element={<TheBookClubFavorites />} path="/favorites" />
+            <Route element={<Algolia />} path="/searcthebook" />
           </Routes>
           <Footer />
         </ScrollToTop>
