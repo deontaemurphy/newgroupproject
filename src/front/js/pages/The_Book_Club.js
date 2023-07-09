@@ -2,7 +2,7 @@ import React from "react";
 import { useContext } from "react";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
-import Search from "../pages/Search.js";
+
 
 const The_Book_Club = () => {
   const popoverTriggerList = document.querySelectorAll(
@@ -13,7 +13,19 @@ const The_Book_Club = () => {
   );
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
+  let token = sessionStorage.getItem("token");
+  let auth = sessionStorage.getItem("token");
+  // {Laura suggestes a true statement in order to fix the broken authenticator}
 
+  // console.log(store.token);
+  // // if (token && token != "" && token != undefined) {
+  //   navigate("/auth/thebookclub");
+  //   // }
+  // Authentincate
+  if (auth === true || auth === defined || auth === "") {
+    navigate("/thebookclub");
+  }
+  // }, []);
   return (
     <div>
       <button

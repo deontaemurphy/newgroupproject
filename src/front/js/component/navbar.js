@@ -88,12 +88,12 @@ export const Navbar = () => {
 {
   <nav className="navbar navbar-light bg-light">
     <div className="container">
-      <Link to="/thebookclub">
+      <Link to="/searchthebookclub">
         <span className="navbar-brand mb-0 h1">"Home"</span>
       </Link>
       <div className="ml-auto">
-        <Link to="/thebookclub">
-          <button className="btn btn-primary"></button>
+        <Link to="/searchthebook">
+          <button className="btn btn-primary">Search</button>
         </Link>
       </div>
     </div>

@@ -6,7 +6,7 @@ import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
-
+import The_Book_Club_auth from "./pages/The_Book_Club_auth";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Register from "./pages/SignUp";
@@ -39,6 +39,7 @@ const Layout = () => {
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<h1>Not found!</h1>} />
             <Route element={<The_Book_Club />} path="/auth/thebookclub" />
+            <Route element={<The_Book_Club_auth />} path="/thebookclub" />
             <Route element={<Search />} path="/searchthebookclub" />
             <Route element={<Publish />} path="/publishmystory" />
             <Route element={<TheBookClubFavorites />} path="/favorites" />
