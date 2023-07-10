@@ -16,7 +16,7 @@ export const Single = (props) => {
       <img src="https://wallpaperaccess.com/full/8011.jpg" />
       <hr className="my-4" />
 
-      <Link to="/">
+      <Link to="/auth/searchthebookclub/home">
         <span className="btn btn-primary btn-lg" href="" role="button">
           
         </span>

@@ -34,14 +34,15 @@ const Layout = () => {
             <Route element={<Login />} path="/login" />
             <Route element={<Register />} path="/createUser" />
             <Route element={<Createstory />} path="/Createstory" />
-            <Route element={<Demo />} path="/auth/searchthebookclub/home" />
+            <Route element={<Search />} path="/auth/searchthebookclub/home" />
             <Route element={<Single />} path="/single/:theid" />
-            <Route element={<h1>Not found!</h1>} />
+
             <Route element={<Autherization />} path="/auth/thebookclub" />
             <Route
               element={<SearchTheBookClub />}
               path="/searchthebookclub/home"
             />
+            <Route element={<h1>Not found!</h1>} />
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Search />} path="/favorites" />
             <Route element={<Algolia />} path="/searcthebook" />
