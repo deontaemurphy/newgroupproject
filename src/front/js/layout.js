@@ -16,7 +16,7 @@ import The_Book_Club from "./pages/The_Book_Club";
 import TheBookClubFavorites from "./pages/TheBookClubFavorites";
 import Search from "./pages/Search";
 import Algolia from "./pages/Algolia";
-import Publish from "./pages/PublishYours";
+import Auth from "./pages/The_Book_Club";
 
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
@@ -35,13 +35,13 @@ const Layout = () => {
             <Route element={<Login />} path="/login" />
             <Route element={<Register />} path="/createUser" />
             <Route element={<Createstory />} path="/Createstory" />
-            <Route element={<Demo />} path="/demo" />
+            <Route element={<Demo />} path="/auth/searchthebookclub/home" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<h1>Not found!</h1>} />
-            <Route element={<The_Book_Club />} path="/auth/thebookclub" />
-            <Route element={<The_Book_Club_auth />} path="/thebookclub" />
-            <Route element={<Search />} path="/searchthebookclub" />
-            <Route element={<Publish />} path="/publishmystory" />
+            <Route element={<The_Book_Club />} path="/thebookclub" />
+            <Route element={<The_Book_Club_auth />} path="/auth/thebookclub" />
+            <Route element={<Search />} path="/searchthebookclub/home" />
+            <Route element={<Auth />} path="/publishmystory" />
             <Route element={<TheBookClubFavorites />} path="/favorites" />
             <Route element={<Algolia />} path="/searcthebook" />
           </Routes>

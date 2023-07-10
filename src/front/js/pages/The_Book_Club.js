@@ -1,90 +1,95 @@
-import React from "react";
-import { useContext } from "react";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import rigoImageUrl from "../../img/rigo-baby.jpg";
+import "../../styles/home.css";
+import Login from "./login.js";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 
-
-const The_Book_Club = () => {
-  const popoverTriggerList = document.querySelectorAll(
-    '[data-bs-toggle="popover"]'
-  );
-  const popoverList = [...popoverTriggerList].map(
-    (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
-  );
+export const Auth = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
-  let token = sessionStorage.getItem("token");
-  let auth = sessionStorage.getItem("token");
-  // {Laura suggestes a true statement in order to fix the broken authenticator}
+  useEffect(() => {
+    if (
+      store.token !== null &&
+      store.token !== "" &&
+      store.token !== undefined
+    ) {
+      navigate("/thebookclub");
+    }
+  }, [store.token]);
 
-  // console.log(store.token);
-  // // if (token && token != "" && token != undefined) {
-  //   navigate("/auth/thebookclub");
-  //   // }
-  // Authentincate
-  if (auth === true || auth === defined || auth === "") {
-    navigate("/thebookclub");
-  }
-  // }, []);
   return (
-    <div>
-      <button
-        type="button"
-        class="btn btn-lg btn-danger"
-        data-bs-toggle="popover"
-        data-bs-title="The Readers"
-        data-bs-content="And here's some amazing content. It's very engaging. Right?"
-      >
-        Click to toggle popover
-      </button>
+    <div className="text-center mt-5">
+      <nav className="navbar navbar-light bg-light">
+        <div className="container">
+          <div className="ml-auto">
+            <button className="btn btn-primary">
+              <input placeholder="Reloj" size="100px;"></input>
+            </button>
+            <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
+              <button onClick={(e) => handleClick(e)}>Search</button>
+            </a>
+          </div>
+        </div>
+      </nav>
+      <div className="form-control">
+        Discover (Needs to be up under The Algolia)
+        <input
+          className="form-control me-2 ml-100"
+          placeholder=" 
 
-      <h1>Spotlighted Books</h1>
-      <div class="sticky-top">
-        <img src="" />
-        Photo Here
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
-              Email address
-            </label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">
-              Password
-            </label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div class="mb-3 form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1">
-              Check me out
-            </label>
-          </div>
-          <button type="submit" class="btn btn-primary">
-            Submit
-          </button>
-        </form>
-        <input size="100"></input>
+        "
+          size="125"
+          cols="25"
+          rows="25"
+        />
+         “ Read it aloud.” The note was
+        undated, and without either signature or address. “There will call upon
+        you to-night, at a quarter to eight o'clock,” it said, “‘a gentleman who
+        desires to consult you upon a matter of the very deepest moment. Your
+        recent services to one of the royal houses of Europe have shown that you
+        are one who may safely be trusted with matters which are of an
+        importance which can hardly be exaggerated. This account of you we have
+        from all quarters received. Be in
+        <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
+          <img
+            className="Adjust"
+            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
+          />
+        </a>
+        <button onClick={(e) => handleClick(e)}>The Book Club</button>
+        console.log(this is a token oriented page) ["Sherlock Holmes: 6
+        ADVENTURES OF SHERLOCK HOLMES must be dull, indeed, if I do not
+        pronounce him to be an active member of the medical profession.” I could
+        not help laughing at the ease with which he explained his process of
+        deduction. “When I hear you give your reasons,” I remarked, “the thing
+        always appears to me to be so ridiculously simple that I could easily do
+        it myself, though at each successive instance of your reasoning I am
+        baffled, until you explain your process. And yet I believe that my eyes
+        are as good as yours.” “Quite so,” he answered, lighting a cigarette,
+        and throwing himself down into an arm-chair. ‘You see, but you do not
+        observe. The distinction is clear. For example, you have frequently seen
+        the steps which lead up from the hall to this room.” “ Frequently.” “
+        How often ?”’ “Well, some hundreds of times.” “Then how many are there
+        ?” “How many? I don’t know.” “Quite so! You have not observed. And yet
+        you have seen, ‘That is just my point. Now, I know that there are
+        seventeen steps, because I have both seen and observed. Bythe-way, since
+        you are interested in these little problems, and since you are good
+        enough to chronicle one or two of my trifling experiences, you may be
+        interested in this.” He threw over a sheet of thick, pink-tinted
+        note-paper which had been lying open upon the table. “It came by the
+        last post,’ said he. “ Read it aloud.” The note was undated, and without
+        either signature or address. “There will call upon you to-night, at a
+        quarter to eight o'clock,” it said, “‘a gentleman who desires to consult
+        you upon a matter of the very deepest moment. Your recent services to
+        one of the royal houses of Europe have shown that you are one who may
+        safely be trusted with matters which are of an importance which can
+        hardly be exaggerated. This account of you we have from all quarters
+        received. Be in "]
       </div>
     </div>
   );
 };
 
-export default The_Book_Club;
+export default Auth;
