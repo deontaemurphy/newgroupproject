@@ -2,7 +2,7 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 import "../../styles/home.css";
-const Search = () => {
+const SearchTheBookClub = () => {
   const { store, actions } = useContext(Context);
   const [bookTitle, setBookTitle] = useState("");
   const [name, setName] = useState("");
@@ -53,4 +53,4 @@ const Search = () => {
   );
 };
 
-export default Search;
+export default SearchTheBookClub;

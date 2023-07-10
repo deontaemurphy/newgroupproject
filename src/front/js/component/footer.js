@@ -17,16 +17,15 @@ export const Footer = () => (
             className="page-link"
             href="https://archive.org/details/adventuresofsher00doylrich/page/272/mode/2up?ref=ol&view=theater"
           >
-            BookClub:Page Of The Week
+            The BookClub's Monthly Pick
           </a>
         </li>
         <li className="page-item">
-          <a
-            className="page-link"
-            href="https://www.youtube.com/watch?v=JkcxEUNohC8r"
-          >
-            1
-          </a>
+          <Link to="/auth/searchthebookclub">
+            <span className="page-link" href="#">
+              1
+            </span>
+          </Link>
         </li>
         <li className="page-item">
           <a

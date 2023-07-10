@@ -11,9 +11,6 @@ const Register = () => {
     actions.register(name, email, password);
   };
   return (
-
-    
-
     <div>
       <input
         type="text"
