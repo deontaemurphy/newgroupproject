@@ -44,7 +44,6 @@ const Layout = () => {
             />
             <Route element={<h1>Not found!</h1>} />
             <Route element={<Publish />} path="/publishmystory/auth" />
-            <Route element={<Search />} path="/favorites" />
             <Route element={<Algolia />} path="/searcthebook" />
           </Routes>
           <Footer />
