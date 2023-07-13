@@ -13,7 +13,7 @@ const Search = () => {
     <div>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <Link to="/thebookclub">
+          <Link to="/searchthebookclub">
             <span className="navbar-brand mb-0 h1">"Home"</span>
           </Link>
           <div className="ml-auto">

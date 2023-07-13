@@ -23,14 +23,18 @@ export const Publish = () => {
     <div className="text-center mt-5">
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <div className="ml-auto">
-            <button className="btn btn-primary">
-              <input placeholder="Reloj" size="100px;"></input>
-            </button>
-            <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
-              <button onClick={(e) => handleClick(e)}>Search</button>
-            </a>
-          </div>
+          <Link to="/auththebookclub">
+            <div className="ml-auto">
+              <button className="btn btn-primary">
+                <input placeholder="Reloj" size="100px;" a href="
+                  https://archive.org/details/adventuresofsher00doylrich/page/126/mode/2up?ref=ol&view=theater
+                </input>
+              </button>
+              <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
+                <button onClick={(e) => handleClick(e)}>Search</button>
+              </a>
+            </div>
+          </Link>
         </div>
       </nav>
       <div className="form-control">

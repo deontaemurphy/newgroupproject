@@ -39,7 +39,7 @@ export const Createstory = () => {
       </ul>
       <br />
       <input maxLength={10}></input>
-      <Link to="/home">
+      <Link to="/">
         <button className="btn btn-primary">Save Draft</button>
       </Link>
     </div>
