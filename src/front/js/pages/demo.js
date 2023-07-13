@@ -1,47 +1,29 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+// import React, { useState, useEffect, useContext } from "react";
+// import PropTypes from "prop-types";
+// import { Link, useParams } from "react-router-dom";
+// import { Context } from "../store/appContext";
 
-import { Context } from "../store/appContext";
+// export const Single = (props) => {
+//   const { store, actions } = useContext(Context);
+//   const params = useParams();
+//   return (
+//     <div className="jumbotron">
+//       <h1 className="display-4">
+//         This will log you in then display your home page{" /"}
+//         {store.demo[params.theid].title}
+//       </h1>
+//       <img src="https://wallpaperaccess.com/full/8011.jpg" />
+//       <hr className="my-4" />
 
-export const Demo = () => {
-  const { store, actions } = useContext(Context);
+//       <Link to="/thebookclub">
+//         <span className="btn btn-primary btn-lg" href="" role="button">
+//           Button
+//         </span>
+//       </Link>
+//     </div>
+//   );
+// };
 
-  return (
-    <div className="container">
-      <ul className="list-group">
-        {store.demo.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className="list-group-item d-flex justify-content-between"
-              style={{ background: item.background }}
-            >
-              <Link to={"/single/" + index}>
-                <span>Link to: {item.title}</span>
-              </Link>
-              {
-                // Conditional render example
-                // Check to see if the background is orange, if so, display the message
-                item.background === "orange" ? (
-                  <p style={{ color: item.initial }}>
-                    Check store/flux.js scroll to the actions to see the code
-                  </p>
-                ) : null
-              }
-              <button
-                className="btn btn-success"
-                onClick={() => actions.changeColor(index, "orange")}
-              >
-                Blue
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-      <br />
-      <Link to="/home">
-        <button className="btn btn-primary">Vide</button>
-      </Link>
-    </div>
-  );
-};
+// Single.propTypes = {
+//   match: PropTypes.object,
+// };
