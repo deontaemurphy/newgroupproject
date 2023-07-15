@@ -22,7 +22,10 @@ export const Footer = () => (
         </li>
         <li className="page-item">
           <Link to="/auth/searchthebookclub">
-            <span className="page-link" href="#">
+            <span
+              className="page-link"
+              href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater"
+            >
               1
             </span>
           </Link>
