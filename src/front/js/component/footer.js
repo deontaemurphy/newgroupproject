@@ -15,7 +15,7 @@ export const Footer = () => (
         <li className="page-item">
           <a
             className="page-link"
-            href="https://archive.org/details/adventuresofsher00doylrich/page/272/mode/2up?ref=ol&view=theater"
+            href="https://dashboard.algolia.com/apps/7VW33R3U8I/dashboard"
           >
             The BookClub's Monthly Pick
           </a>
