@@ -61,7 +61,7 @@ export const Navbar = () => {
                 </Link>
               </li>
               <li className="nav-item">
-                <Link to="/auth/searchthebookclub/home">
+                <Link to="/auth/searchingthebookclub/home">
                   <span className="nav-link">Search</span>
                 </Link>
               </li>

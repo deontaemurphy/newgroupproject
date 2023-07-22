@@ -64,7 +64,7 @@ const Buscarro = () => {
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
-      <Link to="/">
+      <Link to="/auth/searchingthebookclub/home">
         <input placeholder="Reloj" size="10;"></input>
         <button ocClick={(e) => handleClick(e)}>Searching</button>
       </Link>

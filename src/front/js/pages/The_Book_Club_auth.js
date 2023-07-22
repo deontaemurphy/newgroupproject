@@ -13,7 +13,7 @@ const Authorization = () => {
       store.token !== "" &&
       store.token !== undefined
     ) {
-      navigate("/thebookclub");
+      navigate("/single/:theid");
     }
   }, [store.token]);
   return (
