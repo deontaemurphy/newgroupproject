@@ -14,11 +14,11 @@ const Search = () => {
     <div>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <Link to="/searchthebookclub">
+          <Link to="/searchthebookclub/home">
             <span className="navbar-brand mb-0 h1">"Home"</span>
           </Link>
 
-          <Link to="/auth/search/thebookclub">
+          <Link to="/Discoveryourword/book">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
