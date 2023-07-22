@@ -19,7 +19,7 @@ const Buscarro = () => {
           </Link>
 
           <Link to="/auth/search/thebookclub">
-            <span className="navbar-brand mb-0 h1">"Look It Up"</span>
+            <span className="navbar-brand mb-0 h1">"Buscalo"</span>
           </Link>
           <div className="ml-auto">
             <Link to="/">
