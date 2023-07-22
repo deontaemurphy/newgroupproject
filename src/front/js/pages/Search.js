@@ -22,8 +22,10 @@ const Search = () => {
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/">
+            <Link to="//searcthebook">
+              <span>
               <input placeholder="Reloj" size="100px;"></input>
+              </span>
               <button ocClick={(e) => handleClick(e)}>Entrar</button>
             </Link>
           </div>

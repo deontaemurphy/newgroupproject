@@ -37,7 +37,7 @@ const Layout = () => {
             <Route element={<Search />} path="/auth/searchingthebookclub/home" />
             <Route element={<Single />} path="/single/:theid/test" />
 
-            <Route element={<Autherization />} path="/auth/thebookclub" />
+            <Route element={<Autherization />} path="/auth/search/thebookclub" />
             <Route
               element={<SearchTheBookClub />}
               path="/searchthebookclub/home"

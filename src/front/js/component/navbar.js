@@ -71,7 +71,7 @@ export const Navbar = () => {
                     <span className="nav-link">Login</span>
                   </Link>
                 ) : (
-                  <Link to="/">
+                  <Link to="/logout">
                     <span onClick={() => actions.logut()} className="nav-link">
                       Log out
                     </span>
