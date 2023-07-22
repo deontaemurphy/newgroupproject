@@ -15,7 +15,7 @@ export const Home = () => {
       store.token !== "" &&
       store.token !== undefined
     ) {
-      navigate("/thebookclub");
+      useNavigate("/thebookclub");
     }
   }, [store.token]);
 

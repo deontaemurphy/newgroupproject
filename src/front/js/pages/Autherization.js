@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext, useState } from "react";
+import { Context } from "../store/appContext";
+
 const Authorization = () => {
   const handleClick = (e) => {
     e.preventDefault();
-    actions.register( email, password);
+    actions.register(email, password);
   };
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();

@@ -22,11 +22,9 @@ const Search = () => {
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/thebookclub">
-              <button onClick={(e) => handleClick(e)}>
-                <input placeholder="Reloj" size="100px;"></input>
-                <button>Search</button>
-              </button>
+            <Link to="/">
+              <input placeholder="Reloj" size="100px;"></input>
+              <button ocClick={(e) => handleClick(e)}>Buscandote</button>
             </Link>
           </div>
         </div>
@@ -37,7 +35,7 @@ const Search = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       ></input>
-      <Link to="auth/searchthebook/home">
+      <Link to="/auth/thebookclub">
         <button onClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
       </Link>
       <Link to="/searchthebook/home">

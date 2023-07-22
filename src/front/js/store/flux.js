@@ -31,25 +31,7 @@ const getState = ({ getStore, getActions, setStore }) => {
       exampleFunction: () => {
         getActions().changeColor(0, "green");
       },
-      loadSomeData: () => {
-        changeColor: (index, color) => {
-          //get the store
-          const store = getStore();
-
-          //we have to loop the entire demo array to look for the respective index
-          //and change its color
-          const demo = store.demo.map((elm, i) => {
-            if (i === index) elm.background = color;
-            return elm;
-          });
-
-          //reset the global store
-          setStore({ demo: demo });
-        },
-          setStore({ token: null });
-        window.location.href = cf_url + "/";
-      },
-
+   
       login: async (email, password) => {
         const opts = {
           method: "POST",
@@ -64,7 +46,7 @@ const getState = ({ getStore, getActions, setStore }) => {
           }),
         };
         try {
-          const resp = await fetch(process.env.BACKEND_URL + `/api/login`, opts);
+          const resp = await fetch(process.env.BACKEND_URL + `/login`, opts);
           if (resp.status !== 200) {
             alert("there has been an error");
             return false;
@@ -73,7 +55,8 @@ const getState = ({ getStore, getActions, setStore }) => {
           console.log("this is from backend flux", data);
           sessionStorage.setItem("token", data.access_token);
           setStore({
-            token: data.access_token, });
+            token: data.access_token,
+          });
           return true;
         } catch (error) {
           console.error(error);

@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { Context } from "../store/appContext";
-import { Link, Navigate, useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const { store, actions } = useContext(Context);
@@ -17,11 +17,11 @@ const Login = () => {
   // useEffect(() => {
   console.log(store.token);
   if (token && token != "" && token != undefined) {
-  navigate("/thebookclub");
-  // }
-  // Authentincate 
-  // if (auth === true || auth === defined || auth === "") {
-    navigate("/thebookclub");
+    useNavigate("/thebookclub");
+    // }
+    // Authentincate
+    // if (auth === true || auth === defined || auth === "") {
+    // navigate("/thebookclub");
   }
   // }, []);
   return (
