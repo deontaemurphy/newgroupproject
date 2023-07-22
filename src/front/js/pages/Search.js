@@ -38,13 +38,13 @@ const Search = () => {
       <Link to="/auth/thebookclub">
         <button onClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
       </Link>
-      <Link to="/searchthebook/home">
-        <input
-          type="text"
-          placeholder="book"
-          value={bookTitle}
-          onChange={(e) => setBookTitle(e.target.value)}
-        ></input>
+      <input
+        type="text"
+        placeholder="book"
+        value={bookTitle}
+        onChange={(e) => setBookTitle(e.target.value)}
+      ></input>
+      <Link to="/auth/thebookclub">
         <button onClick={(e) => handleClick(e)}>Search</button>
       </Link>
     </div>

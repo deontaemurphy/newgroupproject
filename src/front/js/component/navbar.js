@@ -56,7 +56,7 @@ export const Navbar = () => {
                 a
                 href="https://www.youtube.com/watch?v=ZrxCRySeHNE"
               >
-                <Link to="/createStory">
+                <Link to="/Discoveryourword/book">
                   <span className="nav-link">Discover Your Palabra</span>
                 </Link>
               </li>
