@@ -24,7 +24,7 @@ const Search = () => {
           <div className="ml-auto">
             <Link to="/">
               <input placeholder="Reloj" size="100px;"></input>
-              <button ocClick={(e) => handleClick(e)}>Buscandote</button>
+              <button ocClick={(e) => handleClick(e)}>Entrar</button>
             </Link>
           </div>
         </div>
