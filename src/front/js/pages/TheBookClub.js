@@ -46,7 +46,7 @@ const TheBookClub = () => {
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
-      <Link to="/auth/thebookclub">
+      <Link to="/auth/searcthebook">
         <button ocClick={(e) => handleClick(e)}>Search</button>
       </Link>
       <div class="card text-center">
