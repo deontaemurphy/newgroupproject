@@ -43,7 +43,7 @@ const Layout = () => {
 
             <Route
               element={<Autherization />}
-              path="/auth/search/thebookclub"
+              path="/auth/search/thebookclub/home"
             />
             <Route
               element={<SearchTheBookClub />}

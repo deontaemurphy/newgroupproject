@@ -35,8 +35,8 @@ const SearchAlgolia = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       ></input>
-      <Link to="/auth/search/thebookclub">
-        <button onClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
+      <Link to="/thebookclubhome">
+        <button ocClick={(e) => handleClick(e)}>Libre</button>
       </Link>
       <input
         type="text"

@@ -37,7 +37,7 @@ const Search = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       ></input>
-      <Link to="/auth/search/thebookclub">
+      <Link to="/auth/search/thebookclub/home">
         <button ocClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
       </Link>
       <input
