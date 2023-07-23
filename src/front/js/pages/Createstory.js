@@ -35,8 +35,8 @@ const Search = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       ></input>
-      <Link to="/">
-        <button onClick={(e) => handleClick(e)}>Publish</button>
+      <Link to="/publishmystory/auth">
+        <button ocClick={(e) => handleClick(e)}>Publish</button>
       </Link>
       <input
         type="text"
@@ -44,8 +44,8 @@ const Search = () => {
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
-      <Link to="/auth/thebookclub">
-        <button onClick={(e) => handleClick(e)}>Search</button>
+      <Link to="/auth/searcthebook">
+        <button ocClick={(e) => handleClick(e)}>Search</button>
       </Link>
     </div>
   );
