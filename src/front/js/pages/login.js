@@ -42,6 +42,13 @@ const Login = () => {
       <Link to="/createUser">
         <button>Register</button>
       </Link>
+
+      <h1 className="display-1">The</h1>
+      <h1 className="display-2">World</h1>
+      <h1 className="display-3">Is</h1>
+      <h1 className="display-4">Your 4</h1>
+      <h1 className="display-5">Personal</h1>
+      <h1 className="display-6">Library</h1>
     </div>
   );
 };
