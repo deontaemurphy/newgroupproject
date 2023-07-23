@@ -12,7 +12,7 @@ const searchClient = algoliasearch(
   "b1f9230c31bc7c0e843528ead2376046"
 );
 
-function Search() {
+function SearchAPI() {
   return (
     <div className="ais-InstantSearch">
       <InstantSearch indexName="the_book_club" searchClient={searchClient}>
@@ -39,4 +39,4 @@ function Hit({ hits }) {
   );
 }
 
-export default Search;
+export default SearchAPI;

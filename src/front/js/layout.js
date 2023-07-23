@@ -5,7 +5,6 @@ import { Home } from "./pages/home";
 import { Demo } from "./pages/demo";
 import { Single } from "./pages/single";
 import injectContext from "./store/appContext";
-import The_Book_Club_auth from "./pages/The_Book_Club_auth";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
 import Register from "./pages/SignUp";
@@ -16,6 +15,7 @@ import Search from "./pages/Search";
 import Algolia from "./pages/Algolia";
 import Autherization from "./pages/Autherization";
 import Publish from "./pages/PublishYours";
+import TheBookClub from "./pages/TheBookClub";
 
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
@@ -34,10 +34,17 @@ const Layout = () => {
             <Route element={<Login />} path="/login" />
             <Route element={<Register />} path="/createUser" />
             <Route element={<Createstory />} path="/Discoveryourword/book" />
-            <Route element={<Search />} path="/auth/searchingthebookclub/home" />
+            <Route
+              element={<Search />}
+              path="/auth/searchingthebookclub/home"
+            />
             <Route element={<Single />} path="/single/:theid/test" />
+            <Route element={<TheBookClub />} path="/thebookclubhome" />
 
-            <Route element={<Autherization />} path="/auth/search/thebookclub" />
+            <Route
+              element={<Autherization />}
+              path="/auth/search/thebookclub"
+            />
             <Route
               element={<SearchTheBookClub />}
               path="/searchthebookclub/home"
