@@ -62,17 +62,20 @@ const TheBookClub = () => {
         <img
           src="data:image/png;base64,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"
           class="rounded mx-auto d-block"
-          alt="..."
+          alt="github"
         ></img>
-        <div class="card-body">
-          <h5 class="card-title">Special title treatment</h5>
-          <p class="card-text">
-            With supporting text below as a natural lead-in to additional
-            content.
-          </p>
-          <a href="#" class="btn btn-primary">
-            Go somewhere
-          </a>
+        <div class="card text-center">
+          <div class="card-header">Featured</div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">
+              With supporting text below as a natural lead-in to additional
+              content.
+            </p>
+            <a href="#" class="btn btn-primary">
+              Go somewhere
+            </a>
+          </div>
         </div>
         <div class="card-footer text-body-secondary">2 days ago</div>
       </div>

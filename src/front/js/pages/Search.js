@@ -24,7 +24,7 @@ const Search = () => {
           <div className="ml-auto">
             <Link to="//searcthebook">
               <span>
-              <input placeholder="Reloj" size="100px;"></input>
+                <input placeholder="Reloj" size="100px;"></input>
               </span>
               <button ocClick={(e) => handleClick(e)}>Entrar</button>
             </Link>
@@ -46,8 +46,12 @@ const Search = () => {
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
-      <Link to="/auth/thebookclub">
+      <Link to="/publishmystory/auth">
         <button ocClick={(e) => handleClick(e)}>Search</button>
+      </Link>
+      <Link to="/">
+        <input placeholder="Reloj" size="100px;"></input>
+        <button ocClick={(e) => handleClick(e)}>Buscandos</button>
       </Link>
     </div>
   );

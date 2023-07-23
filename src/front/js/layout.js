@@ -51,7 +51,7 @@ const Layout = () => {
             />
             <Route element={<h1>Not found!</h1>} />
             <Route element={<Publish />} path="/publishmystory/auth" />
-            <Route element={<Algolia />} path="/searcthebook" />
+            <Route element={<Algolia />} path="/auth/searcthebook" />
           </Routes>
           <Footer />
         </ScrollToTop>
