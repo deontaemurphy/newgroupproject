@@ -22,7 +22,7 @@ const SearchAlgolia = () => {
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/">
+            <Link to="/auth/search/thebookclub">
               <input placeholder="Reloj" size="100px;"></input>
               <button ocClick={(e) => handleClick(e)}>Entrar</button>
             </Link>
