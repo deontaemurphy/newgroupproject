@@ -68,7 +68,9 @@ export const PublishYourContent = () => {
             src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
           />
         </a>
-        <button onClick={(e) => handleClick(e)}>The Book Club</button>
+        <Link to="/thebookclubhome">
+          <button onClick={(e) => handleClick(e)}>The Book Club</button>
+        </Link>
         ‘You see, but you do not observe. The distinction is clear. For example,
         you have frequently seen the steps which lead up from the hall to this
         room.” “ Frequently.” “ How often ?”’ “Well, some hundreds of times.”
