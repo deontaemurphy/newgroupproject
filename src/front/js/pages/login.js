@@ -10,24 +10,17 @@ const Login = () => {
     e.preventDefault();
     actions.login(email, password);
   };
-  let navigate = useNavigate();
-  let token = sessionStorage.getItem("token");
-  // let auth = sessionStorage.getItem("token");
-  // {Laura suggestes a true statement in order to fix the broken authenticator}
-  // useEffect(() => {
-  console.log(store.token);
-  if (token && token != "" && token != undefined) {
-    useNavigate("/thebookclub");
-    // }
-    // Authentincate
-    // if (auth === true || auth === defined || auth === "") {
-    // navigate("/thebookclub");
-  }
-  // }, []);
-  erzpthSTkTrkGcL1W297MidfKFyaO7EY61ycnmwlFw2UmlZS8i5rauiqHLGE+FzFz9kPuUP+x7lWhNQkQ6zehw6Tpcbqn/DETg50J5WQWmd5JDeSjiQbdMjx5rcDsxL2d4sVP6wL5fQmMvBJJ22qiSy3gJLnRfkkQoROacNyjuOK6vAMCTQ/3Fz5LiL3TDZFkNGbQAhEQxIilkQPesR8VUp36+jQ9JaHopU86kFNNs7EclFqRxPRbXFEOtkviQ6r/Wch+hopVcVfuTCW0RX2W24tjNLJhoQ0hodCjBpStPmhYL6vdwEXX8otSC4dafRE2y7TMZG2R0Po6LtMqSN22oJQXcqG56M2VYQgXd/Ns+nMl3dZgHUMTsc0QjpHPbBP1uTakWgPVRuU+zk+hMUlnUbjbK53pZAsEbgOmBBHDrIrCNAJuQOGmTJuxCPlugG4oG4n6imFeReXDLM94KRQHL6MBkbxhVZc7FEmIaaMMABhECJthXRCnAXez6ckIWg+8M4UcNL0toT4df2p4m2MzZPAFCrThPiq+N3GhABFF0fI0CMJyeN4yDAPh6UhCDlCQKNIN+feeXIF+v1AHw0UIcGyKUC7siCWjK5DhOboLQJ2pVLlHHmwpYiQMpJxjuUhCdGf9EWyHiDylpFLU0iNHnFW3bFKEbZTqeQKTkNwQpS55N1OpYPkC0Hk3tE5GrIc7Hmdz5sHIUUPURcpVTZNka43ug8JEeVKYgoPMU8oYuY1pGrjM6MtRHkTqQNTWfBBU+7/gM+wvOBAaPuhIqQ2kB1aiI1/INri4PQMlpAlaYdwdSgV5lD2gMkgY1I1T3MkdEKk3yOndxltdmVFSL7ngoJCSE+MIkMntCwLOIbPBc9NRK0DYWh0xNwRBEtLtd8O+HKluuB2vByaARqnN7O4nGiy613ZMT4pxSoJdlU/vwAaiZc5lJD7VrBllLqAkSPDdOf5hH6sybGYgNQeGiABsb7cvBeGU8RCaMvF5MOxrIkhlpNBTnVuGXAHfyKk5VNzCkmP2GJ6MIpVYNO94YqmMCEGmO+9ED/qbVlZKJokhPcg1xvUap7I6UWGQ33o3fLBR7suGCjUmhN5hflayZNBB0+OSasTtDHm9QXW+UDqEylX4Gff8r8KQXG503UianJ3CxXIcCIvftqQgqf4Mjk5rPomWkfuvx4c4Jt5Xksc64R45jEEM751758FWOZ6Gluj/2mJR3I9Ibw5mqnUkpLrUYEulM+oJ4SY5iXcZ754VIBI46vH1youQ8SCPK3rXc5ZRwXacnWWJbRxtdCHcGdxKltSY1DcZ+yE7nANtNWTulYLroGNmSbEbakMQzXBXWFQQMMMCOGqoKtK5ZEMA3NYLtr/GjLVbYvVGqbedqm8HSCXGL2IUHfKpykfd1+lPkSVBhMqEsH18TaTh+j3+3Ntjo+nftB4qx0N9ZzllD/uwprdcnsBa120wyEq3+HgEMSQ1RpU24flChM31PmBtmywRpYyb53lPYQj+XBXZomq4dpR2Hk/zNVhxcXMmwYZy2GlYyh547BXD9nIaxbe/wCX4h6tx5Xa3QAAAABJRU5ErkJggg=="
-        class="rounded float-end"
-        alt="BoiseCascade1"
-      ></img>
+};
+let navigate = useNavigate();
+let token = sessionStorage.getItem("token");
+// let auth = sessionStorage.getItem("token");
+// {Laura suggestes a true statement in order to fix the broken authenticator}
+// useEffect(() => {
+console.log(store.token);
+if (token && token != "" && token != undefined) {
+  useNavigate("/thebookclub");
+  return (
+    <div>
       <input
         type="text"
         placeholder="email"
@@ -58,6 +51,6 @@ const Login = () => {
       </Link>
     </div>
   );
-};
+}
 
 export default Login;
