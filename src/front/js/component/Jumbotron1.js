@@ -41,20 +41,22 @@ export const Jumbotron1 = () => {
         ></img>
         <div className="ml-auto">
           <Link to="/auth/search/thebookclub">
-            <button className="btn btn-primary">Publish</button>
+            <div>
+              <button className="btn btn-primary">Publish</button>
+            </div>
           </Link>
         </div>
         <div>
-        <img
-          src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-          class="rounded float-start"
-          alt="sherlock holmes"
-        />
-        <img
-          src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-          class="rounded float-end"
-          alt="spongebob"
-        ></img>
+          <img
+            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
+            class="rounded float-start"
+            alt="sherlock holmes"
+          />
+          <img
+            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
+            class="rounded float-end"
+            alt="spongebob"
+          ></img>
         </div>
       </div>
     </nav>
