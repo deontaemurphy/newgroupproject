@@ -1,3 +1,11 @@
+.theo {
+  background-color: beige;
+}
+.nav {
+  color: mediumturquoise;
+  display: inline-block;
+  font-size: 60px;
+}
 /*
     home.css: This website contains selectors only used in home.css
 

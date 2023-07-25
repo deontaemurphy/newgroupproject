@@ -15,19 +15,17 @@ const Search = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Link to="/searchthebookclub/home">
-            <span className="navbar-brand mb-0 h1">"Home"</span>
+            <span className="nav">"Home"</span>
           </Link>
 
           <Link to="/Discoveryourword/book">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="//searcthebook">
-              <span>
-                <input placeholder="Reloj" size="100px;"></input>
-              </span>
+          <a href="https://archive.org/details/adventuresofsher00doylrich/page/8/mode/2up?ref=ol&view=theater">
               <button ocClick={(e) => handleClick(e)}>Entrar</button>
-            </Link>
+            </a>
+            <input className="theo" placeholder="Clock" size="100px;"></input>
           </div>
         </div>
       </nav>
@@ -46,14 +44,13 @@ const Search = () => {
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
-      <Link to="/publishmystory/auth">
+      <Link to="/">
         <button ocClick={(e) => handleClick(e)}>Search</button>
       </Link>
       <Link to="/">
         <input placeholder="Reloj" size="100px;"></input>
         <button ocClick={(e) => handleClick(e)}>Buscandos</button>
       </Link>
-      <a href="https://archive.org/details/adventuresofsher00doylrich/page/8/mode/2up?ref=ol&view=theater">
         <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" />
         <span>
           "man or Russian could not have written that. It is the German who is
@@ -85,7 +82,6 @@ const Search = () => {
           trimmed at the tops with rich brown fur, completed the impression of
           barbaric"
         </span>
-      </a>
     </div>
   );
 };
