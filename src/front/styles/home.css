@@ -5,7 +5,11 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
-
+.stretch {
+  background: olive;
+  margin: auto;
+  border: #101010;
+}
 .bigCounter div {
   display: inline-block;
   font-size: 60px;
@@ -16,7 +20,16 @@
   color: white;
   padding: 10px;
 }
-
+.display-4 {
+  text-align: center;
+  color: deeppink;
+  background-color: beige;
+  border: 10px;
+}
+.leadme {
+  margin-left: 480px;
+  margin-right: 480px;
+}
 .button {
   background-color: blueviolet;
 }

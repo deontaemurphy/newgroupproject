@@ -25,15 +25,28 @@ export const Jumbotron = () => {
             <button className="btn btn-primary">Search</button>
           </Link>
         </div>
-        <iframe
-          width="560"
-          height="315"
-          src="https://www.youtube-nocookie.com/embed/tme-KxDyiKY"
-          title="YouTube video player"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+        <div>
+          <iframe
+            width="530"
+            height="315"
+            src="https://www.youtube-nocookie.com/embed/tme-KxDyiKY"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+        <div className="stretch">
+          <iframe
+            width="630"
+            height="315"
+            src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
         <div>
           <div class="container py-4">
             <header class="pb-3 mb-4 border-bottom">
