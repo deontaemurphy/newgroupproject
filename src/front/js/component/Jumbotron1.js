@@ -29,11 +29,11 @@ export const Jumbotron1 = () => {
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowfullscreen
         ></iframe>
-        <img src="..." class="rounded float-start" alt="..." />
+        <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" class="rounded float-start" alt="sherlock holmes" />
         <img
           src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
           class="rounded float-end"
-          alt="..."
+          alt="spongebob"
         ></img>
         <div className="ml-auto">
           <Link to="/auth/search/thebookclub">
