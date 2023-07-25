@@ -26,17 +26,6 @@ export const Jumbotron1 = () => {
           </Link>
         </div>
 
-        <div className="stretch">
-          <iframe
-            width="630"
-            height="70"
-            src="https://www.youtube.com/embed/0-Hj_bi9Qto"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
         <div>
           <iframe
             width="530"

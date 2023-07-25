@@ -11,6 +11,9 @@ const Demo = () => {
   const handleClick = (e) => {
     e.preventDefault();
     actions.login(email, password);
+    $(function () {
+      $('[data-toggle="popover"]').popover();
+    });
   };
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
@@ -37,9 +40,29 @@ const Demo = () => {
               utility to mix up the jumbotron look. Then, mix and match with
               additional component themes and more.
             </p>
-            <button class="btn btn-outline-light" type="button">
+            <button
+              class="btn btn-outline-light"
+              type="button"
+              height="200"
+              size="400"
+              width="250"
+            >
+              <div className="stretch" height="245" width="265">
+                <a href="https://www.youtube.com/embed/0-Hj_bi9Qto">
+                <iframe
+                  width="50"
+                  height="140"
+                  src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe> 
+                </a>
+              </div>
               Example button
             </button>
+           
           </div>
         </div>
         <input
@@ -106,17 +129,17 @@ const Demo = () => {
             <button type="submit" class="btn btn-primary">
               Submit
             </button>
-            <button
-              type="button"
-              class="btn btn-lg btn-danger"
-              data-toggle="popover"
-              title="Popover title"
-              data-content="And here's some amazing content. It's very engaging. Right?"
-            >
-              Click to toggle popover
-            </button>
           </Link>
         </form>
+        <button
+          type="button"
+          class="btn btn-lg btn-danger"
+          data-toggle="popover"
+          title="Popover title"
+          data-content="And here's some amazing content. It's very engaging. Right?"
+        >
+          Click to toggle popover
+        </button>
       </div>
     </div>
   );
