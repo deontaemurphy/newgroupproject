@@ -42,7 +42,7 @@ export const Jumbotron1 = () => {
         <div className="ml-auto">
           <Link to="/auth/search/thebookclub">
             <div>
-              <button className="btn btn-primary">Publish</button>
+              <button className="btnpop">Publish</button>
             </div>
           </Link>
         </div>
