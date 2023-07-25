@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-export const Jumbotron = () => {
+export const Jumbotron1 = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
   const handleClick = (e) => {

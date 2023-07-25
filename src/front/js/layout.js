@@ -16,7 +16,8 @@ import Autherization from "./pages/Autherization";
 import Publish from "./pages/PublishYours";
 import TheBookClub from "./pages/TheBookClub";
 import Demo from "./pages/demo";
-import {Jumbotron }from"./component/Jumbotron";
+import {Jumbotron1 }from"./component/Jumbotron1";
+import { Jumbotron2 } from "./component/Jumbotron2";
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
 const Layout = () => {
@@ -29,7 +30,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />
-          <Jumbotron/>
+          <Jumbotron1/>
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
@@ -56,6 +57,7 @@ const Layout = () => {
             <Route element={<Algolia />} path="/auth/searcthebook" />
           </Routes>
           <Footer />
+          <Jumbotron2/>
         </ScrollToTop>
       </BrowserRouter>
     </div>
