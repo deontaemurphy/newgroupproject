@@ -1,30 +1,42 @@
-import React, { useState, useEffect, useContext } from "react";
-import PropTypes from "prop-types";
-import { Link, useParams } from "react-router-dom";
+import React, { useContext } from "react";
 import { Context } from "../store/appContext";
+import "../../styles/home.css";
+import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
-export const Single = (props) => {
+export const Favorites = () => {
   const { store, actions } = useContext(Context);
-  const params = useParams();
+  let navigate = useNavigate();
+  useEffect(() => {
+    if (
+      store.token !== null &&
+      store.token !== "" &&
+      store.token !== undefined
+    ) {
+      navigate("/thebookclub");
+    }
+  }, [store.token]);
 
   return (
-    <div className="jumbotron">
-      <h1 className="display-4">
-        This will log you in then display your home page{" /"}
-        {store.demo[params.theid].title}
-      </h1>
-      <img src="https://wallpaperaccess.com/full/8011.jpg" />
-      <hr className="my-4" />
-
-      <Link to="/auth/searchthebookclub/home">
-        <button className="btn btn-primary btn-lg" href="" role="button">
-          Tap/single/:theid/test
-        </button>
-      </Link>
+    <div>
+      <div class="row align-items-md-stretch">
+        <div class="col-md-6">
+          <div class="h-100 p-5 text-bg-dark rounded-3">
+            <h2>Change the background</h2>
+            <p>
+              Swap the background-color utility and add a `.text-*` color
+              utility to mix up the jumbotron look. Then, mix and match with
+              additional component themes and more.
+            </p>
+            <button class="btn btn-outline-light" type="button">
+              Example button
+            </button>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
 
-Single.propTypes = {
-  match: PropTypes.object,
-};
+export default Favorites;

@@ -17,6 +17,24 @@
   padding: 10px;
 }
 
+.button {
+  background-color: blueviolet;
+}
+
 .open {
- color: rgb(83, 205, 77);
+  color: rgb(83, 205, 77);
+}
+
+.boostrap {
+  width: 100%;
+  max-width: 660px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.boostrapbasic {
+  width: 100%;
+  max-width: 660px;
+  overflow: hidden;
+  border-radius: 09px;
 }

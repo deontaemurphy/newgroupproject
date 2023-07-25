@@ -39,15 +39,14 @@ const Authorization = () => {
           <p className="card-text">This is a house above my book button</p>
           <div className="img-top">
             <a href="https://on.soundcloud.com/KRsbN">
-              <button>
+              <button className="button">
                 <span>Follow</span>
                 <b>Me</b>
               </button>
               <iframe
                 allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
                 frameborder="12"
-                height="450"
-                // style="width:100%;max-width:660px;overflow:hidden;border-radius:10px;"
+                height="560"
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                 src="https://embed.music.apple.com/us/album/the-unexplainable-single/1686946932"
               ></iframe>
