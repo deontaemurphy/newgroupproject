@@ -84,7 +84,15 @@ const Search = () => {
         followed by a sharp pull at the bell. Holmes whistled. “A pair, by the
         sound,” said he. “Yes,” he continued, glancing out of the window. “A
         nice little brougham and a pair of beauties. A hundred and fifty guineas
-        apiece. There’s money in this case, Watson, if there is nothing else.”
+        apiece. 
+        
+        
+        <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" />
+        
+        
+        
+        
+        There’s money in this case, Watson, if there is nothing else.”
         “J think that I had better go, Holmes.” “Not a bit, doctor. Stay where
         you are. I am lost without my Boswell. And this promises to be
         interesting. It would be a pity to miss it.” “ But your client —” “Never
