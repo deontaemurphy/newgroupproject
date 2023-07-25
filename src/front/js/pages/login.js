@@ -37,10 +37,10 @@ const Login = () => {
         within the larger container.
       </p>
       <p className="leadme">
-        <Link to ="/">
-        <span class="btn btn-primary btn-lg" role="button">
-          Learn more
-        </span>
+        <Link to="/">
+          <span class="btn btn-primary btn-lg" role="button">
+            Learn more
+          </span>
         </Link>
       </p>
       <input
@@ -70,15 +70,25 @@ const Login = () => {
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
           />
+          <div>
           <input
-            type="password"
-            placeholder="password"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            type="text"
+            placeholder="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
-          <Link to="/createUser">
-            <button class="btn btn-primary">Register</button>
-          </Link>
+          </div>
+          <div>
+            <input
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+            ></input>
+            <Link to="/login">
+              <button class="btn btn-primary">Register</button>
+            </Link>
+          </div>
           <div id="emailHelp" class="form-text">
             We'll never share your email with anyone else.
           </div>
