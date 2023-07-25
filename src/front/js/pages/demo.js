@@ -47,22 +47,18 @@ const Demo = () => {
               size="400"
               width="250"
             >
-              <div className="stretch" height="245" width="265">
-                <a href="https://www.youtube.com/embed/0-Hj_bi9Qto">
-                <iframe
-                  width="50"
-                  height="140"
-                  src="https://www.youtube.com/embed/0-Hj_bi9Qto"
-                  title="YouTube video player"
-                  frameborder="0"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  allowfullscreen
-                ></iframe> 
-                </a>
-              </div>
-              Example button
+              <iframe
+                width="245"
+                height="140"
+                src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+              Example button{" "}
             </button>
-           
+            <a href="https://www.youtube.com/embed/0-Hj_bi9Qto"></a>
           </div>
         </div>
         <input
