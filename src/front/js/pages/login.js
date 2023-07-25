@@ -71,12 +71,15 @@ const Login = () => {
             aria-describedby="emailHelp"
           />
           <div>
-          <input
-            type="text"
-            placeholder="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          ></input>
+            <input
+              type="text"
+              placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+            ></input>
+            <Link to="/login">
+              <button class="btn btn-primary">Login</button>
+            </Link>
           </div>
           <div>
             <input
@@ -85,7 +88,7 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
-            <Link to="/login">
+            <Link to="/createUser">
               <button class="btn btn-primary">Register</button>
             </Link>
           </div>
