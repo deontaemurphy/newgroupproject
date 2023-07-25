@@ -21,15 +21,15 @@ export const Jumbotron1 = () => {
       </div>
       <div>
         <div className="ml-auto">
-          <Link to="/searchthebook">
+          <Link to="/auth/search/thebookclub">
             <button className="btn btn-primary">Search</button>
           </Link>
         </div>
 
         <div>
           <iframe
-            width="530"
-            height="215"
+            width="1000"
+            height="400"
             src="https://www.youtube-nocookie.com/embed/tme-KxDyiKY"
             title="YouTube video player"
             frameborder="0"
