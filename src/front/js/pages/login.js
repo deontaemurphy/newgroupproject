@@ -88,10 +88,11 @@ const Login = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             ></input>
-            <Link to="/createUser">
-              <button class="btn btn-primary">Register</button>
-            </Link>
           </div>
+          <Link to="/createUser">
+            <button class="btn btn-primary">Register</button>
+          </Link>
+
           <div id="emailHelp" class="form-text">
             We'll never share your email with anyone else.
           </div>
