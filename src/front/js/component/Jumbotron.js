@@ -15,14 +15,26 @@ export const Jumbotron = () => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
-        <Link to="/searchthebookclub">
+        <a href="">
           <span className="navbar-brand mb-0 h1">"Home"</span>
-        </Link>
+        </a>
+      </div>
+      <div>
         <div className="ml-auto">
           <Link to="/searchthebook">
             <button className="btn btn-primary">Search</button>
           </Link>
-
+        </div>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube-nocookie.com/embed/tme-KxDyiKY"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <div>
           <div class="container py-4">
             <header class="pb-3 mb-4 border-bottom">
               <a
@@ -80,9 +92,11 @@ export const Jumbotron = () => {
                     sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                     src="https://embed.music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082"
                   ></iframe>
-                  <button class="btn btn-outline-light" type="button">
-                    Example button
-                  </button>
+                  <a href="https://music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082">
+                    <button class="btn btn-outline-light" type="button">
+                      Example button
+                    </button>
+                  </a>
                 </div>
               </div>
               <div class="col-md-6">
