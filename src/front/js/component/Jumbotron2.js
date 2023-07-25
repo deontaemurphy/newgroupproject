@@ -81,6 +81,14 @@ export const Jumbotron2 = () => {
           <div class="col-md-6">
             <div class="h-100 p-5 bg-body-tertiary border rounded-3">
               <h2>Add borders</h2>
+              <iframe
+                allow="autoplay *; encrypted-media *;"
+                frameborder="0"
+                height="450"
+                style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/album/scooby-doo-music-from-the-motion-picture/706073180"
+              ></iframe>
               <p>
                 Or, keep it light and add a border for some added definition to
                 the boundaries of your content. Be sure to look under the hood
@@ -90,6 +98,14 @@ export const Jumbotron2 = () => {
               <button class="btn btn-outline-secondary" type="button">
                 Example button
               </button>
+              <iframe
+                allow="autoplay *; encrypted-media *;"
+                frameborder="0"
+                height="150"
+                style="width:100%;max-width:660px;overflow:hidden;background:transparent;"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/album/lose-control-feat-ciara-fat-man-scoop/73240848?i=73240545"
+              ></iframe>
             </div>
           </div>
         </div>
