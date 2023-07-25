@@ -71,6 +71,7 @@ export const PublishYourContent = () => {
         <Link to="/thebookclubhome">
           <button onClick={(e) => handleClick(e)}>The Book Club</button>
         </Link>
+        <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=7be868ce-3a2b-ee11-a9bb-000d3a41e8b8" frameborder="0" allowfullscreen></iframe>
        
       </div>
     </div>
