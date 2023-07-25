@@ -13,10 +13,9 @@ export const Home = () => {
       store.token !== "" &&
       store.token !== undefined
     ) {
-      useNavigate("/thebookclub");
+      navigate("/auth/thebookclub");
     }
   }, [store.token]);
-
   return (
     <div className="text-center mt-5">
       <h1>New Page Loading</h1>
