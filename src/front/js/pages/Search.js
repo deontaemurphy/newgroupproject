@@ -51,9 +51,7 @@ const Search = () => {
       <Link to="/">
         <input placeholder="Reloj" size="100px;"></input>
         <button ocClick={(e) => handleClick(e)}>Buscandos</button>
-      </Link>
-      <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" />
-      <span>
+      </Link>      <span>
         "man or Russian could not have written that. It is the German who is so
         uncourteous to his verbs. It only remains, therefore, to discover what
         is wanted by this German who writes upon Bohemian paper, and prefers
@@ -82,6 +80,8 @@ const Search = () => {
         and which were trimmed at the tops with rich brown fur, completed the
         impression of barbaric"
       </span>
+      <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" />
+      
     </div>
   );
 };
