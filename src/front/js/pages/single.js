@@ -17,9 +17,9 @@ export const Single = (props) => {
       <hr className="my-4" />
 
       <Link to="/auth/searchthebookclub/home">
-        <span className="btn btn-primary btn-lg" href="" role="button">
-          
-        </span>
+        <button className="btn btn-primary btn-lg" href="" role="button">
+          Tap/single/:theid/test
+        </button>
       </Link>
     </div>
   );

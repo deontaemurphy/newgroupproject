@@ -5,3 +5,18 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+
+.bigCounter div {
+  display: inline-block;
+  font-size: 60px;
+  line-height: 60px;
+  height: 60px;
+  background: #101010;
+  margin: 3px;
+  color: white;
+  padding: 10px;
+}
+
+.open {
+ color: rgb(83, 205, 77);
+}

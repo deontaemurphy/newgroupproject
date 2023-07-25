@@ -18,8 +18,8 @@ export const Home = () => {
   }, [store.token]);
   return (
     <div className="text-center mt-5">
-      <h1>New Page Loading</h1>
-      <span>
+      <h1 className="open">New Page Loading</h1>
+      <span className="close">
         Let's start the basic writings on how this web page was structured.
       </span>
 
