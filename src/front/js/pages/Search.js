@@ -28,7 +28,7 @@ const Search = () => {
             <input className="theo" placeholder="Clock" size="100px;"></input>
           </div>
         </div>
-      </nav>
+      
       <Link to="/publishmystory/auth">
         <button ocClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
       </Link>
@@ -51,7 +51,9 @@ const Search = () => {
       <Link to="/">
         <input placeholder="Reloj" size="100px;"></input>
         <button ocClick={(e) => handleClick(e)}>Buscandos</button>
-      </Link>      <span>
+      </Link>  
+      </nav>
+          <span>
         "man or Russian could not have written that. It is the German who is so
         uncourteous to his verbs. It only remains, therefore, to discover what
         is wanted by this German who writes upon Bohemian paper, and prefers
