@@ -56,9 +56,10 @@ const Demo = () => {
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen
               ></iframe>
-              Example button{" "}
             </button>
-            <a href="https://www.youtube.com/embed/0-Hj_bi9Qto"></a>
+            <button class="btn btn-outline-light" type="button">
+              <a href="https://www.youtube.com/embed/0-Hj_bi9Qto">Push</a>
+            </button>
           </div>
         </div>
         <input
