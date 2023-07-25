@@ -78,7 +78,9 @@ const Login = () => {
               onChange={(e) => setEmail(e.target.value)}
             ></input>
             <Link to="/login">
-              <button class="btn btn-primary">Login</button>
+              <button className="btn" size="25">
+                Login
+              </button>
             </Link>
           </div>
           <div>

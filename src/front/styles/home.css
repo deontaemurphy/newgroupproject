@@ -1,6 +1,9 @@
 .theo {
   background-color: beige;
 }
+.btn {
+  color: red;
+}
 .nav {
   color: mediumturquoise;
   display: inline-block;
