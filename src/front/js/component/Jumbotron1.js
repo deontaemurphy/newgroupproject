@@ -21,7 +21,7 @@ export const Jumbotron1 = () => {
       </div>
       <div>
         <iframe
-          width="1200"
+          width="1450"
           height="400"
           src="https://www.youtube-nocookie.com/embed/tme-KxDyiKY"
           title="YouTube video player"
