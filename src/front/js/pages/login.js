@@ -37,7 +37,7 @@ const Login = () => {
         within the larger container.
       </p>
       <p className="leadme">
-        <Link to="/">
+        <Link to="/thebookclubhome">
           <span class="btn btn-primary btn-lg" role="button">
             Learn more
           </span>

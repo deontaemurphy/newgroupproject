@@ -18,8 +18,7 @@ import TheBookClub from "./pages/TheBookClub";
 import Demo from "./pages/demo";
 import { Jumbotron1 } from "./component/Jumbotron1";
 import { Jumbotron2 } from "./component/Jumbotron2";
-import LoginComponent from "./pages/LoginComponent";
-import { Logout } from "./component/Logout";
+import { LogoutJumbotron } from "./component/Jumbotron3";
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
 const Layout = () => {
@@ -33,6 +32,7 @@ const Layout = () => {
         <ScrollToTop>
           <Navbar />
           <Jumbotron1 />
+          <LogoutJumbotron />
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
@@ -61,7 +61,6 @@ const Layout = () => {
           </Routes>
 
           <Jumbotron2 />
-          <Logout />
           <Footer />
         </ScrollToTop>
       </BrowserRouter>

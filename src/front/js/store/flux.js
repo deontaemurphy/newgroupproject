@@ -94,7 +94,8 @@ const getState = ({ getStore, getActions, setStore }) => {
             console.error(error);
           }
         },
-          sessionStorage.removeItem("token");
+        // *comment//
+        sessionStorage.removeItem("token");
         setStore({ token: null });
       },
 
