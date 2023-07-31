@@ -17,6 +17,15 @@ export const NavbarStretch = () => {
       <div class="container-fluid">
         <a class="navbar-brand" href="#">
           Navbar
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </a>
         <button
           class="navbar-toggler"
@@ -45,9 +54,9 @@ export const NavbarStretch = () => {
                 </li>
 
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Another action
-                  </a>
+                  <Link to="/auth/searchingthebookclub/home">
+                    Sherlock Holmes
+                  </Link>
                 </li>
                 <li>
                   <a class="dropdown-item" href="#">
