@@ -39,10 +39,12 @@ export const Jumbotron2 = () => {
             <span class="fs-4">Jumbotron example</span>
           </a>
         </header>
-       <button onClick={(e) => handleClick(e)}>Login</button>
-      <Link to="/createUser">
-        <button>Register</button>
-      </Link>
+        <Link to="/login">
+          <button onClick={(e) => handleClick(e)}>Login</button>
+        </Link>
+        <Link to="/createUser">
+          <button>Register</button>
+        </Link>
 
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
           <div class="container-fluid py-5">
