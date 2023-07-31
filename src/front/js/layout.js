@@ -31,10 +31,8 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          <Navbar />
-
           <NavbarStretch />
-
+          <Navbar />
           <Routes>
             <Route element={<Home />} path="/" />
 
