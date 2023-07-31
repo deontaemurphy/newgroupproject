@@ -24,9 +24,9 @@ export const Navbar = () => {
             </li>
             <a
               className="navbar-brand"
-              href="https://dashboard.algolia.com/apps/7VW33R3U8I/dashboard"
+              href="https://github.com/Doctorine06/SimpleCounter/blob/main/src/js/component/home.jsx"
             >
-              Search With Algolia(iEDTlxfP7yn7HNp6F9XgG)
+              Home.jsx
             </a>
             <button
               className="navbar-toggler"

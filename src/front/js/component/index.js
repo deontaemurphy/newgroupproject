@@ -7,7 +7,7 @@ import ReactDOM from "react-dom";
 // include your styles into the webpack bundle
 import "../styles/index.css";
 import Home from "./component/home.jsx";
-//import your own components
+
 import PropTypes from "prop-types";
 
 // function SimpleCounter(props){

@@ -31,12 +31,7 @@ export const Footer = () => (
           </Link>
         </li>
         <li className="page-item">
-          <a
-            className="page-link"
-            href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater"
-          >
-            2
-          </a>
+          <Link to="/thebookclub">2</Link>
         </li>
         <li className="page-item">
           <a

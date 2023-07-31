@@ -28,7 +28,7 @@ export const Jumbotron2 = () => {
               viewBox="0 0 118 94"
               role="img"
             >
-              <title>Bootstrap</title>
+              <title>JumboTron@2</title>
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"
@@ -36,7 +36,7 @@ export const Jumbotron2 = () => {
                 fill="currentColor"
               ></path>
             </svg>
-            <span class="fs-4">Jumbotron example</span>
+            <span class="fs-4">Jumbotron example page #2</span>
           </a>
         </header>
         <Link to="/login">

@@ -31,10 +31,13 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
+          <Navbar />
+          <Jumbotron2 />
           <NavbarStretch />
 
           <Routes>
             <Route element={<Home />} path="/" />
+
             <Route element={<Login />} path="/login" />
             <Route element={<Register />} path="/createUser" />
             <Route element={<Createstory />} path="/Discoveryourword/book" />
@@ -59,10 +62,9 @@ const Layout = () => {
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />
           </Routes>
-          <Navbar />
+
           <Jumbotron1 />
           <LogoutJumbotron />
-          <Jumbotron2 />
           <Footer />
         </ScrollToTop>
       </BrowserRouter>
