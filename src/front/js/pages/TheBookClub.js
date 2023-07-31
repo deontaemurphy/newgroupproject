@@ -80,7 +80,7 @@ const TheBookClub = () => {
           <div class="card-header">Featured</div>
           <div class="card-body">
             <h5 class="card-title">Special title treatment</h5>
-            <p class="card-text">
+            <p className="sherlock">
               With supporting text below as a natural lead-in to additional
               content.
             </p>
@@ -92,7 +92,11 @@ const TheBookClub = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-            <a href="https://www.youtube.com/results?search_query=children%27s+books+read+aloud+in+spanish+" class="btn btn-primary">
+            <a
+              className="sherlock"
+              href="https://www.youtube.com/results?search_query=children%27s+books+read+aloud+in+spanish+"
+              class="btn btn-primary"
+            >
               Go somewhere
             </a>
           </div>

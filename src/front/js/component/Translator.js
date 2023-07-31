@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-export const Navbar = () => {
+export const NavbarStretch = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
   const handleClick = (e) => {

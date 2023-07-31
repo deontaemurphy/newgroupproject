@@ -16,6 +16,7 @@ import Autherization from "./pages/Autherization";
 import Publish from "./pages/PublishYours";
 import TheBookClub from "./pages/TheBookClub";
 import Demo from "./pages/demo";
+import { NavbarStretch } from "./component/Translator";
 import { Jumbotron1 } from "./component/Jumbotron1";
 import { Jumbotron2 } from "./component/Jumbotron2";
 import { LogoutJumbotron } from "./component/Jumbotron3";
@@ -30,8 +31,9 @@ const Layout = () => {
     <div>
       <BrowserRouter basename={basename}>
         <ScrollToTop>
-          <Navbar />
+          <NavbarStretch />
           <Jumbotron1 />
+          <Navbar />
 
           <Routes>
             <Route element={<Home />} path="/" />
