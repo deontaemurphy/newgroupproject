@@ -40,7 +40,7 @@ export const Jumbotron2 = () => {
           </a>
         </header>
         <Link to="/login">
-          <button onClick={(e) => handleClick(e)}>Login</button>
+          <button>Login</button>
         </Link>
         <Link to="/createUser">
           <button>Register</button>

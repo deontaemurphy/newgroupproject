@@ -32,7 +32,7 @@ const Layout = () => {
         <ScrollToTop>
           <Navbar />
           <Jumbotron1 />
-          <LogoutJumbotron />
+
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
@@ -59,7 +59,8 @@ const Layout = () => {
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />
           </Routes>
-
+          <Jumbotron1 />
+          <LogoutJumbotron />
           <Jumbotron2 />
           <Footer />
         </ScrollToTop>
