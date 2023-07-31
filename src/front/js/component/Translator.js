@@ -19,14 +19,14 @@ export const NavbarStretch = () => {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-itemHome mt-2 mx-4">
               <Link to="/thebookclubfavorites">
-                <i className="fa-solid fa-bookmark fa-bounce"></i>
+                <i class="fa-solid fa-bars"></i>
               </Link>
             </li>
             <a
               className="navbar-brand"
               href="https://dashboard.algolia.com/apps/7VW33R3U8I/dashboard"
             >
-              Search With Algolia(iEDTlxfP7yn7HNp6F9XgG)
+              TheBookClub
             </a>
             <button
               className="navbar-toggler"

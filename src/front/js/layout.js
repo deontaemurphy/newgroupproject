@@ -32,8 +32,6 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <NavbarStretch />
-          <Jumbotron1 />
-          <Navbar />
 
           <Routes>
             <Route element={<Home />} path="/" />
@@ -61,6 +59,7 @@ const Layout = () => {
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />
           </Routes>
+          <Navbar />
           <Jumbotron1 />
           <LogoutJumbotron />
           <Jumbotron2 />
