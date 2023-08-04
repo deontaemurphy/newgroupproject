@@ -129,11 +129,11 @@ export const Navbar = () => {
                     data-bs-toggle="dropdown"
                     aria-expanded="false"
                   >
-                    Dropdown
+                    Discover
                   </button>
                   <ul class="dropdown-menu dropdown-menu-dark">
                     <li>
-                      <Link to="/Discoveryourword/book">Tag Here</Link>
+                      <Link to="/Discoveryourword/book">Buscalo</Link>
                     </li>
 
                     <li>
@@ -142,9 +142,9 @@ export const Navbar = () => {
                       </Link>
                     </li>
                     <li>
-                      <a class="dropdown-item" href="#">
-                        Something else here
-                      </a>
+                      <Link to="/auth/searchingthebookclub/home">
+                        Are you lost?
+                      </Link>
                     </li>
                   </ul>
                 </li>
