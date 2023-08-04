@@ -28,7 +28,7 @@ export const Jumbotron2 = () => {
               viewBox="0 0 118 94"
               role="img"
             >
-              <title>JumboTron@2</title>
+              <title>JumboTron2</title>
               <path
                 fill-rule="evenodd"
                 clip-rule="evenodd"

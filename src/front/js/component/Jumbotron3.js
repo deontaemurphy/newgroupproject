@@ -17,28 +17,20 @@ export const LogoutJumbotron = () => {
   return (
     <div class="jumbotron">
       <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
-      <img src="https://i.imgur.com/KFp3ilV.jpeg" />
+      <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
+        <img src="https://i.imgur.com/KFp3ilV.jpeg" />
+      </a>
       <p class="lead">The featured book (cover)</p>
+
       <hr class="my-4" />
-      <p>
-        It uses utility classes for typography and spacing to space content out
-        within the larger container.
-      </p>
+      <p>He chuckled to himself and rubbed his long, nervous hands together.</p>
       <p className="leadme">
-        <Link to="/thebookclubhome">
+        <a href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater">
           <span class="btn btn-primary btn-lg" role="button">
-            Learn more
+            Read More
           </span>
-        </Link>
+        </a>
       </p>
-      <iframe
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/5m6Dpvky20Y"
-        title="YouTube video player"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-        allowfullscreen
-      ></iframe>
     </div>
   );
 };
