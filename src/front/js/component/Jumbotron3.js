@@ -20,17 +20,6 @@ export const LogoutJumbotron = () => {
       <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
         <img src="https://i.imgur.com/KFp3ilV.jpeg" />
       </a>
-      <p class="lead">The featured book (cover)</p>
-
-      <hr class="my-4" />
-      <p>He chuckled to himself and rubbed his long, nervous hands together.</p>
-      <p className="leadme">
-        <a href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater">
-          <span class="btn btn-primary btn-lg" role="button">
-            Read More
-          </span>
-        </a>
-      </p>
     </div>
   );
 };
