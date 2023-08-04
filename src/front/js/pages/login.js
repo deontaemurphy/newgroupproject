@@ -47,9 +47,9 @@ const Login = () => {
       <hr class="my-4" />
       <p>Please go home</p>
       <p className="leadme">
-        <Link to="/thebookclubhome">
+        <Link to="/">
           <span class="btn btn-primary btn-lg" role="button">
-            Learn more
+            Home
           </span>
         </Link>
       </p>

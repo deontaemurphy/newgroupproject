@@ -16,11 +16,9 @@ export const LogoutJumbotron = () => {
   };
   return (
     <div class="jumbotron">
-      <h1 className="display-4">Hello, world!</h1>
-      <p class="lead">
-        This is a simple hero unit, a simple jumbotron-style component for
-        calling extra attention to featured content or information.
-      </p>
+      <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+      <img src="https://i.imgur.com/KFp3ilV.jpeg" />
+      <p class="lead">The featured book (cover)</p>
       <hr class="my-4" />
       <p>
         It uses utility classes for typography and spacing to space content out

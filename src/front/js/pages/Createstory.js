@@ -26,7 +26,9 @@ const Search = () => {
             </Link>
           </div>
         </nav>
-
+        <a href="https://writer.com/product/api/">
+        <b>https://writer.com/product/api/</b>
+        </a>
         <iframe
           width="560"
           height="202"
@@ -38,11 +40,12 @@ const Search = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Link to="/auth/searcthebook">
-            <span className="navbar-brand mb-0 h1">"Home"</span>
+            <span className="navbar-brand mb-0 h1">"Casa"</span>
           </Link>
           <div className="ml-auto">
             <p>About ME</p>
             <input placeholder="Reloj" size="115;"></input>
+            <p>In the "About me section"</p>
           </div>
           <Link to="/auth/searchingthebookclub/home">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>

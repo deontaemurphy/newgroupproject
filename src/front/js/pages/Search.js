@@ -48,7 +48,7 @@ const Search = () => {
           onChange={(e) => setName(e.target.value)}
         ></input>
         <Link to="/">
-          <button ocClick={(e) => handleClick(e)}>Search</button>
+          <button ocClick={(e) => handleClick(e)}>En Espanol</button>
         </Link>
         <Link to="/">
           <input placeholder="Reloj" size="100px;"></input>
