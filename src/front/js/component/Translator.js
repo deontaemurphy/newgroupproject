@@ -50,7 +50,7 @@ export const NavbarStretch = () => {
               </button>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li>
-                  <Link to="/Discoveryourword/book">Libre</Link>
+                  <Link to="/login">Entrar</Link>
                 </li>
 
                 <li>
