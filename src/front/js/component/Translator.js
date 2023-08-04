@@ -46,22 +46,22 @@ export const NavbarStretch = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Dropdown
+               Inquistivo
               </button>
               <ul class="dropdown-menu dropdown-menu-dark">
                 <li>
-                  <Link to="/Discoveryourword/book">Tag Here</Link>
+                  <Link to="/Discoveryourword/book">Libre</Link>
                 </li>
 
                 <li>
-                  <Link to="/auth/searchingthebookclub/home">
-                    Sherlock Holmes
+                  <Link to="/">
+                    Sherlock Holmes 
                   </Link>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="#">
-                    Something else here
-                  </a>
+                <Link to="/auth/searchingthebookclub/home">
+                        Are you lost?
+                      </Link>
                 </li>
               </ul>
             </li>
