@@ -32,7 +32,8 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <NavbarStretch />
-          <Navbar /> 
+          <Navbar />
+          <Jumbotron1 />
           <LogoutJumbotron />
           <Routes>
             <Route element={<Home />} path="/" />
@@ -62,9 +63,6 @@ const Layout = () => {
             <Route element={<Algolia />} path="/auth/searcthebook" />
           </Routes>
 
-          <Jumbotron1 />
-         
-          
           <Footer />
         </ScrollToTop>
       </BrowserRouter>

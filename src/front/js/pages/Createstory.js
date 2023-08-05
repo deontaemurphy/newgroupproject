@@ -29,6 +29,11 @@ const Search = () => {
         <a href="https://writer.com/product/api/">
         <b>https://writer.com/product/api/</b>
         </a>
+        <div className="ml-auto">
+            <p>About ME</p>
+            <input placeholder="Reloj" size="115;"></input>
+            <p>In the "About me section"</p>
+          </div>
         <iframe
           width="560"
           height="202"
@@ -42,11 +47,7 @@ const Search = () => {
           <Link to="/auth/searcthebook">
             <span className="navbar-brand mb-0 h1">"Casa"</span>
           </Link>
-          <div className="ml-auto">
-            <p>About ME</p>
-            <input placeholder="Reloj" size="115;"></input>
-            <p>In the "About me section"</p>
-          </div>
+          
           <Link to="/auth/searchingthebookclub/home">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
@@ -55,6 +56,13 @@ const Search = () => {
           </Link>
         </div>
       </nav>
+      <iframe
+          width="560"
+          height="202"
+          src="https://www.bandlab.com/embed/?id=0c397c8a-f22a-ee11-a9bb-000d3a41e8b8"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
 
       <Link to="/publishmystory/auth">
         <button ocClick={(e) => handleClick(e)}>Publish</button>
