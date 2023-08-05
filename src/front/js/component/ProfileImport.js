@@ -1,11 +1,9 @@
-import React, { useContext, useState } from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 
-export const LogoutJumbotron = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
+export const ProfileImport = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
   const handleClick = (e) => {
@@ -14,10 +12,10 @@ export const LogoutJumbotron = () => {
     navigate("/");
     actions.checkForToken();
   };
-  return <div class="jumbotron">
-
-
-    Open for foto 
-  </div>;
+  return (
+    <div>
+      <img src="#"></img>
+    </div>
+    
+  );
 };
-
