@@ -105,40 +105,43 @@ const Blank = () => {
       </Link>
       <div>
         <p>
-          There’s a dangerous thing deep inside of me, a being that enjoys the
-          pain of others. Gazing into your soul, seeking weakness; if there is
-          any it will know. For years I’ve struggled to keep his violent urges
-          from emerging from the depths of hell. Its strength grows as time
-          passes and I fear I may be losing my handle. Many have tried to reason
-          with him, every attempt being as futile as the first, ending in
-          horror. This creature is not of this world, or any else, he is your
-          beginning and your end. ABANDON ALL HOPE Let Me Out!!! The chants grew
-          louder and louder; his rage grew stronger, bound by the chains of
-          goodwill and faith; he is contained. Fear consumed me. “I promised I
-          would never allow you to control me ever again. I don’t need your
-          help.”{" "}
+          Hay algo peligroso en lo más profundo de mí, un ser que disfruta del
+          dolor de los demás. Mirando dentro de tu alma, buscando debilidad; si
+          hay alguno lo sabrá. Durante años he luchado para evitar que sus
+          impulsos violentos emergieran de las profundidades del infierno. Su
+          fuerza crece a medida que pasa el tiempo y temo que pueda estar
+          perdiendo el control. Muchos han tratado de razonar con él, siendo
+          cada intento tan inútil como el primero, terminando en horror. Esta
+          criatura no es de este mundo, ni de ningún otro, es vuestro principio
+          y vuestro fin. ABANDONA TODA ESPERANZA Déjame Salir!!! Los cánticos se
+          hicieron más y más fuertes; su rabia se hizo más fuerte, atado por las
+          cadenas de la buena voluntad y la fe; él está contenido. El miedo me
+          consumía. “Prometí que nunca permitiría que me controlaras nunca más.
+          No necesito tu ayuda.
         </p>
         <hr></hr>
         <p>
           {" "}
-          The Day of Acceptance is a tradition for the son of the king; this day
-          is filled with much joy and many praises. It’s a day for the ages,
-          feast bigger than the Rahnoki. Prince Zakar Chamber: “The sun rises in
-          your favor Prince Zakar, are you ready to face your father?’ My father
-          shouldn’t worry Master Serech, I’m ready.” I bow showing my teacher
-          the proper respect; however, my father, King Shamus - ruler of the
-          northern lands, was a great and powerful warrior, and a wiser king.
-          Our nation was of the four great nations; to the south of us hailed
-          the people of the claw, believing that it was the Great Rahnoki’s claw
-          to carve out the lands. Father always believed this tale to be
-          foolish, we all believed it be; this world was sanctioned by the Elder
-          Gods of Dimorphous. Legend says that their leader faced the Rahnoki
-          alone, ‘the battle was so intense it caused the lands to rise from the
-          sea, and the clouds to rain mountains upon those lands.’ No one knows
-          for certain, but there have been tales that the son of Lord Nior,
-          ruler of the Dimorphites, has made friends with the Rahnoki. Sounds
-          farfetched. Knock. Knock “Father.” There was silence; I knocked again.
-          Knocks. Knocks. Again, the man stands there.{" "}
+          El Día de la Aceptación es una tradición para el hijo del rey; este
+          día está lleno de mucha alegría y muchas alabanzas. Es un día para las
+          edades, fiesta más grande que el Rahnoki. Cámara del Príncipe Zakar:
+          "El sol sale a su favor, Príncipe Zakar, ¿está listo para enfrentarse
+          a su padre?" Mi padre no debería preocuparse, Maestro Serech, estoy
+          listo. Me inclino mostrando a mi maestro el debido respeto; sin
+          embargo, mi padre, el rey Shamus, gobernante de las tierras del norte,
+          era un gran y poderoso guerrero, y un rey más sabio. Nuestra nación
+          era de las cuatro grandes naciones; al sur de nosotros saludó a la
+          gente de la garra, creyendo que era la garra del Gran Rahnoki para
+          tallar las tierras. Mi padre siempre creyó que este cuento era una
+          tontería, todos lo creímos; este mundo fue sancionado por los Dioses
+          Mayores de Dimorphous. La leyenda dice que su líder se enfrentó solo a
+          los Rahnoki, "la batalla fue tan intensa que hizo que las tierras se
+          levantaran del mar y las nubes hicieran llover montañas sobre esas
+          tierras". Nadie lo sabe con certeza, pero hay historias de que los
+          hijo de Lord Nior, gobernante de los dimorfitas, se ha hecho amigo de
+          los Rahnoki. Suena descabellado. Golpear. Toca "Padre". Había
+          silencio; Toqué de nuevo. Golpes. Golpes. Una vez más, el hombre se
+          encuentra allí.{" "}
         </p>
         <hr></hr>
       </div>
