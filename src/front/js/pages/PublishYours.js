@@ -30,7 +30,7 @@ export const PublishYourContent = () => {
                 </Link>
               </button>
             </div>
-            <Link to="/thebookclubhome">
+            <Link to="/searchthebook">
               <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
                 <button onClick={(e) => handleClick(e)}>Espanol</button>
               </a>
