@@ -21,6 +21,9 @@
   display: inline-block;
   font-size: 60px;
 }
+.card-header {
+  background-color: blue;
+}
 .nav1 {
   color: mediumturquoise;
   display: inline-block;
@@ -28,8 +31,10 @@
   background-color: black;
   border: 1px;
 }
-.p{font-language-override: es;
-color:blue;}
+.p {
+  font-language-override: es;
+  color: blue;
+}
 /*
     home.css: This website contains selectors only used in home.css
 

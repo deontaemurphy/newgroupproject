@@ -32,9 +32,21 @@ const Authorization = () => {
   return (
     <div className="open">
       <div className="card">
-        <div className="card-header">Featured Books</div>
         <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+        <div className="card-header">Featured Books</div>
+        <hr></hr>
         <h1>Spolighted Books</h1>
+        <hr></hr>
+        <ol>
+          <a>
+            <li>The Adventure of Sherlock Holmes</li>
+          </a>
+          <Link to="/">
+            <li>Sherlock Holmes</li>
+          </Link>
+          <li></li>
+        </ol>
+
         <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
           <img src="https://i.imgur.com/KFp3ilV.jpeg" />
         </a>
