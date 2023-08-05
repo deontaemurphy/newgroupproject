@@ -39,22 +39,27 @@ const Authorization = () => {
         <hr></hr>
         <ol>
           <a>
-            <li className="size">The Adventure of Sherlock Holmes
-            <img src="https://i.imgur.com/KFp3ilV.jpeg" className="likkle"/>
+            <li className="size">
+              The Adventure of Sherlock Holmes
+              <button>
+                <img
+                  src="https://i.imgur.com/KFp3ilV.jpeg"
+                  className="likkle"
+                />
+              </button>
             </li>
-
           </a>
           <Link to="/">
             <li>Sherlock Holmes</li>
           </Link>
           <li>
-          <iframe
-                allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                frameborder="0"
-                height="450"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082"
-              ></iframe>
+            <iframe
+              allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+              frameborder="0"
+              height="450"
+              sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+              src="https://embed.music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082"
+            ></iframe>
           </li>
         </ol>
       </div>
@@ -75,7 +80,7 @@ const Authorization = () => {
                 <span>Follow</span>
                 <b>Me</b>
               </button>
-              
+
               <hr></hr>
               <p>Tag a layout</p>
               <br></br>
