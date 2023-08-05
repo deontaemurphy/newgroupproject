@@ -14,8 +14,8 @@ export const Jumbotron1 = () => {
   };
   return (
     <nav className="navbar navbar-light bg-light">
-      <div className="container-fluid">
-        <ul className="">
+      <div className="flo">
+        <ul className="push">
           <a
             className="navbar-brand"
             href="https://github.com/Doctorine06/SimpleCounter/blob/main/src/js/component/home.jsx"

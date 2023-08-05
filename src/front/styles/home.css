@@ -20,9 +20,18 @@
 .btn {
   color: red;
 }
+.pad {
+  margin-left: 300px;
+}
 .Adjust {
   height: 50%;
   width: 70%;
+}
+.flow {
+  padding: left 800px;
+}
+.push {
+  color: red;
 }
 .nav {
   color: mediumturquoise;
@@ -46,8 +55,12 @@
   color: mediumturquoise;
   display: inline-block;
   font-size: 20px;
-  background-color: black;
+  background-color: rgb(0, 0, 0);
   border: 1px;
+  padding-right: 700px;
+  margin-left: -300px;
+  margin-bottom: 9%;
+
 }
 .p {
   font-language-override: es;
@@ -65,6 +78,7 @@
   margin: auto;
   border: #101010;
 }
+
 .bigCounter div {
   display: inline-block;
   font-size: 60px;

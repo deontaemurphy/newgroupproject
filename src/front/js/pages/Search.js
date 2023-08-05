@@ -13,7 +13,7 @@ const Search = () => {
   return (
     <div>
       <nav className="navbar navbar-light bg-light">
-        <div className="container">
+        <div className="pad">
           <Link to="/searchthebookclub/home">
             <button className="nav1" ocClick={(e) => handleClick(e)}>
               En Espanol
