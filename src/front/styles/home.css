@@ -27,6 +27,13 @@
 .it {
   font-size: 95px;
 }
+.size {
+  border-radius: 0cm;
+}
+.likkle {
+  height: 100px;
+  width: 100px;
+}
 .nav1 {
   color: mediumturquoise;
   display: inline-block;
