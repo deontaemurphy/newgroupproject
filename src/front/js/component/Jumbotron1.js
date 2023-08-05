@@ -16,15 +16,13 @@ export const Jumbotron1 = () => {
     <nav className="navbar navbar-light bg-light">
       <div className="flo">
         <ul className="push">
-          <a
-            className="navbar-brand"
-            href="https://github.com/Doctorine06/SimpleCounter/blob/main/src/js/component/home.jsx"
-          >
-            <Link to="/thebookclubfavorites">
-              <i className="fa-solid fa-bookmark fa-bounce"></i>
-            </Link>
-            Home.jsx
-          </a>
+          <Link to="/thebookclubfavorites">
+            <i className="fa-solid fa-bookmark fa-bounce"></i>
+          </Link>
+          <Link to="/publishmystory/auth">
+            <span className="colores">Home.thebookclub</span>
+          </Link>
+
           <button
             className="navbar-toggler"
             type="button"

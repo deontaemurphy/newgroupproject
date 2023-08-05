@@ -27,7 +27,7 @@ const TheBookClub = () => {
                 <input placeholder="Reloj" size="100px;"></input>
               </span>
               <a href="#">
-              <button onClick={(e) => handleClick(e)}>Entrar</button>
+                <button onClick={(e) => handleClick(e)}>Entrar</button>
               </a>
               <button onClick={(e) => handleClick(e)}>Translate</button>
             </Link>
@@ -107,6 +107,45 @@ const TheBookClub = () => {
       <Link to="/auth/searcthebook">
         <button ocClick={(e) => handleClick(e)}>Search</button>
       </Link>
+      <div>
+        <p>
+          There’s a dangerous thing deep inside of me, a being that enjoys the
+          pain of others. Gazing into your soul, seeking weakness; if there is
+          any it will know. For years I’ve struggled to keep his violent urges
+          from emerging from the depths of hell. Its strength grows as time
+          passes and I fear I may be losing my handle. Many have tried to reason
+          with him, every attempt being as futile as the first, ending in
+          horror. This creature is not of this world, or any else, he is your
+          beginning and your end. ABANDON ALL HOPE Let Me Out!!! The chants grew
+          louder and louder; his rage grew stronger, bound by the chains of
+          goodwill and faith; he is contained. Fear consumed me. “I promised I
+          would never allow you to control me ever again. I don’t need your
+          help.”{" "}
+        </p>
+        <hr></hr>
+        <p>
+          {" "}
+          The Day of Acceptance is a tradition for the son of the king; this day
+          is filled with much joy and many praises. It’s a day for the ages,
+          feast bigger than the Rahnoki. Prince Zakar Chamber: “The sun rises in
+          your favor Prince Zakar, are you ready to face your father?’ My father
+          shouldn’t worry Master Serech, I’m ready.” I bow showing my teacher
+          the proper respect; however, my father, King Shamus - ruler of the
+          northern lands, was a great and powerful warrior, and a wiser king.
+          Our nation was of the four great nations; to the south of us hailed
+          the people of the claw, believing that it was the Great Rahnoki’s claw
+          to carve out the lands. Father always believed this tale to be
+          foolish, we all believed it be; this world was sanctioned by the Elder
+          Gods of Dimorphous. Legend says that their leader faced the Rahnoki
+          alone, ‘the battle was so intense it caused the lands to rise from the
+          sea, and the clouds to rain mountains upon those lands.’ No one knows
+          for certain, but there have been tales that the son of Lord Nior,
+          ruler of the Dimorphites, has made friends with the Rahnoki. Sounds
+          farfetched. Knock. Knock “Father.” There was silence; I knocked again.
+          Knocks. Knocks. Again, the man stands there.{" "}
+        </p>
+        <hr></hr>
+      </div>
       <div class="card text-center">
         <div class="card-header">Featured</div>
         <img
@@ -160,13 +199,7 @@ const TheBookClub = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-            <a
-              className="sherlock"
-              href="https://www.youtube.com/results?search_query=children%27s+books+read+aloud+in+spanish+"
-              class="btn btn-primary"
-            >
-              Go somewhere
-            </a>
+            
           </div>
         </div>
         <div class="card-footer text-body-secondary">2 days ago</div>
