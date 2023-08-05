@@ -99,7 +99,7 @@ const Blank = () => {
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
       <Link to="/auth/searcthebook">
-        <button ocClick={(e) => handleClick(e)}>Search</button>
+        <button ocClick={(e) => handleClick(e)} className="sherlock">búsqueda</button>
       </Link>
       <div>
         <h1>El cuento de dos reyes</h1>
