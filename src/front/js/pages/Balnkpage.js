@@ -12,7 +12,7 @@ const Blank = () => {
   };
   return (
     <div>
-      <nav className="navbar navbar-light bg-light">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div className="container">
           <Link to="/publishmystory/auth">
             <span className="navbar-brand mb-0 h1">"Casa"</span>
@@ -29,9 +29,7 @@ const Blank = () => {
             </Link>
           </div>
         </div>
-      </nav>
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
             Navbar.home.theexclusive
@@ -104,6 +102,7 @@ const Blank = () => {
         <button ocClick={(e) => handleClick(e)}>Search</button>
       </Link>
       <div>
+        <h1>El cuento de dos reyes</h1>
         <p>
           Hay algo peligroso en lo más profundo de mí, un ser que disfruta del
           dolor de los demás. Mirando dentro de tu alma, buscando debilidad; si

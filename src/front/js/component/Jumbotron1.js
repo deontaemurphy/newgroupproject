@@ -21,15 +21,21 @@ export const Jumbotron1 = () => {
           </Link>
           <ul>
             <li>
-          <Link to="/publishmystory/auth">
-            <span className="colores">Home.thebookclub</span>
-          </Link></li>
-          <li>
-          <Link to="/auth/searchingthebookclub/home">
-            <span className="colores">Search.thebookclub</span>
-          </Link></li>
+              <Link to="/publishmystory/auth">
+                <span className="colores">Home.thebookclub</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/auth/searchingthebookclub/home">
+                <span className="colores">Search.thebookclub</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/auth/search/thebookclub/home">
+                <span>El Club del Libro.Exclusivo</span>
+              </Link>
+            </li>
           </ul>
-
 
           <button
             className="navbar-toggler"
