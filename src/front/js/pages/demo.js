@@ -47,6 +47,17 @@ const Demo = () => {
         </div>
       </nav>
       <p>Spanish Titles</p>
+      <h1>I Want To Know</h1>
+      <p> I am a publication form.</p>
+      <form>
+        <label>
+          <button>
+            Click Me To {""}
+            <input placeholder="register"></input>
+            {"publish"}
+          </button>
+        </label>
+      </form>
       <iframe
         width="560"
         height="202"
@@ -54,15 +65,27 @@ const Demo = () => {
         frameborder="0"
         allowfullscreen
       ></iframe>
-      <hr></hr>
-      <iframe
-        allow="autoplay *; encrypted-media *;"
-        frameborder="0"
-        height="450"
-        width="500"
-        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-        src="https://embed.music.apple.com/us/album/scooby-doo-music-from-the-motion-picture/706073180"
-      ></iframe>
+      <form>
+        <label>
+          <button>
+            <p>Title</p>
+            Click Me To {"view writer"}
+            <input placeholder="register"></input>
+            {"publish"}
+          </button>
+        </label>
+      </form>
+      <br></br>
+
+      <div>
+        <iframe
+          width="560"
+          height="202"
+          src="https://www.bandlab.com/embed/?id=7be868ce-3a2b-ee11-a9bb-000d3a41e8b8"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+      </div>
     </div>
   );
 };
