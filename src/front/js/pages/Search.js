@@ -16,14 +16,14 @@ const Search = () => {
         <div className="pad">
           <Link to="/searchthebookclub">
             <button className="nav1" ocClick={(e) => handleClick(e)}>
-             Ofrecido en español
+              Ofrecido en español
             </button>
 
             <span className="nav">"Home"</span>
           </Link>
           <div class="dropdown">
             <button
-              class="btn btn-secondary dropdown-toggle"
+              className="margin-left"
               type="button"
               data-bs-toggle="dropdown"
               aria-expanded="false"
@@ -31,11 +31,7 @@ const Search = () => {
               Dropdown button
             </button>
             <ul class="dropdown-menu">
-              <li>
-                <a class="dropdown-item" href="#">
-                  Action
-                </a>
-              </li>
+              
               <li>
                 <Link to="/publishmystory/auth">
                   <button ocClick={(e) => handleClick(e)}>
@@ -43,6 +39,7 @@ const Search = () => {
                   </button>
                 </Link>
               </li>
+             
               <li>
                 <a class="dropdown-item" href="#"></a>
               </li>
@@ -118,7 +115,10 @@ const Search = () => {
         <br></br>
         1. a person who is very interested in a particular activity or subject:
         <hr></hr>
-       <p className="watson">Nothing follws until the Scavenger Hunt Timer begins </p> There’s{" "}
+        <p className="watson">
+          Nothing follws until the Scavenger Hunt Timer begins{" "}
+        </p>{" "}
+        There’s{" "}
         <input
           type="text"
           placeholder="page 5"
