@@ -21,6 +21,7 @@ import { NavbarStretch } from "./component/Translator";
 import { Jumbotron1 } from "./component/Jumbotron1";
 import { Jumbotron2 } from "./component/Jumbotron2";
 import { LogoutJumbotron } from "./component/Jumbotron3";
+import { ProfileImport } from "./component/ProfileImport";
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
 const Layout = () => {
@@ -65,6 +66,7 @@ const Layout = () => {
 
           <Footer />
           <Jumbotron2 />
+          <ProfileImport />
         </ScrollToTop>
       </BrowserRouter>
     </div>
