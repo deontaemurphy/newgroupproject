@@ -54,7 +54,7 @@ const Login = () => {
           </span>
         </Link>
       </p>
-      <h1 className="display-4">Hello, world!</h1>
+      <h1 className="display-4">Hola,mundo!</h1>
     </div>
   );
 };
