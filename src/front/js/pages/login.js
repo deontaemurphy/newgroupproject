@@ -26,6 +26,7 @@ const Login = () => {
   // }, []);
   return (
     <div class="jumbotron">
+      <p>Please go home</p>
       <input
         type="text"
         placeholder="email"
@@ -42,10 +43,10 @@ const Login = () => {
       <Link to="/createUser">
         <button>Register</button>
       </Link>
-      <h1 className="display-4">Hello, world!</h1>
+
       <p class="lead">This is the bottom of my login page</p>
       <hr class="my-4" />
-      <p>Please go home</p>
+
       <p className="leadme">
         <Link to="/">
           <span class="btn btn-primary btn-lg" role="button">
@@ -53,6 +54,7 @@ const Login = () => {
           </span>
         </Link>
       </p>
+      <h1 className="display-4">Hello, world!</h1>
     </div>
   );
 };
