@@ -70,3 +70,37 @@ def createUser():
   db.session.add(user)   
   db.session.commit()
   return jsonify(request_body,access_token), 200
+
+  @api.route('/bookclub', methods=['GET'])
+@jwt_required()
+def thebookclub():
+  username = get_jwt_identity()
+  user = User.query.filter_by(username = username).first()
+  return jsonify(user.serialize()), 200
+
+
+@api.route('/bookclubexclusivecontent', methods=['POST'])
+def exclusivecontent():
+  request_body = request.get_json()
+
+  if not request_body["name"]:
+      return jsonify({"msg": "Name is required"}), 400
+  if not request_body["email"]:
+      return jsonify({"msg": "Email is required"}), 400
+  if not request_body["password"]:
+      return jsonify({"msg": "Password is required"}), 400
+
+  user = User.query.filter_by(email=request_body["email"]).first()
+  if user:
+      return jsonify({"msg": "User already exists"}), 400
+
+  user = User(
+            name = request_body["name"],
+            email = request_body["email"],
+            password = generate_password_hash(request_body["password"]),
+            )
+  email = request.json.get("email",None)
+  access_token = create_access_token(identity=email)
+  db.session.add(user)   
+  db.session.commit()
+  return jsonify(request_body,access_token), 200

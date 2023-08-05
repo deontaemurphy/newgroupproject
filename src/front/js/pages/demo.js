@@ -8,6 +8,7 @@ const Demo = () => {
   const { store, actions } = useContext(Context);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [bookTitle, setBookTitle] = useState("");
   const handleClick = (e) => {
     e.preventDefault();
     actions.login(email, password);

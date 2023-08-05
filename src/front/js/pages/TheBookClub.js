@@ -22,16 +22,16 @@ const TheBookClub = () => {
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/searcthebookclub">
-              <span>
-                <input placeholder="Reloj" size="100px;"></input>
-              </span>
-              <a href="#">
-                <button onClick={(e) => handleClick(e)}>Entrar</button>
-              </a>
-              {/* <Link to ="" */}
-              <button onClick={(e) => handleClick(e)}>Translate</button>
+            <Link to="/searchthebookclub">
+              <button ocClick={(e) => handleClick(e)}>
+                The Book Club Exclusive
+              </button>
             </Link>
+            <span>
+              {"stringify 250+ "}
+              Today we title the cultural differences of not knowing
+              <input placeholder="counter" size="100px;"></input>
+            </span>
           </div>
         </div>
       </nav>
