@@ -19,9 +19,18 @@ export const Jumbotron1 = () => {
           <Link to="/thebookclubfavorites">
             <i className="fa-solid fa-bookmark fa-bounce"></i>
           </Link>
-          <Link to="/publishmystory/auth">
-            <span className="colores">Home.thebookclub</span>
-          </Link>
+          <ul>
+            <li>
+              <Link to="/publishmystory/auth">
+                <span className="colores">Home.thebookclub</span>
+              </Link>
+            </li>
+            <li>
+              <Link to="/publishmystory/auth">
+                <span className="colores">Search.thebookclub</span>
+              </Link>
+            </li>
+          </ul>
 
           <button
             className="navbar-toggler"
