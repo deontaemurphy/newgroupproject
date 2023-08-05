@@ -90,7 +90,7 @@ const Blank = () => {
         onChange={(e) => setName(e.target.value)}
       ></input>
       <Link to="/auth/search/thebookclub/home">
-        <button ocClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
+        <button ocClick={(e) => handleClick(e)}>Exclusivo del club de lectura</button>
       </Link>
       <input
         type="text"
