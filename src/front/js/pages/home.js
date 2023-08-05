@@ -29,7 +29,7 @@ export const Home = () => {
           />
           <p class="lead">The featured book (cover)</p>
         </a>
-        
+        <hr></hr>
         <iframe
           width="560"
           height="315"
@@ -39,8 +39,9 @@ export const Home = () => {
           allowfullscreen
         ></iframe>
         <a href="https://www.youtube.com/embed/5m6Dpvky20Y">
-        <p>Children's Tab</p>
+          <p>Children's Tab</p>
         </a>
+        <hr></hr>
       </div>
     </div>
   );

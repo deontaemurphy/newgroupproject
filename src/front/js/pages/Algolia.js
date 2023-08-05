@@ -44,6 +44,8 @@ const SearchAlgolia = () => {
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
+      <hr></hr>
+      <p>El cuento de dos reyes Un título escrito por Steven Ferguson</p>
       <div class="text-center">
         <img
           src="https://cdn-assets-eu.frontify.com/s3/frontify-enterprise-files-eu/eyJwYXRoIjoiYWxnb2xpYS1icmFuZFwvZmlsZVwvYkZrVnB4ZFJBenQ2c0RXTmZ3NGcucG5nIn0:algolia-brand:KOjXQWukOtV8KHzQLORQ_RoIzND_P5xvvvths9EFPok?width=2400"
