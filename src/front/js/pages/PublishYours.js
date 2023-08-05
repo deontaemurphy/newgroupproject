@@ -103,7 +103,10 @@ export const PublishYourContent = () => {
         <hr></hr>
       </div>
       <div>
-        <p>This is the bottom of the page</p>
+        <p>This is the bottom of the page.
+
+          I am a publication page 
+        </p>
         <iframe
           width="560"
           height="202"
