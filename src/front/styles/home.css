@@ -24,6 +24,9 @@
 .card-header {
   background-color: blue;
 }
+.it {
+  font-size: 95px;
+}
 .nav1 {
   color: mediumturquoise;
   display: inline-block;

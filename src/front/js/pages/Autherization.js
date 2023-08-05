@@ -46,13 +46,18 @@ const Authorization = () => {
           </Link>
           <li></li>
         </ol>
-
+      </div>
+      <div className="close">
         <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
           <img src="https://i.imgur.com/KFp3ilV.jpeg" />
         </a>
+
         <div className="card-body">
+          <hr></hr>
           <h5 className="card-title">Special title treatment</h5>
+          <hr></hr>
           <p className="card-text">This is a house above my book button</p>
+          <h5>Throw Error!</h5>
           <div className="img-top">
             <a href="https://on.soundcloud.com/KRsbN">
               <button className="button">
@@ -66,6 +71,9 @@ const Authorization = () => {
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                 src="https://embed.music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082"
               ></iframe>
+              <hr></hr>
+              <p>Tag a layout</p>
+              <br></br>
               <iframe
                 allow="autoplay *; encrypted-media *;"
                 frameborder="0"
@@ -74,6 +82,7 @@ const Authorization = () => {
                 src="https://embed.music.apple.com/us/album/lose-control-feat-ciara-fat-man-scoop/73240848?i=73240545"
               ></iframe>
               <p>🇯🇲</p>
+              <b className="it">Genre</b>
               <span>About Me Section Here</span>
               <iframe
                 allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
