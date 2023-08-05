@@ -70,7 +70,12 @@ const Search = () => {
           apiece.
         </b>
         <hr></hr>
-        There’s money in this case, Watson, if there is nothing else.” “J think
+        There’s  <input
+        type="text"
+        placeholder="page 4"
+        value={bookTitle}
+        onChange={(e) => setBookTitle(e.target.value)}
+      ></input> in this case, Watson, if there is nothing else.” “J think
         that I had better go, Holmes.” “Not a bit, doctor. Stay where you are. I
         am lost without my Boswell. And this promises to be interesting. It
         would be a pity to miss it.” “ But your client —” “Never mind him. I may
@@ -89,19 +94,9 @@ const Search = () => {
         and which were trimmed at the tops with rich brown fur, completed the
         impression of barbaric"
       </span>
-      <input
-        type="text"
-        placeholder="book"
-        value={bookTitle}
-        onChange={(e) => setBookTitle(e.target.value)}
-      ></input>
+     
 
-      <input
-        type="text"
-        placeholder="name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-      ></input>
+      
     </div>
   );
 };
