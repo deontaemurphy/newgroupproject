@@ -66,8 +66,14 @@ const SearchAlgolia = () => {
         faith; he is contained. Fear consumed me. “I promised I would never
         allow you to control me ever again. I don’t need your help.”
       </p>
-      <a href="https://dashboard.algolia.com/apps/7VW33R3U8I/explorer/browse/the_book_club?searchMode=search">
-        <button onClick={(e) => handleClick(e)}>Search</button>
+      
+        <a
+          class="btn btn-primary"
+          href="https://dashboard.algolia.com/apps/7VW33R3U8I/explorer/browse/the_book_club?searchMode=search"
+          role="button"
+        >
+        
+        <button >Search</button>
       </a>
       <p>
         El Día de la Aceptación es una tradición para el hijo del rey; este día
@@ -90,6 +96,9 @@ const SearchAlgolia = () => {
         Golpear. Toca "Padre". Había silencio; Toqué de nuevo. Golpes. Golpes.
         Una vez más, el hombre se encuentra allí.
       </p>
+      <hr></hr>
+      <b>Algolia is my search API</b>
+      <hr></hr>
     </div>
   );
 };
