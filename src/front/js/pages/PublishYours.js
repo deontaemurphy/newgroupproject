@@ -38,18 +38,16 @@ export const PublishYourContent = () => {
           </div>
         </div>
       </nav>
-      <div className="form-control">
-        Discover (Needs to be up under The Algolia)
-        <input
-          className="form-control me-2 ml-100"
-          placeholder=" 
-
-        "
-          size="125"
-          cols="25"
-          rows="25"
-        />
-        Sherlock Holmes: 6 ADVENTURES OF SHERLOCK HOLMES must be dull, indeed,
+      <div>
+        Sherlock Holmes:
+        
+        <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
+          <img
+            className="Adjust"
+            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
+          />
+        </a>
+        6 ADVENTURES OF SHERLOCK HOLMES must be dull, indeed,
         if I do not pronounce him to be an active member of the medical
         profession.” I could not help laughing at the ease with which he
         explained his process of deduction. “When I hear you give your reasons,”
@@ -61,13 +59,6 @@ export const PublishYourContent = () => {
         see, but you do not observe. The distinction is clear. For example, you
         have frequently seen the steps which lead up from the hall to this
         room.” “ Frequently.”
-        <br></br>
-        <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
-          <img
-            className="Adjust"
-            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-          />
-        </a>
         <iframe
           width="560"
           height="202"
