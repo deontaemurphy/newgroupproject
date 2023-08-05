@@ -31,113 +31,41 @@ const Demo = () => {
   // }, []);
   return (
     <div>
-      <div class="row align-items-md-stretch">
-        <div class="col-md-6">
-          <div class="h-100 p-5 text-bg-dark rounded-3">
-            <h2>Change the background</h2>
-            <p>
-              Swap the background-color utility and add a `.text-*` color
-              utility to mix up the jumbotron look. Then, mix and match with
-              additional component themes and more.
-            </p>
-            <button
-              class="btn btn-outline-light"
-              type="button"
-              height="200"
-              size="400"
-              width="250"
-            >
-              <iframe
-                width="245"
-                height="140"
-                src="https://www.youtube.com/embed/0-Hj_bi9Qto"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </button>
-            <button class="btn btn-outline-light" type="button">
-              <a href="https://www.youtube.com/embed/0-Hj_bi9Qto">Push</a>
-            </button>
-          </div>
-        </div>
-        <input
-          type="text"
-          placeholder="email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        ></input>
-        <input
-          type="password"
-          placeholder="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        ></input>
-        <button onClick={(e) => handleClick(e)}>Login</button>
-        <Link to="/createUser">
-          <button>Register</button>
-        </Link>
-        <form>
-          <div class="mb-3">
-            <label for="exampleInputEmail1" class="form-label">
-              Email address
-            </label>
-            <input
-              type="email"
-              class="form-control"
-              id="exampleInputEmail1"
-              aria-describedby="emailHelp"
-            />
-            <input
-              type="password"
-              placeholder="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-            <Link to="/createUser">
-              <button class="btn btn-primary">Register</button>
-            </Link>
-            <div id="emailHelp" class="form-text">
-              We'll never share your email with anyone else.
-            </div>
-          </div>
-          <div class="mb-3">
-            <label for="exampleInputPassword1" class="form-label">
-              Password
-            </label>
-            <input
-              type="password"
-              class="form-control"
-              id="exampleInputPassword1"
-            />
-          </div>
-          <div class="mb-3 form-check">
-            <input
-              type="checkbox"
-              class="form-check-input"
-              id="exampleCheck1"
-            />
-            <label class="form-check-label" for="exampleCheck1">
-              Check me out
-            </label>
-          </div>
-          <Link to="/thebookclub">
-            <button type="submit" class="btn btn-primary">
-              Submit
-            </button>
+      <nav className="navbar navbar-light bg-light">
+        <div className="container">
+          <Link to="/auth/searcthebook">
+            <span className="navbar-brand mb-0 h1">"Casa"</span>
           </Link>
-        </form>
-        <button
-          type="button"
-          class="btn btn-lg btn-danger"
-          data-toggle="popover"
-          title="Popover title"
-          data-content="And here's some amazing content. It's very engaging. Right?"
-        >
-          Click to toggle popover
-        </button>
-      </div>
+
+          <Link to="/auth/searchingthebookclub/home">
+            <span className="navbar-brand mb-0 h1">"Look It Up"</span>
+          </Link>
+          <Link to="/auth/thebookclub">
+            <button ocClick={(e) => handleClick(e)}>Home</button>
+          </Link>
+        </div>
+      </nav>
+      <p>Spanish Titles</p>
+      <iframe
+        width="560"
+        height="202"
+        src="https://www.bandlab.com/embed/?id=0c397c8a-f22a-ee11-a9bb-000d3a41e8b8"
+        frameborder="0"
+        allowfullscreen
+      ></iframe>
+
+      <Link to="/publishmystory/auth">
+        <button ocClick={(e) => handleClick(e)}>Publish</button>
+      </Link>
+      <input
+        type="text"
+        placeholder="book"
+        value={bookTitle}
+        onChange={(e) => setBookTitle(e.target.value)}
+      ></input>
+      <Link to="/auth/searcthebook">
+        <button ocClick={(e) => handleClick(e)}>Search</button>
+      </Link>
     </div>
   );
 };

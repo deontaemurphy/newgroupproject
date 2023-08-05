@@ -15,50 +15,8 @@ export const Jumbotron1 = () => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container">
-        <a href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater">
-          <span className="navbar-brand mb-0 h1">"page 4"</span>
-        </a>
-      </div>
-      <div>
-        <iframe
-          width="1450"
-          height="400"
-          src="https://www.youtube.com/embed/kpPMZftGOSQ"
-          title="Harry Potter"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
-
-        <p>Harry Potter and The Sorcerer's Stone</p>
-        <img
-          src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-          class="rounded float-start"
-          alt="sherlock holmes"
-        />
-        <img
-          src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-          class="rounded float-end"
-          alt="spongebob"
-        ></img>
         <div className="ml-auto">
-          <Link to="/auth/search/thebookclub">
-            <div>
-              <button className="btnpop">Publish</button>
-            </div>
-          </Link>
-        </div>
-        <div>
-          <img
-            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-            class="rounded float-start"
-            alt="sherlock holmes"
-          />
-          <img
-            src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-            class="rounded float-end"
-            alt="spongebob"
-          ></img>
+        <hr></hr>
         </div>
       </div>
     </nav>

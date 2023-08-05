@@ -62,17 +62,23 @@ export const PublishYourContent = () => {
         see, but you do not observe. The distinction is clear. For example, you
         have frequently seen the steps which lead up from the hall to this
         room.” “ Frequently.”
+        <br></br>
+        <Link to="/thebookclubhome">
+          <button onClick={(e) => handleClick(e)}>The Book Club</button>
+        </Link>
         <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
           <img
             className="Adjust"
             src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
           />
         </a>
-        <Link to="/thebookclubhome">
-          <button onClick={(e) => handleClick(e)}>The Book Club</button>
-        </Link>
-        <iframe width="560" height="202" src="https://www.bandlab.com/embed/?id=7be868ce-3a2b-ee11-a9bb-000d3a41e8b8" frameborder="0" allowfullscreen></iframe>
-       
+        <iframe
+          width="560"
+          height="202"
+          src="https://www.bandlab.com/embed/?id=7be868ce-3a2b-ee11-a9bb-000d3a41e8b8"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
       </div>
     </div>
   );
