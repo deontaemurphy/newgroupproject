@@ -41,7 +41,7 @@ const Demo = () => {
           <Link to="/auth/searchingthebookclub/home">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
-          <Link to="/auth/thebookclub">
+          <Link to="/publishmystory/auth">
             <button ocClick={(e) => handleClick(e)}>Home</button>
           </Link>
         </div>
