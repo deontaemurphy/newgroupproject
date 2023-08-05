@@ -14,7 +14,7 @@ const Inquistivo = () => {
     <div>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <Link to="/searchthebookclub">
+          <Link to="/auth/searchingthebookclub/home">
             <span className="navbar-brand mb-0 h1">"Casa"</span>
           </Link>
 
@@ -38,7 +38,7 @@ const Inquistivo = () => {
       <a href="https://archive.org/details/adventuresofsher00doylrich/page/300/mode/2up?ref=ol&view=theater">
         <input placeholder="The Reloj" size="100;"></input>
         <button ocClick={(e) => handleClick(e)}>Inquistivo</button>
-        </a>
+      </a>
       <input
         type="text"
         placeholder="libre"
@@ -68,10 +68,10 @@ const Inquistivo = () => {
       han demostrado que es alguien a quien se le puede confiar con seguridad
       asuntos que son de una importancia que difícilmente puede exagerarse.
       <br></br>
-      hay <span className="p">página 4</span> en este caso, Watson, si no
-      hay nada más. Creo que será mejor que me vaya, Holmes. “Ni un poco,
-      doctor. Quédate donde estás. Estoy perdido sin mi Boswell. Y esto promete
-      ser interesante. Sería una pena perdérselo”. Pero su cliente... —No se
+      hay <span className="p">página 4</span> en este caso, Watson, si no hay
+      nada más. Creo que será mejor que me vaya, Holmes. “Ni un poco, doctor.
+      Quédate donde estás. Estoy perdido sin mi Boswell. Y esto promete ser
+      interesante. Sería una pena perdérselo”. Pero su cliente... —No se
       preocupe por él. Puede que necesite tu ayuda, y él también. Ahí viene.
       Siéntese en ese sillón, doctor, y bríndenos su mejor atención. Un paso
       lento y pesado, que se había oído en las escaleras y en el pasillo, se
