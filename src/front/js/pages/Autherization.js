@@ -28,11 +28,28 @@ const Authorization = () => {
     // Authentincate
     // if (auth === true || auth === defined || auth === "") {
     navigate("/thebookclub");
+    const popoverTriggerList = document.querySelectorAll(
+      '[data-bs-toggle="popover"]'
+    );
+    const popoverList = [...popoverTriggerList].map(
+      (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
+    );
   }
   return (
     <div className="open">
       <div className="card">
         <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+        <hr></hr>
+        <button
+          type="button"
+          class="btn btn-lg btn-danger"
+          data-bs-toggle="popover"
+          data-bs-title="Popover title"
+          data-bs-content="And here's some amazing content. It's very engaging. Right?"
+        >
+          Click to toggle popover
+        </button>
+        <hr></hr>
         <div className="card-header">Featured Books</div>
         <hr></hr>
         <h1>Spolighted Books</h1>
@@ -40,13 +57,17 @@ const Authorization = () => {
         <ol>
           <a>
             <li className="size">
-              The Adventure of Sherlock Holmes
-              <button>
-                <img
-                  src="https://i.imgur.com/KFp3ilV.jpeg"
-                  className="likkle"
-                />
-              </button>
+              <label>
+                <a href="https://archive.org/details/adventuresofsher00doylrich/page/300/mode/2up?ref=ol&view=theater">
+                  <button>
+                    <img
+                      src="https://i.imgur.com/KFp3ilV.jpeg"
+                      className="likkle"
+                    />
+                  </button>
+                </a>
+                The Adventure of Sherlock Holmes
+              </label>
             </li>
           </a>
           <Link to="/">
