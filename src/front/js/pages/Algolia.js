@@ -66,9 +66,9 @@ const SearchAlgolia = () => {
         faith; he is contained. Fear consumed me. “I promised I would never
         allow you to control me ever again. I don’t need your help.”
       </p>
-      <Link to="/auth/thebookclub">
+      <a href="https://dashboard.algolia.com/apps/7VW33R3U8I/explorer/browse/the_book_club?searchMode=search">
         <button onClick={(e) => handleClick(e)}>Search</button>
-      </Link>
+      </a>
       <p>
         El Día de la Aceptación es una tradición para el hijo del rey; este día
         está lleno de mucha alegría y muchas alabanzas. Es un día para las

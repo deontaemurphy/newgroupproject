@@ -1,13 +1,15 @@
 .theo {
   background-color: beige;
 }
-.colores{color:red;}
+.colores {
+  color: red;
+}
 .btnpop {
   margin-left: 10%;
   margin-top: 899px;
 }
 .sherlock {
-  color:#101010;
+  color: #101010;
   font-szize: 45 px;
   background-color: aquamarine;
 }
@@ -18,6 +20,13 @@
   color: mediumturquoise;
   display: inline-block;
   font-size: 60px;
+}
+.nav1 {
+  color: mediumturquoise;
+  display: inline-block;
+  font-size: 20px;
+  background-color: black;
+  border: 1px;
 }
 /*
     home.css: This website contains selectors only used in home.css
