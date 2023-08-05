@@ -30,7 +30,7 @@ export const PublishYourContent = () => {
                 </Link>
               </button>
             </div>
-            <Link to="/auth/searcthebook">
+            <Link to="/thebookclubhome">
               <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
                 <button onClick={(e) => handleClick(e)}>Espanol</button>
               </a>
@@ -63,7 +63,6 @@ export const PublishYourContent = () => {
       <br></br>
       <div className="colores">The Tale Of Two Kings by Steven Ferguson</div>
       <br></br>
-      
     </div>
   );
 };

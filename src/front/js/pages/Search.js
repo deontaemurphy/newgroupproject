@@ -18,8 +18,6 @@ const Search = () => {
             <button className="nav1" ocClick={(e) => handleClick(e)}>
               Ofrecido en español
             </button>
-
-          
           </Link>
           <div class="dropdown">
             <button
@@ -46,24 +44,31 @@ const Search = () => {
           </div>
         </div>
       </nav>
+      <br></br>
+      <br></br>
+      <br></br>
       <span>
-        ‘You see, but you do not observe. The distinction is clear. For example,
-        you have frequently seen the steps which lead up from the hall to this
-        room.” “ Frequently.” “ How often ?”’ “Well, some hundreds of times.”
-        “Then how many are there ?” “How many? I don’t know.” “Quite so! You
-        have not observed. And yet you have seen, ‘That is just my point. Now, I
-        know that there are seventeen steps, because I have both seen and
-        observed. Bythe-way, since you are interested in these little problems,
-        and since you are good enough to chronicle one or two of my trifling
-        experiences, you may be interested in this.” He threw over a sheet of
-        thick, pink-tinted note-paper which had been lying open upon the table.
-        “It came by the last post,’ said he. “ Read it aloud.” The note was
-        undated, and without either signature or address. “There will call upon
-        you to-night, at a quarter to eight o'clock,” it said, “‘a gentleman who
-        desires to consult you upon a matter of the very deepest moment. Your
-        recent services to one of the royal houses of Europe have shown that you
-        are one who may safely be trusted with matters which are of an
-        importance which can hardly be exaggerated.
+        <br></br>
+        <div className="watson">
+          ‘You see, but you do not observe. The distinction is clear. For
+          example, you have frequently seen the steps which lead up from the
+          hall to this room.” “ Frequently.” “ How often ?”’ “Well, some
+          hundreds of times.” “Then how many are there ?” “How many? I don’t
+          know.” “Quite so! You have not observed. And yet you have seen, ‘That
+          is just my point. Now, I know that there are seventeen steps, because
+          I have both seen and observed. Bythe-way, since you are interested in
+          these little problems, and since you are good enough to chronicle one
+          or two of my trifling experiences, you may be interested in this.” He
+          threw over a sheet of thick, pink-tinted note-paper which had been
+          lying open upon the table. “It came by the last post,’ said he. “ Read
+          it aloud.” The note was undated, and without either signature or
+          address. “There will call upon you to-night, at a quarter to eight
+          o'clock,” it said, “‘a gentleman who desires to consult you upon a
+          matter of the very deepest moment. Your recent services to one of the
+          royal houses of Europe have shown that you are one who may safely be
+          trusted with matters which are of an importance which can hardly be
+          exaggerated.
+        </div>
         <b>
           This account of you we have from all quarters received. Be in " "man
           or Russian could not have written that. It is the German who is so

@@ -40,7 +40,7 @@
 .nav {
   color: mediumturquoise;
   display: inline-block;
-  font-size: 60px;
+  
   padding-right: auto;
   margin-left: -150px;
   margin-top: 80px;
@@ -50,6 +50,7 @@
   background-color: blue;
 }
 .margin-left {
+  margin-top: -400px;
   margin-left: -300px;
   background-color: black;
   color: red;
