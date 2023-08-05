@@ -21,7 +21,7 @@ export const Home = () => {
       <h1 className="open">The Landing Page Journey</h1>
       <span className="close"></span>
 
-      <div className="form-control">
+      <div className="homepage">
         <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
           <img
             className="Adjust"
@@ -32,8 +32,8 @@ export const Home = () => {
         </a>
         <hr></hr>
         <iframe
-          width="560"
-          height="315"
+          width="370"
+          height="250"
           src="https://www.youtube.com/embed/5m6Dpvky20Y"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"

@@ -33,9 +33,9 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <NavbarStretch />
-          <Navbar />
 
           <Jumbotron1 />
+
           <LogoutJumbotron />
           <Routes>
             <Route element={<Home />} path="/" />

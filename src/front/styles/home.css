@@ -10,11 +10,19 @@
 }
 .sherlock {
   color: #101010;
-  font-szize: 45 px;
+  font-size: 45 px;
   background-color: aquamarine;
+}
+.homepage {
+  border-bottom: 0cap;
+  border: #101010;
 }
 .btn {
   color: red;
+}
+.Adjust {
+  height: 50%;
+  width: 70%;
 }
 .nav {
   color: mediumturquoise;
