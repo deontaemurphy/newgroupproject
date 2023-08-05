@@ -16,6 +16,7 @@ import Autherization from "./pages/Autherization";
 import Publish from "./pages/PublishYours";
 import TheBookClub from "./pages/TheBookClub";
 import Demo from "./pages/demo";
+import Blank from "./pages/Balnkpage";
 import { NavbarStretch } from "./component/Translator";
 import { Jumbotron1 } from "./component/Jumbotron1";
 import { Jumbotron2 } from "./component/Jumbotron2";
@@ -33,6 +34,7 @@ const Layout = () => {
         <ScrollToTop>
           <NavbarStretch />
           <Navbar />
+          <Jumbotron2 />
           <Jumbotron1 />
           <LogoutJumbotron />
           <Routes>
@@ -52,15 +54,13 @@ const Layout = () => {
               element={<Autherization />}
               path="/auth/search/thebookclub/home"
             />
-            <Route
-              element={<SearchTheBookClub />}
-              path="/searchthebookclub/home"
-            />
+            <Route element={<SearchTheBookClub />} path="/searchthebookclub" />
             {/* <Route element={<LoginComponent />} path="/" /> */}
             <Route element={<Demo />} path="/auth/search/thebookclub" />
             <Route element={<h1>Not found!</h1>} />
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />
+            <Route element={<Blank />} path="/searcthebook" />
           </Routes>
 
           <Footer />

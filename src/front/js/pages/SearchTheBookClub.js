@@ -32,7 +32,7 @@ const Inquistivo = () => {
       <hr></hr>
       <input
         type="text"
-        placeholder="name"
+        placeholder="nombre"
         value={name}
         onChange={(e) => setName(e.target.value)}
       ></input>
@@ -42,7 +42,7 @@ const Inquistivo = () => {
       </Link>
       <input
         type="text"
-        placeholder="book"
+        placeholder="libre"
         value={bookTitle}
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
@@ -51,6 +51,7 @@ const Inquistivo = () => {
         <button ocClick={(e) => handleClick(e)}>English</button>
       </Link>
       <hr></hr>
+      <p className="sherlock"></p>
       “Ves, pero no observas. La distinción es clara. Por ejemplo, has visto con
       frecuencia los escalones que suben desde el vestíbulo hasta esta
       habitación. " Frecuentemente." "¿Con qué frecuencia?" "Bueno, algunos

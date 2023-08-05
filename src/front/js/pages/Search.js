@@ -15,7 +15,9 @@ const Search = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Link to="/searchthebookclub/home">
-            <button className="nav1" ocClick={(e) => handleClick(e)}>En Espanol</button>
+            <button className="nav1" ocClick={(e) => handleClick(e)}>
+              En Espanol
+            </button>
 
             <span className="nav">"Home"</span>
           </Link>
@@ -68,14 +70,23 @@ const Search = () => {
           little brougham and a pair of beauties. A hundred and fifty guineas
           apiece.
         </b>
-        <hr></hr>
-        There’s{" "}
         <input
           type="text"
           placeholder="page 4"
           value={bookTitle}
           onChange={(e) => setBookTitle(e.target.value)}
-        ></input>{" "}
+        ></input>
+        <hr></hr>
+        Welcome to the Scavenger Hunt
+        <hr></hr>
+        There’s{" "}
+        <input
+          type="text"
+          placeholder="page 5"
+          value={bookTitle}
+          onChange={(e) => setBookTitle(e.target.value)}
+        ></input>
+        {"money "}
         in this case, Watson, if there is nothing else.” “J think that I had
         better go, Holmes.” “Not a bit, doctor. Stay where you are. I am lost
         without my Boswell. And this promises to be interesting. It would be a
