@@ -9,14 +9,7 @@ export const Footer = () => (
           <button className="watson">Go somewhere</button>
         </Link>
 
-        <iframe
-          allow="autoplay *; encrypted-media *;"
-          frameborder="0"
-          height="450"
-          width="500"
-          sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-          src="https://embed.music.apple.com/us/album/scooby-doo-music-from-the-motion-picture/706073180"
-        ></iframe>
+       
 
         <div>
           <p>This is the bottom of the page. I am a publication page</p>

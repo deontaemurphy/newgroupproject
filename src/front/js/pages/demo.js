@@ -54,19 +54,15 @@ const Demo = () => {
         frameborder="0"
         allowfullscreen
       ></iframe>
-
-      <Link to="/publishmystory/auth">
-        <button ocClick={(e) => handleClick(e)}>Publish</button>
-      </Link>
-      <input
-        type="text"
-        placeholder="book"
-        value={bookTitle}
-        onChange={(e) => setBookTitle(e.target.value)}
-      ></input>
-      <Link to="/auth/searcthebook">
-        <button ocClick={(e) => handleClick(e)}>Search</button>
-      </Link>
+      <hr></hr>
+      <iframe
+        allow="autoplay *; encrypted-media *;"
+        frameborder="0"
+        height="450"
+        width="500"
+        sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+        src="https://embed.music.apple.com/us/album/scooby-doo-music-from-the-motion-picture/706073180"
+      ></iframe>
     </div>
   );
 };
