@@ -41,6 +41,8 @@ const Search = () => {
           frameborder="0"
           allowfullscreen
         ></iframe>
+        <hr></hr>
+        Please do not share your personal information with others
       </div>
     </div>
   );
