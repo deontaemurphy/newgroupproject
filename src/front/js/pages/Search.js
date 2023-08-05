@@ -31,7 +31,6 @@ const Search = () => {
               Dropdown button
             </button>
             <ul class="dropdown-menu">
-              
               <li>
                 <Link to="/publishmystory/auth">
                   <button ocClick={(e) => handleClick(e)}>
@@ -39,18 +38,15 @@ const Search = () => {
                   </button>
                 </Link>
               </li>
-             
+
               <li>
                 <a class="dropdown-item" href="#"></a>
               </li>
             </ul>
           </div>
           <Link to="/Discoveryourword/book">
-            <span className="navbar-brand mb-0 h1">"Look It Up"</span>
+            <span className="margin-left">"Look It Up"</span>
           </Link>
-          <div className="ml-auto">
-            <input className="theo" placeholder="Clock" size="100px;"></input>
-          </div>
         </div>
       </nav>
       <span>
