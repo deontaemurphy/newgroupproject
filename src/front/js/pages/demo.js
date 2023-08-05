@@ -46,6 +46,8 @@ const Demo = () => {
           </Link>
         </div>
       </nav>
+      <hr className="sherlock"></hr>
+      <div className="watson">Welcome to The Sleep Readers</div>
       <p>Spanish Titles</p>
       <h1>I Want To Know</h1>
       <p> I am a publication form.</p>
@@ -74,6 +76,16 @@ const Demo = () => {
             {"publish"}
           </button>
         </label>
+        <br></br>
+        <label>
+          <button>
+            <p>Singer</p>
+            Click Me To {" writer"}
+            <input placeholder="register"></input>
+            {"publish"}
+          </button>
+        </label>
+        <label>Genre</label>
       </form>
       <br></br>
 
@@ -85,6 +97,26 @@ const Demo = () => {
           frameborder="0"
           allowfullscreen
         ></iframe>
+        <form>
+          <label>
+            <button>
+              <p>Title</p>
+              Click Me To {"view writer"}
+              <input placeholder="register"></input>
+              {"publish"}
+            </button>
+          </label>
+          <br></br>
+          <label>
+            <button>
+              <p>Singer</p>
+              Click Me To {" writer"}
+              <input placeholder="register"></input>
+              {"publish"}
+            </button>
+          </label>
+        </form>
+        <button>Sumbit</button>
       </div>
     </div>
   );
