@@ -42,15 +42,15 @@
   display: inline-block;
   font-size: 60px;
   padding-right: auto;
-  margin-left: -15cm;
-  margin-top: -300px;
+  margin-left: -150px;
+  margin-top: 80px;
   margin-inline: inherit;
 }
 .card-header {
   background-color: blue;
 }
 .margin-left {
-  margin-left: -200px;
+  margin-left: -300px;
   background-color: black;
   color: red;
 }

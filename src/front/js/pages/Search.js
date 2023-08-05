@@ -19,7 +19,7 @@ const Search = () => {
               Ofrecido en español
             </button>
 
-            <span className="nav">"Home"</span>
+          
           </Link>
           <div class="dropdown">
             <button
@@ -40,13 +40,10 @@ const Search = () => {
               </li>
 
               <li>
-                <a class="dropdown-item" href="#"></a>
+                <Link to="/Discoveryourword/book">Discoveryourword</Link>
               </li>
             </ul>
           </div>
-          <Link to="/Discoveryourword/book">
-            <span className="margin-left">"Look It Up"</span>
-          </Link>
         </div>
       </nav>
       <span>
