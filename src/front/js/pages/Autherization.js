@@ -40,14 +40,11 @@ const Authorization = () => {
       <div className="card">
         <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
         <hr></hr>
-        <button
-          type="button"
-          class="btn btn-lg btn-danger"
-          data-bs-toggle="popover"
-          data-bs-title="Popover title"
-          data-bs-content="And here's some amazing content. It's very engaging. Right?"
-        >
-          Click to toggle popover
+        <button>
+        <img
+                      src="https://i.imgur.com/KFp3ilV.jpeg"
+                      className="likkle"
+                    />
         </button>
         <hr></hr>
         <div className="card-header">Featured Books</div>
