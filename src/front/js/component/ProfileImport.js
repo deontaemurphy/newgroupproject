@@ -1,21 +1,23 @@
-import react from "react";
+import React, { useContext, useState } from "react";
+import { Link } from "react-router-dom";
+import { Context } from "../store/appContext";
+import { useNavigate } from "react-router-dom";
 
-const ProfileImport = () => {
-  let Profile = "profile,setProfile";
-  return (
-    <nav className="navbar navbar-light bg-light">
-      <div className="container">
-        <Link to="/searchthebookclub">
-          <span className="navbar-brand mb-0 h1">"Home"</span>
-        </Link>
-        <div className="ml-auto">
-          <Link to="/searchthebook">
-            <button className="btn btn-primary">Search</button>
-          </Link>
-        </div>
-      </div>
-    </nav>
-  );
+export const LogoutJumbotron = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const { store, actions } = useContext(Context);
+  let navigate = useNavigate();
+  const handleClick = (e) => {
+    e.preventDefault();
+    actions.logout();
+    navigate("/");
+    actions.checkForToken();
+  };
+  return <div class="jumbotron">
+
+
+    Open for foto 
+  </div>;
 };
 
-export default ProfileImport;
