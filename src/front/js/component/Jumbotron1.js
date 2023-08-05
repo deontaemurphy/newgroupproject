@@ -21,16 +21,15 @@ export const Jumbotron1 = () => {
           </Link>
           <ul>
             <li>
-              <Link to="/publishmystory/auth">
-                <span className="colores">Home.thebookclub</span>
-              </Link>
-            </li>
-            <li>
-              <Link to="/publishmystory/auth">
-                <span className="colores">Search.thebookclub</span>
-              </Link>
-            </li>
+          <Link to="/publishmystory/auth">
+            <span className="colores">Home.thebookclub</span>
+          </Link></li>
+          <li>
+          <Link to="/publishmystory/auth">
+            <span className="colores">Search.thebookclub</span>
+          </Link></li>
           </ul>
+
 
           <button
             className="navbar-toggler"
@@ -41,7 +40,7 @@ export const Jumbotron1 = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="navbar-toggler-icon"></span>
+            <span className="icon"></span>
           </button>
 
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
