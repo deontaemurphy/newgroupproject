@@ -30,9 +30,12 @@ const Search = () => {
           <b>https://writer.com/product/api/</b>
         </a>
         <div className="ml-auto">
+          <hr></hr>
           <p>About ME</p>
+          <hr></hr>
           <input placeholder="Reloj" size="115;"></input>
           <p>In the "About me section"</p>
+          <hr></hr>
         </div>
         <iframe
           width="560"
@@ -41,13 +44,14 @@ const Search = () => {
           frameborder="0"
           allowfullscreen
         ></iframe>
+        <hr></hr>
         <p>
-          Entusiasta sustantivo 
-          <br></br>
+          Entusiasta sustantivo
+          <hr></hr>
         </p>
         <p>
-          1. una persona que está muy interesada en una
-          actividad o tema en particular:
+          1. una persona que está muy interesada en una actividad o tema en
+          particular:
         </p>
         <hr></hr>
         Please do not share your personal information with others
