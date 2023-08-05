@@ -21,7 +21,7 @@ const Search = () => {
             <Link to="/auth/searchingthebookclub/home">
               <span className="navbar-brand mb-0 h1">"Look It Up"</span>
             </Link>
-            <Link to="">
+            <Link to="/">
               <button ocClick={(e) => handleClick(e)}>Espanol</button>
             </Link>
           </div>
@@ -41,6 +41,14 @@ const Search = () => {
           frameborder="0"
           allowfullscreen
         ></iframe>
+        <p>
+          Entusiasta sustantivo 
+          <br></br>
+        </p>
+        <p>
+          1. una persona que está muy interesada en una
+          actividad o tema en particular:
+        </p>
         <hr></hr>
         Please do not share your personal information with others
       </div>
