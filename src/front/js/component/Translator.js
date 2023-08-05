@@ -12,7 +12,5 @@ export const NavbarStretch = () => {
     navigate("/");
     actions.checkForToken();
   };
-  return (
-    <div></div>
-  );
+  return <div>Rick Flair</div>;
 };
