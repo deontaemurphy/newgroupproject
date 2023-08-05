@@ -22,13 +22,14 @@ const TheBookClub = () => {
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/searcthebook">
+            <Link to="/searcthebookclub">
               <span>
                 <input placeholder="Reloj" size="100px;"></input>
               </span>
               <a href="#">
                 <button onClick={(e) => handleClick(e)}>Entrar</button>
               </a>
+              {/* <Link to ="" */}
               <button onClick={(e) => handleClick(e)}>Translate</button>
             </Link>
           </div>
@@ -38,7 +39,7 @@ const TheBookClub = () => {
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">
-            Navbar
+            Navbar.home.theexclusive
             <iframe
               width="560"
               height="315"
@@ -199,7 +200,6 @@ const TheBookClub = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
-            
           </div>
         </div>
         <div class="card-footer text-body-secondary">2 days ago</div>
