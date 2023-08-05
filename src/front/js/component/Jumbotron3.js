@@ -14,12 +14,5 @@ export const LogoutJumbotron = () => {
     navigate("/");
     actions.checkForToken();
   };
-  return (
-    <div class="jumbotron">
-      <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
-      <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
-        <img src="https://i.imgur.com/KFp3ilV.jpeg" />
-      </a>
-    </div>
-  );
+  return <div class="jumbotron"></div>;
 };

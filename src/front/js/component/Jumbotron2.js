@@ -45,7 +45,30 @@ export const Jumbotron2 = () => {
         <Link to="/createUser">
           <button>Register</button>
         </Link>
-
+        <button type="button" class="btn btn-outline-primary">
+          Primary
+        </button>
+        <button type="button" class="btn btn-outline-secondary">
+          Secondary
+        </button>
+        <button type="button" class="btn btn-outline-success">
+          Success
+        </button>
+        <button type="button" class="btn btn-outline-danger">
+          Danger
+        </button>
+        <button type="button" class="btn btn-outline-warning">
+          Warning
+        </button>
+        <button type="button" class="btn btn-outline-info">
+          Info
+        </button>
+        <button type="button" class="btn btn-outline-light">
+          Light
+        </button>
+        <button type="button" class="btn btn-outline-dark">
+          Dark
+        </button>
         <div class="p-5 mb-4 bg-body-tertiary rounded-3">
           <div class="container-fluid py-5">
             <h1 class="display-5 fw-bold">Custom jumbotron</h1>
@@ -65,18 +88,8 @@ export const Jumbotron2 = () => {
           <div class="col-md-6">
             <div class="h-100 p-5 text-bg-dark rounded-3">
               <h2>Change the background</h2>
-              <p>
-                Swap the background-color utility and add a `.text-*` color
-                utility to mix up the jumbotron look. Then, mix and match with
-                additional component themes and more.
-              </p>
-              <iframe
-                allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
-                frameborder="0"
-                height="450"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082"
-              ></iframe>
+              <p></p>
+
               <a href="https://music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082">
                 <button class="btn btn-outline-light" type="button">
                   Example button
@@ -103,13 +116,6 @@ export const Jumbotron2 = () => {
               <button class="btn btn-outline-secondary" type="button">
                 Example button
               </button>
-              <iframe
-                allow="autoplay *; encrypted-media *;"
-                frameborder="0"
-                height="150"
-                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
-                src="https://embed.music.apple.com/us/album/lose-control-feat-ciara-fat-man-scoop/73240848?i=73240545"
-              ></iframe>
             </div>
           </div>
         </div>

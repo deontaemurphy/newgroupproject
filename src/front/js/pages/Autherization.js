@@ -45,11 +45,31 @@ const Authorization = () => {
               </button>
               <iframe
                 allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
+                frameborder="0"
+                height="450"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/album/spongebobs-greatest-hits-from-the-nickelodeon-show/323049082"
+              ></iframe>
+              <iframe
+                allow="autoplay *; encrypted-media *;"
+                frameborder="0"
+                height="150"
+                sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
+                src="https://embed.music.apple.com/us/album/lose-control-feat-ciara-fat-man-scoop/73240848?i=73240545"
+              ></iframe>
+              <p>🇯🇲</p>
+              <span>About Me Section Here</span>
+              <iframe
+                allow="autoplay *; encrypted-media *; fullscreen *; clipboard-write"
                 frameborder="12"
                 height="560"
                 sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation allow-top-navigation-by-user-activation"
                 src="https://embed.music.apple.com/us/album/the-unexplainable-single/1686946932"
               ></iframe>
+            </a>
+            <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+            <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
+              <img src="https://i.imgur.com/KFp3ilV.jpeg" />
             </a>
             <Link to="/publishmystory/auth">
               <img
