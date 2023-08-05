@@ -21,23 +21,40 @@ const Search = () => {
 
             <span className="nav">"Home"</span>
           </Link>
-
+          <div class="dropdown">
+            <button
+              class="btn btn-secondary dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Dropdown button
+            </button>
+            <ul class="dropdown-menu">
+              <li>
+                <a class="dropdown-item" href="#">
+                  Action
+                </a>
+              </li>
+              <li>
+                <Link to="/publishmystory/auth">
+                  <button ocClick={(e) => handleClick(e)}>
+                    The Book Club Exclusive
+                  </button>
+                </Link>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"></a>
+              </li>
+            </ul>
+          </div>
           <Link to="/Discoveryourword/book">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <a href="https://archive.org/details/adventuresofsher00doylrich/page/8/mode/2up?ref=ol&view=theater">
-              <button ocClick={(e) => handleClick(e)}>Entrar</button>
-            </a>
             <input className="theo" placeholder="Clock" size="100px;"></input>
           </div>
         </div>
-
-        <Link to="/publishmystory/auth">
-          <button ocClick={(e) => handleClick(e)}>
-            The Book Club Exclusive
-          </button>
-        </Link>
       </nav>
       <span>
         ‘You see, but you do not observe. The distinction is clear. For example,
@@ -78,8 +95,30 @@ const Search = () => {
         ></input>
         <hr></hr>
         Welcome to the Scavenger Hunt
+        <a href="https://archive.org/details/adventuresofsher00doylrich/page/8/mode/2up?ref=ol&view=theater">
+          <button ocClick={(e) => handleClick(e)} className="pick">
+            Entrar
+          </button>
+        </a>
+        <ol>
+          <li>
+            <a href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater">
+              page 4
+            </a>
+          </li>
+          Here you have to search for the site words listed in the exclusive
+          book of the month.
+          <li className="sherlock">Or Create Your Own Adventure</li>
+        </ol>
+        Each Sherlock Holmes En·thu·si·ast is invited "hmmmm, ... ... It's
+        included to find a ingles definition "<br></br>
+        <b>Enthusiast</b>
+        <br></br>
+        <b className="colors">noun</b>
+        <br></br>
+        1. a person who is very interested in a particular activity or subject:
         <hr></hr>
-        There’s{" "}
+        Nothing follws until the Scavenger Hunt Timer begins There’s{" "}
         <input
           type="text"
           placeholder="page 5"

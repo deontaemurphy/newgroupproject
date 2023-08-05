@@ -60,7 +60,14 @@
   padding-right: 700px;
   margin-left: -300px;
   margin-bottom: 9%;
-
+}
+.colors {
+  color: pink;
+  font-size: 16.76px;
+}
+.pick {
+  margin-right: auto;
+  margin-top: 1%;
 }
 .p {
   font-language-override: es;
