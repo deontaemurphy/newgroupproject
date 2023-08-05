@@ -22,8 +22,7 @@ const Inquistivo = () => {
             <span className="navbar-brand mb-0 h1">"Buscalo"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/">
-              <input placeholder="Reloj" size="100px;"></input>
+            <Link to="/searcthebook">
               <button ocClick={(e) => handleClick(e)}>Buscandos</button>
             </Link>
           </div>
@@ -36,10 +35,10 @@ const Inquistivo = () => {
         value={name}
         onChange={(e) => setName(e.target.value)}
       ></input>
-      <Link to="/">
+      <a href="https://archive.org/details/adventuresofsher00doylrich/page/300/mode/2up?ref=ol&view=theater">
         <input placeholder="The Reloj" size="100;"></input>
         <button ocClick={(e) => handleClick(e)}>Inquistivo</button>
-      </Link>
+        </a>
       <input
         type="text"
         placeholder="libre"
@@ -48,7 +47,7 @@ const Inquistivo = () => {
       ></input>
       <Link to="/auth/searchingthebookclub/home">
         <input placeholder="Reloj" size="10;"></input>
-        <button ocClick={(e) => handleClick(e)}>English</button>
+        <button ocClick={(e) => handleClick(e)}>Ingles</button>
       </Link>
       <hr></hr>
       <p className="sherlock"></p>
@@ -69,24 +68,25 @@ const Inquistivo = () => {
       han demostrado que es alguien a quien se le puede confiar con seguridad
       asuntos que son de una importancia que difícilmente puede exagerarse.
       <br></br>
-      hay página 4 en este caso, Watson, si no hay nada más. Creo que será mejor
-      que me vaya, Holmes. “Ni un poco, doctor. Quédate donde estás. Estoy
-      perdido sin mi Boswell. Y esto promete ser interesante. Sería una pena
-      perdérselo”. Pero su cliente... —No se preocupe por él. Puede que necesite
-      tu ayuda, y él también. Ahí viene. Siéntese en ese sillón, doctor, y
-      bríndenos su mejor atención. Un paso lento y pesado, que se había oído en
-      las escaleras y en el pasillo, se detuvo inmediatamente frente a la
-      puerta. Luego hubo un golpe fuerte y autoritario. "¡Adelante!" dijo
-      Holmes. : Entró un hombre que apenas podía medir menos de seis pies y seis
-      pulgadas de altura, con el pecho y las extremidades de un Hércules. Su
-      vestido era rico con una ostentación que, en Inglaterra, se consideraría
-      de mal gusto. Pesadas tiras de astracán estaban acuchilladas en las mangas
-      y la parte delantera de su abrigo cruzado, mientras que la capa azul
-      oscuro que llevaba. echado sobre sus hombros estaba forrado con seda color
-      fuego, y asegurado en el cuello con un broche que consistía en un solo
-      berilo llameante. Las botas que le llegaban hasta la mitad de las
-      pantorrillas, y que estaban adornadas en la parte superior con un rico
-      pelaje marrón, completaban la impresión de bárbaro".
+      hay <span className="p">página 4</span> en este caso, Watson, si no
+      hay nada más. Creo que será mejor que me vaya, Holmes. “Ni un poco,
+      doctor. Quédate donde estás. Estoy perdido sin mi Boswell. Y esto promete
+      ser interesante. Sería una pena perdérselo”. Pero su cliente... —No se
+      preocupe por él. Puede que necesite tu ayuda, y él también. Ahí viene.
+      Siéntese en ese sillón, doctor, y bríndenos su mejor atención. Un paso
+      lento y pesado, que se había oído en las escaleras y en el pasillo, se
+      detuvo inmediatamente frente a la puerta. Luego hubo un golpe fuerte y
+      autoritario. "¡Adelante!" dijo Holmes. : Entró un hombre que apenas podía
+      medir menos de seis pies y seis pulgadas de altura, con el pecho y las
+      extremidades de un Hércules. Su vestido era rico con una ostentación que,
+      en Inglaterra, se consideraría de mal gusto. Pesadas tiras de astracán
+      estaban acuchilladas en las mangas y la parte delantera de su abrigo
+      cruzado, mientras que la capa azul oscuro que llevaba. echado sobre sus
+      hombros estaba forrado con seda color fuego, y asegurado en el cuello con
+      un broche que consistía en un solo berilo llameante. Las botas que le
+      llegaban hasta la mitad de las pantorrillas, y que estaban adornadas en la
+      parte superior con un rico pelaje marrón, completaban la impresión de
+      bárbaro".
     </div>
   );
 };

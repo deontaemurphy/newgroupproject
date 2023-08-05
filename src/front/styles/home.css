@@ -28,6 +28,8 @@
   background-color: black;
   border: 1px;
 }
+.p{font-language-override: es;
+color:blue;}
 /*
     home.css: This website contains selectors only used in home.css
 
