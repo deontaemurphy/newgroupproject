@@ -15,6 +15,9 @@ const Search = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Link to="/searchthebookclub/home">
+            <button ocClick={(e) => handleClick(e)}>En Espanol</button>
+          </Link>
+          <Link to="/searchthebookclub/home">
             <span className="nav">"Home"</span>
           </Link>
 
@@ -47,9 +50,7 @@ const Search = () => {
           value={name}
           onChange={(e) => setName(e.target.value)}
         ></input>
-        <Link to="/">
-          <button ocClick={(e) => handleClick(e)}>En Espanol</button>
-        </Link>
+
         <Link to="/">
           <input placeholder="Reloj" size="100px;"></input>
           <button ocClick={(e) => handleClick(e)}>Buscandos</button>
@@ -84,32 +85,26 @@ const Search = () => {
         followed by a sharp pull at the bell. Holmes whistled. “A pair, by the
         sound,” said he. “Yes,” he continued, glancing out of the window. “A
         nice little brougham and a pair of beauties. A hundred and fifty guineas
-        apiece. 
-        
-        
+        apiece.
         <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" />
-        
-        
-        
-        
-        There’s money in this case, Watson, if there is nothing else.”
-        “J think that I had better go, Holmes.” “Not a bit, doctor. Stay where
-        you are. I am lost without my Boswell. And this promises to be
-        interesting. It would be a pity to miss it.” “ But your client —” “Never
-        mind him. I may want your help, and so may he. Here he comes. Sit down
-        in that arm-chair, doctor, and give us your best attention.” A slow and
-        heavy step, which had been heard upon the stairs and in the passage,
-        paused immediately outside the door. Then there was a loud and
-        authoritative tap. “Come in!” said Holmes. : A man entered who could
-        hardly have been less than six feet six inches in height, with the chest
-        and limbs of a Hercules. His dress was rich with a richness which would,
-        in England, be looked upon as akin to bad taste. Heavy bands of
-        Astrakhan were slashed across the sleeves and fronts of his
-        double-breasted coat, while the deep blue cloak which was. thrown over
-        his shoulders was lined with flamecolored silk, and secured at the neck
-        with a brooch which consisted of a single flaming beryl. Boots which
-        extended half-way up his calves, and which were trimmed at the tops with
-        rich brown fur, completed the impression of barbaric"
+        There’s money in this case, Watson, if there is nothing else.” “J think
+        that I had better go, Holmes.” “Not a bit, doctor. Stay where you are. I
+        am lost without my Boswell. And this promises to be interesting. It
+        would be a pity to miss it.” “ But your client —” “Never mind him. I may
+        want your help, and so may he. Here he comes. Sit down in that
+        arm-chair, doctor, and give us your best attention.” A slow and heavy
+        step, which had been heard upon the stairs and in the passage, paused
+        immediately outside the door. Then there was a loud and authoritative
+        tap. “Come in!” said Holmes. : A man entered who could hardly have been
+        less than six feet six inches in height, with the chest and limbs of a
+        Hercules. His dress was rich with a richness which would, in England, be
+        looked upon as akin to bad taste. Heavy bands of Astrakhan were slashed
+        across the sleeves and fronts of his double-breasted coat, while the
+        deep blue cloak which was. thrown over his shoulders was lined with
+        flamecolored silk, and secured at the neck with a brooch which consisted
+        of a single flaming beryl. Boots which extended half-way up his calves,
+        and which were trimmed at the tops with rich brown fur, completed the
+        impression of barbaric"
       </span>
       <img src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0023.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0" />
       <img src="https://archive.org/details/adventuresofsher00doylrich/page/n7/mode/2up?ref=ol&view=theater"></img>
