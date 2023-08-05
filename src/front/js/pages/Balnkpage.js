@@ -15,7 +15,7 @@ const Blank = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <Link to="/publishmystory/auth">
-            <span className="navbar-brand mb-0 h1">"Home"</span>
+            <span className="navbar-brand mb-0 h1">"Casa"</span>
           </Link>
 
           <Link to="/Discoveryourword/book">
@@ -27,11 +27,6 @@ const Blank = () => {
                 The Book Club Exclusive
               </button>
             </Link>
-            <span>
-              {"stringify 250+ "}
-              Today we title the cultural differences of not knowing
-              <input placeholder="counter" size="100px;"></input>
-            </span>
           </div>
         </div>
       </nav>
