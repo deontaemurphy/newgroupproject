@@ -52,6 +52,14 @@ const Demo = () => {
       <h1>I Want To Know</h1>
       <p> I am a publication form.</p>
       <form>
+      <hr></hr>
+        <button>
+        <img
+                      src="https://i.imgur.com/KFp3ilV.jpeg"
+                      className="likkle"
+                    />
+        </button>
+        <hr></hr>
         <label>
           <button>
             Click Me To {""}

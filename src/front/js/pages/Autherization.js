@@ -39,14 +39,7 @@ const Authorization = () => {
     <div className="open">
       <div className="card">
         <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
-        <hr></hr>
-        <button>
-        <img
-                      src="https://i.imgur.com/KFp3ilV.jpeg"
-                      className="likkle"
-                    />
-        </button>
-        <hr></hr>
+      
         <div className="card-header">Featured Books</div>
         <hr></hr>
         <h1>Spolighted Books</h1>
