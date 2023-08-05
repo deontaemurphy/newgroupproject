@@ -34,7 +34,7 @@ const Layout = () => {
         <ScrollToTop>
           <NavbarStretch />
           <Navbar />
-          <Jumbotron2 />
+
           <Jumbotron1 />
           <LogoutJumbotron />
           <Routes>
@@ -64,6 +64,7 @@ const Layout = () => {
           </Routes>
 
           <Footer />
+          <Jumbotron2 />
         </ScrollToTop>
       </BrowserRouter>
     </div>
