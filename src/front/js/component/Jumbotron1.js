@@ -26,7 +26,7 @@ export const Jumbotron1 = () => {
               </Link>
             </li>
             <li>
-              <Link to="/auth/search/thebookclub">
+              <Link to="/auth/search/thebookclub/home">
                 <span>Spanish</span>
               </Link>
             </li>
