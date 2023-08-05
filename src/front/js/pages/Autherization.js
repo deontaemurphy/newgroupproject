@@ -34,6 +34,10 @@ const Authorization = () => {
       <h1>Spolighted Books</h1>
       <div className="card">
         <div className="card-header">Featured Books</div>
+        <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+        <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
+          <img src="https://i.imgur.com/KFp3ilV.jpeg" />
+        </a>
         <div className="card-body">
           <h5 className="card-title">Special title treatment</h5>
           <p className="card-text">This is a house above my book button</p>
@@ -67,10 +71,7 @@ const Authorization = () => {
                 src="https://embed.music.apple.com/us/album/the-unexplainable-single/1686946932"
               ></iframe>
             </a>
-            <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
-            <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
-              <img src="https://i.imgur.com/KFp3ilV.jpeg" />
-            </a>
+
             <Link to="/publishmystory/auth">
               <img
                 className="boostrapbasic"
