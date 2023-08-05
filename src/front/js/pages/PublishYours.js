@@ -23,17 +23,16 @@ export const PublishYourContent = () => {
       <nav className="navbar navbar-light bg-light">
         <div className="container">
           <div className="ml-auto">
-            <button className="btn btn-primary">
-              <input
-                placeholder="Reloj"
-                size="100px;"
-                a
-                href="https://archive.org/details/adventuresofsher00doylrich/page/126/mode/2up?ref=ol&view=theater"
-              ></input>
-            </button>
+            <div>
+              <button className="btn btn-primary">
+                <Link to="/thebookclubhome">
+                  <button onClick={(e) => handleClick(e)}>The Book Club</button>
+                </Link>
+              </button>
+            </div>
             <Link to="/auth/searcthebook">
               <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
-                <button onClick={(e) => handleClick(e)}>Search</button>
+                <button onClick={(e) => handleClick(e)}>Espanol</button>
               </a>
             </Link>
           </div>
@@ -63,9 +62,6 @@ export const PublishYourContent = () => {
         have frequently seen the steps which lead up from the hall to this
         room.” “ Frequently.”
         <br></br>
-        <Link to="/thebookclubhome">
-          <button onClick={(e) => handleClick(e)}>The Book Club</button>
-        </Link>
         <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
           <img
             className="Adjust"
