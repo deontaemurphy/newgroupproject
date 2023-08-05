@@ -14,7 +14,7 @@ const TheBookClub = () => {
     <div>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <Link to="/searchthebookclub/home">
+          <Link to="/publishmystory/auth">
             <span className="navbar-brand mb-0 h1">"Home"</span>
           </Link>
 
@@ -22,12 +22,21 @@ const TheBookClub = () => {
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="//searcthebook">
+            <Link to="/searcthebook">
               <span>
                 <input placeholder="Reloj" size="100px;"></input>
               </span>
               <button ocClick={(e) => handleClick(e)}>Entrar</button>
             </Link>
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/i6yFRXUDC-w"
+              title="YouTube video player"
+             
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
       </nav>
