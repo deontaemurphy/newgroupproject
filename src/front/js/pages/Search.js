@@ -19,29 +19,6 @@ const Search = () => {
               Ofrecido en español
             </button>
           </Link>
-          <div class="dropdown">
-            <button
-              className="margin-left"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Dropdown button
-            </button>
-            <ul class="dropdown-menu">
-              <li>
-                <Link to="auth/search/thebookclub/home">
-                  <button ocClick={(e) => handleClick(e)}>
-                    The Book Club Exclusive
-                  </button>
-                </Link>
-              </li>
-
-              <li>
-                <Link to="/Discoveryourword/book">Discoveryourword</Link>
-              </li>
-            </ul>
-          </div>
         </div>
       </nav>
       <br></br>
@@ -143,6 +120,85 @@ const Search = () => {
         trimmed at the tops with rich brown fur, completed the impression of
         barbaric"
       </span>
+
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#staticBackdrop"
+      >
+        Launch static backdrop modal
+      </button>
+
+      <div
+        class="modal fade"
+        id="staticBackdrop"
+        data-bs-backdrop="static"
+        data-bs-keyboard="false"
+        tabindex="-1"
+        aria-labelledby="staticBackdropLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <p> In order to acess the bookclub you must have registered</p>
+              <hr></hr>
+              <p>
+                If you click the drop down menu you can preview some of the
+                content
+              </p>
+              <div class="dropdown">
+                <button
+                  className="margin.left"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="true"
+                >
+                  Dropdown button
+                </button>
+                <ul class="dropdown-menu">
+                  <li>
+                    <Link to="auth/search/thebookclub/home">
+                      <button ocClick={(e) => handleClick(e)}>
+                        The Book Club Exclusive
+                      </button>
+                    </Link>
+                  </li>
+
+                  <li>
+                    <Link to="/Discoveryourword/book">Discoveryourword</Link>
+                  </li>
+                </ul>
+              </div>
+              <span className="nav">You must refresh in order to proceed</span>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary">
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+              >
+                Understood
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
