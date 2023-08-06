@@ -234,7 +234,7 @@ const Blank = () => {
                     </button>
                   </div>
                   <Link to="/auth/searchingthebookclub/home/auth/search/thebookclub/home">
-                    <button onClick={(e) => handleClick(e)}>Ingles</button>
+                    <button ocClick={(e) => handleClick(e)}>Ingles</button>
                   </Link>
                 </div>
               </div>
