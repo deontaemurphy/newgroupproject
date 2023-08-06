@@ -30,7 +30,7 @@ const Search = () => {
             </button>
             <ul class="dropdown-menu">
               <li>
-                <Link to="/auth/search/thebookclub/home">
+                <Link to="auth/search/thebookclub/home">
                   <button ocClick={(e) => handleClick(e)}>
                     The Book Club Exclusive
                   </button>
