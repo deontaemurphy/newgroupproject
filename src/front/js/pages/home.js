@@ -42,9 +42,19 @@ export const Home = () => {
           allowfullscreen
         ></iframe>
         <a href="https://www.youtube.com/embed/5m6Dpvky20Y">
-          <p>Children's Tab</p>
+          <p id="watson"> Como Esta ? How are you</p>
           <hr></hr>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/pxj20DQee98"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
         </a>
+        <p>Children's Tab</p>
+        <hr />
         <iframe
           width="560"
           height="315"

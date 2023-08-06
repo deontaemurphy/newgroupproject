@@ -75,6 +75,9 @@ export const PublishYourContent = () => {
                       <button onClick={(e) => handleClick(e)}>Login</button>
                     </div>
                     <div class="modal-footer">
+                      <Link to="/searcthebook">
+                        <button>Español</button>
+                      </Link>
                       <button
                         type="button"
                         class="btn btn-secondary"

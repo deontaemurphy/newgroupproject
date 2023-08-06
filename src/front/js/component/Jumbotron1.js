@@ -51,7 +51,7 @@ export const Jumbotron1 = () => {
               </Link>
             </li>
           </ul>
-
+          <Link to ="/">
           <button
             className="navbar-toggler"
             type="button"
@@ -61,8 +61,8 @@ export const Jumbotron1 = () => {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <span className="icon"></span>
-          </button>
+            <span className="icon">ES</span>
+          </button></Link>
         </ul>
       </div>
     </nav>
