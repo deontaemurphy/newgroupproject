@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
-
+import { Link } from "react-router-dom";
 export const Home = () => {
   const { store, actions } = useContext(Context);
   let navigate = useNavigate();
@@ -105,42 +105,6 @@ export const Home = () => {
               <nav className="navbar navbar-light bg-light">
                 <div className="flo">
                   <ul className="push">
-                    <Link to="/thebookclubfavorites">
-                      <i className="fa-solid fa-bookmark fa-bounce"></i>
-                    </Link>
-                    <ul>
-                      <li>
-                        <Link to="/auth/search/thebookclub">
-                          <span>Ingles</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/auth/search/thebookclub/home">
-                          <span>Spanish</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/publishmystory/auth">
-                          <span className="colores">Home.thebookclub</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/auth/searchingthebookclub/home">
-                          <span className="colores">Search.thebookclub</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/auth/search/thebookclub">
-                          <span>The Book Club Exclusive</span>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link to="/auth/search/thebookclub/home">
-                          <span>El Club del Libro.Exclusivo</span>
-                        </Link>
-                      </li>
-                    </ul>
-
                     <button
                       className="navbar-toggler"
                       type="button"
@@ -150,7 +114,7 @@ export const Home = () => {
                       aria-expanded="false"
                       aria-label="Toggle navigation"
                     >
-                      <span className="icon"></span>
+                      <span className="icon">This is The Sub Navbar</span>
                     </button>
 
                     <div
@@ -202,16 +166,18 @@ export const Home = () => {
               </nav>
             </div>
             <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button type="button" class="btn btn-primary">
-                Understood
-              </button>
+              <Link to="/">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Understood
+                </button>
+              </Link>
             </div>
           </div>
         </div>

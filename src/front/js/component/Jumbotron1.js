@@ -63,7 +63,8 @@ export const Jumbotron1 = () => {
           >
             <span className="icon"></span>
           </button>
-
-       
+        </ul>
+      </div>
+    </nav>
   );
 };
