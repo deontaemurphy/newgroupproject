@@ -3,14 +3,15 @@ import { Link } from "react-router-dom";
 
 export const Footer = () => (
   <footer className="footer mt-auto py-3 text-center">
+    <Link to="/searchthebook">
     <button
       type="button"
       className="watson"
       data-bs-toggle="modal"
       data-bs-target="#exampleModal"
     >
-      Example
-    </button>
+      The Book Club Exclusive
+    </button></Link>
 
     <div
       class="modal fade"
@@ -54,14 +55,13 @@ export const Footer = () => (
             </div>
             <div class="modal-footer">
               <Link to="/auth/search/thebookclub">
-                <button
-                  type="button"
-                  class="btn btn-secondary"
-                  data-bs-dismiss="modal"
-                >
-                  Close
-                </button>
-              </Link>
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button></Link>
               <Link to="/auth/search/thebookclub/home">
                 <button
                   type="button"
