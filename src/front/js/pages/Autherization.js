@@ -62,7 +62,7 @@ const Authorization = () => {
               </label>
             </li>
           </a>
-          <Link to="/">
+          <Link to="/searcthebook">
             <li>Sherlock Holmes</li>
           </Link>
           <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
