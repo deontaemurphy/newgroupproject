@@ -1,4 +1,4 @@
-import React, { useContext, useState  } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { useNavigate } from "react-router-dom";
@@ -81,9 +81,6 @@ export const PublishYourContent = () => {
                         data-bs-dismiss="modal"
                       >
                         Close
-                      </button>
-                      <button type="button" class="btn btn-primary">
-                        Save changes
                       </button>
                     </div>
                   </div>
