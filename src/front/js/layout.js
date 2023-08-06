@@ -5,7 +5,7 @@ import { Home } from "./pages/home";
 import Favorites, { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
-import { FooterBlock } from "./component/footer";
+import { Footer } from "./component/footer";
 import Register from "./pages/SignUp";
 import Login from "./pages/login.js";
 import Createstory from "./pages/Createstory";
@@ -73,7 +73,7 @@ const Layout = () => {
             <Route element={<Blank />} path="/searcthebook" />
           </Routes>
 
-          <FooterBlock />
+          <Footer />
           <Jumbotron2 />
           <ProfileImport />
         </ScrollToTop>

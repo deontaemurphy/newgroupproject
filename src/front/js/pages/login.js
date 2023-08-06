@@ -27,26 +27,9 @@ const Login = () => {
   return (
     <div class="jumbotron">
       <p>Please go home</p>
-      <input
-        type="text"
-        placeholder="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      ></input>
-      <input
-        type="password"
-        placeholder="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      ></input>
-      <button onClick={(e) => handleClick(e)}>Login</button>
-      <Link to="/createUser">
-        <button>Register</button>
-      </Link>
 
       <p class="lead">This is the bottom of my login page</p>
       <hr class="my-4" />
-
       <p className="leadme">
         <Link to="/">
           <span class="btn btn-primary btn-lg" role="button">
@@ -55,6 +38,83 @@ const Login = () => {
         </Link>
       </p>
       <h1 className="display-4">Hola,mundo!</h1>
+
+      <div>
+        {" "}
+        <button
+          type="button"
+          className="watson"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          Login
+        </button>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true"
+        >
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  Modal title
+                </h1>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"
+                ></button>
+              </div>
+              <div class="modal-body">
+                {" "}
+                <div>
+                  <hr></hr>
+                  <div>
+                    <input
+                      type="text"
+                      placeholder="email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    ></input>
+
+                    <input
+                      type="password"
+                      placeholder="password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    ></input>
+
+                    <button onClick={(e) => handleClick(e)}>Login</button>
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <Link to="/login">
+                    <button
+                      type="button"
+                      class="btn btn-secondary"
+                      data-bs-dismiss="modal"
+                    >
+                      Close
+                    </button>
+                    <button
+                      type="button"
+                      class="btn btn-primary"
+                      data-bs-dismiss="modal"
+                    >
+                      Save changes
+                    </button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   );
 };
