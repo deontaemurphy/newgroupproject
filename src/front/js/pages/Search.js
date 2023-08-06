@@ -67,11 +67,6 @@ const Search = () => {
         ></input>
         <hr></hr>
         Welcome to the Scavenger Hunt
-        <a href="https://archive.org/details/adventuresofsher00doylrich/page/8/mode/2up?ref=ol&view=theater">
-          <button ocClick={(e) => handleClick(e)} className="pick">
-            Entrar
-          </button>
-        </a>
         <ol>
           <li>
             <a href="https://archive.org/details/adventuresofsher00doylrich/page/4/mode/2up?ref=ol&view=theater">
@@ -93,43 +88,35 @@ const Search = () => {
         <p className="watson">
           Nothing follws until the Scavenger Hunt Timer begins{" "}
         </p>{" "}
-        There’s{" "}
-        <input
-          type="text"
-          placeholder="page 5"
-          value={bookTitle}
-          onChange={(e) => setBookTitle(e.target.value)}
-        ></input>
-        {"money "}
-        in this case, Watson, if there is nothing else.” “J think that I had
-        better go, Holmes.” “Not a bit, doctor. Stay where you are. I am lost
-        without my Boswell. And this promises to be interesting. It would be a
-        pity to miss it.” “ But your client —” “Never mind him. I may want your
-        help, and so may he. Here he comes. Sit down in that arm-chair, doctor,
-        and give us your best attention.” A slow and heavy step, which had been
-        heard upon the stairs and in the passage, paused immediately outside the
-        door. Then there was a loud and authoritative tap. “Come in!” said
-        Holmes. : A man entered who could hardly have been less than six feet
-        six inches in height, with the chest and limbs of a Hercules. His dress
-        was rich with a richness which would, in England, be looked upon as akin
-        to bad taste. Heavy bands of Astrakhan were slashed across the sleeves
-        and fronts of his double-breasted coat, while the deep blue cloak which
-        was. thrown over his shoulders was lined with flamecolored silk, and
-        secured at the neck with a brooch which consisted of a single flaming
-        beryl. Boots which extended half-way up his calves, and which were
-        trimmed at the tops with rich brown fur, completed the impression of
-        barbaric"
+        There’s money in this case, Watson, if there is nothing else.” “J think
+        that I had better go, Holmes.” “Not a bit, doctor. Stay where you are. I
+        am lost without my Boswell. And this promises to be interesting. It
+        would be a pity to miss it.” “ But your client —” “Never mind him. I may
+        want your help, and so may he. Here he comes. Sit down in that
+        arm-chair, doctor, and give us your best attention.” A slow and heavy
+        step, which had been heard upon the stairs and in the passage, paused
+        immediately outside the door. Then there was a loud and authoritative
+        tap. “Come in!” said Holmes. : A man entered who could hardly have been
+        less than six feet six inches in height, with the chest and limbs of a
+        Hercules. His dress was rich with a richness which would, in England, be
+        looked upon as akin to bad taste. Heavy bands of Astrakhan were slashed
+        across the sleeves and fronts of his double-breasted coat, while the
+        deep blue cloak which was. thrown over his shoulders was lined with
+        flamecolored silk, and secured at the neck with a brooch which consisted
+        of a single flaming beryl. Boots which extended half-way up his calves,
+        and which were trimmed at the tops with rich brown fur, completed the
+        impression of barbaric"
       </span>
-
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#staticBackdrop"
-      >
-        Launch static backdrop modal
-      </button>
-
+      <div>
+        <button
+          type="button"
+          class="btn btn-primary"
+          data-bs-toggle="modal"
+          data-bs-target="#staticBackdrop"
+        >
+          Launch Scavenger Hunt
+        </button>
+      </div>
       <div
         class="modal fade"
         id="staticBackdrop"
@@ -143,7 +130,7 @@ const Search = () => {
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Modal title
+                Special Instructions
               </h1>
               <button
                 type="button"
@@ -175,6 +162,13 @@ const Search = () => {
                         The Book Club Exclusive
                       </button>
                     </Link>
+                  </li>
+                  <li>
+                    <a href="https://archive.org/details/adventuresofsher00doylrich/page/8/mode/2up?ref=ol&view=theater">
+                      <button ocClick={(e) => handleClick(e)} className="pick">
+                        Enter The Adventures Of Sherlock Holmes
+                      </button>
+                    </a>
                   </li>
 
                   <li>
