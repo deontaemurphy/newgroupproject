@@ -90,7 +90,9 @@ const Blank = () => {
         onChange={(e) => setName(e.target.value)}
       ></input>
       <Link to="/auth/search/thebookclub/home">
-        <button ocClick={(e) => handleClick(e)}>Exclusivo del club de lectura</button>
+        <button ocClick={(e) => handleClick(e)}>
+          Exclusivo del club de lectura
+        </button>
       </Link>
       <input
         type="text"
@@ -99,51 +101,11 @@ const Blank = () => {
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
       <Link to="/auth/searcthebook">
-        <button ocClick={(e) => handleClick(e)} className="sherlock">búsqueda</button>
+        <button ocClick={(e) => handleClick(e)} className="sherlock">
+          búsqueda
+        </button>
       </Link>
-      <div>
-        <h1>El cuento de dos reyes</h1>
-        <p>
-          Hay algo peligroso en lo más profundo de mí, un ser que disfruta del
-          dolor de los demás. Mirando dentro de tu alma, buscando debilidad; si
-          hay alguno lo sabrá. Durante años he luchado para evitar que sus
-          impulsos violentos emergieran de las profundidades del infierno. Su
-          fuerza crece a medida que pasa el tiempo y temo que pueda estar
-          perdiendo el control. Muchos han tratado de razonar con él, siendo
-          cada intento tan inútil como el primero, terminando en horror. Esta
-          criatura no es de este mundo, ni de ningún otro, es vuestro principio
-          y vuestro fin. ABANDONA TODA ESPERANZA Déjame Salir!!! Los cánticos se
-          hicieron más y más fuertes; su rabia se hizo más fuerte, atado por las
-          cadenas de la buena voluntad y la fe; él está contenido. El miedo me
-          consumía. “Prometí que nunca permitiría que me controlaras nunca más.
-          No necesito tu ayuda.
-        </p>
-        <hr></hr>
-        <p>
-          {" "}
-          El Día de la Aceptación es una tradición para el hijo del rey; este
-          día está lleno de mucha alegría y muchas alabanzas. Es un día para las
-          edades, fiesta más grande que el Rahnoki. Cámara del Príncipe Zakar:
-          "El sol sale a su favor, Príncipe Zakar, ¿está listo para enfrentarse
-          a su padre?" Mi padre no debería preocuparse, Maestro Serech, estoy
-          listo. Me inclino mostrando a mi maestro el debido respeto; sin
-          embargo, mi padre, el rey Shamus, gobernante de las tierras del norte,
-          era un gran y poderoso guerrero, y un rey más sabio. Nuestra nación
-          era de las cuatro grandes naciones; al sur de nosotros saludó a la
-          gente de la garra, creyendo que era la garra del Gran Rahnoki para
-          tallar las tierras. Mi padre siempre creyó que este cuento era una
-          tontería, todos lo creímos; este mundo fue sancionado por los Dioses
-          Mayores de Dimorphous. La leyenda dice que su líder se enfrentó solo a
-          los Rahnoki, "la batalla fue tan intensa que hizo que las tierras se
-          levantaran del mar y las nubes hicieran llover montañas sobre esas
-          tierras". Nadie lo sabe con certeza, pero hay historias de que los
-          hijo de Lord Nior, gobernante de los dimorfitas, se ha hecho amigo de
-          los Rahnoki. Suena descabellado. Golpear. Toca "Padre". Había
-          silencio; Toqué de nuevo. Golpes. Golpes. Una vez más, el hombre se
-          encuentra allí.{" "}
-        </p>
-        <hr></hr>
-      </div>
+
       <div class="card text-center">
         <div class="card-header">Featured</div>
         <img
@@ -197,6 +159,102 @@ const Blank = () => {
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
               allowfullscreen
             ></iframe>
+          </div>
+          <div className="text-center mt-5">
+            <nav className="navbar navbar-light bg-light">
+              <div className="container">
+                <div className="ml-auto">
+                  <div>
+                    <button className="btn btn-primary">
+                      <Link to="/thebookclubhome">
+                        <button onClick={(e) => handleClick(e)}>
+                          El club del libro
+                        </button>
+                      </Link>
+                    </button>
+                  </div>
+                  <Link to="/publishmystory/auth">
+                    <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
+                      <button onClick={(e) => handleClick(e)}>Ingles</button>
+                    </a>
+                  </Link>
+                </div>
+              </div>
+            </nav>
+            <div>Sherlock Holmes:</div>
+            <div>
+              <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
+                <img
+                  className="Adjust"
+                  src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
+                />
+              </a>
+            </div>
+            <div>
+              6 AVENTURAS DE SHERLOCK HOLMES debe ser aburrido, de hecho, si no
+              lo hago declararlo miembro activo de la profesión médica”. I no
+              pudo evitar reírse de la facilidad con la que explicaba su proceso
+              de deducción. “Cuando te escucho dar tus razones,” comentó, “la
+              cosa siempre me parece tan ridículamente simple que podría hacerlo
+              fácilmente yo mismo, aunque en cada sucesiva ejemplo de su
+              razonamiento estoy desconcertado, hasta que explique su proceso.
+              Y, sin embargo, creo que mis ojos son tan buenos como los tuyos.
+              "Así es", respondió, encendiendo un cigarrillo y tirándolo se
+              sentó en un sillón. “Ves, pero no observas. La distinción es
+              clara. Por ejemplo, has visto con frecuencia los escalones que
+              conducen desde el vestíbulo a esta habitación. “ Frecuentemente."
+            </div>
+            <br></br>
+            <div className="colores">
+              El cuento de dos reyes de Steven Ferguson
+              <div>
+                <h1>El cuento de dos reyes</h1>
+                <p>
+                  Hay algo peligroso en lo más profundo de mí, un ser que
+                  disfruta del dolor de los demás. Mirando dentro de tu alma,
+                  buscando debilidad; si hay alguno lo sabrá. Durante años he
+                  luchado para evitar que sus impulsos violentos emergieran de
+                  las profundidades del infierno. Su fuerza crece a medida que
+                  pasa el tiempo y temo que pueda estar perdiendo el control.
+                  Muchos han tratado de razonar con él, siendo cada intento tan
+                  inútil como el primero, terminando en horror. Esta criatura no
+                  es de este mundo, ni de ningún otro, es vuestro principio y
+                  vuestro fin. ABANDONA TODA ESPERANZA Déjame Salir!!! Los
+                  cánticos se hicieron más y más fuertes; su rabia se hizo más
+                  fuerte, atado por las cadenas de la buena voluntad y la fe; él
+                  está contenido. El miedo me consumía. “Prometí que nunca
+                  permitiría que me controlaras nunca más. No necesito tu ayuda.
+                </p>
+                <hr></hr>
+                <p>
+                  {" "}
+                  El Día de la Aceptación es una tradición para el hijo del rey;
+                  este día está lleno de mucha alegría y muchas alabanzas. Es un
+                  día para las edades, fiesta más grande que el Rahnoki. Cámara
+                  del Príncipe Zakar: "El sol sale a su favor, Príncipe Zakar,
+                  ¿está listo para enfrentarse a su padre?" Mi padre no debería
+                  preocuparse, Maestro Serech, estoy listo. Me inclino mostrando
+                  a mi maestro el debido respeto; sin embargo, mi padre, el rey
+                  Shamus, gobernante de las tierras del norte, era un gran y
+                  poderoso guerrero, y un rey más sabio. Nuestra nación era de
+                  las cuatro grandes naciones; al sur de nosotros saludó a la
+                  gente de la garra, creyendo que era la garra del Gran Rahnoki
+                  para tallar las tierras. Mi padre siempre creyó que este
+                  cuento era una tontería, todos lo creímos; este mundo fue
+                  sancionado por los Dioses Mayores de Dimorphous. La leyenda
+                  dice que su líder se enfrentó solo a los Rahnoki, "la batalla
+                  fue tan intensa que hizo que las tierras se levantaran del mar
+                  y las nubes hicieran llover montañas sobre esas tierras".
+                  Nadie lo sabe con certeza, pero hay historias de que los hijo
+                  de Lord Nior, gobernante de los dimorfitas, se ha hecho amigo
+                  de los Rahnoki. Suena descabellado. Golpear. Toca "Padre".
+                  Había silencio; Toqué de nuevo. Golpes. Golpes. Una vez más,
+                  el hombre se encuentra allí.{" "}
+                </p>
+                <hr></hr>
+              </div>
+            </div>
+            <br></br>
           </div>
         </div>
         <div class="card-footer text-body-secondary">2 days ago</div>

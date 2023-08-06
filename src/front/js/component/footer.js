@@ -13,9 +13,11 @@ export const Footer = () => (
         <div>
           <p>This is the bottom of the page. I am a publication page</p>
         </div>
-        <button class="btn btn-primary btn-lg" type="button">
-          Example button
-        </button>
+        <Link to="/auth/search/thebookclub">
+          <button class="btn btn-primary btn-lg" type="button">
+            Example button
+          </button>
+        </Link>
       </div>
     </div>
   </footer>
