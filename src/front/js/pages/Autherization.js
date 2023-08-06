@@ -38,11 +38,13 @@ const Authorization = () => {
   return (
     <div className="open">
       <div className="card">
-        <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+        <h1 className="display-4">
+          Comienza el Club del Libro Lectura Exclusiva
+        </h1>
 
-        <div className="card-header">Featured Books</div>
+        <div className="card-header">Libros destacados</div>
         <hr></hr>
-        <h1>Spolighted Books</h1>
+        <h1>Libros estropeados</h1>
         <hr></hr>
         <ol>
           <a>
@@ -56,7 +58,7 @@ const Authorization = () => {
                     />
                   </button>
                 </a>
-                The Adventure of Sherlock Holmes
+                La aventura de Sherlock Holmes
               </label>
             </li>
           </a>
@@ -70,7 +72,7 @@ const Authorization = () => {
           <form class="was-validated">
             <div class="mb-3">
               <label for="validationTextarea" class="form-label">
-                Textarea
+                área de texto
               </label>
               <textarea
                 class="form-control"
@@ -79,7 +81,7 @@ const Authorization = () => {
                 required
               ></textarea>
               <div class="invalid-feedback">
-                Please enter a message in the textarea.
+                Por favor ingrese un mensaje en el área de texto.
               </div>
             </div>
 
@@ -91,9 +93,11 @@ const Authorization = () => {
                 required
               />
               <label class="form-check-label" for="validationFormCheck1">
-                Check this checkbox
+                Marque esta casilla de verificación
               </label>
-              <div class="invalid-feedback">Example invalid feedback text</div>
+              <div class="invalid-feedback">
+                Ejemplo de texto de comentario no válido
+              </div>
             </div>
 
             <div class="form-check">
@@ -105,7 +109,7 @@ const Authorization = () => {
                 required
               />
               <label class="form-check-label" for="validationFormCheck2">
-                Toggle this radio(It needs improvement)
+                Alternar esta radio (si necesita mejoras)
               </label>
             </div>
             <div class="form-check mb-3">
@@ -117,22 +121,22 @@ const Authorization = () => {
                 required
               />
               <label class="form-check-label" for="validationFormCheck3">
-                Or toggle this other radio(I like the bookclub)
+                O cambia esta otra radio (me gusta el club de lectura)
               </label>
               <div class="invalid-feedback">
-                More example invalid feedback text
+                Más ejemplos de texto de comentario no válido
               </div>
             </div>
 
             <div class="mb-3">
               <select class="form-select" required aria-label="select example">
-                <option value="">Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="">Abrir este menú de selección</option>
+                <option value="1">Uno</option>
+                <option value="2">Dos</option>
+                <option value="3">Tres</option>
               </select>
               <div class="invalid-feedback">
-                Example invalid select feedback
+                Ejemplo de comentarios de selección no válidos
               </div>
             </div>
 
@@ -144,13 +148,13 @@ const Authorization = () => {
                 required
               />
               <div class="invalid-feedback">
-                Example invalid form file feedback
+                Ejemplo de comentario de archivo de formulario no válido
               </div>
             </div>
 
             <div class="mb-3">
               <button class="btn btn-primary" type="submit">
-                Submit form
+                Enviar formulario
               </button>
             </div>
           </form>
