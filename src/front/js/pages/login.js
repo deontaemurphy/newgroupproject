@@ -31,7 +31,7 @@ const Login = () => {
       <p class="lead">This is the bottom of my login page</p>
       <hr class="my-4" />
       <p className="leadme">
-        <Link to="/">
+        <Link to="/createUser">
           <span class="btn btn-primary btn-lg" role="button">
             Home
           </span>
