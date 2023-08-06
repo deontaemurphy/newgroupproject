@@ -12,5 +12,11 @@ export const NavbarStretch = () => {
     navigate("/");
     actions.checkForToken();
   };
-  return <div>Rick Flair</div>;
+  return (
+    <div>
+      <Link to="/searchthebookclub">
+        <button ocClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
+      </Link>
+    </div>
+  );
 };
