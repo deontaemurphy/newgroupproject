@@ -36,9 +36,7 @@ const Blank = () => {
           <Link to="/Discoveryourword/book">
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
-          <div className="ml-auto">
-            
-          </div>
+          <div className="ml-auto"></div>
         </div>
 
         <div class="container-fluid">
@@ -235,10 +233,8 @@ const Blank = () => {
                       </Link>
                     </button>
                   </div>
-                  <Link to="/publishmystory/auth">
-                    <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
-                      <button onClick={(e) => handleClick(e)}>Ingles</button>
-                    </a>
+                  <Link to="/auth/searchingthebookclub/home/auth/search/thebookclub/home">
+                    <button onClick={(e) => handleClick(e)}>Ingles</button>
                   </Link>
                 </div>
               </div>
