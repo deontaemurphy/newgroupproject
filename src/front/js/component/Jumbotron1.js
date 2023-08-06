@@ -36,7 +36,7 @@ export const Jumbotron1 = () => {
               </Link>
             </li>
             <li>
-              <Link to="/auth/searchingthebookclub/home">
+              <Link to="/searchthebookclub">
                 <span className="colores">Search.thebookclub</span>
               </Link>
             </li>
