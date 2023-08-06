@@ -5,7 +5,7 @@ import { Home } from "./pages/home";
 import Favorites, { Single } from "./pages/single";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
-import { Footer } from "./component/footer";
+import { FooterBlock } from "./component/footer";
 import Register from "./pages/SignUp";
 import Login from "./pages/login.js";
 import Createstory from "./pages/Createstory";
@@ -64,12 +64,16 @@ const Layout = () => {
               element={<TheBookClub />}
               path="/auth/searchingthebookclub/home/auth/search/thebookclub/home"
             />
+            <Route
+              element={<TheBookClubHome />}
+              path="/auth/searchingthebookclub/home/auth/search/thebookclub/home"
+            />
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />
             <Route element={<Blank />} path="/searcthebook" />
           </Routes>
 
-          <Footer />
+          <FooterBlock />
           <Jumbotron2 />
           <ProfileImport />
         </ScrollToTop>

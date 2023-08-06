@@ -1,7 +1,17 @@
-import React, { Component } from "react";
+import React, { useContext, useState } from "react";
+import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
 
-export const Footer = () => (
+const FooterBlock = () => {
+  const { store, actions } = useContext(Context);
+  const [email, setEmail] = useState("");
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+  const handleClick = (e) => {
+    e.preventDefault();
+    actions.register(name, email, password);
+  };
+  return(
   <footer className="footer mt-auto py-3 text-center">
     <button
       type="button"
@@ -42,6 +52,28 @@ export const Footer = () => (
                 </Link>
 
                 <div>
+                  <input
+                    type="text"
+                    placeholder="name"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                  ></input>
+                  <input
+                    type="text"
+                    placeholder="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  ></input>
+                  <input
+                    type="password"
+                    placeholder="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  ></input>
+                  <button onClick={(e) => handleClick(e)}>Register</button>
+                  <Link to="/login">
+                    <button>Log In</button>
+                  </Link>
                   <p>This is the bottom of the page. I am a publication page</p>
                 </div>
 
@@ -72,5 +104,7 @@ export const Footer = () => (
         </div>
       </div>
     </div>
-  </footer>
-);
+  </footer>)
+}
+
+export default FooterBlock;
