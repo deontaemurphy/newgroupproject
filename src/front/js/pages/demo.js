@@ -56,7 +56,7 @@ const Demo = () => {
               </label>
             </li>
           </a>
-          <Link to="/thebookclubfavorites">
+          <Link to="/auth/searchingthebookclub/home/auth/search/thebookclub/home">
             <li>Sherlock Holmes</li>
           </Link>
           <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
@@ -178,7 +178,6 @@ const Demo = () => {
           </Link>
         </div>
       </nav>
-     
     </div>
   );
 };

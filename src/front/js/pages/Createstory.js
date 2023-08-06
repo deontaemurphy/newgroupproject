@@ -15,13 +15,13 @@ const Search = () => {
       <div class="text-center">
         <nav className="navbar navbar-light bg-light">
           <div className="container">
-            <Link to="/publishmystory/auth">
+            <Link to="/searcthebook">
               <span className="navbar-brand mb-0 h1">"Home"</span>
             </Link>
             <Link to="/auth/searchingthebookclub/home">
               <span className="navbar-brand mb-0 h1">"Look It Up"</span>
             </Link>
-            <Link to="/">
+            <Link to="/auth/search/thebookclub/home">
               <button ocClick={(e) => handleClick(e)}>Espanol</button>
             </Link>
           </div>
