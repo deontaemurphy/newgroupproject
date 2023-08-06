@@ -134,6 +134,7 @@
 
 .open {
   color: rgb(83, 205, 77);
+  background-color: burlywood;
 }
 
 .boostrap {
@@ -148,4 +149,7 @@
   max-width: 660px;
   overflow: hidden;
   border-radius: 09px;
+}
+.lead {
+  background-color: bisque;
 }

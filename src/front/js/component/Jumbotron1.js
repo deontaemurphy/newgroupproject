@@ -64,44 +64,6 @@ export const Jumbotron1 = () => {
             <span className="icon"></span>
           </button>
 
-          <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <li className="nav-item">
-              <Link to="/">
-                <span className="nav-link active" aria-current="page">
-                  Home
-                </span>
-              </Link>
-            </li>
-            <li
-              className="nav-item"
-              a
-              href="https://www.youtube.com/watch?v=ZrxCRySeHNE"
-            >
-              <Link to="/Discoveryourword/book">
-                <span className="nav-link">Discover Your Palabra</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link to="/auth/searchingthebookclub/home">
-                <span className="nav-link">Search</span>
-              </Link>
-            </li>
-            <li className="nav-item">
-              {!store.token ? (
-                <Link to="/login">
-                  <span className="nav-link">Login</span>
-                </Link>
-              ) : (
-                <Link to="/logout">
-                  <span onClick={() => actions.logut()} className="nav-link">
-                    Log out
-                  </span>
-                </Link>
-              )}
-            </li>
-          </div>
-        </ul>
-      </div>
-    </nav>
+       
   );
 };
