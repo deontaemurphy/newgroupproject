@@ -41,6 +41,11 @@ export const Jumbotron1 = () => {
               </Link>
             </li>
             <li>
+              <Link to="/auth/search/thebookclub">
+                <span>The Book Club Exclusive</span>
+              </Link>
+            </li>
+            <li>
               <Link to="/auth/search/thebookclub/home">
                 <span>El Club del Libro.Exclusivo</span>
               </Link>
