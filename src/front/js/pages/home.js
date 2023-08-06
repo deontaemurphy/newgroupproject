@@ -44,6 +44,29 @@ export const Home = () => {
           <p>Children's Tab</p>
           <hr></hr>
         </a>
+        <hr />
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/i6yFRXUDC-w"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <hr />
+        <p>Sherlock Holmes #25:</p>
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <a href="https://youtu.be/0-Hj_bi9Qto">
+          <p>The Empty House</p>
+        </a>
         Line Leader: "On this page you can browse"
       </div>
     </div>
