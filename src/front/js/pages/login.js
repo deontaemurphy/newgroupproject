@@ -37,6 +37,22 @@ const Login = () => {
           </span>
         </Link>
       </p>
+      <input
+        type="text"
+        placeholder="email"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      ></input>
+
+      <input
+        type="password"
+        placeholder="password"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      ></input>
+
+      <button onClick={(e) => handleClick(e)}>Login</button>
+
       <h1 className="display-4">Hola,mundo!</h1>
 
       <div>
@@ -71,23 +87,6 @@ const Login = () => {
               <div class="modal-body">
                 <div>
                   <hr></hr>
-                  <div>
-                    <input
-                      type="text"
-                      placeholder="email"
-                      value={email}
-                      onChange={(e) => setEmail(e.target.value)}
-                    ></input>
-
-                    <input
-                      type="password"
-                      placeholder="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                    ></input>
-
-                    <button onClick={(e) => handleClick(e)}>Login</button>
-                  </div>
                 </div>
                 <div class="modal-footer">
                   <Link to="/login">

@@ -61,6 +61,7 @@ export const Footer = () => {
                     <p>
                       This is the bottom of the page. I am a publication page
                     </p>
+                    
                   </div>
 
                   <Link to="/auth/search/thebookclub">
