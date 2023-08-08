@@ -17,7 +17,7 @@ import Publish from "./pages/PublishYours";
 import TheBookClub from "./pages/TheBookClub";
 import Demo from "./pages/demo";
 import TheBookClubHome from "./pages/TheLastPage";
-import Blank from "./pages/Balnkpage";
+import Blank from "./pages/Blank";
 import { NavbarStretch } from "./component/Translator";
 import { Jumbotron1 } from "./component/Jumbotron1";
 import { Jumbotron2 } from "./component/Jumbotron2";
@@ -70,7 +70,7 @@ const Layout = () => {
             />
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />
-            <Route element={<Blank />} path="/searcthebook" />
+            <Route element={<Blank />} path="/searchthebook" />
           </Routes>
 
           <Footer />

@@ -40,7 +40,6 @@ const Login = () => {
       <h1 className="display-4">Hola,mundo!</h1>
 
       <div>
-        {" "}
         <button
           type="button"
           className="watson"
@@ -70,7 +69,6 @@ const Login = () => {
                 ></button>
               </div>
               <div class="modal-body">
-                {" "}
                 <div>
                   <hr></hr>
                   <div>
@@ -114,7 +112,6 @@ const Login = () => {
           </div>
         </div>
       </div>
-
     </div>
   );
 };
