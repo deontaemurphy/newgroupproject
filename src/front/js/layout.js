@@ -66,7 +66,7 @@ const Layout = () => {
             />
             <Route
               element={<TheBookClubHome />}
-              path="/auth/searchingthebookclub/home/auth/search/thebookclub/home"
+              path="/auth/buscandoclubllibro/vide/auth/search/thebookclub/home"
             />
             <Route element={<Publish />} path="/publishmystory/auth" />
             <Route element={<Algolia />} path="/auth/searcthebook" />

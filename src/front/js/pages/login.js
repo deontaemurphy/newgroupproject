@@ -17,7 +17,7 @@ const Login = () => {
   // useEffect(() => {
   console.log(store.token);
   if (token && token != "" && token != undefined) {
-    navigate("/thebookclub");
+    navigate("/auth/buscandoclubllibro/vide/auth/search/thebookclub/home");
     // }
     // Authentincate
     // if (auth === true || auth === defined || auth === "") {
@@ -36,6 +36,9 @@ const Login = () => {
             Home
           </span>
         </Link>
+        <button>
+          <Link to="/auth/searchingthebookclub/home/auth/search/thebookclub/home"></Link>
+        </button>
       </p>
       <input
         type="text"
