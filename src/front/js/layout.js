@@ -38,7 +38,6 @@ const Layout = () => {
 
           <Jumbotron1 />
 
-          <LogoutJumbotron />
           <Routes>
             <Route element={<Home />} path="/" />
 
@@ -56,6 +55,7 @@ const Layout = () => {
               element={<Autherization />}
               path="/auth/search/thebookclub/home"
             />
+            <Route element={<LogoutJumbotron />} path="/logout" />
             <Route element={<SearchTheBookClub />} path="/searchthebookclub" />
             {/* <Route element={<LoginComponent />} path="/" /> */}
             <Route element={<Demo />} path="/auth/search/thebookclub" />

@@ -2,20 +2,8 @@ import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link, useNavigate } from "react-router-dom";
 
-export const Footer = () => {
-  const { store, actions } = useContext(Context);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const handleClick = (e) => {
-    e.preventDefault();
-    actions.login(email, password);
-  };
-  let navigate = useNavigate();
-  let token = sessionStorage.getItem("token");
-  if (token && token != "" && token != undefined) {
-    navigate("/thebookclub");
-  }
-  return (
+export const Footer = () =>(
+ 
     <footer className="footer mt-auto py-3 text-center">
       <Link to="/searchthebook">
         <button
@@ -61,7 +49,6 @@ export const Footer = () => {
                     <p>
                       This is the bottom of the page. I am a publication page
                     </p>
-                    
                   </div>
 
                   <Link to="/auth/search/thebookclub">
@@ -97,4 +84,4 @@ export const Footer = () => {
       </div>
     </footer>
   );
-};
+

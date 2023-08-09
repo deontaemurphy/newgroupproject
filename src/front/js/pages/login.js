@@ -21,7 +21,7 @@ const Login = () => {
     // }
     // Authentincate
     // if (auth === true || auth === defined || auth === "") {
-    navigate("/thebookclub");
+   
   }
   // }, []);
   return (

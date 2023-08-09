@@ -67,6 +67,9 @@ const getState = ({ getStore, getActions, setStore }) => {
       },
 
       logout: () => {
+        sessionStorage.removeItem("token");
+        console.log("if it isnt love");
+        setStore({ token: null });
         //   async (email, password) => {
         //     const opts = {
         //       method: "POST",

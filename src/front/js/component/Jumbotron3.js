@@ -14,5 +14,9 @@ export const LogoutJumbotron = () => {
     navigate("/");
     actions.checkForToken();
   };
-  return <div class="jumbotron"></div>;
+  return (
+    <div class="jumbotron">
+      <button onClick={handleClick}>Logout</button>
+    </div>
+  );
 };
