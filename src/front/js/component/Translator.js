@@ -15,14 +15,14 @@ export const NavbarStretch = () => {
   return (
     <div>
       <Link to="/searchthebook">
-      <button
-        type="button"
-        className="watson"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        The Book Club Exclusive
-      </button>
+        <button
+          type="button"
+          className="watson"
+          data-bs-toggle="modal"
+          data-bs-target="#exampleModal"
+        >
+          The Book Club Exclusive
+        </button>
       </Link>
 
       <div
@@ -35,9 +35,11 @@ export const NavbarStretch = () => {
         <div class="modal-dialog">
           <div class="modal-content">
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
-              </h1>
+              <Link to="/auth/buscandoclubllibro/vide/auth/search/thebookclub/home">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">
+                  The Book Club Exclusive
+                </h1>
+              </Link>
               <button
                 type="button"
                 class="btn-close"
@@ -46,7 +48,17 @@ export const NavbarStretch = () => {
               ></button>
             </div>
             <div class="modal-body">
-              {" "}
+              {!store.token ? (
+                <Link to="/login">
+                  <span className="nav-link">Login</span>
+                </Link>
+              ) : (
+                <Link to="/logout">
+                  <span onClick={() => actions.logut()} className="nav-link">
+                    Log out
+                  </span>
+                </Link>
+              )}{" "}
               <div>
                 <hr></hr>
                 <div>
@@ -62,24 +74,21 @@ export const NavbarStretch = () => {
                 </div>
               </div>
               <div class="modal-footer">
-                <Link to="/searchthebook">
-                  <button
-                    type="button"
-                    class="btn btn-secondary"
-                    data-bs-dismiss="modal"
-                  >
-                    Close
-                  </button>
-                </Link>
-                <Link to="/searchthebook">
-                  <button
-                    type="button"
-                    class="btn btn-primary"
-                    data-bs-dismiss="modal"
-                  >
-                    Save changes
-                  </button>
-                </Link>
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Close
+                </button>
+
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-dismiss="modal"
+                >
+                  Save changes
+                </button>
               </div>
             </div>
           </div>

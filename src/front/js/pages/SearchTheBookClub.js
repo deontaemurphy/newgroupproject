@@ -22,7 +22,7 @@ const Inquistivo = () => {
             <span className="navbar-brand mb-0 h1">"Buscalo"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/searcthebook">
+            <Link to="/auth/search/thebookclub/home">
               <button ocClick={(e) => handleClick(e)}>Buscandos</button>
             </Link>
           </div>

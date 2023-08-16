@@ -20,7 +20,7 @@ export const PublishYourContent = () => {
       store.token !== "" &&
       store.token !== undefined
     ) {
-      navigate("/thebookclub");
+      navigate("/auth/buscandoclubllibro/vide/auth/search/thebookclub/home");
     }
   }, [store.token]);
 
@@ -30,14 +30,16 @@ export const PublishYourContent = () => {
         <div className="container">
           <div className="ml-auto">
             <div>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-toggle="modal"
-                data-bs-target="#exampleModal"
-              >
-                TheBookClubHome
-              </button>
+              <Link to="/login">
+                <button
+                  type="button"
+                  class="btn btn-primary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  TheBookClubHome
+                </button>
+              </Link>
 
               <div
                 class="modal fade"
@@ -59,21 +61,7 @@ export const PublishYourContent = () => {
                         aria-label="Close"
                       ></button>
                     </div>
-                    <div class="modal-body">
-                      <input
-                        type="text"
-                        placeholder="email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                      ></input>
-                      <input
-                        type="password"
-                        placeholder="password"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                      ></input>
-                      <button onClick={(e) => handleClick(e)}>Login</button>
-                    </div>
+                    <div class="modal-body"></div>
                     <div class="modal-footer">
                       <Link to="/searcthebook">
                         <button>Español</button>

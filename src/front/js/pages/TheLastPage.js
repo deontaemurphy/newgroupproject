@@ -28,7 +28,7 @@ const TheBookClubHome = () => {
               </button>
             </Link>
             <span>
-              {"stringify 250+ "}
+              {" "}
               Today we title the cultural differences of not knowing
               <input placeholder="counter" size="100px;"></input>
             </span>

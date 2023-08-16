@@ -14,7 +14,7 @@ export const ProfileImport = () => {
   };
   return (
     <div>
-      <img src="#"></img>
+      <img src=""></img>
       <p> TEST</p>
     </div>
   );

@@ -23,17 +23,6 @@ const Authorization = () => {
   }, [store.token]);
   console.log(store.token);
   if (token && token != "" && token != undefined) {
-    navigate("/thebookclub");
-    // }
-    // Authentincate
-    // if (auth === true || auth === defined || auth === "") {
-    navigate("/thebookclub");
-    const popoverTriggerList = document.querySelectorAll(
-      '[data-bs-toggle="popover"]'
-    );
-    const popoverList = [...popoverTriggerList].map(
-      (popoverTriggerEl) => new bootstrap.Popover(popoverTriggerEl)
-    );
   }
   return (
     <div className="open">

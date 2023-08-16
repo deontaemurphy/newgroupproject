@@ -90,13 +90,13 @@ export const Home = () => {
       </button>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id="staticBackdrop"
         data-bs-backdrop="static"
         data-bs-keyboard="false"
         tabindex="-1"
         aria-labelledby="staticBackdropLabel"
-        aria-hidden="true"
+        aria-hidden="false"
       >
         <div class="modal-dialog">
           <div class="modal-content">
@@ -114,19 +114,18 @@ export const Home = () => {
             <div class="modal-body">
               <nav className="navbar navbar-light bg-light">
                 <div className="flo">
+                  <button
+                    className="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                  >
+                    <span className="icon">This is The Sub Navbar</span>
+                  </button>
                   <ul className="push">
-                    <button
-                      className="navbar-toggler"
-                      type="button"
-                      data-bs-toggle="collapse"
-                      data-bs-target="#navbarSupportedContent"
-                      aria-controls="navbarSupportedContent"
-                      aria-expanded="false"
-                      aria-label="Toggle navigation"
-                    >
-                      <span className="icon">This is The Sub Navbar</span>
-                    </button>
-
                     <div
                       className="collapse navbar-collapse"
                       id="navbarSupportedContent"
@@ -182,8 +181,10 @@ export const Home = () => {
                   class="btn btn-secondary"
                   data-bs-dismiss="modal"
                 >
-                  Close
+                  Close This Or to logout
                 </button>
+              </Link>
+              <Link to="/">
                 <button type="button" class="btn btn-primary">
                   Understood
                 </button>
