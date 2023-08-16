@@ -86,7 +86,7 @@ export const Home = () => {
         data-bs-toggle="modal"
         data-bs-target="#staticBackdrop"
       >
-        Launch static backdrop modal
+        Login
       </button>
 
       <div
@@ -102,7 +102,7 @@ export const Home = () => {
           <div class="modal-content">
             <div class="modal-header">
               <h1 class="modal-title fs-5" id="staticBackdropLabel">
-                Modal title
+                Titulo
               </h1>
               <button
                 type="button"
@@ -176,7 +176,7 @@ export const Home = () => {
               </nav>
             </div>
             <div class="modal-footer">
-              <Link to="/">
+              <Link to="/logout">
                 <button
                   type="button"
                   class="btn btn-secondary"
