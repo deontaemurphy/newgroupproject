@@ -21,6 +21,7 @@ const Search = () => {
             <Link to="/auth/searchingthebookclub/home">
               <span className="navbar-brand mb-0 h1">"Look It Up"</span>
             </Link>
+
             <Link to="/auth/search/thebookclub/home">
               <button ocClick={(e) => handleClick(e)}>Espanol</button>
             </Link>
@@ -31,11 +32,24 @@ const Search = () => {
         </a>
         <div className="ml-auto">
           <hr></hr>
-          <p>About ME</p>
-          <hr></hr>
-          <input placeholder="Reloj" size="115;"></input>
-          <p>In the "About me section"</p>
-          <hr></hr>
+          <div className="SherlockHolmes">
+            <p>About ME</p>
+            <hr></hr>
+            <input placeholder="Reloj" size="115;"></input>
+            <p>In the "About me section"</p>
+            <hr></hr>
+          </div>
+        </div>
+        <div>
+          {" "}
+          <iframe
+            width="560"
+            height="202"
+            src="https://www.bandlab.com/embed/?id=a24f825a-3c22-ee11-a9bb-000d3a41e8b8"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <hr />
         </div>
         <iframe
           width="560"

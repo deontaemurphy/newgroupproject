@@ -27,11 +27,10 @@ const TheBookClub = () => {
                 The Book Club Exclusive
               </button>
             </Link>
-            <span>
-              {"stringify 250+ "}
-              Today we title the cultural differences of not knowing
-              <input placeholder="counter" size="100px;"></input>
-            </span>
+            <span className="Watson2">
+              Reloj on each page starting November 1st!
+            </span>{" Novembre "}
+            <input placeholder="counter" size="100px;"></input>
           </div>
         </div>
       </nav>

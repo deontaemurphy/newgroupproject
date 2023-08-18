@@ -20,13 +20,7 @@ const TheBookClubHome = () => {
 
           <Link to="/Discoveryourword/book">
             <hr />
-            <iframe
-              width="560"
-              height="202"
-              src="https://www.bandlab.com/embed/?id=a24f825a-3c22-ee11-a9bb-000d3a41e8b8"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
+
             <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
@@ -35,8 +29,8 @@ const TheBookClubHome = () => {
                 The Book Club Exclusive
               </button>
             </Link>
-            <span>
-             Add a Counter with Styles to our Exclsuive Landing Pages
+            <span className="Watson2">
+              Add a Counter with Styles to our Exclsuive Landing Pages
               <input placeholder="counter" size="100px;"></input>
             </span>
           </div>
