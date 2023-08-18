@@ -70,3 +70,4 @@ def createUser():
   db.session.add(user)   
   db.session.commit()
   return jsonify(request_body,access_token), 200
+

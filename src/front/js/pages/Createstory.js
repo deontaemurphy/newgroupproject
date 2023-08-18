@@ -1,49 +1,77 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-
-export const Createstory = () => {
+import "../../styles/home.css";
+const Search = () => {
   const { store, actions } = useContext(Context);
-
+  const [bookTitle, setBookTitle] = useState("");
+  const [name, setName] = useState("");
+  const handleClick = (e) => {
+    e.preventDefault();
+    actions.search(name, bookTitle);
+  };
   return (
-    <div className="container">
-      <ul className="list-group">
-        {store.demo.map((item, index) => {
-          return (
-            <li
-              key={index}
-              className="list-group-item d-flex justify-content-between"
-              style={{ background: item.background }}
-            >
-              <Link to="/publishmystory">
-                <span>Link to: "publish" </span>
-              </Link>
-              {
-                // Conditional render example
-                // Check to see if the background is orange, if so, display the message
-                item.background === "orange" ? (
-                  <p style={{ color: item.initial }}>
-                    Check store/flux.js scroll to the actions to see the code
-                  </p>
-                ) : null
-              }
-              <button
-                className="btn btn-success"
-                onClick={() => actions.changeColor(index, "orange")}
-              >
-                Publish
-              </button>
-            </li>
-          );
-        })}
-      </ul>
-      <br />
-      <input maxLength={10}></input>
-      <Link to="/home">
-        <button className="btn btn-primary">Save Draft</button>
-      </Link>
+    <div>
+      <div class="text-center">
+        <nav className="navbar navbar-light bg-light">
+          <div className="container">
+            <Link to="/searcthebook">
+              <span className="navbar-brand mb-0 h1">"Home"</span>
+            </Link>
+            <Link to="/auth/searchingthebookclub/home">
+              <span className="navbar-brand mb-0 h1">"Look It Up"</span>
+            </Link>
+
+            <Link to="/auth/search/thebookclub/home">
+              <button ocClick={(e) => handleClick(e)}>Espanol</button>
+            </Link>
+          </div>
+        </nav>
+        <a href="https://writer.com/product/api/">
+          <b>https://writer.com/product/api/</b>
+        </a>
+        <div className="ml-auto">
+          <hr></hr>
+          <div className="SherlockHolmes">
+            <p>About ME</p>
+            <hr></hr>
+            <input placeholder="Reloj" size="115;"></input>
+            <p>In the "About me section"</p>
+            <hr></hr>
+          </div>
+        </div>
+        <div>
+          {" "}
+          <iframe
+            width="560"
+            height="202"
+            src="https://www.bandlab.com/embed/?id=a24f825a-3c22-ee11-a9bb-000d3a41e8b8"
+            frameborder="0"
+            allowfullscreen
+          ></iframe>
+          <hr />
+        </div>
+        <iframe
+          width="560"
+          height="202"
+          src="https://www.bandlab.com/embed/?id=0c397c8a-f22a-ee11-a9bb-000d3a41e8b8"
+          frameborder="0"
+          allowfullscreen
+        ></iframe>
+        <hr></hr>
+        <p>
+          Entusiasta sustantivo
+          <hr></hr>
+        </p>
+        <p>
+          1. una persona que está muy interesada en una actividad o tema en
+          particular:
+        </p>
+        <hr></hr>
+        Please do not share your personal information with others
+      </div>
     </div>
   );
 };
 
-export default Createstory;
+export default Search;

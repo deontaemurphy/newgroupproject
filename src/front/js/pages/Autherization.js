@@ -3,42 +3,37 @@ import { Context } from "../store/appContext";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
-
-const Demo = () => {
-  const { store, actions } = useContext(Context);
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [bookTitle, setBookTitle] = useState("");
+const Authorization = () => {
   const handleClick = (e) => {
     e.preventDefault();
-    actions.login(email, password);
-    $(function () {
-      $('[data-toggle="popover"]').popover();
-    });
+    actions.register(email, password);
   };
+  const { store, actions } = useContext(Context);
   let navigate = useNavigate();
   let token = sessionStorage.getItem("token");
-  // let auth = sessionStorage.getItem("token");
-  // {Laura suggestes a true statement in order to fix the broken authenticator}
-  // useEffect(() => {
+
+  useEffect(() => {
+    if (
+      store.token !== null &&
+      store.token !== "" &&
+      store.token !== undefined
+    ) {
+      navigate("/auth/thebookclub");
+    }
+  }, [store.token]);
   console.log(store.token);
   if (token && token != "" && token != undefined) {
-    navigate("/thebookclub");
-    // }
-    // Authentincate
-    // if (auth === true || auth === defined || auth === "") {
-    navigate("/thebookclub");
   }
-  // }, []);
-
   return (
     <div className="open">
       <div className="card">
-        <h1 className="display-4">Start The Book Club Exclusive Reading</h1>
+        <h1 className="display-4">
+          Comienza el Club del Libro Lectura Exclusiva
+        </h1>
 
-        <div className="card-header">Featured Books</div>
+        <div className="card-header">Libros destacados</div>
         <hr></hr>
-        <h1>Spolighted Books</h1>
+        <h1>Libros estropeados</h1>
         <hr></hr>
         <ol>
           <a>
@@ -52,11 +47,11 @@ const Demo = () => {
                     />
                   </button>
                 </a>
-                The Adventure of Sherlock Holmes
+                La aventura de Sherlock Holmes
               </label>
             </li>
           </a>
-          <Link to="/auth/searchingthebookclub/home/auth/search/thebookclub/home">
+          <Link to="/searcthebook">
             <li>Sherlock Holmes</li>
           </Link>
           <a href="https://archive.org/details/adventuresofsher00doylrich/page/n15/mode/2up?ref=ol&view=theater">
@@ -66,7 +61,7 @@ const Demo = () => {
           <form class="was-validated">
             <div class="mb-3">
               <label for="validationTextarea" class="form-label">
-                Textarea
+                área de texto
               </label>
               <textarea
                 class="form-control"
@@ -75,7 +70,7 @@ const Demo = () => {
                 required
               ></textarea>
               <div class="invalid-feedback">
-                Please enter a message in the textarea.
+                Por favor ingrese un mensaje en el área de texto.
               </div>
             </div>
 
@@ -87,9 +82,11 @@ const Demo = () => {
                 required
               />
               <label class="form-check-label" for="validationFormCheck1">
-                Check this checkbox
+                Marque esta casilla de verificación
               </label>
-              <div class="invalid-feedback">Example invalid feedback text</div>
+              <div class="invalid-feedback">
+                Ejemplo de texto de comentario no válido
+              </div>
             </div>
 
             <div class="form-check">
@@ -101,7 +98,7 @@ const Demo = () => {
                 required
               />
               <label class="form-check-label" for="validationFormCheck2">
-                Toggle this radio(It needs improvement)
+                Alternar esta radio (si necesita mejoras)
               </label>
             </div>
             <div class="form-check mb-3">
@@ -113,22 +110,22 @@ const Demo = () => {
                 required
               />
               <label class="form-check-label" for="validationFormCheck3">
-                Or toggle this other radio(I like the bookclub)
+                O cambia esta otra radio (me gusta el club de lectura)
               </label>
               <div class="invalid-feedback">
-                More example invalid feedback text
+                Más ejemplos de texto de comentario no válido
               </div>
             </div>
 
             <div class="mb-3">
               <select class="form-select" required aria-label="select example">
-                <option value="">Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option value="">Abrir este menú de selección</option>
+                <option value="1">Uno</option>
+                <option value="2">Dos</option>
+                <option value="3">Tres</option>
               </select>
               <div class="invalid-feedback">
-                Example invalid select feedback
+                Ejemplo de comentarios de selección no válidos
               </div>
             </div>
 
@@ -140,13 +137,13 @@ const Demo = () => {
                 required
               />
               <div class="invalid-feedback">
-                Example invalid form file feedback
+                Ejemplo de comentario de archivo de formulario no válido
               </div>
             </div>
 
             <div class="mb-3">
               <button class="btn btn-primary" type="submit">
-                Submit form
+                Enviar formulario
               </button>
             </div>
           </form>
@@ -163,23 +160,7 @@ const Demo = () => {
       <hr></hr>
       <p>Tag a layout</p>
       <br></br>
-
-      <nav className="navbar navbar-light bg-light">
-        <div className="container">
-          <Link to="/auth/searcthebook">
-            <span className="navbar-brand mb-0 h1">"Casa"</span>
-          </Link>
-
-          <Link to="/auth/searchingthebookclub/home">
-            <span className="navbar-brand mb-0 h1">"Look It Up"</span>
-          </Link>
-          <Link to="/publishmystory/auth">
-            <button ocClick={(e) => handleClick(e)}>Home</button>
-          </Link>
-        </div>
-      </nav>
     </div>
   );
 };
-
-export default Demo;
+export default Authorization;

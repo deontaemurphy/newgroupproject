@@ -1,3 +1,106 @@
+.theo {
+  background-color: beige;
+}
+.colores {
+  color: red;
+}
+.Watson2 {
+  color: chocolate;
+  font-size: 67px;
+  background-color: blanchedalmond;
+}
+
+.btnpop {
+  margin-left: 10%;
+  margin-top: 899px;
+}
+.sherlock {
+  color: #101010;
+  font-size: 45 px;
+  background-color: aquamarine;
+}
+.watson {
+  font-size: 45 px;
+  background-color: blanchedalmond;
+}
+.homepage {
+  border-bottom: 0cap;
+  border: #101010;
+}
+.btn {
+  color: red;
+}
+.pad {
+  margin-left: 300px;
+}
+.margin.left {
+  margin-left: 40px;
+  color: orange;
+  background-color: aquamarine;
+}
+.Adjust {
+  height: 50%;
+  width: 70%;
+}
+.flow {
+  padding: left 800px;
+}
+.push {
+  color: red;
+}
+.nav {
+  color: mediumturquoise;
+  display: inline-block;
+
+  padding-right: auto;
+  margin-left: -150px;
+  margin-top: 80px;
+  margin-inline: inherit;
+}
+.card-header {
+  background-color: blue;
+}
+.margin-left {
+  margin-top: -400px;
+  margin-left: -300px;
+  background-color: black;
+  color: red;
+}
+.it {
+  font-size: 95px;
+}
+.icons {
+  margin-left: 20px;
+}
+.size {
+  border-radius: 0cm;
+}
+.likkle {
+  height: 9%;
+  width: 80px;
+}
+.nav1 {
+  color: mediumturquoise;
+  display: inline-block;
+  font-size: 20px;
+  background-color: rgb(0, 0, 0);
+  border: 1px;
+  padding-right: 700px;
+  margin-left: -300px;
+  margin-bottom: 9%;
+}
+.colors {
+  color: pink;
+  font-size: 16.76px;
+}
+.pick {
+  margin-right: auto;
+  margin-top: 1%;
+}
+.p {
+  font-language-override: es;
+  color: blue;
+}
 /*
     home.css: This website contains selectors only used in home.css
 
@@ -5,3 +108,64 @@
     one more css for each page that will contain the selected used 
     on that page only (the ones not reused in other pages).
 */
+.stretch {
+  background: olive;
+  margin: auto;
+  border: #101010;
+}
+
+.bigCounter div {
+  display: inline-block;
+  font-size: 60px;
+  line-height: 60px;
+  height: 60px;
+  background: #101010;
+  margin: 3px;
+  color: white;
+  padding: 10px;
+}
+.display-4 {
+  text-align: center;
+  color: deeppink;
+  background-color: beige;
+  border: 10px;
+}
+.leadme {
+  margin-left: 480px;
+  margin-right: 480px;
+}
+.button {
+  background-color: blueviolet;
+}
+
+.open {
+  color: rgb(83, 205, 77);
+  background-color: burlywood;
+}
+
+.boostrap {
+  width: 100%;
+  max-width: 660px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.boostrapbasic {
+  width: 100%;
+  max-width: 660px;
+  overflow: hidden;
+  border-radius: 09px;
+}
+.lead {
+  background-color: bisque;
+}
+#watson {
+  background-color: rosybrown;
+}
+.rojo {
+  background-color: red;
+}
+
+.azul {
+  background-color: blue;
+}

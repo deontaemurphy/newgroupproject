@@ -1,115 +1,96 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
 import { Link } from "react-router-dom";
-const Register = () => {
+import "../../styles/home.css";
+const TheBookClubHome = () => {
   const { store, actions } = useContext(Context);
   const [bookTitle, setBookTitle] = useState("");
-  const [email, setEmail] = useState("");
   const [name, setName] = useState("");
-  const [password, setPassword] = useState("");
   const handleClick = (e) => {
     e.preventDefault();
-    actions.register(name, email, password);
+    actions.search(name, bookTitle);
   };
   return (
     <div>
       <nav className="navbar navbar-light bg-light">
         <div className="container">
-          <button
-            type="button"
-            className="watson"
-            data-bs-toggle="modal"
-            data-bs-target="#exampleModal"
-          >
-            Book Club Offers
-          </button>
-          <Link to="/auth/searchingthebookclub/home">
-            <span className="navbar-brand mb-0 h1">"Casa"</span>
+          <Link to="/auth/searchingthebookclub/home/auth/search/thebookclub/home">
+            <span className="navbar-brand mb-0 h1">"Home"</span>
           </Link>
 
-          <Link to="/auth/search/thebookclub">
-            <span className="navbar-brand mb-0 h1">"Buscalo"</span>
+          <Link to="/Discoveryourword/book">
+            <hr />
+
+            <span className="navbar-brand mb-0 h1">"Look It Up"</span>
           </Link>
           <div className="ml-auto">
-            <Link to="/auth/search/thebookclub">
-              <button ocClick={(e) => handleClick(e)}>Buscandos</button>
+            <Link to="/searchthebookclub">
+              <button ocClick={(e) => handleClick(e)}>
+                The Book Club Exclusive
+              </button>
             </Link>
-            <input
-              type="text"
-              placeholder="name"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-            ></input>
-            <input
-              type="text"
-              placeholder="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            ></input>
-            <input
-              type="password"
-              placeholder="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-            ></input>
-            <button onClick={(e) => handleClick(e)}>Register</button>
-            <Link to="/login">
-              <button>Log In</button>
-            </Link>
+            <span className="Watson2">
+              Add a Counter with Styles to our Exclsuive Landing Pages
+              <input placeholder="counter" size="100px;"></input>
+            </span>
           </div>
         </div>
       </nav>
-      <div>
-        <div
-          class="modal fade"
-          id="exampleModal"
-          tabindex="-1"
-          aria-labelledby="exampleModalLabel"
-          aria-hidden="true"
-        >
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="exampleModalLabel">
-                  Create A User
-                </h1>
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">
+            Navbar.home.theexclusive
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavDarkDropdown"
+            aria-controls="navbarNavDarkDropdown"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
                 <button
-                  type="button"
-                  class="btn-close"
-                  data-bs-dismiss="modal"
-                  aria-label="Close"
-                ></button>
-              </div>
-              <div class="modal-body">
-                <div>
-                  <hr></hr>
-                </div>
-                <div class="modal-footer">
-                  <Link to="/createUser">
-                    <button
-                      type="button"
-                      class="btn btn-secondary"
-                      data-bs-dismiss="modal"
-                    >
-                      Close
-                    </button>
-                    <button
-                      type="button"
-                      class="btn btn-primary"
-                      data-bs-dismiss="modal"
-                    >
-                      Save changes
-                    </button>
-                  </Link>
-                </div>
-              </div>
-            </div>
+                  class="btn btn-dark dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Inquistivo
+                </button>
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <Link to="/login">Entrar</Link>
+                  </li>
+
+                  <li>
+                    <Link to="/">Sherlock Holmes</Link>
+                  </li>
+                  <li>
+                    <Link to="/auth/searchingthebookclub/home">
+                      Are you lost?
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-      <div>
-        <h5>This Is The User Interface</h5>
-      </div>
+      </nav>
       <input
         type="text"
         placeholder="name"
@@ -117,9 +98,7 @@ const Register = () => {
         onChange={(e) => setName(e.target.value)}
       ></input>
       <Link to="/auth/search/thebookclub/home">
-        <button ocClick={(e) => handleClick(e)}>
-          Exclusivo del club de lectura
-        </button>
+        <button ocClick={(e) => handleClick(e)}>The Book Club Exclusive</button>
       </Link>
       <input
         type="text"
@@ -128,11 +107,47 @@ const Register = () => {
         onChange={(e) => setBookTitle(e.target.value)}
       ></input>
       <Link to="/auth/searcthebook">
-        <button ocClick={(e) => handleClick(e)} className="sherlock">
-          búsqueda
-        </button>
+        <button ocClick={(e) => handleClick(e)}>Search</button>
       </Link>
-
+      <div>
+        <p>
+          There’s a dangerous thing deep inside of me, a being that enjoys the
+          pain of others. Gazing into your soul, seeking weakness; if there is
+          any it will know. For years I’ve struggled to keep his violent urges
+          from emerging from the depths of hell. Its strength grows as time
+          passes and I fear I may be losing my handle. Many have tried to reason
+          with him, every attempt being as futile as the first, ending in
+          horror. This creature is not of this world, or any else, he is your
+          beginning and your end. ABANDON ALL HOPE Let Me Out!!! The chants grew
+          louder and louder; his rage grew stronger, bound by the chains of
+          goodwill and faith; he is contained. Fear consumed me. “I promised I
+          would never allow you to control me ever again. I don’t need your
+          help.”{" "}
+        </p>
+        <hr></hr>
+        <p>
+          {" "}
+          The Day of Acceptance is a tradition for the son of the king; this day
+          is filled with much joy and many praises. It’s a day for the ages,
+          feast bigger than the Rahnoki. Prince Zakar Chamber: “The sun rises in
+          your favor Prince Zakar, are you ready to face your father?’ My father
+          shouldn’t worry Master Serech, I’m ready.” I bow showing my teacher
+          the proper respect; however, my father, King Shamus - ruler of the
+          northern lands, was a great and powerful warrior, and a wiser king.
+          Our nation was of the four great nations; to the south of us hailed
+          the people of the claw, believing that it was the Great Rahnoki’s claw
+          to carve out the lands. Father always believed this tale to be
+          foolish, we all believed it be; this world was sanctioned by the Elder
+          Gods of Dimorphous. Legend says that their leader faced the Rahnoki
+          alone, ‘the battle was so intense it caused the lands to rise from the
+          sea, and the clouds to rain mountains upon those lands.’ No one knows
+          for certain, but there have been tales that the son of Lord Nior,
+          ruler of the Dimorphites, has made friends with the Rahnoki. Sounds
+          farfetched. Knock. Knock “Father.” There was silence; I knocked again.
+          Knocks. Knocks. Again, the man stands there.{" "}
+        </p>
+        <hr></hr>
+      </div>
       <div class="card text-center">
         <div class="card-header">Featured</div>
         <img
@@ -140,13 +155,31 @@ const Register = () => {
           class="rounded mx-auto d-block"
           alt="github"
         ></img>
-        <div></div>
+        <div>
+          <iframe
+            width="560"
+            height="315"
+            src="https://www.youtube.com/embed/i6yFRXUDC-w"
+            title="YouTube video player"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
       </div>
       <div class="card text-center">
         <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
           <div class="card-header">Featured</div>
         </a>
 
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/0-Hj_bi9Qto"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
         <img
           src="data:image/png;base64,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"
           class="rounded mx-auto d-block"
@@ -169,101 +202,6 @@ const Register = () => {
               allowfullscreen
             ></iframe>
           </div>
-          <div className="text-center mt-5">
-            <nav className="navbar navbar-light bg-light">
-              <div className="container">
-                <div className="ml-auto">
-                  <div>
-                    <button className="btn btn-primary">
-                      <Link to="/thebookclubhome">
-                        <button onClick={(e) => handleClick(e)}>
-                          El club del libro
-                        </button>
-                      </Link>
-                    </button>
-                  </div>
-                  <Link to="/publishmystory/auth">
-                    <a href="https://3000-doctorine06-newgrouppro-bvmcmo3525y.ws-us101.gitpod.io/searchthebookclub">
-                      <button onClick={(e) => handleClick(e)}>Ingles</button>
-                    </a>
-                  </Link>
-                </div>
-              </div>
-            </nav>
-            <div>Sherlock Holmes:</div>
-            <div>
-              <a href="https://archive.org/details/adventuresofsher00doylrich/mode/2up?ref=ol&view=theater">
-                <img
-                  className="Adjust"
-                  src="https://ia802607.us.archive.org/BookReader/BookReaderImages.php?zip=/4/items/adventuresofsher00doylrich/adventuresofsher00doylrich_jp2.zip&file=adventuresofsher00doylrich_jp2/adventuresofsher00doylrich_0001.jp2&id=adventuresofsher00doylrich&scale=4&rotate=0"
-                />
-              </a>
-            </div>
-            <div>
-              6 AVENTURAS DE SHERLOCK HOLMES debe ser aburrido, de hecho, si no
-              lo hago declararlo miembro activo de la profesión médica”. I no
-              pudo evitar reírse de la facilidad con la que explicaba su proceso
-              de deducción. “Cuando te escucho dar tus razones,” comentó, “la
-              cosa siempre me parece tan ridículamente simple que podría hacerlo
-              fácilmente yo mismo, aunque en cada sucesiva ejemplo de su
-              razonamiento estoy desconcertado, hasta que explique su proceso.
-              Y, sin embargo, creo que mis ojos son tan buenos como los tuyos.
-              "Así es", respondió, encendiendo un cigarrillo y tirándolo se
-              sentó en un sillón. “Ves, pero no observas. La distinción es
-              clara. Por ejemplo, has visto con frecuencia los escalones que
-              conducen desde el vestíbulo a esta habitación. “ Frecuentemente."
-            </div>
-            <br></br>
-            <div className="colores">
-              El cuento de dos reyes de Steven Ferguson
-              <div>
-                <h1>El cuento de dos reyes</h1>
-                <p>
-                  Hay algo peligroso en lo más profundo de mí, un ser que
-                  disfruta del dolor de los demás. Mirando dentro de tu alma,
-                  buscando debilidad; si hay alguno lo sabrá. Durante años he
-                  luchado para evitar que sus impulsos violentos emergieran de
-                  las profundidades del infierno. Su fuerza crece a medida que
-                  pasa el tiempo y temo que pueda estar perdiendo el control.
-                  Muchos han tratado de razonar con él, siendo cada intento tan
-                  inútil como el primero, terminando en horror. Esta criatura no
-                  es de este mundo, ni de ningún otro, es vuestro principio y
-                  vuestro fin. ABANDONA TODA ESPERANZA Déjame Salir!!! Los
-                  cánticos se hicieron más y más fuertes; su rabia se hizo más
-                  fuerte, atado por las cadenas de la buena voluntad y la fe; él
-                  está contenido. El miedo me consumía. “Prometí que nunca
-                  permitiría que me controlaras nunca más. No necesito tu ayuda.
-                </p>
-                <hr></hr>
-                <p>
-                  El Día de la Aceptación es una tradición para el hijo del rey;
-                  este día está lleno de mucha alegría y muchas alabanzas. Es un
-                  día para las edades, fiesta más grande que el Rahnoki. Cámara
-                  del Príncipe Zakar: "El sol sale a su favor, Príncipe Zakar,
-                  ¿está listo para enfrentarse a su padre?" Mi padre no debería
-                  preocuparse, Maestro Serech, estoy listo. Me inclino mostrando
-                  a mi maestro el debido respeto; sin embargo, mi padre, el rey
-                  Shamus, gobernante de las tierras del norte, era un gran y
-                  poderoso guerrero, y un rey más sabio. Nuestra nación era de
-                  las cuatro grandes naciones; al sur de nosotros saludó a la
-                  gente de la garra, creyendo que era la garra del Gran Rahnoki
-                  para tallar las tierras. Mi padre siempre creyó que este
-                  cuento era una tontería, todos lo creímos; este mundo fue
-                  sancionado por los Dioses Mayores de Dimorphous. La leyenda
-                  dice que su líder se enfrentó solo a los Rahnoki, "la batalla
-                  fue tan intensa que hizo que las tierras se levantaran del mar
-                  y las nubes hicieran llover montañas sobre esas tierras".
-                  Nadie lo sabe con certeza, pero hay historias de que los hijo
-                  de Lord Nior, gobernante de los dimorfitas, se ha hecho amigo
-                  de los Rahnoki. Suena descabellado. Golpear. Toca "Padre".
-                  Había silencio; Toqué de nuevo. Golpes. Golpes. Una vez más,
-                  el hombre se encuentra allí.{" "}
-                </p>
-                <hr></hr>
-              </div>
-            </div>
-            <br></br>
-          </div>
         </div>
         <div class="card-footer text-body-secondary">2 days ago</div>
       </div>
@@ -271,4 +209,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default TheBookClubHome;
