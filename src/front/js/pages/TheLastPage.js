@@ -36,8 +36,7 @@ const TheBookClubHome = () => {
               </button>
             </Link>
             <span>
-              {" "}
-              Today we title the cultural differences of not knowing
+             Add a Counter with Styles to our Exclsuive Landing Pages
               <input placeholder="counter" size="100px;"></input>
             </span>
           </div>
