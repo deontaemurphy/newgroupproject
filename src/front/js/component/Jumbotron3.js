@@ -18,5 +18,7 @@ export const LogoutJumbotron = () => {
     <div class="jumbotron">
       <button onClick={handleClick}>Logout</button>
     </div>
+    <p style="color:blue">{open up chat//: I can tell that you're into me"(the sweat)"</p>}
+    </p>
   );
 };
