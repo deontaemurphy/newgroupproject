@@ -37,6 +37,7 @@ const Search = () => {
             <hr></hr>
             <input placeholder="Reloj" size="115;"></input>
             <p>In the "About me section"</p>
+            <p style="color:white"> “Here goes the start of a new life” He walked into a vast hallway that had been lined with a lavender color and graced with a golden trim. It had topiary statues of all the headmaster's past. This would be the start of a new world.</p>
             <hr></hr>
           </div>
         </div>
