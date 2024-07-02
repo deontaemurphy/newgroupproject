@@ -12,20 +12,28 @@ export default function Createstory() {
           <h3 className="">Title</h3>
           <input></input>
           <div class="card" style="width: 18rem;">
-          <img src="..." class="card-img-top" alt="description relating to photo"/>
-          <div class="card-body">
-          <h5 class="card-title">Story title</h5>
-          <p class="card-text">Romeo and Juiletta</p>
-          </div>
-          <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
-          </ul>
-          <div class="card-body">
-          <a href="#" class="card-link">Card link</a>
-          <a href="#" class="card-link">Another link</a>
-          </div>
+            <img
+              src="..."
+              class="card-img-top"
+              alt="description relating to photo"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Story title</h5>
+              <p class="card-text">Romeo and Juiletta</p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+            <div class="card-body">
+              <a href="#" class="card-link">
+                Card link
+              </a>
+              <a href="#" class="card-link">
+                Another link
+              </a>
+            </div>
           </div>
           <h3>Description</h3>
           <textarea placeholder="Add description here"></textarea>
