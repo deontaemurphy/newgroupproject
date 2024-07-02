@@ -14,6 +14,7 @@ import Login from "./pages/login.js";
 import Createstory from "./pages/Createstory";
 import The_Book_Club from "./pages/The_Book_Club";
 import Search from "./pages/Search";
+import Couresel from "./component/Couresel";
 
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
@@ -27,6 +28,7 @@ const Layout = () => {
       <BrowserRouter basename={basename}>
         <ScrollToTop>
           <Navbar />
+          <Couresel />
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
