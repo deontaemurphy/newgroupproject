@@ -12,6 +12,8 @@ import { Footer } from "./component/footer";
 import Register from "./pages/SignUp";
 import Login from "./pages/login.js";
 import Createstory from "./pages/Createstory";
+import The_Book_Club from "./pages/The_Book_Club";
+import Search from "./pages/Search";
 
 //In the console it said sign up on line 26 was undefined bc it was Not imported in the file
 //create your first component
@@ -28,11 +30,13 @@ const Layout = () => {
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Login />} path="/login" />
-            <Route element={<Register />} path="/createaccount" />
+            <Route element={<Register />} path="/createUser" />
             <Route element={<Createstory />} path="/Createstory" />
             <Route element={<Demo />} path="/demo" />
             <Route element={<Single />} path="/single/:theid" />
             <Route element={<h1>Not found!</h1>} />
+            <Route element={<The_Book_Club />} path="/thebookclub" />
+            <Route element={<Search />} path="/searchthebookclub" />
           </Routes>
           <Footer />
         </ScrollToTop>

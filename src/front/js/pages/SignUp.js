@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { Context } from "../store/appContext";
-
+import { Link } from "react-router-dom";
 const Register = () => {
   const { store, actions } = useContext(Context);
   const [email, setEmail] = useState("");
@@ -8,7 +8,7 @@ const Register = () => {
   const [password, setPassword] = useState("");
   const handleClick = (e) => {
     e.preventDefault();
-    actions.register(name,email, password);
+    actions.register(name, email, password);
   };
   return (
     <div>
@@ -31,7 +31,9 @@ const Register = () => {
         onChange={(e) => setPassword(e.target.value)}
       ></input>
       <button onClick={(e) => handleClick(e)}>Register</button>
-      <button>Log In</button>
+      <Link to="/login">
+        <button>Log In</button>
+      </Link>
     </div>
   );
 };

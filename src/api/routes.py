@@ -16,7 +16,7 @@ api = Blueprint('api', __name__)
 #access_token = create_access_token
 
 
-@api.route("/token", methods=["POST"])
+@api.route("/login", methods=["POST"])
 def create_token():
     email = request.json.get("email", None)
     password = request.json.get("password", None)
@@ -37,6 +37,13 @@ def create_token():
     expiration = datetime.timedelta(days=3)
     access_token = create_access_token(identity= user.id, expires_delta= expiration)
     return jsonify(access_token=access_token), 200
+
+@api.route('/user', methods=['GET'])
+@jwt_required()
+def user():
+  username = get_jwt_identity()
+  user = User.query.filter_by(username = username).first()
+  return jsonify(user.serialize()), 200
 
 
 @api.route('/createUser', methods=['POST'])

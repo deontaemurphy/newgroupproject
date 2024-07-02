@@ -1,20 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Createstory from "../pages/Createstory";
+import Login from "../pages/login";
 
 export const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
-        <Link to="/demo">Navbar(logo)</Link>
-
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-itemHome mt-2 mx-4">
-              <Link to="/">Home</Link>
+              <Link to="/thebookclubfavorites">
+                <i class="fa-solid fa-bookmark fa-bounce"></i>
+              </Link>
             </li>
-            <a className="navbar-brand" href="#">
-              Navbar
+            <a className="navbar-brand" href="https://www.algolia.com/">
+              Search With Algolia
             </a>
             <button
               className="navbar-toggler"
@@ -27,6 +27,10 @@ export const Navbar = () => {
             >
               <span className="navbar-toggler-icon"></span>
             </button>
+            <div className="form-control">
+              Discover (Needs to be up under The Algolia)
+              <input className="form-control me-2 ml-100" />
+            </div>
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
@@ -55,62 +59,24 @@ export const Navbar = () => {
                   </a>
                   <ul className="dropdown-menu">
                     <li>
-                      <Link to="/Createstory">User</Link>
+                      <Link to="/">Createstory</Link>
                     </li>
                     <li>
-                      <Link to="/demo">View Favorites</Link>
+                      <Link to="/thebookclubfavorites">
+                        View Favorites is undefined
+                      </Link>
                     </li>
                     <li>
-                      <Link to="/">Logout</Link>
+                      <Link to="/thebookclub">Logout</Link>
                     </li>
                   </ul>
                 </li>
               </ul>
             </div>
-            <form className="d-flex w-100" role="search" />
-            <input className="form-control me-2 ml-100" />
-            <div>Discover</div>
-            <ul className="dropdown-menu">
-              <li>
-                <a
-                  className="dropdown-item"
-                  href="this way to the linkage of the bokks being a public domain read."
-                >
-                  My Book <span>donde estas las bibl 'i' oeteca</span> (sus
-                  libre)
-                </a>
-                <bold>Too much "c" </bold>
-              </li>
-              <li>
-                <a className="dropdown-item" href="#"></a>
-              </li>
-
-              <li>
-                {" "}
-                <span> Code Name Kids Next Door : </span>
-              </li>
-              <li>
-                <a className="dropdown-item" href="google.com">
-                  Something else here
-                </a>
-              </li>
-            </ul>
-            <li className="nav-item">
-              <a className="nav-link disabled"></a>
-            </li>
           </ul>
-          <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Look it up"
-              aria-label="Find the right read"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Signup
-            </button>
-            <Link to="/createaccount"></Link>
-          </form>
+          <Link to="/createUser">
+            <button>Login</button>
+          </Link>
         </div>
       </div>
     </nav>
